@@ -1,0 +1,79 @@
+﻿@model Admin.Models.ViewModels.OrderVM
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div class="ec-content-wrapper">
+    <div class="content">
+        <div class="breadcrumb-wrapper breadcrumb-wrapper-2">
+            <h1>@Localizer["NewOrders"] </h1>
+            <p class="breadcrumbs">
+                <span><a href="/">@Localizer["Home"] </a></span>
+                <span><i class="mdi mdi-chevron-right"></i></span>@Localizer["Orders"]
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card card-default">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <div id="responsive-data-table_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+                                <table id="responsive-data-table" class="table dataTable no-footer" style="width: 100%;" aria-describedby="responsive-data-table_info">
+                                    <thead>
+                                        <tr>
+                                            <th class="sorting" tabindex="0" aria-controls="responsive-data-table" rowspan="1" colspan="1" aria-label="Customer: activate to sort column ascending" style="width: 159px;">@Localizer["Customer"] </th>
+                                            <th class="sorting" tabindex="0" aria-controls="responsive-data-table" rowspan="1" colspan="1" aria-label="Items: activate to sort column ascending" style="width: 37px;">@Localizer["Items"] </th>
+                                            <th class="sorting" tabindex="0" aria-controls="responsive-data-table" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending" style="width: 34px;">@Localizer["Price"] </th>
+                                            <th class="sorting" tabindex="0" aria-controls="responsive-data-table" rowspan="1" colspan="1" aria-label="Date: activate to sort column ascending" style="width: 51px;">@Localizer["Date"] </th>
+                                            <th class="sorting" tabindex="0" aria-controls="responsive-data-table" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 58px;">@Localizer["Action"] </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.Orders)
+                                        {
+                                            <tr class="odd">
+                                                <td>
+                                                    <strong>@item.FirstName @item.LastName</strong><br>
+                                                    @item.Email
+                                                </td>
+                                                @{
+                                                    double subtotal = 0;
+                                                    int Qty = 0;
+                                                    foreach (var orderItem in Model.OrderItems.Where(orderItem => orderItem.OrderID == item.ID))
+                                                    {
+                                                        subtotal += orderItem.Quantity * orderItem.Product.Price;
+                                                        Qty += orderItem.Quantity;
+                                                    }
+                                                }
+                                                @{
+                                                    double finalTotal = subtotal;
+                                                }
+                                                <td>@Qty</td>
+                                                <td>@finalTotal.ToString("F") @Localizer["JOD"]</td>
+                                                <td>@item.Timestamp</td>
+                                                <td>
+                                                    <div class="btn-group mb-1">
+                                                        <button type="button" class="btn btn-outline-success">Info</button>
+                                                        <button type="button" class="btn btn-outline-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+                                                            <span class="sr-only">@Localizer["Info"]</span>
+                                                        </button>
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" asp-controller="Order" asp-action="Detail" asp-route-id="@item.ID">@Localizer["Detail"] </a>
+                                                            <a class="dropdown-item" href="#">@Localizer["Delete"] </a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Content -->
+</div>

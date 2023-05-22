@@ -1,0 +1,373 @@
+﻿@model Admin.Models.ViewModels.ProductsVMUser
+<div class="container-fluid p-0 bg-gray-l">
+    <div class="container">
+        <div class="row align-items-center py-3">
+            <div class="col">
+                <div class="m-0 p-0 breadcrumb bg-gray-l">
+                    <ul class="m-0 text-left" itemscope="">
+                        <li><span> <a href="/"> <span>@Localizer["Home"]</span> </a> </span> <span class="delimiter">/</span></li>
+                        <li itemprop="itemListElement" itemscope="">
+                            <a href="/Products" itemprop="item"> <span itemprop="name">@Localizer["Products"]</span> </a> <span class="delimiter">/</span>
+                            <meta itemprop="position" content="1">
+                        </li>
+                        <li itemprop="itemListElement" itemscope="">
+                            <a href="#" itemprop="item"> <span itemprop="name">@Model.Products.NameEn</span> </a>
+                            <meta itemprop="position" content="2">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="center-1">
+    <div class="page product-details-page">
+        <form method="post" id="product-details-form" novalidate="novalidate">
+            <div itemscope="" data-productid="56">
+                <div class="product-essential">
+                    <div class="container-fluid px-0 mt-3 mb-3 mb-lg-5">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                                    <div class="gallery" data-popup="#dialogForImgPopUp" id="fullWidthgallery" style="float:left">
+                                        <link rel="image_src" href="/images/@Model.Products.BaseImage">
+                                        <div id="wrap" style="top:0px;z-index:9999;position:relative;">
+                                            <a href="/images/@Model.Products.BaseImage" class="cloud-zoom" style="position: relative; display: block;" id="dbrandImage">
+                                                <img alt="Picture of @Model.Products.NameEn" src="/images/@Model.Products.BaseImage" title="Picture of @Model.Products.NameEn" style="height: auto; width: 100%; border-width: 0px; display: block;" class="cloud-zoom-image cloud-zoom-image-size" width="400" id="main-product-img-lightbox-anchor-56">
+                                            </a>
+                                        </div>
+                                        <div class="cloud-zoom-thumb-container">
+                                            <div class="cloud-zoom-thumb">
+                                                <a href="/images/@Model.Products.BaseImage" rel="lightbox-p" class="src-zoom-anchor" onclick="return false;" data-halfimgurl="/images/@Model.Products.BaseImage">
+                                                    <img src="/images/@Model.Products.BaseImage" alt="Picture of @Model.Products.NameEn" title="Picture of @Model.Products.NameEn" class="src-zoom-image" style="height:100px; width:100px">
+                                                </a>
+                                            </div>
+                                            <div class="cloud-zoom-thumb">
+                                                <a href="/images/@Model.Products.AltImage" rel="lightbox-p" class="src-zoom-anchor" onclick="return false;" data-halfimgurl="/images/@Model.Products.AltImage">
+                                                    <img src="/images/@Model.Products.AltImage" alt="Picture of @Model.Products.NameEn" title="Picture of @Model.Products.NameEn" class="src-zoom-image" style="height:100px; width:100px">
+                                                </a>
+                                            </div>
+                                            @if (Model.Products.Images != null && Model.Products.Images.Count > 0)
+                                            {
+                                                @foreach (var item in Model.Products.Images)
+                                                {
+                                                    <div class="cloud-zoom-thumb">
+                                                        <a href="/images/@item.ImageName" rel="lightbox-p" class="src-zoom-anchor" onclick="return false;" data-halfimgurl="/images/@item.ImageName">
+                                                            <img src="/images/@item.ImageName" alt="Picture of @Model.Products.NameEn" title="Picture of @Model.Products.NameEn" class="src-zoom-image" style="height:100px; width:100px">
+                                                        </a>
+                                                    </div>
+                                                }
+
+                                            }
+                                        </div>
+                                        <div class="imgForMobile" id="dialogForImgPopUp">
+                                            <img alt="" src="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="float-none w-100 text-left overview">
+                                        <div class="mb-2 product-name">
+                                            <h1 itemprop="name">@Model.Products.NameEn</h1>
+                                        </div>
+                                        <div class="my-3 bg-gray-2 divider-h">divider</div>
+                                        <div class="prices">
+                                            <div class="product-price"><span id="price-value-56" class="price-value-56">@Model.Products.Price @Localizer["JOD"]</span></div>
+                                        </div>
+                                        <div class="my-3 bg-gray-2 divider-h">divider</div>
+                                        <div class="mb-3 manufacturers"><span class="clr-gray-3 font-weight-bold label">@Localizer["Brand"]:</span> <span class="value"> <a href="/Brands/Products?brandId=@Model.Products.BrandsId">@Model.Products.Brands.NameEn</a> </span></div>
+                                        <div class="mb-3 clr-gray short-description">@Model.Products.DescriptionEn</div>
+                                        <div class="mb-3 clr-gray short-description">@Localizer["Size"]:&nbsp;<strong>@Model.Products.Size</strong></div>
+                                        <div class="m-0 additional-details"></div>
+@*                                        <div class="attributes">
+                                            <dl>
+                                                <dt id="product_attribute_label_24"><label class="text-prompt">@Localizer["Type"] </label></dt>
+                                                <dd id="product_attribute_input_24">
+                                                    <ul data-attr="24" class="option-list attribute-squares color-squares" id="color-squares-24">
+                                                        @foreach (var color in Model.Products.Types)
+                                                        {
+                                                            <li data-attr-value="59">
+                                                                <label for="product_attribute_24_59"> <span class="attribute-square-container" title="Blue"> <span class="attribute-square" style="background-color:@color.Value">&nbsp;</span> </span> <input id="product_attribute_24_59" type="radio" name="product_attribute_24" value="59"> </label>
+                                                            </li>
+                                                        }
+                                                    </ul>
+                                                </dd>
+                                            </dl>
+                                        </div>*@
+                                        <div class="my-3 bg-gray-2 divider-h">divider</div>
+                                        <div class="d-flex flex-column p-qty">
+                                            <div class="add-to-cart">
+                                                <div class="add-to-cart-panel">
+                                                    <label class="qty-label" for="addtocart_56_EnteredQuantity">Qty:</label>
+                                                    <div class="input-group mr-3 p-qty--counter"><span class="input-group-btn"> <button class="btn btn-minus--details btn-disabled" type="button"> <i class="fas fa-minus"></i> </button> </span> <input class="qty-input" type="text" data-val="true" data-val-required="The Qty field is required." id="EnteredQuantity"  data-value="" value="1"> <span class="input-group-btn"> <button class="btn btn-plus--details" type="button"> <i class="fas fa-plus"></i> </button> </span></div>
+                                                    <input type="button" id="add-to-cart-button-56" class="button-1 add-to-cart-button AddToCartAccourdingQty" data-product-Id="@Model.Products.Id" value="@Localizer["AddtoCart"]" data-productid="56">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="overview-buttons">
+                                            <div class="add-to-wishlist"><button type="button" id="add-to-wishlist-button-56" class="btn btn-link text-uppercase AddToWishlistAccourdingQty" data-product-Id="@Model.Products.Id" value="@Localizer["AddtoWishlist"]"> <i class="far fa-heart pr-1"></i> <span>@Localizer["AddtoWishlist"]</span> </button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid px-0 mb-5">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="px-md-1 tab-content" id="tabContentProductDesc">
+                                        <div class="pt-4 also-purchased-products-grid product-grid">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="position-relative text-center clr-dark section-header">
+                                                            <h3 class="d-flex justify-content-center align-items-center text-uppercase section-title"><span>@Localizer["Customers"]</span></h3>
+                                                        </div>
+                                                        <div class="row justify-content-center mt-5 p-grid">
+                                                            @foreach (var item in Model.FirstFourItems)
+                                                            {
+                                                                <div class="col-6 col-md-4 col-lg-3 p-item">
+                                                                    <div class="position-relative mb-5 et-lazy-img-3--hvr p-card">
+                                                                        <div class="position-relative of-h p-card--img">
+                                                                            <a class="position-relative d-block w-100 h-100 p-card--link" href="/Products/Detail?Id=@item.Id" title="Show details for @item.NameEn"> <span class="position-relative d-block p-card--link-img lazyload" id="productPictureContainer_67" data-src="/images/@item.BaseImage"></span> </a>
+                                                                            <div class="position-absolute w-100 et-lazy-img-3 p-card--img-hover hoverImage_67">
+                                                                                <div class="position-relative d-block w-100 h-100 p-card--img-hover-inner hoverInnerImage_67" style="background-image:url('')">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="position-absolute w-100 et-lazy-img-3 p-card--img-hover hoverImage_67">
+                                                                                <div class="position-relative d-block w-100 h-100 p-card--img-hover-inner hoverInnerImage_67" style="background-image: url('/images/@item.AltImage')">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="position-absolute p-card--btn-icons p-card--wt"><button type="button" value="@Localizer["AddtoWishlist"]" data-product-Id="@item.Id" title="@Localizer["AddtoWishlist"]" rel="nofollow" data-product-Id="@item.Id" class="position-relative d-inline-block m-0 text-center add-list add-wt AddToWishlist"> <i id="wishListIcon_67" class="btn-icon far fa-heart"></i> </button></div>
+                                                                            <div class="position-absolute d-flex flex-column text-center p-card--hvr-btn product-item" data-productid="56" data-quick-view="true"><button class="d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id"> <i class="btn-icon lnr lnr-cart"></i> <span class="btn-txt">@Localizer["AddToCart"]</span> </button> <button class="d-inline-block d-lg-none position-relative text-center text-capitalize add-btn add-btn-sm add-atc" rel="nofollow" data_Id="@item.Id" title="" data-original-title="@Localizer["AddToCart"]"> <i class="btn-icon lnr lnr-cart"></i> </button><button data-toggle="modal" data-target="#glassAnimals_@item.Id" data-Id="@item.Id" id="QuickView" type="button" class="button-2 quick-view-btn d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-qv" data-productid="56" title="Quick view"><i class="btn-icon lnr lnr-eye"></i><span class="btn-txt">@Localizer["QuickView"]</span></button></div>
+                                                                        </div>
+                                                                        <div class="text-center p-card--info">
+                                                                            <h3 class="position-relative m-0 clr-dark text-capitalize p-card--title"><a href="/short-sleeve-polo-shirts-for-boys" class="p-card--title-link" title="Show details for Short Sleeve Polo Shirts for Boys">@item.NameEn</a></h3>
+                                                                            <div class="position-absolute offer-content"></div>
+                                                                            <h4 class="position-relative m-0 clr-dark p-card--title" style="font-size:12px">@Localizer["Size"]: &nbsp;<strong>@item.Size</strong></h4>
+                                                                            <div class="p-card--prices"><span class="clr-primary f-s-22 p-card--price font-weight-medium actual-price">@item.Price @Localizer["JOD"]</span></div>
+@*                                                                            <div class="d-flex justify-content-center m-0 attributes">
+                                                                                <ul class="option-list attribute-circles color-circle" id="color-circle-82">
+                                                                                    @foreach (var color in item.Types)
+                                                                                    {
+                                                                                        <li><label for="82"> <span class="attribute-circle-container" style="background-color:@color.Value" title="Green click on it"> <span class="attribute-circle" style="background-color:@color.Value">&nbsp;</span> </span> <input id="82" type="radio" name="colorAttribute_82" value="82"> </label></li>
+                                                                                    }
+                                                                                </ul>
+                                                                            </div>*@
+                                                                            <div class="d-none p-card--hvr-btn product-item" data-productid="67" data-quick-view="true"><button class="d-none d-md-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id"> <i class="btn-icon lnr lnr-cart"></i> <span class="btn-txt">@Localizer["AddtoCart"]</span> </button><button type="button" class="d-none d-md-inline-block position-relative text-center text-capitalize add-btn add-qv" data-product-Id="@item.Id" data-productid="67" title="Quick view"><i class="btn-icon lnr lnr-eye"></i><span class="btn-txt">@Localizer["QuickView"]</span></button></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            }
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="tabContentSpec" role="tabpanel" aria-labelledby="tabSpec"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid px-0">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="related-products-grid product-grid">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="position-relative text-center clr-dark section-header">
+                                                    <h3 class="d-flex justify-content-center align-items-center text-uppercase section-title"><span>@Localizer["RelatedProducts"]</span></h3>
+                                                </div>
+                                                <div class="row justify-content-center mt-5 p-grid">
+                                                    @foreach (var item in Model.lastFourItems)
+                                                    {
+                                                        <div class="col-6 col-md-4 col-lg-3 p-item">
+                                                            <div class="position-relative mb-5 et-lazy-img-3--hvr p-card">
+                                                                <div class="position-relative of-h p-card--img">
+                                                                    <a class="position-relative d-block w-100 h-100 p-card--link" href="/Products/Detail?Id=@item.Id" title="Show details for @item.NameEn"> <span class="position-relative d-block p-card--link-img lazyload" id="productPictureContainer_67" data-src="/images/@item.BaseImage"></span> </a>
+                                                                    <div class="position-absolute w-100 et-lazy-img-3 p-card--img-hover hoverImage_67">
+                                                                        <div class="position-relative d-block w-100 h-100 p-card--img-hover-inner hoverInnerImage_67" style="background-image:url('')">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="position-absolute w-100 et-lazy-img-3 p-card--img-hover hoverImage_67">
+                                                                        <div class="position-relative d-block w-100 h-100 p-card--img-hover-inner hoverInnerImage_67" style="background-image: url('/images/@item.AltImage')">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="position-absolute p-card--btn-icons p-card--wt"><button type="button" value="@Localizer["AddtoWishlist"]" title="@Localizer["AddtoWishlist"]" rel="nofollow" data-product-Id="@item.Id" class="position-relative d-inline-block m-0 text-center add-list add-wt AddToWishlist"> <i id="wishListIcon_67" class="btn-icon far fa-heart"></i> </button></div>
+                                                                    <div class="position-absolute d-flex flex-column text-center p-card--hvr-btn product-item" data-productid="56" data-quick-view="true"><button class="d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id"> <i class="btn-icon lnr lnr-cart"></i> <span class="btn-txt">@Localizer["AddToCart"]</span> </button> <button class="d-inline-block d-lg-none position-relative text-center text-capitalize add-btn add-btn-sm add-atc" rel="nofollow" data_Id="@item.Id" title="" data-original-title="@Localizer["AddToCart"]"> <i class="btn-icon lnr lnr-cart"></i> </button><button data-toggle="modal" data-target="#glassAnimals_@item.Id" data-Id="@item.Id" id="QuickView" type="button" class="button-2 quick-view-btn d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-qv" data-productid="56" title="Quick view"><i class="btn-icon lnr lnr-eye"></i><span class="btn-txt">@Localizer["QuickView"]</span></button></div>
+                                                                </div>
+                                                                <div class="text-center p-card--info">
+                                                                    <h3 class="position-relative m-0 clr-dark text-capitalize p-card--title"><a href="/short-sleeve-polo-shirts-for-boys" class="p-card--title-link" title="Show details for Short Sleeve Polo Shirts for Boys">@item.NameEn</a></h3>
+                                                                    <div class="position-absolute offer-content"></div>
+                                                                    <h4 class="position-relative m-0 clr-dark p-card--title" style="font-size:12px">@Localizer["Size"]:&nbsp;<strong>@item.Size</strong></h4>
+                                                                    <div class="p-card--prices"><span class="clr-primary f-s-22 p-card--price font-weight-medium actual-price">@item.Price @Localizer["JOD"]</span></div>
+@*                                                                    <div class="d-flex justify-content-center m-0 attributes">
+                                                                        <ul class="option-list attribute-circles color-circle" id="color-circle-82">
+                                                                            @foreach (var color in item.Types)
+                                                                            {
+                                                                                <li><label for="82"> <span class="attribute-circle-container" style="background-color:@color.Value" title="Green click on it"> <span class="attribute-circle" style="background-color:@color.Value">&nbsp;</span> </span> <input id="82" type="radio" name="colorAttribute_82" value="82"> </label></li>
+                                                                            }
+                                                                        </ul>
+                                                                    </div>*@
+                                                                    <div class="d-none p-card--hvr-btn product-item" data-productid="67" data-quick-view="true"><button class="d-none d-md-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id"> <i class="btn-icon lnr lnr-cart"></i> <span class="btn-txt">@Localizer["AddtoCart"]</span> </button><button type="button" class="d-none d-md-inline-block position-relative text-center text-capitalize add-btn add-qv" data-product-Id="@item.Id" data-productid="67" title="Quick view"><i class="btn-icon lnr lnr-eye"></i><span class="btn-txt">@Localizer["QuickView"]</span></button></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<partial name="_PopupPartial" model="Model.lastFourItems" />
+<partial name="_PopupPartial" model="Model.FirstFourItems" />
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.src-zoom-anchor').on({
+            'click': function () {
+                var aSrc = $(this).attr('href');
+                var imgSrc = $(this).attr('data-halfimgurl');
+                $('.cloud-zoom-image').attr('src', imgSrc);
+                $('.cloud-zoom').attr('href', aSrc);
+                $("a.cloud-zoom").data('zoom').destroy();
+                initZoom();
+            }
+        });
+        initZoom();
+    });
+
+    $(window).resize(function () {
+        initZoom();
+    });
+</script>
+    <script>
+        var hrefValue ="";
+            $(".cloud-zoom-thumb").on("click", function () {
+                hrefValue = $('#dbrandImage').attr('href');
+            });
+        $(".AddToCartAccourdingQty").on("click",async function () {
+            debugger
+            if(hrefValue== ""){
+                hrefValue = @Html.Raw(Json.Serialize(Model.Products.BaseImage))
+            }
+            var modifiedPath = hrefValue.replace("/images/", "");
+            var inputValue = $('#EnteredQuantity').val();
+            var productId = $(this).attr('data-product-Id')
+        @if (User.Identity.IsAuthenticated)
+        {
+            <text>
+                try {
+                    var response = await fetch(`/Cart/AddItemWithQtyAndImage?productId=${productId}&&qty=${inputValue}&&image=${modifiedPath}`);
+                    if (response.status == 200) {
+                    location.reload();
+                    }
+                }
+                catch (err) {
+                    console.log(err);
+                }
+            </text>
+        }
+        else
+        {
+        <text>
+                window.location.href="/Account/Login"
+                    </text>
+        }});
+
+    </script>
+    <script>
+        $(".AddToWishlistAccourdingQty").on("click",async function () {
+            debugger
+            if(hrefValue== ""){
+                hrefValue = @Html.Raw(Json.Serialize(Model.Products.BaseImage))
+            }
+            var modifiedPath = hrefValue.replace("/images/", "");
+            var inputValue = $('#EnteredQuantity').val();
+            var productId = $(this).attr('data-product-Id')
+        @if (User.Identity.IsAuthenticated)
+        {
+            <text>
+                try {
+                    var response = await fetch(`/WishList/AddItemWithQtyAndImage?productId=${productId}&&qty=${inputValue}&&image=${modifiedPath}`);
+                    if (response.status == 200) {
+                    location.reload();
+                    }
+                }
+                catch (err) {
+                    console.log(err);
+                }
+            </text>
+        }
+        else
+        {
+        <text>
+                window.location.href="/Account/Login"
+        </text>
+        }});
+    </script>
+        <script>
+        $(".AddToCart").on("click",async function () {
+            debugger
+            var productId = $(this).attr('data-product-Id')
+        @if (User.Identity.IsAuthenticated)
+        {
+            <text>
+                try {
+                    var response = await fetch(`/Cart/AddItem?productId=${productId}`);
+                    if (response.status == 200) {
+                    location.reload();
+                    }
+                }
+                catch (err) {
+                    console.log(err);
+                }
+            </text>
+        }
+        else
+        {
+        <text>
+                window.location.href="/Account/Login"
+                    </text>
+        }});
+
+    </script>
+        <script>
+        $(".AddToWishlist").on("click",async function () {
+            debugger
+            var productId = $(this).attr('data-product-Id')
+        @if (User.Identity.IsAuthenticated)
+        {
+            <text>
+                try {
+                    var response = await fetch(`/WishList/AddItem?productId=${productId}`);
+                    if (response.status == 200) {
+                    location.reload();
+                    }
+                }
+                catch (err) {
+                    console.log(err);
+                }
+            </text>
+        }
+        else
+        {
+        <text>
+                window.location.href="/Account/Login"
+                    </text>
+        }});
+
+    </script>

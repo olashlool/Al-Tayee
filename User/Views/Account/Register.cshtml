@@ -1,0 +1,163 @@
+﻿@model Admin.Models.ViewModels.RegisterVM
+<div class=center-1>
+    <div class="page registration-page">
+        <div class="container-fluid position-relative">
+            <div class="d-flex justify-content-center align-items-center py-50 px-0 page-header">
+                <div class="position-absolute t-0 b-0 l-0 r-0 bg-gray page-header--bg lazyload" data-src="https://nop-kalles.nop-station.com/images/thumbs/0000368_0000275_Categorie-Breadcrumb-Banner-men.jpeg"></div>
+                <div class="position-relative page-header--content">
+                    <h1 class="clr-white f-s-20 text-center page-header--content-title">@Localizer["Register"]</h1>
+                </div>
+            </div>
+        </div>
+        <div class="pt-4 page-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <form class="inline-form" asp-controller="Account" asp-action="Register" method="post">
+                            <div class="fieldset">
+                                <div class="title"><strong>@Localizer["YourPersonalDetails"]</strong></div>
+                                <div class="alert alert-danger" role="alert" asp-validation-summary="ModelOnly" class="text-danger" style="margin: 0;padding: 5px; margin-top: 20px; margin-bottom: 20px;"></div>
+                                <div class="form-fields">
+                                    <div class="form-group row align-items-center inputs">
+                                        <div class="col-md-4 col-lg-5 text-left text-md-right"><label asp-for="Gender" class="col-form-label">@Localizer["Gender"]:</label><span class="required">*</span></div>
+                                        <div class="col-md-8 col-lg-7 text-left">
+                                            <div class="gender">
+                                                <span class="ctm-radio male"> <input data-val-required="@Localizer["ValidationGender"]" asp-for="Gender" type="radio" value="Male" id="gender-male" name="Gender"> <label class="forcheckbox" for="gender-male">@Localizer["Male"]</label> </span>
+                                                <span class="ctm-radio female"> <input type="radio" value="Female" id="gender-female" name="Gender"> <label class="forcheckbox" for="gender-female">@Localizer["Female"]</label> </span>
+                                                <span asp-validation-for="Gender" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row align-items-center inputs">
+                                        <div class="col-md-4 col-lg-5 text-left text-md-right"><label class="col-form-label" for="FirstName">@Localizer["FirstName"]:</label> <span class="required">*</span></div>
+                                        <div class="col-md-8 col-lg-7 text-left">
+                                            <input asp-for="FirstName" class="form-control" type="text" data-val="true" data-val-required="@Localizer["ValidationFirstName"]" id="FirstName" name="FirstName">
+                                            <span asp-validation-for="FirstName" class="field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row align-items-center inputs">
+                                        <div class="col-md-4 col-lg-5 text-left text-md-right"><label class="col-form-label" for="LastName">@Localizer["LastName"]:</label> <span class="required">*</span></div>
+                                        <div class="col-md-8 col-lg-7 text-left">
+                                            <input asp-for="LastName" class="form-control" type="text" data-val="true" data-val-required="@Localizer["ValidationLastName"]" id="LastName" name="LastName">
+                                            <span></span>
+                                            <span asp-validation-for="LastName" class="field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row align-items-center inputs date-of-birth">
+                                        <div class="col-md-4 col-lg-5 text-left text-md-right"><label class="col-form-label">@Localizer["DateOfBirth"]:</label></div>
+                                        <div class="col-md-8 col-lg-7 text-left">
+                                            <div class="date-picker-wrapper">
+                                                <select asp-selected-day="" asp-selected-month="" asp-selected-year="" asp-for="Day">
+                                                    <option value="0">@Localizer["Day"]</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                    <option value="31">31</option>
+                                                </select>
+                                                <select asp-selected-day="" asp-selected-month="" asp-selected-year="" asp-for="Month">
+                                                    <option value="0">@Localizer["Month"]</option>
+                                                    <option value="1">January</option>
+                                                    <option value="2">February</option>
+                                                    <option value="3">March</option>
+                                                    <option value="4">April</option>
+                                                    <option value="5">May</option>
+                                                    <option value="6">June</option>
+                                                    <option value="7">July</option>
+                                                    <option value="8">August</option>
+                                                    <option value="9">September</option>
+                                                    <option value="10">October</option>
+                                                    <option value="11">November</option>
+                                                    <option value="12">December</option>
+                                                </select>
+                                                <select asp-selected-day="" asp-selected-month="" asp-selected-year="" id="year" asp-for="Year">
+                                                    <option value="0">@Localizer["Year"]</option>
+                                                </select>
+                                            </div>
+                                            <span class="field-validation-valid" data-valmsg-for="DateOfBirthDay" data-valmsg-replace="true"></span> <span class="field-validation-valid" data-valmsg-for="DateOfBirthMonth" data-valmsg-replace="true"></span> <span class="field-validation-valid" data-valmsg-for="DateOfBirthYear" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row align-items-center inputs">
+                                        <div class="col-md-4 col-lg-5 text-left text-md-right"><label class="col-form-label" for="Email">@Localizer["Email"]:</label> <span class="required">*</span></div>
+                                        <div class="col-md-8 col-lg-7 text-left">
+                                            <input asp-for="Email" class="form-control" type="email" data-val="true" data-val-email="@Localizer["ValidationEmail2"]" data-val-required="@Localizer["ValidationEmail"]" id="Email" name="Email">
+                                            <span asp-validation-for="Email" class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row align-items-center inputs">
+                                        <div class="col-md-4 col-lg-5 text-left text-md-right"><label class="col-form-label">@Localizer["PhoneNumber"]:</label> <span class="required">*</span></div>
+                                        <div class="col-md-8 col-lg-7 text-left">
+                                            <input asp-for="PhoneNumber" class="form-control" type="tel" name="PhoneNumber" data-val-required="@Localizer["ValidationPhone"]">
+                                            <span asp-validation-for="PhoneNumber" class="field-validation-valid"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fieldset">
+                                <div class="title"><strong>@Localizer["Password"]</strong></div>
+                                <div class="form-fields">
+                                    <div class="form-group row align-items-center inputs">
+                                        <div class="col-md-4 col-lg-5 text-left text-md-right"><label class="col-form-label" for="Password">@Localizer["Password"]:</label> <span class="required">*</span></div>
+                                        <div class="col-md-8 col-lg-7 text-left">
+                                            <input asp-for="Password" class="form-control" type="password" data-val="true" data-val-regex="@Localizer["ValidationPassword"]" data-val-regex-pattern="^.{6,}$" data-val-required="@Localizer["ValidationPassword"]" id="Password" name="Password">
+                                            <span></span>
+                                            <span asp-validation-for="Password" class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row align-items-center inputs">
+                                        <div class="col-md-4 col-lg-5 text-left text-md-right"><label class="col-form-label" for="ConfirmPassword">@Localizer["ConfirmPassword"]:</label> <span class="required">*</span></div>
+                                        <div class="col-md-8 col-lg-7 text-left">
+                                            <input asp-for="ConfirmPassword" class="form-control" type="password" data-val="true" data-val-equalto="@Localizer["ValidConfirmPass"]" data-val-equalto-other="*.Password" data-val-required="@Localizer["ValidationPassword"]" id="ConfirmPassword" name="ConfirmPassword">
+                                            <span asp-validation-for="ConfirmPassword" class="field-validation-valid" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttons"><input type="submit" id="register-button" class="btn btn-primary btn-lg text-uppercase register-next-step-button" value="@Localizer["Register"]" name="register-button"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@section Scripts {
+    <script>
+        /*Date years */
+        var currentYears = new Date().getFullYear();
+        var selectorYear = document.getElementById("year");
+        for (var i = currentYears; i >= currentYears - 70; i--) {
+            var option = document.createElement("option");
+            option.value = i;
+            option.textContent = i;
+            selectorYear.appendChild(option);
+        }
+    </script>
+}

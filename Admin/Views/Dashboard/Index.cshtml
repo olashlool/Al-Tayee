@@ -1,0 +1,178 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using Admin.Models.Interface;
+@inject IOrder _order
+@inject IViewLocalizer Localizer
+@model Admin.Models.ViewModels.HomeAdminVM
+
+<div class="ec-content-wrapper">
+    <div class="content">
+        <div class="row">
+            <div class="col-xl-3 col-sm-6 p-b-15 lbl-card">
+                <div class="card card-mini dash-card card-3">
+                    <div class="card-body">
+                        <h2 class="mb-1">@ViewBag.CountOfBrands</h2>
+                        <p>@Localizer["TotalBrands"]</p>
+                        <span class="mdi mdi-tag-faces"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 p-b-15 lbl-card">
+                <div class="card card-mini dash-card card-2">
+                    <div class="card-body">
+                        <h2 class="mb-1">@ViewBag.CountOfProduct</h2>
+                        <p>@Localizer["TotalProducts"]</p>
+                        <span class="mdi mdi-palette-advanced"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 p-b-15 lbl-card">
+                <div class="card card-mini dash-card card-4">
+                    <div class="card-body">
+                        <h2 class="mb-1">@ViewBag.CountOfOrdersCompleted</h2>
+                        <p>@Localizer["TotalCompleteOrders"]</p>
+                        <span class="mdi mdi-truck-delivery"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 p-b-15 lbl-card">
+                <div class="card card-mini dash-card card-2">
+                    <div class="card-body">
+                        <h2 class="mb-1">@ViewBag.CountOfOrdersRejected</h2>
+                        <p>@Localizer["TotalRejectedOrders"]</p>
+                        <span class="mdi mdi-package-variant"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 p-b-15">
+                <!-- Recent Order Table -->
+                <div class="card card-table-border-none card-default recent-orders" id="recent-orders">
+                    <div class="card-header justify-content-between">
+                        <h2>@Localizer["RecentOrders"]</h2>
+                    </div>
+                    <div class="card-body pt-0 pb-5">
+                        <table class="table card-table table-responsive table-responsive-large" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>@Localizer["OrderID"]</th>
+                                    <th>@Localizer["Name"]</th>
+                                    <th class="d-none d-lg-table-cell">@Localizer["OrderDate"]</th>
+                                    <th class="d-none d-lg-table-cell">@Localizer["OrderCost"]</th>
+                                    <th>@Localizer["Status"]</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Orders.Take(5))
+                                {
+                                    var orderItems = await _order.GetOrderItemsByOrderId(item.ID);
+                                    <tr>
+                                        <td>@item.ID</td>
+                                        <td>
+                                            <a class="text-dark" href=""> @item.FirstName @item.LastName</a>
+                                        </td>
+                                        <td class="d-none d-lg-table-cell">@item.Timestamp</td>
+                                        @{
+                                            double subtotal = 0;
+                                            foreach (var orderItem in orderItems)
+                                            {
+                                                subtotal += orderItem.Quantity * orderItem.Product.Price;
+                                            }
+                                        }
+                                        <td class="d-none d-lg-table-cell">$230</td>
+                                        <td>
+                                            <span class="badge badge-success">@item.OrderStatus</span>
+                                        </td>
+                                        <td class="text-right">
+                                            <div class="dropdown show d-inline-block widget-dropdown">
+                                                <a class="dropdown-toggle icon-burger-mini" href="" role="button" id="dropdown-recent-order1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static"></a>
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item">
+                                                        <a href="Order/Detail/@item.ID">@Localizer["View"]</a>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a onclick="location.href='@Url.Action("DeleteConfirmed", "Home", new { id = item.ID })'">@Localizer["Remove"]</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-5">
+                <!-- New Customers -->
+                <div class="card ec-cust-card card-table-border-none card-default">
+                    <div class="card-header justify-content-between ">
+                        <h2>@Localizer["UserFeedback"]</h2>
+                    </div>
+                    <div class="card-body pt-0 pb-15px">
+                        <table class="table ">
+                            <tbody>
+                                @foreach (var item in Model.ContactUs.Take(3))
+                                {
+                                    <tr>
+                                        <td>
+                                            <div class="media">
+                                                <div class="media-image mr-3 rounded-circle">
+                                                    <img class="profile-img rounded-circle w-45" src="/Admin/assets/img/user/feedback.jpg" alt="customer image">
+                                                </div>
+                                                <div class="media-body align-self-center">
+                                                    <a href="/Feedback">
+                                                        <h6 class="mt-0 text-dark font-weight-medium">
+                                                            @item.Name
+                                                        </h6>
+                                                    </a>
+                                                    <small>@item.Enquiry</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <button type="button" onclick="location.href='/Feedback'" class="btn btn-primary" style="float:right">@Localizer["ViewAll"]</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-7">
+                <!-- Top Products -->
+                <div class="card card-default ec-card-top-prod">
+                    <div class="card-header justify-content-between">
+                        <h2>@Localizer["FeaturedProducts"]</h2>
+                    </div>
+                    <div class="card-body mt-10px mb-10px py-0">
+                        @foreach (var item in Model.Products.Take(2))
+                        {
+                            <div class="row media d-flex pt-15px pb-15px">
+                                <div class="col-lg-3 col-md-3 col-2 media-image align-self-center rounded">
+                                    <a href="/Products/Details?Id=@item.Id"><img src="~/images/@item.BaseImage" alt="customer image"></a>
+                                </div>
+                                <div class="col-lg-9 col-md-9 col-10 media-body align-self-center ec-pos">
+                                    <a href="#">
+                                        <h6 class="mb-10px text-dark font-weight-medium">@item.NameEn</h6>
+                                    </a>
+                                    <p class="d-none d-md-block">
+                                        @item.DescriptionEn
+                                    </p>
+                                    <p class="mb-0 ec-price">
+                                        <span class="text-dark">@item.Price</span>
+                                    </p>
+                                </div>
+                            </div>
+                        }
+                        <button type="button" onclick="location.href='/Products'" class="btn btn-primary" style="float:right">@Localizer["ViewAll"]</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End Content -->
+</div>

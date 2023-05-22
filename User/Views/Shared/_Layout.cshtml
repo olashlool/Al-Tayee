@@ -1,0 +1,563 @@
+﻿@inject Admin.Models.Interface.IBrands Brands
+@inject Admin.Models.Interface.IProducts Products
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<!DOCTYPE html>
+<html lang=en dir=ltr class=html-login-page>
+<head>
+    <title>Al-Tayee fdn.</title>
+    <meta charset=UTF-8>
+    <meta name=description content="@Localizer["Description"]">
+    <meta name=keywords content="@Localizer["Keywords"]">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name=msapplication-TileColor content=#2d89ef>
+    <meta name=msapplication-TileImage content=/icons/icons_0/mstile-144x144.png>
+    <meta name=msapplication-config content=/icons/icons_0/browserconfig.xml>
+    <meta name=theme-color content=#ffffff>
+    <link rel="shortcut icon" href="~/images/Al-Tayee-fdn.-Icone.png" type="image/x-icon" />
+    <script src="/User/Scripts/js/Homepage.Head.scriptsd79c.js" type="text/javascript"></script>
+    @{
+        string culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+
+        if (culture.StartsWith("en"))
+        {
+            <link rel=stylesheet href="/User/Themes/NopKalles/Content/css/bootstrap.min352e.css">
+            <link rel=stylesheet href="/User/Themes/NopKalles/Content/css/styles0e1b.css">
+            <link rel=stylesheet href="/User/Themes/NopKalles/Content/css/responsive8c6e.css">
+            <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.QuickView/Themes/NopKalles/contents/css/stylesa021.css">
+            <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.OCarousels/Themes/NopKalles/Contents/css/stylesbc12.css">
+            <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.OCarousels/Contents/css/owl.carousel13bc.css">
+            <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.OCarousels/Contents/css/owl.theme.green.min5dbe.css">
+            <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.AnywhereSlider/Content/css/owl.carousel0e0f.css">
+            <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.AnywhereSlider/Content/css/owl.theme.green.minb120.css">
+            <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.MegaMenu/Themes/NopKalles/Content/css/megamenua498.css">
+            <link href="/User/Site.css" rel="stylesheet" />
+            <script>
+                $(document).ready(function () {
+                    $("img#AlTayeelogo").attr('src', '../images/Al-Tayee-English-logo.png');
+                    $("img#Slider1").attr('src', '../images/Slider-1.png');
+                    $("img#Slider2").attr('src', '../images/Slider-2.png');
+                    $("img#Slider3").attr('src', '../images/Slider-3.png');
+                });
+            </script>
+        }
+        else if (culture.StartsWith("ar"))
+        {
+            <link rel=stylesheet href="/User/Themes/NopKalles/Content/css/bootstrap.min.rtl29e8.css">
+            <link rel=stylesheet href="/User/Themes/NopKalles/Content/css/styles.rtl144b.css">
+            <link rel=stylesheet href="/User/Themes/NopKalles/Content/css/responsive.rtl294d.css">
+            <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.QuickView/Themes/NopKalles/contents/css/styles.rtl21c0.css">
+            <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.OCarousels/Themes/NopKalles/Contents/css/styles.rtle727.css">
+            <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.OCarousels/Contents/css/rtl/owl.carouselef77.css">
+            <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.OCarousels/Contents/css/rtl/owl.theme.green.minff7c.css?v=FVptHFFFcV4s3d7Lu1UkKVmJ_RE">
+            <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.AnywhereSlider/Themes/NopKalles/Content/css/styles.rtl79d1.css">
+            <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.AnywhereSlider/Content/css/rtl/owl.carousel71fa.css">
+            <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.AnywhereSlider/Content/css/rtl/owl.theme.green.min0819.css">
+            <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.MegaMenu/Themes/NopKalles/Content/css/megamenu.rtl7278.css">
+            <link href="/User/SiteAr.css" rel="stylesheet" />
+            <script>
+                $(document).ready(function () {
+                    $("img#AlTayeelogo").attr('src', '../images/Al-Tayee-Arabic-logo.png');
+                    $("img#Slider1").attr('src', '../images/Slider-1-Ar.png');
+                    $("img#Slider2").attr('src', '../images/Slider-2-Ar.png');
+                    $("img#Slider3").attr('src', '../images/Slider-3-Ar.png');
+                });
+            </script>
+        }
+    }
+</head>
+<body>
+    <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel=stylesheet href="/User/Themes/NopKalles/Content/css/linearicons88b3.css">
+    <link href="../lib_npm/jquery-ui-dist/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/lib_npm/jquery-ui-dist/jquery-ui.min.css" rel="stylesheet" />
+    <link rel=stylesheet href="/User/Themes/NopKalles/Content/css/fontawesome-all.minfebf.css">
+    <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.ProductRibbon/Themes/NopKalles/Contents/css/styles9870.css">
+    <link rel=stylesheet href="/User/Themes/NopKalles/Content/css/owl.carousel.min6b33.css">
+    <link rel=stylesheet href="/User/Themes/NopKalles/Content/css/color7334.css">
+    <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.QuickView/Contents/css/magnific-popup0b51.css">
+    <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.PictureZoom/Contents/css/stylesf57b.css">
+    <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.PictureZoom/Contents/css/cloud-zoomf368.css">
+    <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.AnywhereSlider/Themes/NopKalles/Content/css/stylesfe77.css">
+
+
+    <div class=master-wrapper-page>
+        <div class=master-column-wrapper>
+            <header class="w-100 header">
+                <div class="d-flex justify-content-center align-items-center py-2 header-top">
+                    <div class=container>
+                        <div class=row>
+                            <div class="col-12 col-md-6 d-none d-sm-block">
+                                <div class="d-flex justify-content-center justify-content-md-start align-items-center h-100 header-top--left">
+                                    <ul class="mb-2 mb-md-0 list-inline header-top-links">
+                                        <li class=list-inline-item><a href=tel:+962795524245> <i class="fas fa-phone-alt pr-1 rtl"></i> <span>&#x2B;962795524245</span> </a>
+                                        <li class=list-inline-item><a href="mailto:info@al-tayee.com"> <i class="far fa-envelope pr-1 rtl"></i> <span><span>info@al-tayee.com</span></span> </a>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex justify-content-center justify-content-md-end align-items-center h-100 header-top--right">
+                                    <div class="dropdown show border-right pr-2 mr-3 rtl">
+                                        <a class="dropdown-toggle language-selector" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            @Thread.CurrentThread.CurrentUICulture.Name
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item" href="/Home/Change?culture=en">@Localizer["English"]</a>
+                                            <a class="dropdown-item" href="/Home/Change?culture=ar">@Localizer["Arabic"]</a>
+                                        </div>
+                                    </div>
+                                    <div class="border-right pr-2 mr-3 rtl">
+                                        <div class=currency-selector>
+                                            <select id=customerCurrency name=customerCurrency onchange="if (!window.__cfRLUnblockHandlers) return false; setLocation(this.value)" aria-label="Currency selector" data-cf-modified-90d46f657ad5f90280106dba-="">
+                                                <option selected value="USD">@Localizer["JOD"]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <ul class="mb-0 list-inline header-top-links">
+                                            <li class="list-inline-item">
+                                                <a asp-controller="Account" asp-action="Logout"> <i class="fas fa-sign-out-alt"></i> <span>@Localizer["Logout"]</span> </a>
+                                            </li>
+                                        </ul>
+                                    }
+                                    else
+                                    {
+                                        <ul class="mb-0 list-inline header-top-links">
+                                            <li class=list-inline-item><a href="/Account/Login"> <i class="fas fa-sign-in-alt"></i> <span>@Localizer["Login"]</span> </a>
+                                            <li class=list-inline-item><a href="/Account/Register"> <i class="fas fa-user-plus"></i> <span>@Localizer["Register"]</span> </a>
+                                        </ul>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="HederDisplayBlock" class="d-flex justify-content-center align-items-center header-middle">
+                    <div class=container>
+                        <div class=row>
+                            <div class="col-3 col-md-4 d-block d-lg-none">
+                                <div class="d-flex justify-content-start align-items-center h-100 clr-dark header-middle--left"><button type=button class="btn-sb btn-toggle-menu clr-dark"> <i class="fas fa-align-left fa-lg"></i> </button></div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <div class="d-flex justify-content-center justify-content-lg-start align-items-center h-100 header-middle--left">
+                                    <div class="d-flex align-items-center mb-0 header-logo"><a href="/"> <img id="AlTayeelogo" alt=Al-Tayee src="~/"> </a></div>
+                                </div>
+                            </div>
+                            <div class="d-inline-flex d-lg-none position-absolute">
+                                <div class="d-flex justify-content-center align-items-center h-100 header-middle--middle">
+                                    <nav class="justify-content-center w-100 py-0 navbar navbar-expand-lg">
+                                        <div class="m-0 py-0 border-0 header-menu mega-menu">
+                                            <div class="position-fixed t-0 b-0 d-block of-x-h of-y-a bg-white sb sb-left sb-menu">
+                                                <div class="d-flex flex-column h-100 sb--inner">
+                                                    <div class="d-flex justify-content-between align-items-center p-0 clr-dark sb--header">
+                                                        <ul class="nav nav-tabs nav-justified w-100" id=mobileNavTabs role=tablist>
+                                                            <li class=nav-item><a class="d-flex justify-content-center align-items-center text-center text-uppercase f-s-14 clr-dark nav-link active" id=categories-tab data-toggle=tab href=#categories role=tab aria-controls=categories aria-selected=true> @Localizer["Brands"] </a>
+                                                            <li class=nav-item><a class="d-flex justify-content-center align-items-center text-center text-uppercase f-s-14 clr-dark nav-link" id=quick-links-tab data-toggle=tab href=#quick-links role=tab aria-controls=quick-links aria-selected=false> @Localizer["QuickLinks"] </a>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="position-relative d-flex flex-column justify-content-between w-100 h-100 of-h text-left sb--content">
+                                                        <div class="position-relative of-h w-100 h-100 sb--scroll">
+                                                            <div class="position-absolute t-0 r-0 b-0 l-0 of-a of-x-h scrollbar-inner sb--scroll-inner">
+                                                                <div class=tab-content id=mobileNavTabsContent>
+                                                                    <div class="tab-pane fade show active" id=categories role=tabpanel aria-labelledby=categories-tab>
+                                                                        <nav class=mob-nav role=navigation>
+                                                                            <ul class="top-menu mobile">
+                                                                            </ul>
+                                                                            <ul class="top-menu mobile">
+
+                                                                                @foreach (var item in await Brands.GetBrands())
+                                                                                {
+                                                                                    <li class="col-3 nav-item dropdown accordion">
+                                                                                        <a id=heading-men class="position-relative nav-link text-ellipsis" href="/Brands/Products?id=@item.Id">
+                                                                                            <span class="position-relative d-block py-10 pl-0 pr-1 nav-link--label">
+                                                                                                <span>@item.NameEn</span>
+                                                                                                <span class=nav-counter></span>
+                                                                                            </span>
+                                                                                        </a>
+                                                                                        <div class="sublist-toggle collapsed" data-toggle=collapse data-target=#@item.NameEn aria-expanded=false aria-controls=collapse-men></div>
+                                                                                        <ul id=@item.NameEn aria-labelledby=heading-men class="collapse position-relative sublist first-level">
+                                                                                            @foreach (var product in await Products.GetProductByBrand(item.Id))
+                                                                                            {
+                                                                                            <li class="col-3 nav-item dropdown accordion">
+                                                                                                <a id=heading-jeans-2 class="position-relative nav-link text-ellipsis" href=#>
+                                                                                                    <span class="position-relative d-block py-10 pl-0 pr-1 nav-link--label">
+                                                                                                            <span>@product.NameEn</span>
+                                                                                                    </span>
+                                                                                                </a>
+                                                                                            </li>
+                                                                                            }
+                                                                                        </ul>
+                                                                                    </li>
+                                                                                }
+                                                                            </ul>
+                                                                        </nav>
+                                                                    </div>
+                                                                    <div class="tab-pane fade" id=quick-links role=tabpanel aria-labelledby=quick-links-tab>
+                                                                        <nav class=mob-nav role=navigation>
+                                                                            <ul class="top-menu mobile">
+                                                                                <li class=nav-item><a class=nav-link href="/Products/FeaturedProduct">@Localizer["FeaturedProducts"]</a>
+                                                                                <li class=nav-item><a class=nav-link href="/Home/AboutUs">@Localizer["AboutUs"]</a>
+                                                                                <li class=nav-item><a class=nav-link href="/Contactus">@Localizer["ContactUs"]</a>
+                                                                            </ul>
+                                                                        </nav>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class=sb--footer>
+                                                        <div class="px-20 py-15 sb--footer-inner">
+                                                            <h5 class=f-s-14>@Localizer["NeedHelp"]</h5>
+                                                            <ul class="list-unstyled m-0">
+                                                                <li class=pb-2><a href=tel:+962795524245> <i class="fas fa-phone-alt"></i> <span class=pl-1>&#x2B;962795524245</span> </a>
+                                                                <li>
+                                                                    <a href="mailto:info@al-tayee.com">
+                                                                        <i class="far fa-envelope"></i>
+                                                                        <span class=pl-1>
+                                                                            info@al-tayee.com
+                                                                        </span>
+                                                                    </a>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="position-fixed t-0 l-0 w-100 h-100 sb--overlay sb--overlay-menu"></div>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col col-lg-8 d-none d-lg-block position-static">
+                                <div class="d-flex justify-content-center align-items-center h-100 header-middle--middle">
+                                    <nav class="justify-content-center w-100 py-0 navbar navbar-expand-lg position-static">
+                                        <div class="m-0 py-0 border-0 header-menu mega-menu">
+                                            <div class="collapse navbar-collapse justify-content-center" id=navbarSupportedContent-4>
+                                                <ul class="navbar-nav flex-wrap">
+                                                    <li class="nav-item first-lebel-nav"><a class="position-relative d-flex justify-content-center align-items-center px-3 f-s-14 text-capitalize nav-link" href="/">@Localizer["Home"]</a>
+                                                    <li class="nav-item first-lebel-nav"><a class="position-relative d-flex justify-content-center align-items-center px-3 f-s-14 text-capitalize nav-link" href="/Home/AboutUs">@Localizer["AboutUs"]</a>
+                                                    <li class="position-static nav-item nav-products dropdown">
+                                                        <ul class="navbar-nav align-items-center">
+                                                            <li class="dropdown nav-item dropdown-menu-list">
+                                                                <a class="position-relative d-flex justify-content-center align-items-center px-3 f-s-14 nav-link dropdown-toggle" href=# role=button id="dropdownMenuLink manufacture-dropdown" data-toggle=dropdown aria-haspopup=true aria-expanded=false>@Localizer["Brands"] </a>
+                                                                <div class="d-block dropdown-menu dropdown-menu-md dropdown-menu-right" aria-labelledby=dropdownMenuButton>
+                                                                    <div class="second-dropdown d-block container">
+                                                                        <ul class="row px-3 text-center" id="ddlLayoutBrands">
+
+                                                                                    @foreach (var item in await Brands.GetBrands())
+                                                                                    {
+                                                                                <li class="d-block col-4 mb-2 nav-item dropdown"><a class="d-block px-0 nav-link" asp-controller="Brands" asp-action="Products" asp-route-brandId="@item.Id"> <span class="position-relative d-block w-100 py-10 pl-0 pr-1 text-center text-uppercase nav-link--label"> <span>@item.NameEn</span> </span> </a> </li>
+                                                                                    }
+                                                                        </ul>
+                                                                        <div class="row px-3">
+                                                                            <div class=col-12>
+                                                                                <div class="mt-3 text-center all-manufacture"><a class="btn btn-default w-100" href="/Brands">@Localizer["ViewAll"]</a></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="nav-item first-lebel-nav"><a class="position-relative d-flex justify-content-center align-items-center px-3 f-s-14 nav-link" href=/Products/FeaturedProduct>@Localizer["FeaturedProducts"]</a>
+                                                    <li class="nav-item first-lebel-nav"><a class="position-relative d-flex justify-content-center align-items-center px-3 f-s-14 nav-link" href=/Contactus>@Localizer["ContactUs"]</a>
+                                                </ul>
+                                            </div>
+                                            <div class="position-fixed t-0 l-0 w-100 h-100 sb--overlay sb--overlay-menu"></div>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-3 col-md-4 col-lg-2">
+                                <div class="d-flex justify-content-end align-items-center h-100 header-middle--right">
+                                    <div class="header-links header-menu-icons-wrapper">
+                                        <ul class="mb-0 list-inline header-menu-icons">
+                                            <li class="list-inline-item d-md-inline-block">
+                                                <button type=button class="d-none d-md-inline-block btn-tb btn-toggle-search" title=Search> <i class="lnr lnr-magnifier f-s-20"></i> </button>
+                                                <div class="position-fixed t-0 l-0 d-block of-h w-100 py-4 py-lg-5 bg-white tb tb-search">
+                                                    <div class=container>
+                                                        <div class="d-flex justify-content-between align-items-center pb-2 tb--header">
+                                                            <div class="d-inline-block f-s-14 tb-search--title">@Localizer["SearchProductsToYourNeeds"]</div>
+                                                            <button class=tb--btn-close> <i class="fas fa-times"></i> </button>
+                                                        </div>
+                                                        <div class=tb--content>
+                                                            <form method=get class=search-form id=small-search-box-form asp-controller="Search" asp-action="index">
+                                                                <div class="position-relative search-input"><input type=text class=search-box-text id=small-searchterms autocomplete=off name="searchTerm" placeholder="@Localizer["SearchStor"]" aria-label="@Localizer["SearchStor"]"> <button type=submit value=Search class="text-right search-box-button"> <span class=d-none>button</span> </button></div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="position-fixed t-0 l-0 w-100 h-100 tb--overlay tb--overlay-search"></div>
+                                            </li>
+                                            <li class="list-inline-item d-none d-md-inline-block">
+                                                <a href="/Wishlist"> <span class="d-flex counter-wrapper"> <i class="lnr lnr-heart f-s-20"> <span id="wishlistCount" class="wishlist-qty counter">0</span> </i> </span> </a>
+                                            </li>
+                                            <li class=list-inline-item>
+                                                <button type=button class="btn-sb btn-toggle-cart"> <span class="d-flex counter-wrapper"> <i class="lnr lnr-cart f-s-22"> <span id="cartCount" class="cart-qty counter">0</span> </i> </span> </button>
+                                            </li>
+                                        </ul>
+                                        <div id="flyout-cart">
+                                            <div class="position-fixed t-0 b-0 d-block of-x-h of-y-a bg-white sb sb-right sb-mini-cart">
+                                                <div class="d-flex flex-column h-100 sb--inner">
+                                                    <div class="d-flex justify-content-between align-items-center clr-dark sb--header">
+                                                        <h3 class="text-left text-uppercase f-s-16 sb--title">
+                                                            @Localizer["ShoppingCart"]
+                                                        </h3>
+                                                        <span class="lnr lnr-cross f-s-20 cr-pointer sb--btn-close" onclick="NopStationSmartShoppingCart.closeCart()"></span>
+                                                    </div>
+                                                    @await Component.InvokeAsync("SmallCart")
+                                                </div>
+                                            </div>
+                                            <div class="position-fixed t-0 l-0 w-100 h-100 sb--overlay sb--overlay-cart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            @RenderBody()
+        </div>
+        <div class=container></div>
+        <div class="row no-gutters">
+            <div class="col-12 shipping-types-wrapper">
+                <div class=container>
+                    <div class="shipping-types row">
+                        <div class="col-12 col-md-6 col-lg-3 mb-4 mb-md-4 mb-lg-0 shipping-type">
+                            <a href=page-not-found.html class=information-box></a>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto mr-4 text-center clr-gray shipping-type--icon"><img src=https://nop-kalles.nop-station.com/images/thumbs/0001413_7days.png alt=""></div>
+                                <div class="col of-h clr-gray text-left shipping-type--info">
+                                    <h3 class="mt-0 mb-1 clr-dark shipping-type--title">@Localizer["Support"]</h3>
+                                    <p class="m-0 text-left shipping-type--desc">@Localizer["SupportDec"]
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 mb-4 mb-md-4 mb-lg-0 shipping-type">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto mr-4 text-center clr-gray shipping-type--icon"><img src=https://nop-kalles.nop-station.com/images/thumbs/0001414_30-days-return.png alt=""></div>
+                                <div class="col of-h clr-gray text-left shipping-type--info">
+                                    <h3 class="mt-0 mb-1 clr-dark shipping-type--title">@Localizer["ReturnPolicy"]</h3>
+                                    <p class="m-0 text-left shipping-type--desc">@Localizer["ReturnPolicyDec"]
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 mb-4 mb-md-4 mb-lg-0 shipping-type">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto mr-4 text-center clr-gray shipping-type--icon"><img src=https://nop-kalles.nop-station.com/images/thumbs/0001416_free-delivery.png alt=""></div>
+                                <div class="col of-h clr-gray text-left shipping-type--info">
+                                    <h3 class="mt-0 mb-1 clr-dark shipping-type--title">@Localizer["FastDelivery"]</h3>
+                                    <p class="m-0 text-left shipping-type--desc">@Localizer["FastDeliveryDec"]
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 mb-4 mb-md-4 mb-lg-0 shipping-type">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto mr-4 text-center clr-gray shipping-type--icon"><img src=https://nop-kalles.nop-station.com/images/thumbs/0001415_worldWide--shpping.png alt=""></div>
+                                <div class="col of-h clr-gray text-left shipping-type--info">
+                                    <h3 class="mt-0 mb-1 clr-dark shipping-type--title">@Localizer["DomesticShipping"]</h3>
+                                    <p class="m-0 text-left shipping-type--desc">@Localizer["DomesticShippingDec"]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-black footer">
+            <div class="pt-5 footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="footer-block mb-2 mb-md-4 mb-lg-0 contact-info">
+                                <h3 class="d-flex justify-content-between d-md-none clr-white title opened"><span class="text-uppercase">Get in touch</span> <span class="d-flex justify-content-end align-items-center d-md-none icons"> <span class="fas fa-plus"><span class="d-none">icon</span></span> <span class="fas fa-minus"><span class="d-none">icon</span></span> </span></h3>
+                                <ul class="list-unstyled mb-0 clr-gray list" style="display: block;">
+                                    <li>
+                                        <div class="row no-gutters">
+                                            <div class="col-auto mr-2 lh-100 f-s-20"><span class="lnr lnr-map"><span class="d-none">icon</span></span></div>
+                                            <div class="col">
+                                                <p class="m-0 text-break">@Localizer["LocationPath"]</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row no-gutters">
+                                            <div class="col-auto mr-2 lh-100 f-s-20"><span class="lnr lnr-envelope"><span class="d-none">icon</span></span></div>
+                                            <div class="col"><a class="text-break" href="mailto:info@al-tayee.com">info@al-tayee.com</a></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row no-gutters">
+                                            <div class="col-auto mr-2 lh-100 f-s-20"><span class="lnr lnr-phone"><span class="d-none">icon</span></span></div>
+                                            <div class="col"><a class="text-break" href="tel:+962795524245">+962795524245</a></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row no-gutters">
+                                            <div class="col-auto mr-2 lh-100"><span class="fab fa-facebook-f fa-lg"><span class="d-none">icon</span></span></div>
+                                            <div class="col"><a class="text-break" href="https://www.facebook.com/AltayeeTrading">@Localizer["Facebook"]</a></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3"></div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="footer-block mb-2 mb-md-4 mb-lg-0 information">
+                                <h3 class="d-flex justify-content-between clr-white title"><span class="text-uppercase">@Localizer["Information"]</span> <span class="d-flex justify-content-end align-items-center d-md-none icons"> <span class="fas fa-plus"><span class="d-none">icon</span></span> <span class="fas fa-minus"><span class="d-none">icon</span></span> </span></h3>
+                                <ul class="list-unstyled mb-0 list">
+                                    <li><a href="/Home/DeliveryAndReturns">@Localizer["DeliveryAndReturns"]</a></li>
+                                    <li><a href="/Home/PrivacyPolicy">@Localizer["PrivacyPolicy"]</a></li>
+                                    <li><a href="/Home/ConditionsofUse">@Localizer["ConditionsofUse"]</a></li>
+                                    <li><a href="/Home/AboutUs">@Localizer["AboutUs"]</a></li>
+                                    <li><a href="/Contactus">@Localizer["ContactUs"]</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="footer-block mb-2 mb-md-0 my-account">
+                                <h3 class="d-flex justify-content-between clr-white title"><span class="text-uppercase">@Localizer["MyAccount"]</span> <span class="d-flex justify-content-end align-items-center d-md-none icons"> <span class="fas fa-plus"><span class="d-none">icon</span></span> <span class="fas fa-minus"><span class="d-none">icon</span></span> </span></h3>
+                                <ul class="list-unstyled mb-0 list">
+                                    <li><a href="/Account/ProfileAccount">@Localizer["MyAccount"]</a></li>
+                                    <li><a href="/Orders">@Localizer["Orders"]</a></li>
+                                    <li><a href="/Addresses">@Localizer["Addresses"]</a></li>
+                                    <li><a href="/Cart">@Localizer["ShoppingCart"]</a></li>
+                                    <li><a href="/Wishlist">@Localizer["Wishlist"]</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white py-3 mb-5 mb-lg-0 footer-bottom">
+                <div class="container">
+                    <div class="row justify-content-between mb-2 mb-lg-0">
+                        <div class="col-12 col-lg-5 col-md-4 mb-2 mb-md-0 order-2 order-md-1">
+                            <p class="footer-margin-text text-center text-md-left f-s-14 clr-gray-d">@Localizer["Copyright"]</p>
+                        </div>
+                        <div class="col-12 col-lg-2 col-md-4 mb-2 mb-md-0 order-2 order-md-2"><a class="payment-cart-logo"> <img style="height: 30px;" src="~/images/Cards.png"> </a></div>
+                        <div class="col-12 col-lg-5 col-md-4 order-1 order-md-3">
+                            <div class="footer-margin-text text-center text-md-right">Powered by <a id="majesticAgency" href="https://majesticagency.net/"><strong>Majestic</strong> Agency</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-100 bg-white d-block d-lg-none toolbar-bottom">
+            <ul class="list-inline d-flex justify-content-between align-items-center m-0">
+                <li class="text-center list-inline-item"><a class="d-inline-flex flex-column align-items-center" href=/Account/ProfileAccount> <i class="lnr lnr-user f-s-20"></i> <span class="f-s-10 text-uppercase title">@Localizer["MyAccount"]</span> </a>
+                <li class="text-center list-inline-item"><a class="d-inline-flex flex-column align-items-center" href="/Orders" title=Orders> <i class="lnr lnr-layers f-s-20"></i> <span class="f-s-10 text-uppercase title">@Localizer["Orders"]</span> </a>
+                <li class="text-center list-inline-item"><a class="d-inline-flex flex-column align-items-center" href="/Wishlist"> <span class="position-relative counter-wrapper"> <i class="position-relative lnr lnr-heart f-s-18"> </i> </span> <span class="f-s-10 text-uppercase title">@Localizer["Wishlist"]</span> </a>
+                <li class="d-none d-md-inline-block text-center list-inline-item"><a class="d-inline-flex flex-column align-items-center" href=/Contactus title="Contact us"> <i class="lnr lnr-phone f-s-20"></i> <span class="f-s-10 text-uppercase title">@Localizer["ContactUs"]</span> </a>
+                <li class=list-inline-item><button type=button class="d-flex flex-column align-items-center m-auto btn-tb btn-toggle-search"> <i class="lnr lnr-magnifier"></i> <span class="f-s-10 text-uppercase title">@Localizer["Search"]</span> </button>
+            </ul>
+        </div>
+        <button class=scrollup> <i class="fas fa-long-arrow-alt-up"></i> </button> <input name=__RequestVerificationToken type=hidden value=CfDJ8FzFlYYUAiVGkfhEstzu8a3sjZEI8dqwctbJHVXxOJiqJ-B6iRq_0VTQ_dCcHjiSBfrVyPWfeGs7rp1_gpUokcszjCYXdVYr-SUyiRqKnuG4M6TUmUwuuJE8hXwi5QYHstEyYzZ_HCZ2J6lX--_P6Ac>
+        <div class="socil-links">
+            <div style="background: url('../../images/Chat-Icons/chat.png'); background-size:100% 100%"></div>
+        </div>
+        <div class="TalkToUs">
+            <div class="chat">
+                <button class="WhatsApp" onclick="window.open('https://wa.me/message/6G3BPTJPCXHFD1', '_blank')"></button>
+                <button class="Messenger" onclick="window.open('https://m.me/AltayeeTrading', '_blank')"></button>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        $(".socil-links").on("click", function () {
+            $("#switchIcon").removeClass("fas fa-phone");
+            $("#switchIcon").addClass("fa fa-times");
+            if ($(".TalkToUs").css("display") == "none") {
+                $(".TalkToUs").css("display", "block");
+            } else {
+                $(".TalkToUs").css("display", "none");
+                $("#switchIcon").removeClass("fa fa-times");
+                $("#switchIcon").addClass("fas fa-phone");
+            }
+        });
+        $(".btn-toggle-menu").on("click", function () {
+            $(".socil-links").css("z-index", "1")
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            function GetAllBrands() {
+                $.ajax({
+                    url: "/Brands/GetAllBrands",
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        $("#ddlLayoutBrands").html('');
+                        var innerHtml = '';
+                        $.each(data, function (i, item) {
+
+                            innerHtml += '<li class="d-block col-4 mb-2 nav-item dropdown"><a class="d-block px-0 nav-link" href=#> <span class="position-relative d-block w-100 py-10 pl-0 pr-1 text-center text-uppercase nav-link--label"> <span>' + item.nameEn + '</span> </span> </a>';
+                        });
+                        $("#ddlLayoutBrands").append(innerHtml);
+                    },
+                    error: function (response) {
+                        swal('Oops...', 'Something went wrong!', 'error');;
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        loadCartCount();
+        async function loadCartCount() {
+            try {
+                var response = await fetch(`/Cart/GetTotalItemInCart`);
+                console.log(response)
+                if (response.status == 200) {
+                    var result = await response.json();
+                    var cartCountEl = document.getElementById("cartCount");
+                    cartCountEl.innerHTML = result;
+                }
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
+    </script>
+    <script>
+        loadwishlistCount();
+        async function loadwishlistCount() {
+            try {
+                var response = await fetch(`/WishList/GetTotalItemInCart`);
+                console.log(response)
+                if (response.status == 200) {
+                    var result = await response.json();
+                    var wishlistCountEl = document.getElementById("wishlistCount");
+                    wishlistCountEl.innerHTML = result;
+                }
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
+
+    </script>
+    <script src="/User/Scripts/js/Homepage.Footer.scripts3365.js" type="text/javascript"></script>
+    <script type="text/javascript">var localized_data = { AjaxCartFailure: "Failed to add the product. Please refresh the page and try one more time." }; AjaxCart.init(!1, ".header-links .cart-qty", ".header-links .wishlist-qty", "#flyout-cart", localized_data)</script>
+    <script type="text/javascript">$(".lazyload").lazyload(); $(function () { $(".lazyload").lazyload() })</script>
+    <script type="text/javascript">$(document).ready(function () { $("#mobileNavTabs a").on("click", function (n) { n.preventDefault(); $(this).tab("show") }); $(".menu-toggle").on("click", function () { $(this).siblings(".top-menu.mobile").slideToggle("slow") }) }); $("#close-menu").on("click", function () { $(".mobile-menu").removeClass("isActive") })</script>
+    <script type="text/javascript">$("#small-search-box-form").on("submit", function (n) { $("#small-searchterms").val() == "" && (alert("Please enter some search keyword"), $("#small-searchterms").focus(), n.preventDefault()) })</script>
+    <script type="text/javascript">$(document).ready(function () { var n, t; $("#small-searchterms").autocomplete({ delay: 500, minLength: 3, source: "/catalog/searchtermautocomplete", appendTo: ".search-box", select: function (n, t) { return $("#small-searchterms").val(t.item.label), setLocation(t.item.producturl), !1 }, open: function () { n && (t = document.getElementById("small-searchterms").value, $(".ui-autocomplete").append('<li class="ui-menu-item" role="presentation"><a href="/search?q=' + t + '">View all results...<\/a><\/li>')) } }).data("ui-autocomplete")._renderItem = function (t, i) { var r = i.label; return n = i.showlinktoresultsearch, r = htmlEncode(r), $("<li><\/li>").data("item.autocomplete", i).append("<a><span>" + r + "<\/span><\/a>").appendTo(t) } })</script>
+    <script type="text/javascript">$(document).ready(function () { $("header").on("click", "#topcartlink", function (n) { n.stopPropagation(); var t = $("#flyout-cart"); t.hasClass("active") ? t.removeClass("active") : t.addClass("active") }); $("body").click(function (n) { var t = $(n.target); t.parents().is("#flyout-cart") || t.is("#flyout-cart") || $("#flyout-cart").removeClass("active") }) })</script>
+    <script type="text/javascript">function newsletter_subscribe(n) { var i = $("#subscribe-loading-progress"), t; i.show(); t = { subscribe: n, email: $("#newsletter-email").val() }; addAntiForgeryToken(t); $.ajax({ cache: !1, type: "POST", url: "/subscribenewsletter", data: t, success: function (n) { $("#newsletter-result-block").html(n.Result); n.Success ? ($("#newsletter-subscribe-block").hide(), $("#newsletter-result-block").show()) : $("#newsletter-result-block").fadeIn("slow").delay(2e3).fadeOut("slow") }, error: function () { alert("Failed to subscribe.") }, complete: function () { i.hide() } }) } $(document).ready(function () { $("#newsletter-subscribe-button").on("click", function () { newsletter_subscribe("true") }); $("#newsletter-email").on("keydown", function (n) { if (n.keyCode == 13) return $("#newsletter-subscribe-button").trigger("click"), !1 }) })</script>
+    <script type="text/javascript">var sliderdata = {}; sliderdata.AnywereSliderFailure = "Failed to load slider content."; $(document).ready(function () { AnywereSlider.init("/load_slider_details", ".slider-container", ".v .loader", sliderdata) })</script>
+    <script type="text/javascript">var carouseldata = {}; carouseldata.CarouselFailure = "Failed to load carousel content."; $(document).ready(function () { Carousel.init("/load_carousel_details", ".carousel-container", ".carousel-container .loader", carouseldata) })</script>
+    <script type="text/javascript">var position = "right", cloudZoom = function (n) { $("a.cloud-zoom").imagesLoaded({ done: function () { var t = $(".cloud-zoom-image-size").width() * 1, i = $(".cloud-zoom-image-size").height() * 1; $(".cloud-zoom").CloudZoom({ zoomWidth: t, zoomHeight: i, position: n, tint: !1, tintOpacity: .5, lensOpacity: .5, softFocus: !1, smoothMove: 3, showTitle: !0, titleOpacity: .5, adjustX: 0, adjustY: 0 }) } }) }, initZoom = function () { $(window).width() <= 768 ? cloudZoom("inside") : cloudZoom(position) }</script>
+    <script type="text/javascript">$(document).ready(function () { $(".footer-block .title").on("click", function () { var n = window, t = "inner", i; "innerWidth" in window || (t = "client", n = document.documentElement || document.body); i = { width: n[t + "Width"], height: n[t + "Height"] }; i.width < 769 && ($(this).siblings(".list").slideToggle("slow"), $(this).toggleClass("opened")) }) })</script>
+    <script type="text/javascript">$(document).ready(function () { $(".block .title").on("click", function () { var n = window, t = "inner", i; "innerWidth" in window || (t = "client", n = document.documentElement || document.body); i = { width: n[t + "Width"], height: n[t + "Height"] }; i.width < 1001 && $(this).siblings(".listbox").slideToggle("slow") }) })</script>
+    <script type="text/javascript">new LazyLoad; $(document).ajaxStop(function () { new LazyLoad })</script>
+    <script src="~/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

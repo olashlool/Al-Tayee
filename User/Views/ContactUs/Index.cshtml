@@ -1,0 +1,66 @@
+﻿@model Admin.Models.ContactUs
+
+<div class="column-two-wrapper">
+    <div class="container">
+        @Html.Partial("_LeftSide")
+        <div class="center-2">
+@*            @if (ViewBag.IsSuccess == true)
+            {
+                <div class="alert alert-success" role="alert">
+                    Thank you for your message! We will get back to you soon.
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-danger" role="alert">
+                    Oops! Something went wrong. Please try again.
+                </div>
+            }*@
+            <div class="page contact-page">
+                <div class="container-fluid position-relative">
+                    <div class="d-flex justify-content-center align-items-center py-50 px-0 page-header">
+                        <div class="position-absolute t-0 b-0 l-0 r-0 bg-gray page-header--bg lazyload" data-src="https://nop-kalles.nop-station.com/images/thumbs/0000368_0000275_Categorie-Breadcrumb-Banner-men.jpeg" style="background-image:url('https://nop-kalles.nop-station.com/images/thumbs/0000368_0000275_Categorie-Breadcrumb-Banner-men.jpeg')"><img class="d-none lazyload" alt="" data-src="https://nop-kalles.nop-station.com/images/thumbs/0000368_0000275_Categorie-Breadcrumb-Banner-men.jpeg" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="></div>
+                        <div class="position-relative page-header--content">
+                            <h1 class="clr-white f-s-20 text-center page-header--content-title">@Localizer["ContactUs"]</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-3 page-body">
+                    <div class="container">
+                        <div class="container-fluid position-relative">
+                            <div class="d-flex justify-content-center align-items-center py-30 px-0 page-header">
+                                <div class="position-absolute t-0 b-0 l-0 r-0 bg-gray page-header--bg"></div>
+                                <div class="position-relative page-header--content">
+                                    <div class="text-center topic-block">
+                                        <div class="topic-block-body">
+                                            <p>@Localizer["ContactUsPage"]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="inline-form" method="post" action="/contactus" novalidate="novalidate">
+                            <div class="fieldset">
+                                <div class="form-fields">
+                                    <div class="form-group row align-items-start inputs">
+                                        <div class="col-md-4 col-lg-3 text-left text-md-left"><label class="col-form-label" for="FullName">@Localizer["Yourname"]:</label> <span class="required">*</span></div>
+                                        <div class="col-md-8 col-lg-9 text-left"><input asp-for="Name" class="form-control fullname" placeholder="@Localizer["EnterYourName"]" type="text" data-val="true" data-val-required="@Localizer["ReqName"]" id="FullName"> <span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span></div>
+                                    </div>
+                                    <div class="form-group row align-items-start inputs">
+                                        <div class="col-md-4 col-lg-3 text-left text-md-left"><label class="col-form-label" for="Email">@Localizer["YourEmail"]:</label> <span class="required">*</span></div>
+                                        <div class="col-md-8 col-lg-9 text-left"><input asp-for="Email" class="form-control email" placeholder="@Localizer["EnterYourEmailAddress"]" type="email" data-val="true" data-val-email="@Localizer["ValidationEmail"]" data-val-required="@Localizer["ReqEmail"]" id="Email" name="Email"> <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span></div>
+                                    </div>
+                                    <div class="form-group row align-items-start inputs">
+                                        <div class="col-md-4 col-lg-3 text-left text-md-left"><label class="col-form-label" for="Enquiry">@Localizer["Enquiry"]:</label> <span class="required">*</span></div>
+                                        <div class="col-md-8 col-lg-9 text-left"><textarea asp-for="Enquiry" placeholder="@Localizer["EnterYourEnquiry"]" class="form-control enquiry" data-val="true" data-val-required="@Localizer["ReqEnquiry"]" id="Enquiry" name="Enquiry"></textarea> <span class="field-validation-valid" data-valmsg-for="Enquiry" data-valmsg-replace="true"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center buttons"><input type="submit" name="send-email" class="btn btn-primary btn-lg text-uppercase contact-us-button" value="@Localizer["Submit"]"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

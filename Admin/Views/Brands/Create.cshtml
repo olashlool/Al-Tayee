@@ -1,0 +1,47 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model Admin.Models.ViewModels.BrandsVM
+
+<div class="ec-content-wrapper">
+    <div class="ec-content-wrapper">
+        <div class="content">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12">
+                    <div class="ec-cat-list card card-default mb-24px">
+                        <div class="card-header card-header-border-bottom">
+                            <h2>@Localizer["AddBrand"]</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="ec-cat-form">
+                                <form asp-controller="Brands" asp-action="Create" method="post" enctype="multipart/form-data">
+                                    <div class="form-group row">
+                                        <label for="text" class="col-12 col-form-label">@Localizer["Name"]</label>
+                                        <div class="col-12">
+                                            <input id="text" class="form-control here slug-title" type="text" asp-for="@Model.Brands.NameEn">
+                                            <span asp-validation-for="Brands.NameEn" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="text" class="col-12 col-form-label">@Localizer["Image"]:</label>
+                                        <div class="col-12">
+                                            <input class="form-control here slug-title" name="ImageUpload" type="file" asp-for="@Model.Brands.ImageUrl">
+                                            <span asp-validation-for="ImageUpload" class="text-danger"></span>
+                                        </div>
+                                    </div>                                    
+                                    <div class="row" style="float: right; margin-top: 10px;">
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary">@Localizer["Save"]</button>
+                                            <button asp-controller="Brands" asp-action="Index" class="btn btn-danger">@Localizer["Cancel"]</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End Content -->
+    </div>
+</div>

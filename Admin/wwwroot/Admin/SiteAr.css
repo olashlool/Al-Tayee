@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+body {
+    font-family: Cairo !important;
+}
+
+*:not(i):not(span) {
+    font-family: Cairo !important;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c6922c;
+}
+#AddProduct, #EditProduct, #AddBrands, #EditBrands {
+    display: none;
+}
+.slick-slide {
+    width: 100px;
+}
+.product-brand .rounded-circle{
+    width:150px;
+}
+.brand-edit {
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    color: #bbb;
+}
+    .brand-edit:hover {
+        color: #f7b7b7;
+    }
+.brand-delete {
+    top: 35px !important;
+}
+.ec-brand a img {
+    max-width: 100% !important;
+}
+
+
+/*Layout*/
+.dash-card .card-body span {
+    right: 20px;
+}
+/*.ec-sidebar-fixed .ec-page-wrapper, .ec-sidebar-fixed .ec-main-header {
+    padding-right: 15.6rem;
+    padding-left: 0;
+}
+.navbar .navbar-right .navbar-nav li > .dropdown-menu {
+    right: auto;
+    left: 0;
+}
+.ec-brand a {
+    padding-right: 1.56rem;
+    padding-left:0;
+}*/
+
+#majesticAgency:hover {
+    color: #e1251b !important;
+}
+
+#majesticAgency {
+    color: #8a909d !important;
+}
+/* Admin "Product" */
+
+.deleted-image-upload {
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    z-index: 1;
+    cursor: pointer;
+}

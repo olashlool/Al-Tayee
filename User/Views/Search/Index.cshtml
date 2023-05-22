@@ -1,0 +1,205 @@
+﻿<div class="column-two-wrapper">
+    <div class="container">
+        @Html.Partial("_LeftSide")
+        <div class="center-2">
+            <div class="page search-page">
+                <div class="page-title">
+                    <h1>@Localizer["SearchTitle"]</h1>
+                </div>
+                <div class="page-body">
+                    <div class="search-input">
+                        <form method="get" asp-controller="Search" asp-action="index" novalidate="novalidate">
+                            <div class="fieldset">
+                                <div class="form-fields">
+                                    <div class="basic-search">
+                                        <div class="inputs"><label class="pr-3" for="q">@Localizer["Searchkeyword"]:</label> <input class="search-text" type="text" name="searchTerm" value="@ViewBag.SearchTerm"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttons"><button type="submit" class="button-1 search-button">@Localizer["Search"]</button></div>
+                        </form>
+                    </div>
+                    <div class="container p-selectors">
+                        <div class="row align-items-center my-3 p-selectors--inner">
+                            <div class="col-6 col-md-5 text-left"></div>
+                            <div class="col-2 d-none d-md-block text-center">
+@*                                <div class="d-inline-flex justify-content-around align-items-center vm-btn-group"><a class="d-inline-flex mr-2 vm-btn btn-grid selected" data-viewmode="grid" title="Grid"> <span class="d-none">Grid</span> <i class="fas fa-th fa-lg"></i> </a> <a class="d-inline-flex ml-2 vm-btn btn-list" data-viewmode="list" title="List"> <span class="d-none">List</span> <i class="fas fa-list fa-lg"></i> </a></div>
+*@                            </div>
+                            <div class="col-6 col-md-5 text-right">
+                                <div class="d-flex justify-content-end align-items-center">
+                                    @*                                    <div class="d-inline-flex flex-column mr-2 product-page-size">
+                                    <span class="d-block pb-2 f-s-12 lh-100 text-left">Display</span>
+                                    <select aria-label="Select number of products per page" id="products-pagesize" name="products-pagesize">
+                                    <option value="3">3</option>
+                                    <option selected="" value="6">6</option>
+                                    <option value="9">9</option>
+                                    <option value="18">18</option>
+                                    </select>
+                                    </div>*@
+                                    <div class="d-inline-flex flex-column product-sort-by">
+                                        <span class="d-block pb-2 f-s-12 lh-100 text-left">Sort by</span>
+                                        <select aria-label="Select product sort order" id="products-orderby" name="products-orderby">
+                                            <option selected="" value="">@Localizer["Position"]</option>
+                                            <option value="aToZ">@Localizer["AtoZ"]</option>
+                                            <option value="zToA">@Localizer["ZtoA"]</option>
+                                            <option value="lowToHigh">@Localizer["LToH"]</option>
+                                            <option value="highToLow">@Localizer["HToL"]</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @if (ViewBag.Count > 0)
+                    {
+                        <div class="search-results">
+                            <div class="products-container">
+                                <div class="ajax-products-busy"></div>
+                                <div class="products-wrapper">
+                                    <div class="container">
+                                        <div class="product-grid">
+                                            <div class="row justify-content-center mt-5 p-grid">
+                                                @foreach (var item in Model)
+                                                {
+                                                    <div class="col-6 col-md-4 col-lg-3 p-item">
+                                                        <div class="position-relative mb-5 et-lazy-img-3--hvr p-card">
+                                                            <div class="position-relative of-h p-card--img">
+                                                                <a class="position-relative d-block w-100 h-100 p-card--link" href="/Products/Detail?=@item.Id" title="Show details for @item.NameEn"> <span class="position-relative d-block p-card--link-img lazyload" id="productPictureContainer_67" data-src="/images/@item.BaseImage"></span> </a>
+                                                                <div class="position-absolute w-100 et-lazy-img-3 p-card--img-hover hoverImage_67">
+                                                                    <div class="position-relative d-block w-100 h-100 p-card--img-hover-inner hoverInnerImage_67" style="background-image:url('')">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="position-absolute w-100 et-lazy-img-3 p-card--img-hover hoverImage_67">
+                                                                    <div class="position-relative d-block w-100 h-100 p-card--img-hover-inner hoverInnerImage_67" style="background-image: url('/images/@item.AltImage')">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="position-absolute p-card--btn-icons p-card--wt"><button type="button" value="@Localizer["AddtoWishlist"]" title="@Localizer["AddtoWishlist"]" rel="nofollow" data-product-Id="@item.Id" class="position-relative d-inline-block m-0 text-center add-list add-wt AddToWishlist"> <i id="wishListIcon_67" class="btn-icon far fa-heart"></i> </button></div>
+                                                                <div class="position-absolute d-flex flex-column text-center p-card--hvr-btn product-item" data-productid="56" data-quick-view="true"><button class="d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id"> <i class="btn-icon lnr lnr-cart"></i> <span class="btn-txt">@Localizer["AddToCart"]</span> </button> <button class="d-inline-block d-lg-none position-relative text-center text-capitalize add-btn add-btn-sm add-atc" rel="nofollow" data_Id="@item.Id" title="" data-original-title="@Localizer["AddToCart"]"> <i class="btn-icon lnr lnr-cart"></i> </button><button data-toggle="modal" data-target="#glassAnimals_@item.Id" data-Id="@item.Id" id="QuickView" type="button" class="button-2 quick-view-btn d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-qv" data-productid="56" title="Quick view"><i class="btn-icon lnr lnr-eye"></i><span class="btn-txt">@Localizer["QuickView"]</span></button></div>
+                                                            </div>
+                                                            <div class="text-center p-card--info">
+                                                                <h3 class="position-relative m-0 clr-dark text-capitalize p-card--title"><a href="/short-sleeve-polo-shirts-for-boys" class="p-card--title-link" title="Show details for Short Sleeve Polo Shirts for Boys">@item.NameEn</a></h3>
+                                                                <div class="position-absolute offer-content"></div>
+                                                                <h4 class="position-relative m-0 clr-dark p-card--title" style="font-size:12px">@Localizer["Size"]:&nbsp; <strong>@item.Size</strong></h4>
+                                                                <div class="p-card--prices"><span class="clr-primary f-s-22 p-card--price font-weight-medium actual-price">@item.Price @Localizer["JOD"]</span></div>
+@*                                                                <div class="d-flex justify-content-center m-0 attributes">
+                                                                    <ul class="option-list attribute-circles color-circle" id="color-circle-82">
+                                                                        @foreach (var color in item.Types)
+                                                                        {
+                                                                            <li><label for="82"> <span class="attribute-circle-container" style="background-color:@color.Value" title="Green click on it"> <span class="attribute-circle" style="background-color:@color.Value">&nbsp;</span> </span> <input id="82" type="radio" name="colorAttribute_82" value="82"> </label></li>
+                                                                        }
+                                                                    </ul>
+                                                                </div>*@
+                                                                <div class="d-none p-card--hvr-btn product-item" data-productid="67" data-quick-view="true"><button class="d-none d-md-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id"> <i class="btn-icon lnr lnr-cart"></i> <span class="btn-txt">@Localizer["AddtoCart"]</span> </button><button type="button" class="d-none d-md-inline-block position-relative text-center text-capitalize add-btn add-qv" data-product-Id="@item.Id" data-productid="67" title="Quick view"><i class="btn-icon lnr lnr-eye"></i><span class="btn-txt">@Localizer["QuickView"]</span></button></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="search-results">
+                            <div class="products-container">
+                                <div class="ajax-products-busy"></div>
+                                <div class="products-wrapper">
+                                    <div class="container">
+                                        <div class="no-result">@Localizer["NotFound"]</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <partial name="_PopupPartial" model="Model" />
+@section Scripts
+    {
+        <script>
+        $(".btn-list").click(function () {
+        $("#switchStyle").removeClass("product-grid");
+        $("#switchStyle").addClass("product-list");
+        $(".btn-grid").removeClass("selected");
+        $(".btn-list").addClass("selected");
+
+    });
+    $(".btn-grid").click(function () {
+        $("#switchStyle").removeClass("product-list");
+        $(".btn-list").removeClass("selected");
+        $(".btn-grid").addClass("selected");
+        $("#switchStyle").addClass("product-grid");
+    });
+
+    // Sorted By
+    $(document).ready(function () {
+        // Attach event handler to the select element
+        $('#products-orderby').change(function () {
+            // Get the selected option value
+            var selectedOption = $(this).val();
+
+            var searchTerm =@Html.Raw(Json.Serialize(ViewBag.SearchTerm))
+            // Display an alert message with the selected value
+            window.location.href = '/Search?searchTerm='+ searchTerm +'&&sortOrder=' + selectedOption;
+        });
+    });
+    </script>
+    <script>
+        $(".AddToCart").on("click",async function () {
+            debugger
+            var productId = $(this).attr('data-product-Id')
+        @if (User.Identity.IsAuthenticated)
+        {
+            <text>
+                try {
+                    var response = await fetch(`/Cart/AddItem?productId=${productId}`);
+                    if (response.status == 200) {
+                    location.reload();
+                    }
+                }
+                catch (err) {
+                    console.log(err);
+                }
+            </text>
+        }
+        else
+        {
+        <text>
+                window.location.href="/Account/Login"
+                    </text>
+        }});
+
+    </script>
+    <script>
+        $(".AddToWishlist").on("click",async function () {
+            debugger
+            var productId = $(this).attr('data-product-Id')
+        @if (User.Identity.IsAuthenticated)
+        {
+            <text>
+                try {
+                    var response = await fetch(`/WishList/AddItem?productId=${productId}`);
+                    if (response.status == 200) {
+                    location.reload();
+                    }
+                }
+                catch (err) {
+                    console.log(err);
+                }
+            </text>
+        }
+        else
+        {
+        <text>
+                window.location.href="/Account/Login"
+                    </text>
+        }});
+
+    </script>
+}

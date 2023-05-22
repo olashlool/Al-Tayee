@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model Admin.Models.BrandsPartialView
+
+<div class="column-two-wrapper">
+    <div class="container">
+        @{
+            <partial name="_LeftSide" model="@Model" />
+        }
+        <div class="center-2">
+            <div class="page topic-page" id="ph-topic">
+                <div class="container-fluid position-relative">
+                    <div class="d-flex justify-content-center align-items-center py-30 px-0 page-header">
+                        <div class="position-absolute t-0 b-0 l-0 r-0 bg-gray page-header--bg"></div>
+                        <div class="position-relative page-header--content">
+                            <h1 class="clr-white f-s-20 text-center page-header--content-title">@Localizer["AboutUs"]</h1>
+</div>
+                    </div>
+                </div>
+                <div class="py-5 page-body">
+                    <div class="container">
+                        <p>@Localizer["AboutUsPage"]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

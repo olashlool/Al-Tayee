@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model List<Admin.Models.Brands>
+
+    <div class="content">
+        <div class="breadcrumb-wrapper d-flex align-items-center justify-content-between">
+            <div>
+                <h1>@Localizer["Brands"]</h1>
+                <p class="breadcrumbs">
+                    <span><a href="/">@Localizer["Home"]</a></span>
+                    <span><i class="mdi mdi-chevron-right"></i></span> @Localizer["Brands"]
+                </p>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Create", "Brands")'">
+                    @Localizer["AddBrand"]
+                </button>
+            </div>
+        </div>
+        <div class="product-brand card card-default p-24px">
+            <div class="row mb-m-24px">
+                @foreach (var item in Model)
+                {
+                <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6">
+                    <div class="card card-default">
+                        <div class="card-body text-center p-24px">
+                            <div class="image mb-3">
+                                <img src="@item.ImageUrl" class="img-fluid rounded-circle" alt="Avatar Image">
+                            </div>
+                            <h5 class="card-title text-dark">@item.NameEn</h5>
+                            <span onclick="location.href='@Url.Action("DeleteConfirmed", "Brands", new { id = item.Id })'" class="brand-delete mdi mdi-delete-outline"></span>
+                            <span onclick="location.href='@Url.Action("Edit", "Brands", new { id = item.Id })'" class="brand-edit mdi mdi-circle-edit-outline"></span>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Admin.Models.Addresses>
+
+<div class="column-two-wrapper">
+    <div class="container">
+        @Html.Partial("_LeftSideAccount")
+        @if (Model.Count() == 0)
+        {
+            <div class="center-2">
+                <div class="page account-page address-list-page">
+                    <div class="page-title">
+                        <h1>@Localizer["MyAccount"]  - @Localizer["Addresses"]</h1>
+                    </div>
+                    <div class="page-body">
+                        <div class="no-data" style="text-align: center; margin-bottom: 20px;">@Localizer["NoAddresses"]</div>
+                        <div class="add-button"><input type="button" onclick="location.href='@Url.Action("Create", "Addresses")'" class="btn btn-primary btn-lg text-uppercase add-address-button" value="@Localizer["AddNewAddress"]"></div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="center-2">
+                <div class="page account-page address-list-page">
+                    <div class="page-title">
+                        <h1>@Localizer["MyAccount"]  - @Localizer["Addresses"]</h1>
+                    </div>
+                    @foreach (var item in Model)
+                    {
+                        <div class="page-body">
+                            <div class="address-list">
+                                <div class="section address-item">
+                                    <div class="title"><strong>@item.FirstName @item.LastName</strong></div>
+                                    <ul class="info">
+                                        <li class="name">@item.FirstName @item.LastName</li>
+                                        <li class="email"><label class="mb-0">@Localizer["Email"]:</label> @item.Email</li>
+                                        <li class="phone"><label class="mb-0">@Localizer["PhoneNumber"]:</label> @item.PhoneNumber</li>
+                                        <li class="fax"><label class="mb-0">@Localizer["FaxNumber"]:</label>@item.FaxNumber</li>
+                                        <li class="address1">@item.Country @item.City</li>
+                                        <li class="city-state-zip">@item.Address1</li>
+                                        <li class="country">@item.Address2</li>
+                                    </ul>
+                                    <div class="buttons"><input type="button" class="button-2 edit-address-button" onclick="location.href='@Url.Action("Edit", "Addresses", new {id = item.Id})'" value="@Localizer["Edit"]"> <input type="button" onclick="location.href='@Url.Action("Delete", "Addresses", new {id = item.Id})'"  class="button-2 delete-address-button" value="@Localizer["Delete"]"></div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <div class="add-button"><input type="button" class="btn btn-primary btn-lg text-uppercase add-address-button" onclick="location.href='@Url.Action("Create", "Addresses")'" value="@Localizer["AddNewAddress"]"></div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

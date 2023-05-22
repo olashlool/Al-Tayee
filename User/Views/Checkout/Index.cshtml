@@ -1,0 +1,172 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@inject IHttpContextAccessor _httpContextAccessor
+@model Admin.Models.Order
+
+<div class="center-1">
+    <div class="page checkout-page text-left">
+        <div class="container-fluid position-relative">
+            <div class="d-flex justify-content-center align-items-center py-50 px-0 page-header">
+                <div class="position-absolute t-0 b-0 l-0 r-0 bg-gray page-header--bg lazyload" data-src="https://nop-kalles.nop-station.com/images/thumbs/0000368_0000275_Categorie-Breadcrumb-Banner-men.jpeg" style="background-image:url('https://nop-kalles.nop-station.com/images/thumbs/0000368_0000275_Categorie-Breadcrumb-Banner-men.jpeg')"><img class="d-none lazyload" alt="" data-src="https://nop-kalles.nop-station.com/images/thumbs/0000368_0000275_Categorie-Breadcrumb-Banner-men.jpeg" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="></div>
+                <div class="position-relative page-header--content">
+                    <h1 class="clr-white f-s-20 text-center page-header--content-title">@Localizer["Checkout"]</h1>
+                </div>
+            </div>
+        </div>
+        <div class="page-body checkout-data">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ol id="checkout-steps" class="py-4 list-unstyled stepper">
+                            <form asp-controller="Checkout" asp-action="index" method="post">
+                                <input type="hidden" data-val="true" asp-for="Timestamp" value="@DateTime.Now.ToString();">
+                                <input type="hidden" data-val="true" asp-for="UserID" value="@_httpContextAccessor.HttpContext.User.Claims.FirstOrDefault().Value">
+                                <input type="hidden" data-val="true" asp-for="OrderStatus" value="Completed">
+                                <input type="hidden" data-val="true" asp-for="PaymentStstus" value="Pending">
+                            <li id="opc-billing" class="position-relative of-h tab-section allow step active">
+                                <div class="d-flex align-items-center step--header">
+                                    <span class="d-inline-flex justify-content-center align-items-center clr-white step--number"> 1 </span>
+                                    <h3 class="mb-0 lh-100 step--title">@Localizer["BillingAddress"]</h3>
+                                </div>
+                                <div id="checkout-step-billing" class="pt-4 pb-3 step--content">
+                                    <div id="checkout-billing-load">
+                                        <div class="checkout-data">
+                                            <div class="mt-0 mb-0 section new-billing-address" id="billing-new-address-form" style="">
+                                                <div class="enter-address">
+                                                    <input type="hidden" data-val="true" data-val-required="The Id field is required." id="Id" name="BillingNewAddress.Id" value="0">
+                                                    <div class="pr-1 edit-address">
+                                                        <div class="form-row">
+                                                            <div class="form-group no-label col-md-6"><span class="required">*</span> <input asp-for="FirstName" class="form-control" placeholder="@Localizer["FirstName"]" type="text" data-val="true" data-val-required="@Localizer["RequiredFirstName"]" id="FirstName"> <span class="text-left field-validation-valid" data-valmsg-for="BillingNewAddress.FirstName" data-valmsg-replace="true"></span></div>
+                                                            <div class="form-group no-label col-md-6"><span class="required">*</span> <input asp-for="LastName" class="form-control" placeholder="@Localizer["LastName"]" type="text" data-val="true" data-val-required="@Localizer["RequiredLasrName"]" id="LastName"> <span class="text-left field-validation-valid" data-valmsg-for="BillingNewAddress.LastName" data-valmsg-replace="true"></span></div>
+                                                        </div>
+                                                        <div class="form-group no-label"><span class="required">*</span> <input asp-for="Email" class="form-control" placeholder="@Localizer["Email"]" type="email" data-val="true" data-val-email="Wrong email" data-val-required="@Localizer["RequiredEmail"]" id="Email"> <span class="text-left field-validation-valid" data-valmsg-for="BillingNewAddress.Email" data-valmsg-replace="true"></span></div>
+                                                        <div class="form-row">
+                                                            <div class="form-group no-label col-md-6">
+                                                                <span class="required">*</span>
+                                                                <select class="custom-select f-s-14" data-trigger="country-select" asp-for="Country" data-stateprovince="#StateProvinceId" data-loading="#states-loading-progress" data-val="true" data-val-required="Country is required." id="CountryId">
+                                                                    <option value="Jordan">@Localizer["Jordan"]</option>
+                                                                </select>
+                                                                    @*<span class="text-left field-validation-valid" data-valmsg-for="BillingNewAddress.CountryId" data-valmsg-replace="true"></span>*@
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <select class="custom-select f-s-14" id="StateProvinceId" asp-for="State">
+                                                                    <option value="0">@Localizer["SelectState"]</option>
+                                                                    <option value="Amman">@Localizer["Amman"]</option>
+                                                                    <option value="Irbid">@Localizer["Irbid"]</option>
+                                                                    <option value="Zarqa">@Localizer["Zarqa"]</option>
+                                                                    <option value="Jerash">@Localizer["Jerash"]</option>
+                                                                    <option value="Ma_an">@Localizer["Ma_an"]</option>
+                                                                    <option value="Al_Salt">@Localizer["Al_Salt"]</option>
+                                                                    <option value="Ajloun">@Localizer["Ajloun"]</option>
+                                                                    <option value="Aqaba">@Localizer["Aqaba"]</option>
+                                                                    <option value="Tafilah">@Localizer["Tafilah"]</option>
+                                                                    <option value="Madaba">@Localizer["Madaba"]</option>
+                                                                    <option value="Mafraq">@Localizer["Mafraq"]</option>
+                                                                    <option value="Karak">@Localizer["Karak"]</option>
+                                                                </select>
+                                                                <span id="states-loading-progress" style="display:none" class="please-wait">Please, wait...</span> <span class="text-left field-validation-valid" data-valmsg-for="BillingNewAddress.StateProvinceId" data-valmsg-replace="true"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="form-group no-label col-md-6"><span class="required">*</span> <input asp-for="City" class="form-control" placeholder="@Localizer["City"]" type="text" data-val="true" data-val-required="@Localizer["CityReq"]" id="City"> <span class="text-left field-validation-valid" data-valmsg-for="BillingNewAddress.City" data-valmsg-replace="true"></span></div>
+                                                            <div class="form-group no-label col-md-6">
+                                                                <div class="position-relative"><span></span> <input asp-for="Zip" class="form-control" placeholder="@Localizer["Zip"] " type="text" value=""></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group no-label"><span class="required">*</span> <input asp-for="Address" class="form-control" placeholder="@Localizer["Address1"]" type="text" data-val="true" data-val-required="@Localizer["RequiredAddress1"] id="Address1"> <span class="text-left field-validation-valid" data-valmsg-for="BillingNewAddress.Address1" data-valmsg-replace="true"></span></div>
+                                                        <div class="form-group no-label"><input class="form-control" asp-for="Address2" placeholder="@Localizer["Address2"]" type="text" id="Address2"> <span class="text-left field-validation-valid" data-valmsg-for="Address2" data-val-required="@Localizer["RequiredAddress1"] data-valmsg-replace="true"></span></div>
+                                                        <div class="form-row">
+                                                            <div class="form-group no-label col-md-6"><span class="required">*</span> <input asp-for="Phone" class="form-control" placeholder="@Localizer["PhoneNumber"]" type="tel" data-val="true" data-val-required="@Localizer["RequiredPhone"]" id="PhoneNumber"> <span class="text-left field-validation-valid" data-valmsg-for="PhoneNumber" data-valmsg-replace="true"></span></div>
+                                                            <div class="form-group no-label col-md-6"><input asp-for="Fax" class="form-control" placeholder="@Localizer["FaxNumber"]" type="text" id="FaxNumber"> <span class="text-left field-validation-valid" data-valmsg-for="FaxNumber" data-valmsg-replace="true"></span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-right mt-3 mb-0 pr-1 buttons" id="billing-buttons-container"><span class="pr-2 please-wait" id="billing-please-wait" style="display:none">Loading next step...</span> <button id="ContinueBillingAddress" type="button" name="save" class="button-1 new-address-next-step-button">@Localizer["Continue"]</button></div>
+                                </div>
+                            </li>
+                            <li id="opc-payment_method" class="position-relative of-h tab-section step allow">
+                                <div class="d-flex align-items-center step--header"><span class="d-inline-flex justify-content-center align-items-center clr-white step--number"> 2 </span><h3 class="mb-0 lh-100 step--title">@Localizer["PaymentMethod"]</h3></div><div id="checkout-step-billing" class="pt-4 pb-3 step--content">
+                                    <div id="checkout-payment-method-load">
+                                        <div class="checkout-data">
+
+                                            <div class="mt-2 mb-3 section payment-method">
+                                                <ul class="row method-list" id="payment-method-block">
+                                                    <li class="col-sm">
+                                                        <div class="method-name">
+                                                            <div class="custom-radio-2">
+                                                                <input asp-for="PaymentMethod" id="paymentmethod_0" type="radio" value="Cash on delivery" checked="checked">
+                                                                <label class="d-flex flex-column justify-content-between w-100 mb-0 pl-0 box-card-1" for="paymentmethod_0">
+                                                                    <span class="d-flex f-s-14 text-left method-title">
+                                                                            @Localizer["COD"]
+                                                                    </span>
+
+                                                                    <span class="payment-logo">
+                                                                        <span for="paymentmethod_0">
+                                                                            <img src="https://nop-kalles.nop-station.com/Plugins/Payments.CheckMoneyOrder/logo.jpg" alt="@Localizer["COD"]">
+                                                                        </span>
+                                                                    </span>
+
+                                                                    <span class="d-flex payment-description">@Localizer["COD"]</span>
+                                                                </label>
+                                                                <div class="check"></div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="col-sm">
+                                                        <div class="method-name">
+                                                            <div class="custom-radio-2">
+                                                                <input id="paymentmethod_1" type="radio" name="paymentmethod" value="Payments.Manual" disabled>
+                                                                <label class="d-flex flex-column justify-content-between w-100 mb-0 pl-0 box-card-1" for="paymentmethod_1">
+                                                                    <span class="d-flex f-s-14 text-left method-title">
+                                                                            @Localizer["CC"]
+                                                                    </span>
+
+                                                                    <span class="payment-logo">
+                                                                        <span for="paymentmethod_1">
+                                                                            <img src="https://nop-kalles.nop-station.com/Plugins/Payments.Manual/logo.jpg" alt="@Localizer["CC"]">
+                                                                        </span>
+                                                                    </span>
+
+                                                                    <span class="d-flex payment-description">@Localizer["CC"]</span>
+                                                                </label>
+                                                                <div class="check"></div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-0 buttons" id="payment-method-buttons-container"><p class="mb-0 back-link"><a id="BackPaymentMethod" class="d-flex align-items-center btn btn-default btn-md" href="#"> <i class="fas fa-long-arrow-alt-left pr-2"></i> @Localizer["Back"] </a></p><div><span id="payment-method-please-wait" class="pr-1 please-wait" style="display:none">Loading next step...</span> <input id="ContinuePaymentMethod" type="submit" class="btn btn-primary btn-md px-4 rounded payment-method-next-step-button" value="@Localizer["Confirm"]"></div></div>
+                                </div>
+                            </li>
+                            </form>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#ContinueBillingAddress").on("click", function () {
+        $("#opc-billing").removeClass("active")
+        $("#opc-payment_method").addClass("active");
+    });
+    $("#BackPaymentMethod").on("click", function () {
+        $("#opc-payment_method").removeClass("active")
+        $("#opc-billing").addClass("active");
+    });
+    $("#ContinuePaymentMethod").on("click", function () {
+        $("#opc-payment_method").removeClass("active")
+        $("#opc-confirm_order").addClass("active");
+    });
+    $("#BackOrderCofirm").on("click", function () {
+        $("#opc-confirm_order").removeClass("active")
+        $("#opc-payment_method").addClass("active");
+    });
+</script>

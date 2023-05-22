@@ -1,0 +1,18 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<div class="side-2">
+    <div class="block block-account-navigation block-account">
+        <div class="title">@Localizer["Myaccount"]</div>
+        <div class="p-0 listbox">
+            <ul class="list list-account">
+                <li class="customer-info"><a href="/Account/ProfileAccount" class="active">@Localizer["CustomerInfo"]</a></li>
+                <li class="customer-addresses"><a href="/Addresses" class="inactive">@Localizer["Addresses"]</a></li>
+                <li class="customer-orders"><a href="/Orders" class="inactive">@Localizer["Orders"]</a></li>
+                <li class="change-password"><a href="/Account/ChangePassword" class="inactive">@Localizer["ChangePassword"]</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\LP-OlaAlshloul\Desktop\publishAdmin</_PublishTargetUrl>
+    <History>True|2023-05-20T16:00:26.1374042Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=%28localdb%29\MSSQLLocalDB%3bDatabase=AltayeeDB%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Admin.Data.AltayeeDBContext">
+      <Value>Server=%28localdb%29\MSSQLLocalDB%3bDatabase=AltayeeDB%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

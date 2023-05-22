@@ -1,0 +1,19 @@
+﻿@inject Admin.Models.Interface.IBrands Brands
+
+<div class="side-2">
+    <div class="w-100 accordion" id="accordionManufacturers">
+        <div class="filter-section block block-manufacturer-navigation">
+            <div class="text-left title"><span class="d-flex justify-content-between align-items-center ajaxfilter-title collapsed" data-toggle="collapse" data-target="#ajaxFilterManufacturers" aria-expanded="false" aria-controls="collapseManufacturers"> @Localizer["Brands"] <i class="fa fa-angle-down rotate-icon float-right"></i> </span></div>
+            <div class="listbox ajaxfilter-section collapse" id="ajaxFilterManufacturers" aria-labelledby="headingManufacturers" data-parent="#accordionManufacturers">
+                <ul class="text-left list list-manufacturer">
+                    @foreach (var item in await Brands.GetBrands())
+                    {
+                        <li class="inactive"><a asp-controller="Brands" asp-action="Products" asp-route-brandId="@item.Id">@item.NameEn</a></li>
+                    }
+                </ul>
+                <div class="view-all text-right"><a class="p-0" href="/Brands"> @Localizer["ViewAll"] <span class="lnr lnr-arrow-right ml-2"></span> </a></div>
+            </div>
+        </div>
+    </div>
+</div>
+

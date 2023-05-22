@@ -1,0 +1,1233 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\obj\\Release\\net6.0\\scopedcss\\projectbundle\\Admin.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Admin.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\Site.css",
+      "PackagePath": "staticwebassets\\Admin\\Site.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\SiteAr.css",
+      "PackagePath": "staticwebassets\\Admin\\SiteAr.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\css\\ekka.css",
+      "PackagePath": "staticwebassets\\Admin\\assets\\css\\ekka.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\img\\icons\\edit.svg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\img\\icons\\edit.svg"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\img\\logo\\ec-site-logo.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\img\\logo\\ec-site-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\img\\products\\vender-upload-preview.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\img\\products\\vender-upload-preview.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\img\\products\\vender-upload-thumb-preview.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\img\\products\\vender-upload-thumb-preview.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\img\\user\\feedback.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\img\\user\\feedback.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\img\\user\\user.jpg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\img\\user\\user.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\js\\ekka.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\ekka.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\plugins\\jquery-zoom\\jquery.zoom.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\plugins\\jquery-zoom\\jquery.zoom.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\plugins\\jquery\\jquery-3.5.1.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\plugins\\jquery\\jquery-3.5.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\plugins\\options-sidebar\\optionswitcher.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\plugins\\options-sidebar\\optionswitcher.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\plugins\\simplebar\\simplebar.css",
+      "PackagePath": "staticwebassets\\Admin\\assets\\plugins\\simplebar\\simplebar.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\plugins\\simplebar\\simplebar.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\plugins\\simplebar\\simplebar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\plugins\\slick\\slick-theme.css",
+      "PackagePath": "staticwebassets\\Admin\\assets\\plugins\\slick\\slick-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\plugins\\slick\\slick.css",
+      "PackagePath": "staticwebassets\\Admin\\assets\\plugins\\slick\\slick.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\plugins\\slick\\slick.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\plugins\\slick\\slick.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\plugins\\tags-input\\bootstrap-tagsinput.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\plugins\\tags-input\\bootstrap-tagsinput.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_accordion.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_accordion.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_alert.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_badge.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_button-group.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_button-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_card.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_card.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_carousel.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_carousel.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_close.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_close.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_containers.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_containers.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_grid.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_images.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_images.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_list-group.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_modal.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_modal.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_nav.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_nav.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_offcanvas.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_offcanvas.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_placeholders.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_placeholders.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_popover.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_popover.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_progress.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_reboot.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_root.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_root.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_spinners.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_spinners.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_tables.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_toasts.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_toasts.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_tooltip.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_transitions.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_transitions.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_type.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_type.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\forms\\_form-control.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\forms\\_form-control.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\forms\\_form-range.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\forms\\_form-range.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\forms\\_form-text.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\forms\\_form-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\forms\\_labels.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\helper\\_colored-links.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\helper\\_colored-links.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\helper\\_position.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\helper\\_position.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\helper\\_ratio.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\helper\\_ratio.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\helper\\_stacks.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\helper\\_stacks.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\helper\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\helper\\_stretched-link.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\helper\\_text-truncation.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\helper\\_text-truncation.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\helper\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\helper\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\helper\\_vr.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\helper\\_vr.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_backdrop.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_backdrop.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_container.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_table-variants.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_table-variants.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_utilities.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\utilities\\_api.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\utilities\\_api.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\bootstrap\\scss\\vender\\_rfs.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\bootstrap\\scss\\vender\\_rfs.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-badge.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-bredcrumb.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-bredcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-buttons.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-calendar.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-calendar.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-card.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-card.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-common.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-common.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-compact-spacing.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-compact-spacing.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-date-range-picker.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-date-range-picker.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-footer.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-forms.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-grid.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-icons.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-icons.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-list-group.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-map.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-map.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-media.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-media.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-modal.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-modal.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-navbar.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-optionswitcher.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-optionswitcher.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-overflow.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-overflow.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-pagination.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-popover-tooltip.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-popover-tooltip.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-position.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-position.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-progress.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-reboot.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-sidebar.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-sidebar.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-sizing.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-sizing.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-spacing.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-spacing.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-spinkit.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-spinkit.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-switchers.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-switchers.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-tables.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-tabs.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-tabs.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-text.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-todo.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-todo.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-type.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-type.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\component\\_ec-widgets.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\component\\_ec-widgets.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\pages\\_ec-category.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\pages\\_ec-category.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\pages\\_ec-error.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\pages\\_ec-error.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\pages\\_ec-invoice.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\pages\\_ec-invoice.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\pages\\_ec-orders.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\pages\\_ec-orders.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\pages\\_ec-products.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\pages\\_ec-products.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\pages\\_ec-profile.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\pages\\_ec-profile.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\pages\\_ec-user.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\pages\\_ec-user.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\pages\\_ec-vendor.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\pages\\_ec-vendor.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\utilities\\_ec-mixins.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\utilities\\_ec-mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\assets\\scss\\utilities\\_ec-variables.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\utilities\\_ec-variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\index.umd.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\index.umd.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\alert.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\alert.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\base-component.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\base-component.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\button.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\button.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\carousel.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\collapse.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\collapse.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\dom\\data.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\dom\\data.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\dom\\event-handler.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\dom\\event-handler.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\dom\\manipulator.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\dom\\manipulator.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\dom\\selector-engine.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\dom\\selector-engine.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\dropdown.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\dropdown.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\modal.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\modal.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\offcanvas.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\offcanvas.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\popover.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\popover.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\scrollspy.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\scrollspy.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\tab.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\tab.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\toast.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\toast.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\tooltip.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\tooltip.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\util\\backdrop.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\util\\backdrop.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\util\\component-functions.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\util\\component-functions.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\util\\focustrap.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\util\\focustrap.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\util\\index.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\util\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\util\\sanitizer.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\util\\sanitizer.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\Admin\\js\\src\\util\\scrollbar.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\src\\util\\scrollbar.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Agrado\\IMG_9416.png",
+      "PackagePath": "staticwebassets\\images\\Agrado\\IMG_9416.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Agrado\\IMG_9417.png",
+      "PackagePath": "staticwebassets\\images\\Agrado\\IMG_9417.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Agrado\\IMG_9418.png",
+      "PackagePath": "staticwebassets\\images\\Agrado\\IMG_9418.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Agrado\\IMG_9419.png",
+      "PackagePath": "staticwebassets\\images\\Agrado\\IMG_9419.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Agrado\\IMG_9420.png",
+      "PackagePath": "staticwebassets\\images\\Agrado\\IMG_9420.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Agrado\\IMG_9421.png",
+      "PackagePath": "staticwebassets\\images\\Agrado\\IMG_9421.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Agrado\\IMG_9422.png",
+      "PackagePath": "staticwebassets\\images\\Agrado\\IMG_9422.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Agrado\\Untitled.rtf",
+      "PackagePath": "staticwebassets\\images\\Agrado\\Untitled.rtf"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Al-Tayee-Arabic-logo.png",
+      "PackagePath": "staticwebassets\\images\\Al-Tayee-Arabic-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Al-Tayee-English-logo.png",
+      "PackagePath": "staticwebassets\\images\\Al-Tayee-English-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Al-Tayee-fdn.-Icone.png",
+      "PackagePath": "staticwebassets\\images\\Al-Tayee-fdn.-Icone.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Brands\\Brands-1.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-1.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Brands\\Brands-10.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-10.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Brands\\Brands-11.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-11.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Brands\\Brands-2.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-2.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Brands\\Brands-3.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-3.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Brands\\Brands-4.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-4.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Brands\\Brands-5.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-5.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Brands\\Brands-6.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-6.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Brands\\Brands-7.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-7.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Brands\\Brands-8.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-8.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Brands\\Brands-9.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-9.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Cards.png",
+      "PackagePath": "staticwebassets\\images\\Cards.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Chat-Icons\\chat.png",
+      "PackagePath": "staticwebassets\\images\\Chat-Icons\\chat.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Chat-Icons\\messenger.png",
+      "PackagePath": "staticwebassets\\images\\Chat-Icons\\messenger.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Chat-Icons\\whatsapp.png",
+      "PackagePath": "staticwebassets\\images\\Chat-Icons\\whatsapp.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Elegance-Hair-Gel-500ml\\Elegance Hair Gel 500ml.rtf",
+      "PackagePath": "staticwebassets\\images\\Elegance-Hair-Gel-500ml\\Elegance Hair Gel 500ml.rtf"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Elegance-Hair-Gel-500ml\\IMG_9369.png",
+      "PackagePath": "staticwebassets\\images\\Elegance-Hair-Gel-500ml\\IMG_9369.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Elegance-Hair-Gel-500ml\\IMG_9370.png",
+      "PackagePath": "staticwebassets\\images\\Elegance-Hair-Gel-500ml\\IMG_9370.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Elegance-Hair-Gel-500ml\\IMG_9371.png",
+      "PackagePath": "staticwebassets\\images\\Elegance-Hair-Gel-500ml\\IMG_9371.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Elegance-Hair-Gel-500ml\\IMG_9372.png",
+      "PackagePath": "staticwebassets\\images\\Elegance-Hair-Gel-500ml\\IMG_9372.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Elegance-Hair-Gel-500ml\\IMG_9374.png",
+      "PackagePath": "staticwebassets\\images\\Elegance-Hair-Gel-500ml\\IMG_9374.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Elegance-Hair-Gel-500ml\\IMG_9375.png",
+      "PackagePath": "staticwebassets\\images\\Elegance-Hair-Gel-500ml\\IMG_9375.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Elegance-Hair-Gel-500ml\\IMG_9376.png",
+      "PackagePath": "staticwebassets\\images\\Elegance-Hair-Gel-500ml\\IMG_9376.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Grid\\Des-IMG_4978.png",
+      "PackagePath": "staticwebassets\\images\\Grid\\Des-IMG_4978.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Grid\\Des-IMG_5006.png",
+      "PackagePath": "staticwebassets\\images\\Grid\\Des-IMG_5006.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Grid\\Des-IMG_9423.png",
+      "PackagePath": "staticwebassets\\images\\Grid\\Des-IMG_9423.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Grid\\Des-IMG_9539.png",
+      "PackagePath": "staticwebassets\\images\\Grid\\Des-IMG_9539.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_4964_638203064330813263.png",
+      "PackagePath": "staticwebassets\\images\\IMG_4964_638203064330813263.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_4965_638203064330879493.png",
+      "PackagePath": "staticwebassets\\images\\IMG_4965_638203064330879493.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_9611_638202605257952242.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9611_638202605257952242.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_9611_638202855782171435.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9611_638202855782171435.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_9611_638202899738797146.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9611_638202899738797146.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_9611_638202970006187141.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9611_638202970006187141.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_9615_638202605258034214.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9615_638202605258034214.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_9615_638202855782354500.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9615_638202855782354500.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_9615_638202899738921710.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9615_638202899738921710.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_9615_638202970051371284.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9615_638202970051371284.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_9617_638202605258047402.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9617_638202605258047402.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_9617_638202855782389940.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9617_638202855782389940.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_9617_638202970094458696.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9617_638202970094458696.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_9619_638202970094475012.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9619_638202970094475012.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_9626_638202610259947116.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9626_638202610259947116.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_9627_638202610260063373.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9627_638202610260063373.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_9628_638202610260083945.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9628_638202610260083945.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_9632_638202610602616282.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9632_638202610602616282.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_9634_638202610602632984.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9634_638202610602632984.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_9639_638202610602646507.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9639_638202610602646507.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Slider-1-Ar.png",
+      "PackagePath": "staticwebassets\\images\\Slider-1-Ar.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Slider-1.png",
+      "PackagePath": "staticwebassets\\images\\Slider-1.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Slider-2-Ar.png",
+      "PackagePath": "staticwebassets\\images\\Slider-2-Ar.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Slider-2.png",
+      "PackagePath": "staticwebassets\\images\\Slider-2.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Slider-3-Ar.png",
+      "PackagePath": "staticwebassets\\images\\Slider-3-Ar.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Slider-3.png",
+      "PackagePath": "staticwebassets\\images\\Slider-3.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Slider-4.png",
+      "PackagePath": "staticwebassets\\images\\Slider-4.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\js\\Admin\\bootstrap.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\js\\Admin\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\js\\Admin\\jquery-3.4.1.intellisense.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\jquery-3.4.1.intellisense.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\js\\Admin\\jquery-3.4.1.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\jquery-3.4.1.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\js\\Admin\\jquery-3.4.1.min.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\jquery-3.4.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\js\\Admin\\jquery-3.4.1.min.map",
+      "PackagePath": "staticwebassets\\js\\Admin\\jquery-3.4.1.min.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\js\\Admin\\jquery-3.4.1.slim.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\jquery-3.4.1.slim.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\js\\Admin\\jquery-3.4.1.slim.min.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\jquery-3.4.1.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\js\\Admin\\jquery-3.4.1.slim.min.map",
+      "PackagePath": "staticwebassets\\js\\Admin\\jquery-3.4.1.slim.min.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\js\\Admin\\jquery.validate-vsdoc.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\jquery.validate-vsdoc.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\js\\Admin\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\js\\Admin\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\js\\Admin\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\js\\Admin\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\js\\Admin\\main.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\js\\Admin\\modernizr-2.8.3.js",
+      "PackagePath": "staticwebassets\\js\\Admin\\modernizr-2.8.3.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.Admin.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.build.Admin.props",
+      "PackagePath": "build\\Admin.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Admin.props",
+      "PackagePath": "buildMultiTargeting\\Admin.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildTransitive.Admin.props",
+      "PackagePath": "buildTransitive\\Admin.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

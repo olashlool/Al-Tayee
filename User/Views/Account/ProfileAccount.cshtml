@@ -1,0 +1,121 @@
+﻿@model Admin.Models.ViewModels.UserInfo
+<div class="column-two-wrapper">
+        <div class="container">
+            @{
+                Html.RenderPartial("_LeftSideAccount");
+            }
+            <div class="center-2">
+                <div class="page account-page customer-info-page">
+                    <div class="page-title">
+                        <h1>@Localizer["MyAccount"] - @Localizer["CustomerInfo"]</h1>
+                    </div>
+                    <div class="page-body">
+                        <form method="post" class="inline-form" asp-controller="Account" asp-action="UpdateProfileAccount" novalidate="novalidate">
+                            <div class="fieldset">
+                                <div class="title"><strong>@Localizer["YourPersonalDetails"]</strong></div>
+                                <div class="form-fields">
+                                    <input type="hidden" asp-for="Id" />
+                                    <div class="form-group row align-items-center inputs">
+                                        <div class="col-md-3 text-left text-md-right"><label class="col-form-label">@Localizer["Gender"]:</label><span class="required">*</span></div>
+                                        <div class="col-md-9 text-left">
+                                            <div class="gender"><span class="ctm-radio male"> <input asp-for="Gender" type="radio" value="M" id="gender-male" name="Gender"> <label class="forcheckbox" for="gender-male">@Localizer["Male"]</label> </span> <span class="ctm-radio female"> <input type="radio" value="F" id="gender-female" name="Gender"> <label class="forcheckbox" for="gender-female">@Localizer["Female"]</label> </span></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row align-items-center inputs">
+                                        <div class="col-md-3 text-left text-md-right"><label class="col-form-label" for="FirstName">@Localizer["FirstName"]:</label> <span class="required">*</span></div>
+                                        <div class="col-md-9 text-left"><input asp-for="FirstName" class="form-control" type="text" data-val="true" data-val-required="First name is required." id="FirstName" name="FirstName"> <span class="field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span></div>
+                                    </div>
+                                    <div class="form-group row align-items-center inputs">
+                                        <div class="col-md-3 text-left text-md-right"><label class="col-form-label" for="SecondName">@Localizer["LastName"]:</label> <span class="required">*</span></div>
+                                        <div class="col-md-9 text-left"><input asp-for="SecondName" class="form-control" type="text" data-val="true" data-val-required="Last name is required." id="SecondName" name="SecondName"> <span class="field-validation-valid" data-valmsg-for="SecondName" data-valmsg-replace="true"></span></div>
+                                    </div>
+                                    <div class="form-group row align-items-center inputs date-of-birth">
+                                        <div class="col-md-3 text-left text-md-right"><label class="col-form-label">@Localizer["DateOfBirth"]:</label></div>
+                                        <div class="col-md-9 text-left">
+                                            <div asp-selected-day="16" asp-selected-month="10" asp-selected-year="1954" class="date-picker-wrapper">
+                                                <select asp-selected-day="16" asp-selected-month="10" asp-selected-year="1954" name="DateOfBirthDay">
+                                                    <option value="0">@Localizer["Day"]</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                    <option value="31">31</option>
+                                                </select>
+                                                <select asp-selected-day="16" asp-selected-month="10" asp-selected-year="1954" name="DateOfBirthMonth">
+                                                    <option value="0">@Localizer["Month"]</option>
+                                                    <option value="1">January</option>
+                                                    <option value="2">February</option>
+                                                    <option value="3">March</option>
+                                                    <option value="4">April</option>
+                                                    <option value="5">May</option>
+                                                    <option value="6">June</option>
+                                                    <option value="7">July</option>
+                                                    <option value="8">August</option>
+                                                    <option value="9">September</option>
+                                                    <option value="10">October</option>
+                                                    <option value="11">November</option>
+                                                    <option value="12">December</option>
+                                                </select>
+                                                <select asp-selected-day="16" asp-selected-month="10" asp-selected-year="1954" name="DateOfBirthYear" id="year">
+                                                    <option value="0">@Localizer["Year"]</option>
+                                                </select>
+                                            </div>
+                                            <span class="field-validation-valid" data-valmsg-for="DateOfBirthDay" data-valmsg-replace="true"></span> <span class="field-validation-valid" data-valmsg-for="DateOfBirthMonth" data-valmsg-replace="true"></span> <span class="field-validation-valid" data-valmsg-for="DateOfBirthYear" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row align-items-center inputs">
+                                        <div class="col-md-3 text-left text-md-right"><label class="col-form-label" for="Email">@Localizer["Email"]:</label> <span class="required">*</span></div>
+                                        <div class="col-md-9 text-left"><input asp-for="Email" class="form-control" type="email" data-val="true" data-val-email="Wrong email" data-val-required="Email is required." id="Email" name="Email"> <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span></div>
+                                    </div>
+                                    <div class="form-group row align-items-center inputs">
+                                        <div class="col-md-3 text-left text-md-right"><label class="col-form-label" for="PhoneNumber">@Localizer["PhoneNumber"]:</label> <span class="required">*</span></div>
+                                        <div class="col-md-9 text-left"><input asp-for="PhoneNumber" class="form-control" type="text" data-val="true" id="PhoneNumber" name="PhoneNumber"> <span class="field-validation-valid" data-valmsg-for="PhoneNumber" data-valmsg-replace="true"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttons"><input type="submit" id="save-info-button" value="@Localizer["Save"]" name="save-info-button" class="btn btn-primary btn-lg text-uppercase save-customer-info-button"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@section Scripts {
+    <script>
+        /*Date years */
+        var currentYears = new Date().getFullYear();
+        var selectorYear = document.getElementById("year");
+        for (var i = currentYears; i >= currentYears - 70; i--) {
+            var option = document.createElement("option");
+            option.value = i;
+            option.textContent = i;
+            selectorYear.appendChild(option);
+        }
+    </script>
+}

@@ -1,0 +1,127 @@
+﻿@model Admin.Models.ShoppingCart
+@{
+    ViewData["Title"] = "GetUserCart";
+}
+<div class="center-1">
+    <div class="page shopping-cart-page">
+        <div class="container-fluid position-relative">
+            <div class="d-flex justify-content-center align-items-center py-50 px-0 page-header">
+                <div class="position-absolute t-0 b-0 l-0 r-0 page-header--bg" style="background-image:url('https://nop-kalles.nop-station.com/images/thumbs/0000297_0000273_Categorie-Breadcrumb-Banner-women_100.jpeg')"><img class="d-none" src="https://nop-kalles.nop-station.com/images/thumbs/0000297_0000273_Categorie-Breadcrumb-Banner-women_100.jpeg" alt="Shopping cart"></div>
+                <div class="position-relative page-header--content">
+                    <h1 class="clr-white f-s-20 text-center text-uppercase page-header--content-title">@Localizer["ShoppingCart"]</h1>
+                </div>
+            </div>
+        </div>
+        @if (Model != null && Model.CartDetails != null && Model.CartDetails.Count > 0)
+        {
+            <div class="page-body">
+                <div class="order-summary-content">
+                    <div class="container">
+                        <form method="post" enctype="multipart/form-data" class="sp-cart--form" id="shopping-cart-form" asp-controller="Checkout" asp-action="index">
+                            <div class="mt-4 sp-cart--form-wrapper">
+                                <div class="d-none d-lg-block sp-cart--header">
+                                    <div class="row align-items-center">
+                                        <div class="col-5">@Localizer["Products"]</div>
+                                        <div class="col-2">@Localizer["Price"]</div>
+                                        <div class="col-2">@Localizer["Qty"]</div>
+                                        <div class="col-2">@Localizer["Total"]</div>
+                                    </div>
+                                </div>
+                                <div class="sp-cart--list">
+                                    @foreach (var item in Model.CartDetails)
+                                    {
+                                        <div class="mb-4 mb-lg-0 sp-cart--list-item">
+                                            <div class="row align-items-center">
+                                                <div class="col-12 col-md-12 col-lg-5 order-2 order-md-2 mb-3 mb-lg-0 border-bottom border-lg-0">
+                                                    <div class="d-inline-flex align-items-center w-100 text-left">
+                                                        <a class="pr-3" href="/Products/Detail?Id=@item.Products.Id"> <img class="sp-cart--img" alt="Picture of @item.Products.NameEn" src="/images/@item.Image" style="max-width:100px" title="Show details for @item.Products.NameEn"> </a>
+                                                        <div class="d-inline-flex flex-column justify-content-center py-2 py-lg-0 sp-cart--product-info">
+                                                            <h5 class="m-0 mb-2 f-s-14"><a href="/Products/Detail?Id=@item.ProductId" class="product-name clr-dark">@item.Products.NameEn</a></h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-md-4 col-lg-2 order-4 order-md-3"><span class="d-inline-block d-lg-none pr-2">@Localizer["Price"]:</span> <span class="clr-gray-3" id="itemuniteprice1701">@item.Products.Price @Localizer["JOD"]</span></div>
+                                                <div class="col-12 col-md-4 col-lg-2 order-3 order-md-4 mb-3 mb-md-0 pb-3 pb-md-0 border-bottom border-md-0">
+                                                    <div class="input-group mx-auto mx-lg-0 justify-content-center justify-content-lg-between align-items-center p-qty--counter"><span class="input-group-btn"> <button class="btn btn-minus btn-disabled" type="button" onclick="location.href='@Url.Action("RemoveItem", "Cart", new { productId = item.ProductId })'"> <i class="fas fa-minus"></i> </button> </span> <input name="itemquantity1701" id="itemquantity1701" type="text" value="@item.Quantity" class="qty-input"> <span class="input-group-btn"> <button class="btn btn-plus" type="button" onclick="location.href='@Url.Action("AddItem", "Cart", new { productId = item.ProductId })'"> <i class="fas fa-plus"></i> </button> </span></div>
+                                                </div>
+                                                <div class="col-6 col-md-4 col-lg-2 order-5 order-md-5"><span class="d-inline-block d-lg-none pr-2">@Localizer["Total"]:</span> <span class="clr-gray-3 product-subtotal" id="itemsubtotal1701">@(item.Products.Price * item.Quantity) @Localizer["JOD"]</span></div>
+                                            </div>
+                                        </div>
+
+                                    }
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column flex-sm-row justify-content-between pt-2 pt-lg-4 pb-5 common-buttons">
+                                <button class="btn btn-default mb-3 mb-sm-0" type="button" name="continueshopping">
+                                    <i class="fas fa-undo-alt pr-1"></i> <span onclick="location.href='@Url.Action("index", "Brands")'">@Localizer["ContinueShopping"]</span>
+                                </button>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="col-12 col-md-12">
+                                    <div class="mt-2 mt-md-0 rounded-lg sp-cart--totals">
+                                        <div class="clr-dark total-info">
+                                            <table class="cart-total">
+                                                <tbody>
+                                                    <tr class="order-subtotal">
+                                                        <td class="pt-0 cart-total-left">
+                                                            <label class="text-uppercase">@Localizer["Sub_Total"]:</label>
+                                                        </td>
+                                                        <td class="pt-0 cart-total-right">
+                                                            <span class="value-summary" id="subTotalAtOrderTotal">@(Model.CartDetails.Select(item => item.Products.Price * item.Quantity).Sum()) @Localizer["JOD"]</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="tax-value">
+                                                        <td class="cart-total-left">
+                                                            <label class="text-uppercase">@Localizer["Tax"]:</label>
+                                                        </td>
+                                                        <td class="cart-total-right">
+                                                            <span class="value-summary" id="orderTotalTax">0.00 @Localizer["JOD"]</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="order-total">
+                                                        <td class="cart-total-left">
+                                                            <label class="text-uppercase">@Localizer["Total"]:</label>
+                                                        </td>
+                                                        <td class="cart-total-right">
+                                                            <span class="value-summary" id="grandTotalAtOrderTotal"><strong>@(Model.CartDetails.Select(item => item.Products.Price * item.Quantity).Sum()) @Localizer["JOD"]</strong></span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div id="terms-of-service-warning-box" title="Terms of service" style="display:none">
+                                            <p>Please accept the terms of service before the next step.</p>
+                                        </div>
+                                        <div class="p-0 pt-2 text-left terms-of-service">
+                                            <div class="d-inline-flex f-s-12 custom-checkbox custom-checkbox--tc"><input id="termsofservice" type="checkbox" name="termsofservice"> <label for="termsofservice">@Localizer["Iagree"]</label></div>
+                                        </div>
+                                        <div class="pt-2 checkout-buttons"><button type="submit" id="checkout" name="checkout" value="checkout" class="btn btn-primary w-100 text-uppercase checkout-button" asp-controller="Checkout" asp-action="index"> @Localizer["Checkout"] </button></div>
+                                        <div class="addon-buttons"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="page-body">
+                <div class="order-summary-content">
+                    <div class="container">
+                        <div class="py-2 py-md-4 py-lg-5 no-data">
+                            <div class="container">
+                                <div class="d-flex flex-column jutify-content-center align-items-center px-3 py-5">
+                                    <i class="fas fa-shopping-bag fa-5x"></i>
+                                    <p class="mt-3 mb-4 f-s-24 clr-dark font-weight-medium text-uppercase">@Localizer["NoItems"]</p>
+                                    <a class="btn btn-primary btn-lg text-uppercase" href="/Brands" title="@Localizer["ReturnToShop"]"> @Localizer["ReturnToShop"] </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

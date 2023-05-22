@@ -1,0 +1,25 @@
+﻿@model Admin.Models.Order
+<div class="center-1">
+    <div class="page checkout-page order-completed-page">
+        <div class="container-fluid position-relative">
+            <div class="d-flex justify-content-center align-items-center py-30 px-0 page-header">
+                <div class="position-absolute t-0 b-0 l-0 r-0 bg-gray page-header--bg"></div>
+                <div class="position-relative page-header--content">
+                    <h1 class="clr-white f-s-20 text-center page-header--content-title">@Localizer["ThankYou"]</h1>
+                </div>
+            </div>
+        </div>
+        <div class="py-5 page-body checkout-data">
+            <div class="container">
+                <div class="section order-completed">
+                    <div class="clr-green title"><strong>@Localizer["OrderSuccessfully"]</strong></div>
+                    <div class="details">
+                        <div class="order-number"><strong>@Localizer["OrderNumber"]: @Model.ID</strong></div>
+                        <div class="details-link"><a href="/orders/detail?id=@Model.ID">@Localizer["OrderDetails"]</a></div>
+                    </div>
+                    <div class="buttons"><input type="button" onclick="location.href='@Url.Action("index", "Home")'" class="btn btn-primary btn-lg text-uppercase order-completed-continue-button" value="@Localizer["Continue"]"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

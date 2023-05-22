@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<div class="column-two-wrapper">
+    <div class="container">
+        @{
+            Html.RenderPartial("_LeftSide");
+        }        <div class="center-2">
+            <div class="page contact-page">
+                <div class="container-fluid position-relative">
+                    <div class="d-flex justify-content-center align-items-center py-50 px-0 page-header">
+                        <div class="position-absolute t-0 b-0 l-0 r-0 bg-gray page-header--bg lazyload" data-src="https://nop-kalles.nop-station.com/images/thumbs/0000368_0000275_Categorie-Breadcrumb-Banner-men.jpeg" style="background-image:url('https://nop-kalles.nop-station.com/images/thumbs/0000368_0000275_Categorie-Breadcrumb-Banner-men.jpeg')"><img class="d-none lazyload" alt="" data-src="https://nop-kalles.nop-station.com/images/thumbs/0000368_0000275_Categorie-Breadcrumb-Banner-men.jpeg" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="></div>
+                        <div class="position-relative page-header--content">
+                            <h1 class="clr-white f-s-20 text-center page-header--content-title">@Localizer["PrivacyPolicy"]</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-3 page-body">
+                    <div class="container">
+                        <div class="container-fluid position-relative">
+                            <div class="d-flex justify-content-center align-items-center py-30 px-0 page-header">
+                                <div class="position-absolute t-0 b-0 l-0 r-0 bg-gray page-header--bg"></div>
+                                <div class="position-relative page-header--content">
+                                    <div class="text-center topic-block">
+                                        <div class="topic-block-body">
+                                            <p>@Localizer["PrivacyPolicyPage"]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

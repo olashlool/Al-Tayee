@@ -1,0 +1,53 @@
+﻿<div class="column-two-wrapper">
+    <div class="container">
+        @Html.Partial("_LeftSide")
+        <div class="center-2">
+            <div class="page contact-page">
+                <div class="container-fluid position-relative">
+                    <div class="d-flex justify-content-center align-items-center py-50 px-0 page-header">
+                        <div class="position-absolute t-0 b-0 l-0 r-0 bg-gray page-header--bg lazyload" data-src="https://nop-kalles.nop-station.com/images/thumbs/0000368_0000275_Categorie-Breadcrumb-Banner-men.jpeg" style="background-image:url('https://nop-kalles.nop-station.com/images/thumbs/0000368_0000275_Categorie-Breadcrumb-Banner-men.jpeg')"><img class="d-none lazyload" alt="" data-src="https://nop-kalles.nop-station.com/images/thumbs/0000368_0000275_Categorie-Breadcrumb-Banner-men.jpeg" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="></div>
+                        <div class="position-relative page-header--content">
+                            <h1 class="clr-white f-s-20 text-center page-header--content-title">@Localizer["ContactUs"]</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-3 page-body">
+                    <div class="container">
+                        <div class="container-fluid position-relative">
+                            <div class="d-flex justify-content-center align-items-center py-30 px-0 page-header">
+                                <div class="position-absolute t-0 b-0 l-0 r-0 bg-gray page-header--bg"></div>
+                                <div class="position-relative page-header--content">
+                                    <div class="text-center topic-block">
+                                        <div class="topic-block-body">
+                                            <p>@Localizer["ContactUsPage"]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="inline-form" method="post" action="/contactus" novalidate="novalidate">
+                            <div class="fieldset">
+                                <div class="form-fields">
+                                    <div class="form-group row align-items-start inputs">
+                                        <div class="col-md-4 col-lg-3 text-left text-md-left"><label class="col-form-label" for="FullName">@Localizer["Yourname"]:</label> <span class="required">*</span></div>
+                                        <div class="col-md-8 col-lg-9 text-left"><input class="form-control fullname" placeholder="@Localizer["EnterYourName"]" type="text" data-val="true" data-val-required="Enter your name" id="FullName" name="FullName"> <span class="field-validation-valid" data-valmsg-for="FullName" data-valmsg-replace="true"></span></div>
+                                    </div>
+                                    <div class="form-group row align-items-start inputs">
+                                        <div class="col-md-4 col-lg-3 text-left text-md-left"><label class="col-form-label" for="Email">@Localizer["YourEmail"]:</label> <span class="required">*</span></div>
+                                        <div class="col-md-8 col-lg-9 text-left"><input class="form-control email" placeholder="@Localizer["EnterYourEmailAddress"]" type="email" data-val="true" data-val-email="Wrong email" data-val-required="Enter email" id="Email" name="Email"> <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span></div>
+                                    </div>
+                                    <div class="form-group row align-items-start inputs">
+                                        <div class="col-md-4 col-lg-3 text-left text-md-left"><label class="col-form-label" for="Enquiry">@Localizer["Enquiry"]:</label> <span class="required">*</span></div>
+                                        <div class="col-md-8 col-lg-9 text-left"><textarea placeholder="@Localizer["EnterYourEnquiry"]" class="form-control enquiry" data-val="true" data-val-required="Enter enquiry" id="Enquiry" name="Enquiry"></textarea> <span class="field-validation-valid" data-valmsg-for="Enquiry" data-valmsg-replace="true"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center buttons"><input type="submit" name="send-email" class="btn btn-primary btn-lg text-uppercase contact-us-button" value="@Localizer["Submit"]"></div>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8FzFlYYUAiVGkfhEstzu8a1wWr9PzxJ5I0mp5J9ajXNrPkecy9Eqb4-nTl9Th_DK4nwoSg--5-6tkeECy-Jtozy-EBVEWHXHwpYKvdERXogfW8cBzhacZzI7GN5mysEhFVP9c55ZiFpb_G-Uj3cNZug">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

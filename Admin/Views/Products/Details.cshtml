@@ -1,0 +1,95 @@
+﻿@model Admin.Models.ViewModels.ProductsVM
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<style>
+    .slick-slide {
+        height: 150px !important;
+    }
+</style>
+<div class="ec-content-wrapper">
+    <div class="content">
+        <div class="breadcrumb-wrapper d-flex align-items-center justify-content-between">
+            <div>
+                <h1>@Localizer["ProductDetail"]</h1>
+                <p class="breadcrumbs">
+                    <span><a href="/">@Localizer["Home"]</a></span>
+                    <span><i class="mdi mdi-chevron-right"></i></span>@Localizer["Product"]
+                </p>
+            </div>
+            <div>
+                <a href="/Products" class="btn btn-primary">
+                    @Localizer["Back"]
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card card-default">
+                    <div class="card-header card-header-border-bottom">
+                        <h2>@Localizer["ProductDetail"]</h2>
+                    </div>
+
+                    <div class="card-body product-detail">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-6">
+                                <div class="row">
+                                    <img src="@Model.BaseImage">
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-6">
+                                <div class="row product-overview">
+                                    <div class="col-12">
+                                        <h5 class="product-title" style="padding-bottom: 15px;">@Model.NameEn</h5>
+                                        <p class="brand" style="padding-bottom: 15px;"><strong>@Localizer["Brand"]:</strong> @Model.Brand</p>
+                                        <p class="product-desc">
+                                            @Model.DescriptionEn
+                                        </p>
+                                        <p class="product-price">@Localizer["Price"]: @Model.Price @Localizer["JOD"]</p>
+                                        <p class="product-size">@Localizer["Size"]: @Model.Size</p>
+
+ @*                                       @if (@Model.Types != null && @Model.Types.Count > 0)
+                                        {
+                                            <ul class="product-color">
+                                                @foreach (var item in @Model.Types)
+                                                {
+                                                    <li class="color"><span style="background-color: @item ;"></span></li>
+                                                }
+                                            </ul>
+                                        }*@
+                                        <div class="single-nav-thumb slick-initialized slick-slider">
+                                            <div class="slick-list draggable">
+                                                <div class="slick-track" style="opacity: 1; width: 100%;">
+                                                    <div class="slick-slide">
+                                                        <div>
+                                                            <div class="single-slide" style="width: 100%; display: inline-block;">
+                                                                <img class="img-responsive" src="@Model.AltImage" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    @if (Model.Images != null && Model.Images.Count > 0)
+                                                    {
+                                                        foreach (var item in Model.Images)
+                                                        {
+                                                            <div class="slick-slide">
+                                                                <div>
+                                                                    <div class="single-slide" style="width: 100%; display: inline-block;">
+                                                                        <img class="img-responsive" src="@item" alt="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        }
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End Content -->
+</div>

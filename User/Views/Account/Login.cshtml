@@ -1,0 +1,55 @@
+﻿@model Admin.Models.ViewModels.LoginVM
+
+<div class=center-1>
+    <div class="page login-page">
+        <div class="container-fluid position-relative">
+            <div class="d-flex justify-content-center align-items-center py-50 px-0 page-header">
+                <div class="position-absolute t-0 b-0 l-0 r-0 bg-gray page-header--bg lazyload" data-src=https://nop-kalles.nop-station.com/images/thumbs/0000368_0000275_Categorie-Breadcrumb-Banner-men.jpeg></div>
+                <div class="position-relative page-header--content">
+                    <h1 class="clr-white f-s-20 text-center page-header--content-title">@Localizer["WelcomePleaseSignIn"]</h1>
+                </div>
+            </div>
+        </div>
+        <div class=page-body>
+            <div class=container>
+                <div class="alert alert-danger" role="alert" asp-validation-summary="ModelOnly" class="text-danger" style="margin: 0;padding: 10px;margin-top: 30px;"></div>
+                <div class="row pt-5 customer-blocks">
+                    <div class="col-md-6 new-wrapper register-block">
+                        <div class=title><strong>@Localizer["NewCustomer"]</strong></div>
+                        <div class="mb-4 text">@Localizer["ParagraphNewCustomer"]</div>
+                        <div class=buttons><a class="btn btn-primary btn-lg register-button" href="/Account/Register">@Localizer["Register"]</a></div>
+                    </div>
+                    <div class="col-md-6 returning-wrapper fieldset">
+                        <form asp-controller="Account" asp-action="Login" method="post">
+                            <div class=title><strong>@Localizer["ReturningCustomer"]</strong></div>
+                            <div class="mb-4 form-fields">
+                                <div class="form-group row align-items-center inputs">
+                                    <div class="col-lg-3 text-left text-md-right"><label asp-for="Email" class="col-form-label mb-0 text-left text-lg-right" for=Email>@Localizer["Email"]:</label></div>
+                                    <div class="col-lg-9 text-left">
+                                        <input asp-for="Email" class="form-control email" autofocus type=email data-val=true data-val-email="Wrong email" data-val-required="@Localizer["ValidationEmail"]" id=Email name=Email>
+                                        <span asp-validation-for="Email" class=field-validation-valid data-valmsg-for=Email data-valmsg-replace=true></span>
+                                    </div>
+                                </div>
+                                <div class="form-group row align-items-center inputs">
+                                    <div class="col-lg-3 text-left text-md-right"><label asp-for="Password" class="col-form-label mb-0 text-left text-lg-right" for=Password>@Localizer["Password"]:</label></div>
+                                    <div class="col-lg-9 text-left">
+                                        <input asp-for="Password" class="form-control password" type=password id=Password name=Password data-val-required="@Localizer["ValidationPassword"]">
+                                        <span asp-validation-for="Password" class=field-validation-valid data-valmsg-for=Password data-valmsg-replace=true></span>
+                                    </div>
+                                </div>
+                                @* <div class="form-group row align-items-center inputs reversed">
+                                <div class="col-lg-9 offset-lg-3 text-left">
+                                <div class="d-inline-flex custom-checkbox"><input type=checkbox data-val=true data-val-required="The Remember me? field is required." id=RememberMe name=RememberMe value=true> <label for=RememberMe>@Localizer["RememberMe"]</label></div>
+                                <span class=forgot-password> <a href=passwordrecovery.html>@Localizer["ForgotPassword"]</a> </span>
+                                </div>
+                                </div>*@
+                            </div>
+                            <div class=buttons><button class="btn btn-primary btn-lg login-button" type=submit value="Log in">@Localizer["Login"] </button></div>
+                            <input type=hidden><input name=RememberMe type=hidden value=false>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

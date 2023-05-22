@@ -1,0 +1,1005 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\obj\\Release\\net6.0\\scopedcss\\projectbundle\\User.bundle.scp.css",
+      "PackagePath": "staticwebassets\\User.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.AnywhereSlider\\Content\\css\\owl.carousel0e0f.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.AnywhereSlider\\Content\\css\\owl.carousel0e0f.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.AnywhereSlider\\Content\\css\\owl.theme.green.minb120.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.AnywhereSlider\\Content\\css\\owl.theme.green.minb120.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.AnywhereSlider\\Content\\css\\rtl\\owl.carousel71fa.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.AnywhereSlider\\Content\\css\\rtl\\owl.carousel71fa.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.AnywhereSlider\\Content\\css\\rtl\\owl.theme.green.min0819.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.AnywhereSlider\\Content\\css\\rtl\\owl.theme.green.min0819.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.AnywhereSlider\\Content\\css\\rtl\\owl.video.play.html",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.AnywhereSlider\\Content\\css\\rtl\\owl.video.play.html"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.AnywhereSlider\\Themes\\NopKalles\\Content\\css\\styles.rtl79d1.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.AnywhereSlider\\Themes\\NopKalles\\Content\\css\\styles.rtl79d1.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.AnywhereSlider\\Themes\\NopKalles\\Content\\css\\stylesfe77.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.AnywhereSlider\\Themes\\NopKalles\\Content\\css\\stylesfe77.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.MegaMenu\\Themes\\NopKalles\\Content\\css\\megamenu.rtl7278.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.MegaMenu\\Themes\\NopKalles\\Content\\css\\megamenu.rtl7278.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.MegaMenu\\Themes\\NopKalles\\Content\\css\\megamenua498.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.MegaMenu\\Themes\\NopKalles\\Content\\css\\megamenua498.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.MegaMenu\\Themes\\NopKalles\\Content\\images\\menu-icon.html",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.MegaMenu\\Themes\\NopKalles\\Content\\images\\menu-icon.html"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.OCarousels\\Contents\\css\\owl.carousel13bc.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.OCarousels\\Contents\\css\\owl.carousel13bc.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.OCarousels\\Contents\\css\\owl.theme.green.min5dbe.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.OCarousels\\Contents\\css\\owl.theme.green.min5dbe.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.OCarousels\\Contents\\css\\rtl\\owl.carouselef77.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.OCarousels\\Contents\\css\\rtl\\owl.carouselef77.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.OCarousels\\Contents\\css\\rtl\\owl.theme.green.minff7c.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.OCarousels\\Contents\\css\\rtl\\owl.theme.green.minff7c.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.OCarousels\\Contents\\css\\rtl\\owl.video.play.html",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.OCarousels\\Contents\\css\\rtl\\owl.video.play.html"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.OCarousels\\Themes\\NopKalles\\Contents\\css\\styles.rtle727.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.OCarousels\\Themes\\NopKalles\\Contents\\css\\styles.rtle727.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.OCarousels\\Themes\\NopKalles\\Contents\\css\\stylesbc12.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.OCarousels\\Themes\\NopKalles\\Contents\\css\\stylesbc12.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.PictureZoom\\Contents\\css\\cloud-zoomf368.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.PictureZoom\\Contents\\css\\cloud-zoomf368.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.PictureZoom\\Contents\\css\\stylesf57b.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.PictureZoom\\Contents\\css\\stylesf57b.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.ProductRibbon\\Themes\\NopKalles\\Contents\\css\\styles9870.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.ProductRibbon\\Themes\\NopKalles\\Contents\\css\\styles9870.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.QuickView\\Contents\\css\\magnific-popup0b51.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.QuickView\\Contents\\css\\magnific-popup0b51.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.QuickView\\Themes\\NopKalles\\contents\\css\\styles.rtl21c0.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.QuickView\\Themes\\NopKalles\\contents\\css\\styles.rtl21c0.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Plugins\\NopStation.Plugin.Widgets.QuickView\\Themes\\NopKalles\\contents\\css\\stylesa021.css",
+      "PackagePath": "staticwebassets\\User\\Plugins\\NopStation.Plugin.Widgets.QuickView\\Themes\\NopKalles\\contents\\css\\stylesa021.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Scripts\\bootstrap.js",
+      "PackagePath": "staticwebassets\\User\\Scripts\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Scripts\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\User\\Scripts\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Scripts\\jquery-3.4.1.intellisense.js",
+      "PackagePath": "staticwebassets\\User\\Scripts\\jquery-3.4.1.intellisense.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Scripts\\jquery-3.4.1.js",
+      "PackagePath": "staticwebassets\\User\\Scripts\\jquery-3.4.1.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Scripts\\jquery-3.4.1.min.js",
+      "PackagePath": "staticwebassets\\User\\Scripts\\jquery-3.4.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Scripts\\jquery-3.4.1.min.map",
+      "PackagePath": "staticwebassets\\User\\Scripts\\jquery-3.4.1.min.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Scripts\\jquery-3.4.1.slim.js",
+      "PackagePath": "staticwebassets\\User\\Scripts\\jquery-3.4.1.slim.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Scripts\\jquery-3.4.1.slim.min.js",
+      "PackagePath": "staticwebassets\\User\\Scripts\\jquery-3.4.1.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Scripts\\jquery-3.4.1.slim.min.map",
+      "PackagePath": "staticwebassets\\User\\Scripts\\jquery-3.4.1.slim.min.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Scripts\\jquery.validate-vsdoc.js",
+      "PackagePath": "staticwebassets\\User\\Scripts\\jquery.validate-vsdoc.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Scripts\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\User\\Scripts\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Scripts\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\User\\Scripts\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Scripts\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\User\\Scripts\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Scripts\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\User\\Scripts\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Scripts\\js\\CheckoutOnePage.Footer.scripts.js",
+      "PackagePath": "staticwebassets\\User\\Scripts\\js\\CheckoutOnePage.Footer.scripts.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Scripts\\js\\CheckoutOnePage.Head.scripts.js",
+      "PackagePath": "staticwebassets\\User\\Scripts\\js\\CheckoutOnePage.Head.scripts.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Scripts\\js\\Homepage.Footer.scripts3365.js",
+      "PackagePath": "staticwebassets\\User\\Scripts\\js\\Homepage.Footer.scripts3365.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Scripts\\js\\Homepage.Head.scriptsd79c.js",
+      "PackagePath": "staticwebassets\\User\\Scripts\\js\\Homepage.Head.scriptsd79c.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Scripts\\modernizr-2.8.3.js",
+      "PackagePath": "staticwebassets\\User\\Scripts\\modernizr-2.8.3.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Site.css",
+      "PackagePath": "staticwebassets\\User\\Site.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\SiteAr.css",
+      "PackagePath": "staticwebassets\\User\\SiteAr.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\Content\\images\\toggle-gray.html",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\Content\\images\\toggle-gray.html"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\css\\bootstrap.min.rtl29e8.css",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\css\\bootstrap.min.rtl29e8.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\css\\bootstrap.min352e.css",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\css\\bootstrap.min352e.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\css\\color7334.css",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\css\\color7334.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\css\\fontawesome-all.minfebf.css",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\css\\fontawesome-all.minfebf.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\css\\images\\ajaxLoader.html",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\css\\images\\ajaxLoader.html"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\css\\linearicons88b3.css",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\css\\linearicons88b3.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\css\\owl.carousel.min6b33.css",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\css\\owl.carousel.min6b33.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\css\\owl.video.play.html",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\css\\owl.video.play.html"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\css\\responsive.rtl294d.css",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\css\\responsive.rtl294d.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\css\\responsive8c6e.css",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\css\\responsive8c6e.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\css\\styles.rtl144b.css",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\css\\styles.rtl144b.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\css\\styles0e1b.css",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\css\\styles0e1b.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\ajax-loader-small.gif",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\ajax-loader-small.gif"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\back-button.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\back-button.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\calendar-next.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\calendar-next.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\calendar-prev.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\calendar-prev.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\close.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\close.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\compare-button.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\compare-button.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\details.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\details.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\discontinued-product-icon.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\discontinued-product-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\download-button.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\download-button.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\edit.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\edit.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\edit_.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\edit_.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\email-button.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\email-button.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\first.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\first.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\last.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\last.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\loading.gif",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\loading.gif"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\move.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\move.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\new.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\new.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\pointer.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\pointer.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\rating1.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\rating1.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\rating2.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\rating2.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\remove.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\remove.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\remove_.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\remove_.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\reply.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\reply.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\retry.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\retry.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\return.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\return.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\rss.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\rss.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\social-sprite.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\social-sprite.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\toggle-gray.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\toggle-gray.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\topic-type1.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\topic-type1.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\topic-type2.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\topic-type2.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\topic-type3.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\topic-type3.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\view-grid.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\view-grid.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\view-list.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\view-list.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\vote-down-selected.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\vote-down-selected.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\vote-down.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\vote-down.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\vote-up-selected.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\vote-up-selected.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\vote-up.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\vote-up.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\watch.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\watch.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\images\\wishlist-button.png",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\images\\wishlist-button.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\Linearicons-Free54e9.eot",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\Linearicons-Free54e9.eot"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\Linearicons-Free54e9.svg",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\Linearicons-Free54e9.svg"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\Linearicons-Free54e9.ttf",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\Linearicons-Free54e9.ttf"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\Linearicons-Free54e9.woff",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\Linearicons-Free54e9.woff"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\Linearicons-Free54e9.woff2",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\Linearicons-Free54e9.woff2"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\Linearicons-Freed41d.eot",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\Linearicons-Freed41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-brands-400d41d.eot",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-brands-400d41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-regular-400d41d.eot",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-regular-400d41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-solid-900d41d.eot",
+      "PackagePath": "staticwebassets\\User\\Themes\\NopKalles\\Content\\webfonts\\fa-solid-900d41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Agrado\\IMG_9416.png",
+      "PackagePath": "staticwebassets\\images\\Agrado\\IMG_9416.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Agrado\\IMG_9417.png",
+      "PackagePath": "staticwebassets\\images\\Agrado\\IMG_9417.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Agrado\\IMG_9418.png",
+      "PackagePath": "staticwebassets\\images\\Agrado\\IMG_9418.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Agrado\\IMG_9419.png",
+      "PackagePath": "staticwebassets\\images\\Agrado\\IMG_9419.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Agrado\\IMG_9420.png",
+      "PackagePath": "staticwebassets\\images\\Agrado\\IMG_9420.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Agrado\\IMG_9421.png",
+      "PackagePath": "staticwebassets\\images\\Agrado\\IMG_9421.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Agrado\\IMG_9422.png",
+      "PackagePath": "staticwebassets\\images\\Agrado\\IMG_9422.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Agrado\\Untitled.rtf",
+      "PackagePath": "staticwebassets\\images\\Agrado\\Untitled.rtf"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Al-Tayee-Arabic-logo.png",
+      "PackagePath": "staticwebassets\\images\\Al-Tayee-Arabic-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Al-Tayee-English-logo.png",
+      "PackagePath": "staticwebassets\\images\\Al-Tayee-English-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Al-Tayee-fdn.-Icone.png",
+      "PackagePath": "staticwebassets\\images\\Al-Tayee-fdn.-Icone.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Brands\\Brands-1.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-1.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Brands\\Brands-10.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-10.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Brands\\Brands-11.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-11.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Brands\\Brands-2.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-2.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Brands\\Brands-3.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-3.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Brands\\Brands-4.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-4.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Brands\\Brands-5.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-5.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Brands\\Brands-6.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-6.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Brands\\Brands-7.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-7.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Brands\\Brands-8.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-8.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Brands\\Brands-9.png",
+      "PackagePath": "staticwebassets\\images\\Brands\\Brands-9.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Cards.png",
+      "PackagePath": "staticwebassets\\images\\Cards.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Chat-Icons\\chat.png",
+      "PackagePath": "staticwebassets\\images\\Chat-Icons\\chat.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Chat-Icons\\messenger.png",
+      "PackagePath": "staticwebassets\\images\\Chat-Icons\\messenger.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Chat-Icons\\whatsapp.png",
+      "PackagePath": "staticwebassets\\images\\Chat-Icons\\whatsapp.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Elegance-Hair-Gel-500ml\\Elegance Hair Gel 500ml.rtf",
+      "PackagePath": "staticwebassets\\images\\Elegance-Hair-Gel-500ml\\Elegance Hair Gel 500ml.rtf"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Elegance-Hair-Gel-500ml\\IMG_9369.png",
+      "PackagePath": "staticwebassets\\images\\Elegance-Hair-Gel-500ml\\IMG_9369.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Elegance-Hair-Gel-500ml\\IMG_9370.png",
+      "PackagePath": "staticwebassets\\images\\Elegance-Hair-Gel-500ml\\IMG_9370.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Elegance-Hair-Gel-500ml\\IMG_9371.png",
+      "PackagePath": "staticwebassets\\images\\Elegance-Hair-Gel-500ml\\IMG_9371.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Elegance-Hair-Gel-500ml\\IMG_9372.png",
+      "PackagePath": "staticwebassets\\images\\Elegance-Hair-Gel-500ml\\IMG_9372.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Elegance-Hair-Gel-500ml\\IMG_9374.png",
+      "PackagePath": "staticwebassets\\images\\Elegance-Hair-Gel-500ml\\IMG_9374.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Elegance-Hair-Gel-500ml\\IMG_9375.png",
+      "PackagePath": "staticwebassets\\images\\Elegance-Hair-Gel-500ml\\IMG_9375.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Elegance-Hair-Gel-500ml\\IMG_9376.png",
+      "PackagePath": "staticwebassets\\images\\Elegance-Hair-Gel-500ml\\IMG_9376.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Grid\\Des-IMG_4978.png",
+      "PackagePath": "staticwebassets\\images\\Grid\\Des-IMG_4978.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Grid\\Des-IMG_5006.png",
+      "PackagePath": "staticwebassets\\images\\Grid\\Des-IMG_5006.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Grid\\Des-IMG_9423.png",
+      "PackagePath": "staticwebassets\\images\\Grid\\Des-IMG_9423.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Grid\\Des-IMG_9539.png",
+      "PackagePath": "staticwebassets\\images\\Grid\\Des-IMG_9539.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_4964_638203064330813263.png",
+      "PackagePath": "staticwebassets\\images\\IMG_4964_638203064330813263.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_4965_638203064330879493.png",
+      "PackagePath": "staticwebassets\\images\\IMG_4965_638203064330879493.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_9611_638202605257952242.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9611_638202605257952242.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_9611_638202855782171435.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9611_638202855782171435.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_9611_638202899738797146.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9611_638202899738797146.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_9611_638202970006187141.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9611_638202970006187141.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_9615_638202605258034214.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9615_638202605258034214.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_9615_638202855782354500.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9615_638202855782354500.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_9615_638202899738921710.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9615_638202899738921710.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_9615_638202970051371284.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9615_638202970051371284.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_9617_638202605258047402.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9617_638202605258047402.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_9617_638202855782389940.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9617_638202855782389940.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_9617_638202970094458696.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9617_638202970094458696.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_9619_638202970094475012.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9619_638202970094475012.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_9626_638202610259947116.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9626_638202610259947116.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_9627_638202610260063373.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9627_638202610260063373.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_9628_638202610260083945.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9628_638202610260083945.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_9632_638202610602616282.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9632_638202610602616282.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_9634_638202610602632984.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9634_638202610602632984.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\IMG_9639_638202610602646507.png",
+      "PackagePath": "staticwebassets\\images\\IMG_9639_638202610602646507.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Slider-1-Ar.png",
+      "PackagePath": "staticwebassets\\images\\Slider-1-Ar.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Slider-1.png",
+      "PackagePath": "staticwebassets\\images\\Slider-1.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Slider-2-Ar.png",
+      "PackagePath": "staticwebassets\\images\\Slider-2-Ar.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Slider-2.png",
+      "PackagePath": "staticwebassets\\images\\Slider-2.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Slider-3-Ar.png",
+      "PackagePath": "staticwebassets\\images\\Slider-3-Ar.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Slider-3.png",
+      "PackagePath": "staticwebassets\\images\\Slider-3.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\images\\Slider-4.png",
+      "PackagePath": "staticwebassets\\images\\Slider-4.png"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\User\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.User.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.build.User.props",
+      "PackagePath": "build\\User.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.User.props",
+      "PackagePath": "buildMultiTargeting\\User.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildTransitive.User.props",
+      "PackagePath": "buildTransitive\\User.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

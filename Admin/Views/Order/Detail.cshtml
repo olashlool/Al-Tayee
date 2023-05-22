@@ -1,0 +1,127 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model Admin.Models.ViewModels.OrderDetailVM
+
+<div class="ec-content-wrapper">
+    <div class="content">
+        <div class="breadcrumb-wrapper breadcrumb-wrapper-2">
+            <h1>Order Detail</h1>
+            <p class="breadcrumbs">
+                <span><a href="/">Home</a></span>
+                <span><i class="mdi mdi-chevron-right"></i></span>Orders
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="ec-odr-dtl card card-default">
+                    <div class="card-header card-header-border-bottom d-flex justify-content-between">
+                        <h2 class="ec-odr">
+                            Order Detail<br>
+                            <span class="small">Order ID: #@Model.OrderItems.First().Order.ID</span>
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6">
+                                <address class="info-grid">
+                                    <div class="info-title"><strong>Customer:</strong></div>
+                                    <br>
+                                    <div class="info-content">
+                                        @Model.OrderItems.First().Order.FirstName, @Model.OrderItems.First().Order.LastName<br>
+                                        @Model.OrderItems.First().Order.Country, @Model.OrderItems.First().Order.City<br>
+                                        @Model.OrderItems.First().Order.Address<br>
+                                        <abbr title="Phone">P:</abbr> @Model.OrderItems.First().Order.Phone
+                                    </div>
+                                </address>
+                            </div>
+                            <div class="col-xl-3 col-lg-6">
+                                <address class="info-grid">
+                                    <div class="info-title"><strong>Payment Method:</strong></div>
+                                    <br>
+                                    <div class="info-content">
+                                        Cash on delivary<br>
+                                        @Model.OrderItems.First().Order.Email<br>
+                                    </div>
+                                </address>
+                            </div>
+                            <div class="col-xl-3 col-lg-6">
+                                <address class="info-grid">
+                                    <div class="info-title"><strong>Order Date:</strong></div>
+                                    <br>
+                                    <div class="info-content">
+                                        @Model.OrderItems.First().Order.Timestamp
+                                    </div>
+                                </address>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="tbl-title">PRODUCT SUMMARY</h3>
+                                <div class="table-responsive">
+                                    <table class="table table-striped o-tbl">
+                                        <thead>
+                                            <tr class="line">
+                                                <td><strong>#</strong></td>
+                                                <td class="text-center"><strong>IMAGE</strong></td>
+                                                <td class="text-center"><strong>PRODUCT</strong></td>
+                                                <td class="text-center"><strong>PRICE/UNIT</strong></td>
+                                                <td class="text-right"><strong>QUANTITY</strong></td>
+                                                <td class="text-right"><strong>SUBTOTAL</strong></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @{
+                                                var count = 1;
+                                                double subtotal = 0;
+                                                double OrderTotal = 0;
+                                            }
+                                            @foreach (var item in Model.OrderItems)
+                                            {
+                                                var total = item.Quantity * item.Product.Price;
+                                                OrderTotal += total;
+                                                foreach (var orderItem in Model.OrderItems.Where(orderItem => orderItem.OrderID == item.ID))
+                                                {
+                                                    subtotal += orderItem.Quantity * orderItem.Product.Price;
+                                                }
+                                                <tr>
+                                                    <td>@count</td>
+                                                    <td><img class="product-img" src="/images/@item.Product.BaseImage" alt=""></td>
+                                                    <td>
+                                                        <strong>@item.Product.NameEn</strong>
+                                                    </td>
+                                                    <td class="text-center">@item.Product.Price</td>
+                                                    <td class="text-center">@item.Quantity</td>
+                                                    <td class="text-right">@total</td>
+                                                </tr>
+                                                count++;
+                                            }
+                                            <tr>
+                                                <td colspan="4"></td>
+                                                <td class="text-right"><strong>Taxes</strong></td>
+                                                <td class="text-right"><strong>N/A</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="4">
+                                                </td>
+                                                <td class="text-right"><strong>Total</strong></td>
+                                                <td class="text-right"><strong>@OrderTotal.ToString("F") JOD</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="4">
+                                                </td>
+                                                <td class="text-right"><strong>Payment Status</strong></td>
+                                                <td class="text-right"><strong>PAID</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Content -->
+</div>
+

@@ -1,0 +1,47 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model IList<Admin.Models.ContactUs>
+
+<div class="ec-content-wrapper ec-ec-content-wrapper mb-m-24px">
+    <div class="content">
+        <div class="breadcrumb-wrapper breadcrumb-contacts">
+            <div>
+                <h1>@Localizer["Feedback"] </h1>
+                <p class="breadcrumbs">
+                    <span><a href="/">@Localizer["Home"]</a></span>
+                    <span><i class="mdi mdi-chevron-right"></i></span>@Localizer["UserFeedback"]
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-6 col-xl-4 mb-24px">
+                    <div class="ec-user-card card card-default p-4">
+@*                        <a href="javascript:0" data-bs-toggle="modal" data-bs-target="#modalContact" class="view-detail">
+                            <i class="mdi mdi-eye-plus-outline"></i>
+                        </a>*@
+                        <a href="javascript:0" class="media text-secondary">
+                            <img src="/Admin/assets/img/user/feedback.jpg" class="mr-3 img-fluid" alt="Avatar Image">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-2 text-dark">@item.Name</h5>
+                                <ul class="list-unstyled">
+                                    <li class="d-flex mb-1">
+                                        <i class="mdi mdi-email mr-1"></i>
+                                        <span>@item.Email</span>
+                                    </li>
+                                    <li class="d-flex mb-1">
+@*                                        <i class="mdi mdi-phone mr-1"></i>
+*@                                        <span>@item.Enquiry</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+    <!-- End Content -->
+</div>

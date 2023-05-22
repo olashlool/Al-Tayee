@@ -1,0 +1,208 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
+body {
+    direction: rtl;
+    font-family: Cairo !important;
+}
+    *:not(i):not(span) {
+        font-family: Cairo !important;
+    }
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #c6922c;
+}
+.gallery {
+    float: left;
+    max-width: 50%;
+    margin-left: 40px;
+}
+#fullWidthgallery {
+    max-width: 100% !important;
+}
+.cloud-zoom-big {
+    right: 369px !important;
+}
+.vm-btn.selected {
+    color: #c6922c !important;
+    pointer-events: none;
+}
+.slider-subtitle {
+    padding-left: 2px;
+    font-size: 30px !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white !important;
+    letter-spacing: 2px;
+}
+.slider-title {
+    padding-top: 7px;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white !important;
+}
+.slider-caption-inner {
+    right: 0 !important;
+}
+
+#majesticAgency:hover {
+    color: #e1251b !important;
+}
+.overview .product-name h1 {
+    font-weight: 700;
+}
+.footer-top {
+    padding-bottom: 3rem;
+}
+@media only screen and (max-width: 991px){
+    .header-logo a img {
+        max-width: 75%;
+    }
+    .socil-links {
+        bottom: 65px !important;
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .footer-margin-text{
+        margin-bottom:12px !important;
+    }
+}
+@media only screen and (max-width: 451px) {
+    .slider-title {
+        font-size: 14px !important;
+    }
+
+    .slider-subtitle {
+        font-size: 10px !important;
+    }
+    .slider-btn {
+        min-width: 100px !important;
+        min-height: 20px !important;
+        margin-top: 10px !important;
+    }
+}
+@media only screen and (max-width: 737px) {
+    .footer-block .list a {
+        padding:0;
+    }
+    .no-gutters{
+        padding:10px 0;
+    }
+    .footer-block .list > li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 575px) {
+    .slider-caption-inner {
+        width: calc(100% - 50%) !important;
+    }
+    .slider-subtitle{
+        font-size:21px;
+    }
+}
+.category-name {
+    text-transform: uppercase;
+}
+.slider-caption-inner{
+    text-align:right !important;
+}
+.slider-subtitle{
+    letter-spacing:0 !important;
+}
+
+@media (max-width: 1300px) {
+    .slider-btn {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+.socil-links {
+    position: fixed;
+    bottom: 55px;
+    right: 1%;
+    display: grid;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 500;
+}
+    .socil-links:hover{
+        opacity:1;
+    }
+.chat {
+    position: absolute;
+    bottom: 30px;
+    display: grid;
+    right: 5%;
+    margin-right: 5px;
+}
+.Messenger {
+    background: url('../../images/Chat-Icons/messenger.png');
+    background-size: 100% 100%;
+    width: 50px;
+    height: 50px;
+}
+.WhatsApp {
+    background: url('../../images/Chat-Icons/whatsapp.png');
+    background-size: 100% 100%;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+.TalkToUs {
+    position: fixed;
+    bottom: 90px;
+    right: 1%;
+    z-index: 500;
+    display:none;
+}
+
+.TalkToUs {
+    opacity: 0;
+    animation: appear 2s forwards;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.dropdown-menu {
+    min-width: 4rem !important;
+    border-radius: 6px;
+    padding: 0;
+}
+.dropdown-item {
+    font-size: 12px;
+    padding: 5px;
+}
+#checkout:focus {
+    background: #ca8341 !important;
+}
+
+#ContinuePaymentMethod:focus {
+    background: #ca8341 !important;
+}
+
+.scroll-bar {
+    background: #ca8341 !important;
+}
+
+.scrollbar-inner:hover > .scroll-element .scroll-bar {
+    background-color: #c6922c !important;
+}
+
+.scrollbar-inner > .scroll-element .scroll-bar {
+    opacity: 1 !important;
+}

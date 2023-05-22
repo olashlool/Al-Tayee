@@ -1,0 +1,101 @@
+﻿@model Admin.Models.ShoppingCart
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+@if (Model != null && Model.CartDetails != null && Model.CartDetails.Count > 0)
+{
+    <div id="miniCartWithProduct" class="position-relative d-flex flex-column justify-content-between w-100 h-100 of-h text-left sb--content">
+        <div class="position-relative of-h w-100 h-100 sb--scroll">
+            <div class="position-absolute t-0 r-0 b-0 l-0 of-a of-x-h scrollbar-inner sb--scroll-inner">
+                <ul class="list-unstyled mb-0 mini-cart--list" id="miniShoppingCartItemContainer">
+                    @foreach (var item in Model.CartDetails)
+                    {
+                        <li class="d-flex p-3 mini-cart--list-item first" id="shoppingCartItem_1702">
+                            <a class="d-block mr-3 mini-cart--p-img" href="/Products/Detail?Id=@item.Products.Id" title="Show details for @item.Products.NameEn">
+@*                                @if (@ViewContext.HttpContext.Request.Path == "/")
+                                {*@
+                                    <img class="w-100" src="/images/@item.Image" alt="@item.Products.NameEn">
+
+                                </a>
+                            <div class="position-relative of-h mini-cart--p-overview">
+                                <a class="d-block f-s-12 mini-cart--p-title" href="#" title="">
+                                    @item.Products.NameEn
+                                </a>
+                                <div class="mini-cart--p-meta">
+                                    <div class="d-block f-s-14 mini-cart--p-variant">
+                                        <span class="font-weight-medium new-price" id="itemunitpriceflyout1702">@item.Products.Price X @item.Quantity</span>
+                                    </div>
+                                </div>
+                                <div class="my-2 input-group p-qty--counter qty--counter-sm mini-cart--p-qty">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-minus btn-disabled" type="button" onclick="location.href='@Url.Action("RemoveItem", "Cart", new { productId = item.ProductId })'">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                    </span>
+                                    <input name="itemquantity1702" id="itemquantity1702" type="text" value="@item.Quantity" class="qty-input">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-plus" type="button" onclick="location.href='@Url.Action("AddItem", "Cart", new { productId = item.ProductId })'">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </span>
+                                </div>
+@*                                <div class="f-s-16 mini-cart--p-buttons">
+                                    <div class="d-inline-flex pt-1 pr-3 delete-item">
+                                        <button type="button" onclick="NopStationSmartShoppingCart.flyOutCartDeleteItem(1702)">
+                                            <i class="far fa-trash-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>*@
+                            </div>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="sb--footer mini-cart--footer">
+            <div class="d-flex flex-column justify-content-between h-100 p-3 sb--footer-inner">
+                <div class="d-flex justify-content-between align-items-center pb-3 clr-dark f-s-18">
+                    <span class="font-weight-bold">@Localizer["Sub_Total"]</span>
+                    <span class="font-weight-medium" id="miniCartSubTotal">@(Model.CartDetails.Select(item => item.Products.Price * item.Quantity).Sum()) @Localizer["JOD"]</span>
+                </div>
+                <div class="">
+                    <div class="d-flex flex-column mini-cart--buttons">
+                        <button value="GoToCart" onclick="location.href='@Url.Action("index", "Cart")'" class="mb-2 btn btn-light btn-sm clr-dark f-s-12 text-uppercase cart-button">
+                            @Localizer["GoToCart"]
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else{
+        <div class="position-relative d-flex flex-column justify-content-between w-100 h-100 of-h text-left sb--content">
+       <div class="position-relative of-h w-100 h-100 sb--scroll">
+          <div class="scroll-wrapper position-absolute t-0 r-0 b-0 l-0 of-a of-x-h scrollbar-inner sb--scroll-inner" style="position: absolute;">
+             <div class="position-absolute t-0 r-0 b-0 l-0 of-a of-x-h scrollbar-inner sb--scroll-inner scroll-content" style="height: 303px; margin-bottom: 0px; margin-right: 0px; max-height: none;">
+                <div class="pt-5 px-3 text-center mini-cart--empty">
+                   <i class="fas fa-shopping-bag fa-4x"></i>
+
+                   <p class="mt-2">@Localizer["NoItems"]</p>
+                        <p><a class="btn btn-primary btn-lg text-uppercase" href="/" title="Return To Shop">@Localizer["ReturnToShop"]</a></p>
+                </div>
+             </div>
+             <div class="scroll-element scroll-x">
+                <div class="scroll-element_outer">
+                   <div class="scroll-element_size"></div>
+                   <div class="scroll-element_track"></div>
+                   <div class="scroll-bar" style="width: 0px;"></div>
+                </div>
+             </div>
+             <div class="scroll-element scroll-y">
+                <div class="scroll-element_outer">
+                   <div class="scroll-element_size"></div>
+                   <div class="scroll-element_track"></div>
+                   <div class="scroll-bar" style="height: 0px;"></div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+}

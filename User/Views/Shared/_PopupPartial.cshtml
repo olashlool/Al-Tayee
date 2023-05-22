@@ -1,0 +1,188 @@
+﻿@model IList<Admin.Models.Products>
+@inject Admin.Models.Interface.IBrands Brands
+@inject Admin.Models.Interface.IImages Images
+
+@if(Model != null)
+{
+foreach (var item in Model)
+{
+        var brand = await Brands.GetBrandById(item.BrandsId);
+        <div class="modal fade" id="glassAnimals_@item.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body" style="padding: 30px">
+                    <div class="product-details-pictures">
+                        <!--product pictures-->
+                        <div class="gallery" data-popup="#dialogForImgPopUp">
+                            <link rel="image_src" href="~/images/@item.BaseImage">
+                            <div id="wrap" style="top:0px;z-index:9999;position:relative;">
+                                <a href="~/images/@item.BaseImage" class="cloud-zoom" style="position: relative; display: block;" id="dbrandImage">
+                                    <img alt="Picture of @item.NameEn" src="~/images/@item.BaseImage" title="Picture of @item.NameEn" style="height: auto; width: 100%; border-width: 0px; display: block;" class="cloud-zoom-image cloud-zoom-image-size" width="400" id="main-product-img-lightbox-anchor-56">
+                                </a>
+                                <div class="mousetrap" style="background-image: url(&quot;.&quot;); z-index: 999; position: absolute; width: 200px; height: 200px; left: 0px; top: 0px; cursor: move;"></div>
+                                <div class="mousetrap" style="background-image: url(&quot;.&quot;); z-index: 999; position: absolute; width: 200px; height: 200px; left: 0px; top: 0px; cursor: move;"></div>
+                                <div class="mousetrap" style="background-image:url(&quot;.&quot;);z-index:999;position:absolute;width:200px;height:200px;left:0px;top:0px;"></div>
+                                <div class="mousetrap" style="background-image:url(&quot;.&quot;);z-index:999;position:absolute;width:200px;height:200px;left:0px;top:0px;"></div>
+                                <div class="mousetrap" style="background-image:url(&quot;.&quot;);z-index:999;position:absolute;width:200px;height:200px;left:0px;top:0px;"></div>
+                                <div class="mousetrap" style="background-image:url(&quot;.&quot;);z-index:999;position:absolute;width:200px;height:200px;left:0px;top:0px;"></div>
+                                <div class="mousetrap" style="background-image:url(&quot;.&quot;);z-index:999;position:absolute;width:200px;height:200px;left:0px;top:0px;"></div>
+                                <div class="mousetrap" style="background-image:url(&quot;.&quot;);z-index:999;position:absolute;width:200px;height:200px;left:0px;top:0px;"></div>
+                                <div class="mousetrap" style="background-image:url(&quot;.&quot;);z-index:999;position:absolute;width:200px;height:200px;left:0px;top:0px;"></div>
+                                <div class="mousetrap" style="background-image:url(&quot;.&quot;);z-index:999;position:absolute;width:200px;height:200px;left:0px;top:0px;"></div>
+                                <div class="mousetrap" style="background-image:url(&quot;.&quot;);z-index:999;position:absolute;width:200px;height:200px;left:0px;top:0px;"></div>
+                                <div class="mousetrap" style="background-image:url(&quot;.&quot;);z-index:999;position:absolute;width:200px;height:200px;left:0px;top:0px;"></div>
+                                <div class="mousetrap" style="background-image:url(&quot;.&quot;);z-index:999;position:absolute;width:200px;height:200px;left:0px;top:0px;"></div>
+                                <div class="mousetrap" style="background-image:url(&quot;.&quot;);z-index:999;position:absolute;width:200px;height:200px;left:0px;top:0px;"></div>
+                            </div>
+                            <div class="cloud-zoom-thumb-container">
+                                <div class="cloud-zoom-thumb">
+                                    <a href="~/images/@item.BaseImage" rel="lightbox-p" class="src-zoom-anchor" onclick="return false;" data-halfimgurl="/images/@item.BaseImage">
+                                        <img src="~/images/@item.BaseImage" alt="Picture of @item.NameEn" title="Picture of @item.NameEn" class="src-zoom-image" style="height:100px; width:100px">
+                                    </a>
+                                </div>
+                                <div class="cloud-zoom-thumb">
+                                    <a href="~/images/@item.AltImage" rel="lightbox-p" class="src-zoom-anchor" onclick="return false;" data-halfimgurl="/images/@item.AltImage">
+                                        <img src="/images/@item.AltImage" alt="Picture of @item.NameEn" title="Picture of @item.NameEn" class="src-zoom-image" style="height:100px; width:100px">
+                                    </a>
+                                </div>
+                                @foreach (var img in await Images.GetImageByProductId(item.Id))
+                                {
+                                    <div class="cloud-zoom-thumb">
+                                        <a href="~/images/@img.ImageName" rel="lightbox-p" class="src-zoom-anchor" onclick="return false;" data-halfimgurl="/images/@img.ImageName">
+                                            <img src="/images/@img.ImageName" alt="Picture of @item.NameEn" title="Picture of @item.NameEn" class="src-zoom-image" style="height:100px; width:100px">
+                                        </a>
+                                    </div>
+                                }
+                            </div>
+                            <div class="imgForMobile" id="dialogForImgPopUp">
+                                <img alt="" src="">
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                $('.src-zoom-anchor').on({
+                                    'click': function () {
+                                        var aSrc = $(this).attr('href');
+                                        var imgSrc = $(this).attr('data-halfimgurl');
+                                        $('.cloud-zoom-image').attr('src', imgSrc);
+                                        $('.cloud-zoom').attr('href', aSrc);
+                                        $("a.cloud-zoom").data('zoom').destroy();
+                                        initZoom();
+                                    }
+                                });
+                                initZoom();
+                            });
+
+                            $(window).resize(function () {
+                                initZoom();
+                            });
+                        </script>
+                        <div class="float-none w-100 text-left overview">
+                            <div class="mb-2 product-name">
+                                <h1 itemprop="name">@item.NameEn</h1>
+                            </div>
+                            <div class="my-3 bg-gray-2 divider-h">divider</div>
+                            <div class="prices">
+                                <div class="product-price"><span id="price-value-56" class="price-value-56">@item.Price @Localizer["JOD"]</span></div>
+                            </div>
+                            <div class="my-3 bg-gray-2 divider-h">divider</div>
+                            <div class="mb-3 manufacturers"><span class="clr-gray-3 font-weight-bold label">@Localizer["Brands"]:</span> <span class="value"> <a href="#">@brand.NameEn</a> </span></div>
+                            <div class="mb-3 clr-gray short-description">@item.DescriptionEn</div>
+                            <div class="mb-3 clr-gray short-description">@Localizer["Size"]: &nbsp;<strong>@item.Size</strong></div>
+                            <div class="m-0 additional-details"></div>
+@*                            <div class="attributes">
+                                <dl>
+                                    <dt id="product_attribute_label_24"><label class="text-prompt"> @Localizer["Type"] </label></dt>
+                                    <dd id="product_attribute_input_24">
+                                        <ul data-attr="24" class="option-list attribute-squares color-squares" id="color-squares-24">
+                                            @foreach (var color in item.Types)
+                                            {
+                                                <li data-attr-value="59">
+                                                    <label for="product_attribute_24_59"> <span class="attribute-square-container"> <span class="attribute-square" style="background-color:@color.Value">&nbsp;</span> </span> <input id="product_attribute_24_59" type="radio" name="product_attribute_24" value="59"> </label>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>*@
+                            <div class="my-3 bg-gray-2 divider-h">divider</div>
+                            <div class="d-flex flex-column p-qty">
+                                <div class="add-to-cart">
+                                    <div class="add-to-cart-panel">
+                                        <label class="qty-label" for="addtocart_56_EnteredQuantity">@Localizer["Qty"]:</label>
+                                         <div class="input-group mr-3 p-qty--counter"><span class="input-group-btn"> <button class="btn btn-minus--details btn-disabled" type="button"> <i class="fas fa-minus"></i> </button> </span> <input class="qty-input valid" type="text" data-val="true" data-val-required="The Qty field is required." id="EnteredQuantityPopup" data-value="" value="1" aria-describedby="EnteredQuantity-error" aria-invalid="false"> <span class="input-group-btn"> <button class="btn btn-plus--details" type="button"> <i class="fas fa-plus"></i> </button> </span></div>
+                                        <input type="button" id="add-to-cart-button-56" class="button-1 add-to-cart-button AddToCartAccordingQty" data-product-Id="@item.Id" value="@Localizer["AddToCart"]" data-productid="56">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overview-buttons">
+                                <div class="add-to-wishlist"><button type="button" id="add-to-wishlist-button-56" class="btn btn-link text-uppercase AddToWishlistWithOneQtyPopup" data-product-Id="@item.Id" value="@Localizer["AddtoWishlist"]"> <i class="far fa-heart pr-1"></i> <span>@Localizer["AddtoWishlist"]</span> </button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+    
+}
+    <script>
+        var hrefValue ="";
+            $(".cloud-zoom-thumb").on("click", function () {
+                hrefValue = $('#dbrandImage').attr('href');
+            });
+        $(".AddToCartAccordingQty").on("click",async function () {
+            debugger
+            if(hrefValue== ""){
+                hrefValue = @Html.Raw(Json.Serialize(Model.FirstOrDefault().BaseImage))
+            }
+            var modifiedPath = hrefValue.replace("/images/", "");
+            var inputValue = $('#EnteredQuantityPopup').val();
+            var productId = $(this).attr('data-product-Id')
+        @if (User.Identity.IsAuthenticated)
+        {
+            <text>
+                try {
+                    var response = await fetch(`/Cart/AddItemWithQtyAndImage?productId=${productId}&&qty=${inputValue}&&image=${modifiedPath}`);
+                    if (response.status == 200) {
+                    location.reload();
+                    }
+                }
+                catch (err) {
+                    console.log(err);
+                }
+            </text>
+        }
+        else
+        {
+        <text>
+                window.location.href="/Account/Login"
+                    </text>
+        }});
+        $(".AddToWishlistWithOneQtyPopup").on("click",async function () {
+            debugger
+            var productId = $(this).attr('data-product-Id')
+        @if (User.Identity.IsAuthenticated)
+        {
+            <text>
+                try {
+                    var response = await fetch(`/WishList/AddItem?productId=${productId}`);
+                    if (response.status == 200) {
+                    location.reload();
+                    }
+                }
+                catch (err) {
+                    console.log(err);
+                }
+            </text>
+        }
+        else
+        {
+        <text>
+                window.location.href="/Account/Login"
+                    </text>
+        }});
+
+    </script>
