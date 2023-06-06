@@ -172,7 +172,7 @@
                                                                                 @foreach (var item in await Brands.GetBrands())
                                                                                 {
                                                                                     <li class="col-3 nav-item dropdown accordion">
-                                                                                        <a id=heading-men class="position-relative nav-link text-ellipsis" href="/Brands/Products?id=@item.Id">
+                                                                                        <a id=heading-men class="position-relative nav-link text-ellipsis" href="/Brands/Products?brandId=@item.Id">
                                                                                             <span class="position-relative d-block py-10 pl-0 pr-1 nav-link--label">
                                                                                                 <span>@item.NameEn</span>
                                                                                                 <span class=nav-counter></span>
@@ -183,7 +183,7 @@
                                                                                             @foreach (var product in await Products.GetProductByBrand(item.Id))
                                                                                             {
                                                                                             <li class="col-3 nav-item dropdown accordion">
-                                                                                                <a id=heading-jeans-2 class="position-relative nav-link text-ellipsis" href=#>
+                                                                                                <a id=heading-jeans-2 class="position-relative nav-link text-ellipsis" href="/Products/Detail?id=@product.Id">
                                                                                                     <span class="position-relative d-block py-10 pl-0 pr-1 nav-link--label">
                                                                                                             <span>@product.NameEn</span>
                                                                                                     </span>

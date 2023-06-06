@@ -33,10 +33,10 @@
                                                     <input type="file" id="thumbUpload01" class="ec-image-upload imageUpload rec" accept=".png, .jpg, .jpeg">
                                                     <label for="imageUpload"><img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg" alt="edit"></label>
                                                 </div>
-@*                                                <div class="deleted-image-upload" style="left: 5px;">
+                                                <div class="deleted-image-upload" style="left: 5px;">
                                                     <input type="button" class="ec-image-upload">
                                                     <label for="imageUpload" style="width: 20px;height: 20px;"><img src="https://flyclipart.com/thumb2/delete-icon-327000.png" class="svg_img header_svg" alt="edit"></label>
-                                                </div>*@
+                                                </div>
                                                 <div class="thumb-preview ec-preview">
                                                     <div class="image-thumb-preview">
                                                         <img class="image-thumb-preview ec-image-preview" src="/admin/assets/img/products/vender-upload-thumb-preview.png" alt="edit">
@@ -178,11 +178,15 @@
         $('.imageUpload').val(null);
     });
     $(document).on('click', ".deleted-image-upload", function () {
-        var imgPath = $(".ec-image-preview").attr('src')
+        alert("Ola")
+        var inputValue = $(".imageUpload");
+        alert(inputValue)
         debugger
-        $.each(this, function (i, item) {
-            imagesToUpload.push(item)
+        $.each(this.files, function (i, item) {
+            alert(item)
         });
+        $(this).parent().remove();
+
     });
     function GetAllBrands() {
         $.ajax({
@@ -218,6 +222,7 @@
                 var innerHtml = "";
                 $("#ProductCard").html('');
                 $.each(data.data, function (i, item) {
+                    debugger
                     innerHtml += '<div class="col-lg-3 col-md-4 col-sm-6">';
                     innerHtml += '<div class="card-wrapper">';
                     innerHtml += '<div class="card-container">';
@@ -230,7 +235,7 @@
                     innerHtml += '<p>' + item.price + ' JOD</p>';
                     innerHtml += '</div>';
                     innerHtml += '<div class="card-action">';
-                    //innerHtml += '<div class="card-edit EditProduct"data_Id ="' + item.id + '"><i class="mdi mdi-circle-edit-outline"></i></div>';
+                    innerHtml += '<div class="card-edit EditProduct"data_Id ="' + item.id + '"><i class="mdi mdi-circle-edit-outline"></i></div>';
                     innerHtml += '<div class="card-preview Details"  data_Id ="' + item.id + '">';
                     innerHtml += '<i class="mdi mdi-eye-outline" data_Id ="' + item.id + '"; ></i>';
                     innerHtml += '</div>';
@@ -250,6 +255,10 @@
     $(document).on("click", ".Details", function () {
         var Id = $(this).attr('data_Id');
         window.location.href = "/Products/Details?Id=" + Id
+    });
+    $(document).on("click", ".EditProduct", function () {
+        var Id = $(this).attr('data_Id');
+        window.location.href = "/Products/Edit?id=" + Id
     });
     $(document).on("click", ".DeleteProduct", function () {
         var Id = $(this).attr('data_Id');

@@ -153,6 +153,9 @@
   <data name="Tax" xml:space="preserve">
     <value>الضريبة</value>
   </data>
+  <data name="TaxInfo" xml:space="preserve">
+    <value>*الأسعار تشمل ضريبة المبيعات</value>
+  </data>
   <data name="Total" xml:space="preserve">
     <value>المجموع</value>
   </data>

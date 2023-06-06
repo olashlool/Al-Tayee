@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "faZHxep/sdYcCHCgZzURaXnf2tT2yXcwQU/5uClumQ8=",
+  "Hash": "ofYNjEvsR0pncnxmAwtFGtw22KzUfUUPsLelrDXB6wk=",
   "Source": "Admin",
   "BasePath": "_content/Admin",
   "Mode": "Default",
@@ -3383,12 +3383,12 @@
       "OriginalItemSpec": "wwwroot\\images\\Elegance-Hair-Gel-500ml\\IMG_9376.png"
     },
     {
-      "Identity": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Grid\\Des-IMG_4978.png",
+      "Identity": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Grid\\Des-IMG-1.png",
       "SourceId": "Admin",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\",
       "BasePath": "_content/Admin",
-      "RelativePath": "images/Grid/Des-IMG_4978.png",
+      "RelativePath": "images/Grid/Des-IMG-1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3397,15 +3397,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Grid\\Des-IMG_4978.png"
+      "OriginalItemSpec": "wwwroot\\images\\Grid\\Des-IMG-1.png"
     },
     {
-      "Identity": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Grid\\Des-IMG_5006.png",
+      "Identity": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Grid\\Des-IMG-2.png",
       "SourceId": "Admin",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\",
       "BasePath": "_content/Admin",
-      "RelativePath": "images/Grid/Des-IMG_5006.png",
+      "RelativePath": "images/Grid/Des-IMG-2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3414,15 +3414,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Grid\\Des-IMG_5006.png"
+      "OriginalItemSpec": "wwwroot\\images\\Grid\\Des-IMG-2.png"
     },
     {
-      "Identity": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Grid\\Des-IMG_9423.png",
+      "Identity": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Grid\\Des-IMG-3.png",
       "SourceId": "Admin",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\",
       "BasePath": "_content/Admin",
-      "RelativePath": "images/Grid/Des-IMG_9423.png",
+      "RelativePath": "images/Grid/Des-IMG-3.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3431,15 +3431,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Grid\\Des-IMG_9423.png"
+      "OriginalItemSpec": "wwwroot\\images\\Grid\\Des-IMG-3.png"
     },
     {
-      "Identity": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Grid\\Des-IMG_9539.png",
+      "Identity": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Grid\\Des-IMG-4.png",
       "SourceId": "Admin",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\",
       "BasePath": "_content/Admin",
-      "RelativePath": "images/Grid/Des-IMG_9539.png",
+      "RelativePath": "images/Grid/Des-IMG-4.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3448,7 +3448,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Grid\\Des-IMG_9539.png"
+      "OriginalItemSpec": "wwwroot\\images\\Grid\\Des-IMG-4.png"
+    },
+    {
+      "Identity": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\Grid\\Des-IMG-5.png",
+      "SourceId": "Admin",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\",
+      "BasePath": "_content/Admin",
+      "RelativePath": "images/Grid/Des-IMG-5.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Grid\\Des-IMG-5.png"
     },
     {
       "Identity": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_4964_638203064330813263.png",
@@ -3468,6 +3485,23 @@
       "OriginalItemSpec": "wwwroot\\images\\IMG_4964_638203064330813263.png"
     },
     {
+      "Identity": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_4964_638213215142179673.png",
+      "SourceId": "Admin",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\",
+      "BasePath": "_content/Admin",
+      "RelativePath": "images/IMG_4964_638213215142179673.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\IMG_4964_638213215142179673.png"
+    },
+    {
       "Identity": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_4965_638203064330879493.png",
       "SourceId": "Admin",
       "SourceType": "Discovered",
@@ -3483,6 +3517,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\IMG_4965_638203064330879493.png"
+    },
+    {
+      "Identity": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_4965_638213215142283337.png",
+      "SourceId": "Admin",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\",
+      "BasePath": "_content/Admin",
+      "RelativePath": "images/IMG_4965_638213215142283337.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\IMG_4965_638213215142283337.png"
+    },
+    {
+      "Identity": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_4966_638213215142311697.png",
+      "SourceId": "Admin",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\",
+      "BasePath": "_content/Admin",
+      "RelativePath": "images/IMG_4966_638213215142311697.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\IMG_4966_638213215142311697.png"
+    },
+    {
+      "Identity": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_4966_638213215142328923.png",
+      "SourceId": "Admin",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\",
+      "BasePath": "_content/Admin",
+      "RelativePath": "images/IMG_4966_638213215142328923.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\IMG_4966_638213215142328923.png"
     },
     {
       "Identity": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\wwwroot\\images\\IMG_9611_638202605257952242.png",

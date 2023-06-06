@@ -240,7 +240,6 @@ $(document).ready(function () {
   
     /*======== Image Change on Upload ========*/
     $("body").on("change", ".ec-image-upload", function (e) {
-  
       var lkthislk = $(this);
   
       if (this.files && this.files[0]) {

@@ -1,0 +1,158 @@
+﻿﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using System.Text;
+@inject IViewLocalizer Localizer
+
+<div class="ec-content-wrapper">
+    <div class="content">
+        <div class="row">
+            <div class="col-12">
+                <div class="card card-default">
+                    <div class="card-header card-header-border-bottom">
+                        <h2>@Localizer["AddProduct"]</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row ec-vendor-uploads">
+                            <span class="spnreq" id="Imagesreq" style="color : red ; display:none"> @Localizer["UplaodAtLeastTwoImages"]</span>
+                            <div class="col-lg-4">
+                                <div class="ec-vendor-img-upload">
+                                    <div class="ec-vendor-main-img">
+                                        <div class="avatar-upload">
+                                            <div class="avatar-edit">
+                                                <input type="file" id="imageUploadAdd" class="ec-image-upload" accept=".png, .jpg, .jpeg">
+                                                <label for="imageUpload"><img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg newimageUpload" alt="edit"></label>
+                                            </div>
+                                            <div class="avatar-preview ec-preview">
+                                                <div class="imagePreview ec-div-preview">
+                                                    <img class="ec-image-preview" src="/admin/assets/img/products/vender-upload-preview.png" alt="edit">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="thumb-upload-set colo-md-12">
+                                            <div class="thumb-upload">
+                                                <div class="thumb-edit">
+                                                    <input type="file" id="thumbUpload01" class="ec-image-upload" accept=".png, .jpg, .jpeg">
+                                                    <label for="imageUpload"><img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg" alt="edit"></label>
+                                                </div>
+                                                <div class="deleted-image-upload" style="left: 5px;">
+                                                <input type="button" class="ec-image-upload">
+                                                <label for="imageUpload" style="width: 20px;height: 20px;"><img src="https://flyclipart.com/thumb2/delete-icon-327000.png" class="svg_img header_svg" alt="edit"></label>
+                                                </div>
+                                                <div class="thumb-preview ec-preview">
+                                                    <div class="image-thumb-preview">
+                                                        <img class="image-thumb-preview ec-image-preview" src="/admin/assets/img/products/vender-upload-thumb-preview.png" alt="edit">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" id="addImage"> <i class="mdi mdi-image-plus"></i> </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="ec-vendor-upload-detail">
+                                    <form class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="inputEmail4" class="form-label">@Localizer["ProductName"]</label>
+                                            <span class="spnreq" id="productNameEntxtreq" style="color : red ; display:none">@Localizer["NameIsRequired"]</span>
+                                            <input type="text" class="form-control slug-title req" id="productNameEntxt">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">@Localizer["SelectBrand"]</label>
+                                            <span class="spnreq" id="ddlAllBrandsreq" style="color : red ; display:none">@Localizer["PleaseSelectBrand"]</span>
+                                            <select name="categories" id="ddlAllBrands" class="form-select">
+                                            </select>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="form-label">@Localizer["ProductFeatured"]</label>
+                                            <select class="form-select" id="selecrdFeatured">
+                                                <option value="true">@Localizer["Yes"]</option>
+                                                <option selected value="false">@Localizer["No"]</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="form-label">@Localizer["Description"]</label>
+                                            <span class="spnreq" id="descEntxtreq" style="color : red ; display:none">@Localizer["DescriptionIsRequired"]</span>
+                                            <textarea id="descEntxt" class="form-control req" rows="2"></textarea>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">@Localizer["Price"] <span>( @Localizer["InJOD"] )</span></label>
+                                            <span class="spnreq" id="Pricetxtreq" style="color : red ; display:none">@Localizer["PriceIsRequired"]</span>
+                                            <input type="number" class="form-control req" id="Pricetxt">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label ">Size</label>
+                                            <span class="spnreq" id="sizetxtreq" style="color : red ; display:none">@Localizer["SizeIsRequired"]</span>
+                                            <input type="text" class="form-control req" id="sizetxt">
+                                        </div>
+                                        @*                                        <div class="col-md-12 mb-25">
+                                        <label class="form-label">@Localizer["Types"]</label>
+                                        <div class="TypesToAdd">
+                                        <input type="color" class="form-control form-control-color typeValue" id="exampleColorInput1" value="" title="Choose your color">
+                                        </div>
+                                        <button type="button" id="addType"> <i class="mdi mdi mdi-plus-outline"></i> </button>
+                                        <span class="spnreq" id="typeValuereq" style="color : red ; display:none">@Localizer["FillAtLeastOneType"]</span>
+                                        </div>*@
+                                        <div class="col-md-12">
+                                            <button type="button" id="SaveProductbtn" class="btn btn-primary">@Localizer["Submit"]</button>
+                                            <button type="button" id="Cancelbtn" class="btn btn-danger">@Localizer["Cancel"]</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Content -->
+
+    <input type="file" id="image-input">
+<img id="preview-image" src="#" alt="Preview">
+
+</div>
+<script src="~/lib/jquery/dist/jquery.min.map"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+    $('#image-input').change(function () {
+        debugger
+        var input = this;
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                // Update the source of the image element
+                $('#preview-image').attr('src', e.target.result);
+            };
+            $('#preview-image').attr('src', input.files[0].name);
+            //reader.readAsDataURL(input.files[0]);
+        }
+    });
+    $(function () {
+        $('#addImage').click(function () {
+            var newDiv = $('<div class="thumb-upload"><div class="thumb-edit"><input id="thumbUpload01" type="file" class="imageUpload ec-image-upload rec" accept=".png, .jpg, .jpeg"><label for="imageUpload"><img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg" alt="edit"></label></div><div class="thumb-preview ec-preview"><div class="image-thumb-preview"><img class="image-thumb-preview ec-image-preview" src="/admin/assets/img/products/vender-upload-thumb-preview.png" alt="edit"></div></div></div>');
+            $('.thumb-upload-set').append(newDiv);
+        });
+
+        //$('.deleted-image-upload').click(function () {
+        //    var imageDelete = $(".ec-image-preview").attr('src')
+
+        //    //imageDelete = Convert.ToBase64String(Encoding.UTF8.GetBytes());
+        //    $(this).parent().remove();
+        //    debugger
+        //    $.each(imagesToUpload, function (i, item) {
+        //        if (item == imageDelete) {
+        //        imagesToUpload.remove(item);
+        //        }
+        //    });
+        //});
+
+        //$('#addType').click(function () {
+        //    var newDiv = $('<input type="color" class="form-control form-control-color typeValue" id="exampleColorInput1" value="" title="Choose your color">');
+        //    //newDiv.style.background = "#000";
+        //    $('.TypesToAdd').append(newDiv);
+        //});
+    });
+</script>

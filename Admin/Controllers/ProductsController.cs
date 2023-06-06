@@ -73,9 +73,12 @@ namespace Admin.Controllers
             //}
             return View(productsVM);
         }
-        public IActionResult Edit()
+        public async Task<IActionResult> Edit(Guid id)
         {
-            return View();
+            var product = await _Products.GetProductById(id);
+            product.Images = await _Images.GetImageByProductId(id);
+            ViewBag.Brands = await _Brands.GetBrands();
+            return View(product);
         }
 
         [HttpPost]

@@ -70,13 +70,9 @@
                                                             <span class="value-summary" id="subTotalAtOrderTotal">@(Model.CartDetails.Select(item => item.Products.Price * item.Quantity).Sum()) @Localizer["JOD"]</span>
                                                         </td>
                                                     </tr>
-                                                    <tr class="tax-value">
-                                                        <td class="cart-total-left">
-                                                            <label class="text-uppercase">@Localizer["Tax"]:</label>
-                                                        </td>
-                                                        <td class="cart-total-right">
-                                                            <span class="value-summary" id="orderTotalTax">0.00 @Localizer["JOD"]</span>
-                                                        </td>
+                                                    <tr>
+                                                        <td class="cart-total-left"><label class="mb-0"></label></td>
+                                                        <td class="cart-total-right" style="color:#c6922c;"><span>@Localizer["TaxInfo"]</span></td>
                                                     </tr>
                                                     <tr class="order-total">
                                                         <td class="cart-total-left">

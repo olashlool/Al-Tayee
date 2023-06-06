@@ -47,8 +47,8 @@
 /* Admin "Product" */
 
 .deleted-image-upload {
-    left: 5px;
-    position: absolute;
+/*    left: 5px;
+*/    position: absolute;
     top: 5px;
     z-index: 1;
     cursor: pointer;

@@ -192,6 +192,9 @@
   <data name="Tax" xml:space="preserve">
     <value>Tax</value>
   </data>
+  <data name="TaxInfo" xml:space="preserve">
+    <value>*Prices include sales tax</value>
+  </data>
   <data name="Total" xml:space="preserve">
     <value>Total</value>
   </data>
