@@ -11,5 +11,9 @@ namespace Admin.Data
         public string? Gender { get; set; }
 
         public DateTime BirthDate { get; set; }
+        public int Day { get; set; }
+        public int Month { get; set; }
+        public int Year { get; set; }
+
     }
 }

@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
   <data name="FeaturedProducts" xml:space="preserve">
     <value>Featured Products</value>
   </data>
@@ -156,11 +159,11 @@
   <data name="TotalOrders" xml:space="preserve">
     <value>Total Orders</value>
   </data>
+  <data name="TotalPendingOrders" xml:space="preserve">
+    <value>Total Pending Orders</value>
+  </data>
   <data name="TotalProducts" xml:space="preserve">
     <value>Total Products</value>
-  </data>
-  <data name="TotalRejectedOrders" xml:space="preserve">
-    <value>Total Rejected Orders</value>
   </data>
   <data name="TotalUser" xml:space="preserve">
     <value>Total User</value>

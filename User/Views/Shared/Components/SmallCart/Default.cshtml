@@ -12,13 +12,10 @@
                     {
                         <li class="d-flex p-3 mini-cart--list-item first" id="shoppingCartItem_1702">
                             <a class="d-block mr-3 mini-cart--p-img" href="/Products/Detail?Id=@item.Products.Id" title="Show details for @item.Products.NameEn">
-@*                                @if (@ViewContext.HttpContext.Request.Path == "/")
-                                {*@
-                                    <img class="w-100" src="/images/@item.Image" alt="@item.Products.NameEn">
-
-                                </a>
+                                <img class="w-100" src="/images/@item.Image" alt="@item.Products.NameEn">
+                            </a>
                             <div class="position-relative of-h mini-cart--p-overview">
-                                <a class="d-block f-s-12 mini-cart--p-title" href="#" title="">
+                                <a class="d-block f-s-12 mini-cart--p-title" href="/Products/Detail?Id=@item.Products.Id" title="">
                                     @item.Products.NameEn
                                 </a>
                                 <div class="mini-cart--p-meta">

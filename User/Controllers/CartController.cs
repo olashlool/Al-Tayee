@@ -32,7 +32,6 @@ namespace User.Controllers
             string returnUrl = Request.Headers["Referer"].ToString() ?? "/";
             return Redirect(returnUrl);
         }
-
         public async Task<IActionResult> RemoveItem(Guid productId)
         {
             var cartCount = await _cartRepo.RemoveItem(productId);
@@ -44,19 +43,10 @@ namespace User.Controllers
             var cart = await _cartRepo.GetUserCart();
             return View(cart);
         }
-
         public async Task<IActionResult> GetTotalItemInCart()
         {
             int cartItem = await _cartRepo.GetCartItemCount();
             return Ok(cartItem);
         }
-
-        //public async Task<IActionResult> Checkout()
-        //{
-        //    bool isCheckedOut = await _cartRepo.DoCheckout();
-        //    if (!isCheckedOut)
-        //        throw new Exception("Something happen in server side");
-        //    return RedirectToAction("Index", "Home");
-        //}
     }
 }

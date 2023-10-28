@@ -8,10 +8,7 @@
             <div class="d-flex justify-content-center align-items-center py-30 px-0 page-header">
                 <div class="position-absolute t-0 b-0 l-0 r-0 bg-gray page-header--bg"></div>
                 <div class="position-relative page-header--content">
-
                     <h1 class="clr-white f-s-20 text-center page-header--content-title">@Localizer["OrderInformation"]</h1>
-                    @*                    <div class="d-block pt-2 text-center"><a href="/orderdetails/print/58" target="_blank" class="btn btn-primary btn-md print-order-button">Print</a> <a href="/orderdetails/pdf/58" class="btn btn-gray btn-md pdf-invoice-button">PDF Invoice</a></div>
-                    *@
                 </div>
             </div>
         </div>
@@ -34,7 +31,7 @@
                                 <li class="phone">@Localizer["PhoneNumber"]: @Model.OrderItems.First().Order.Phone</li>
                                 <li class="fax">@Localizer["FaxNumber"]: @Model.OrderItems.First().Order.Fax</li>
                                 <li class="address1">@Model.OrderItems.First().Order.Address</li>
-                                <li class="city-state-zip">@Model.OrderItems.First().Order.City,@Model.OrderItems.First().Order.Zip</li>
+                                <li class="city-state-zip"@Model.OrderItems.First().Order.Zip</li>
                                 <li class="country">@Model.OrderItems.First().Order.Address2</li>
                             </ul>
                         </div>
@@ -63,6 +60,7 @@
                             </colgroup>
                             <thead>
                                 <tr>
+                                    <th class="name">@Localizer["Image"]</th>
                                     <th class="name">@Localizer["Name"]</th>
                                     <th class="price">@Localizer["Price"]</th>
                                     <th class="quantity">@Localizer["Quantity"]</th>
@@ -76,6 +74,7 @@
                                 @foreach (var orderItem in Model.OrderItems)
                                 {
                                     <tr>
+                                        <td class="product"><em><a href="/Products/Detail?=@orderItem.Product.Id"><img src="/images/@orderItem.ImageProduct" style="width:100%"/></a></em></td>
                                         <td class="product"><em><a href="/Products/Detail?=@orderItem.Product.Id">@orderItem.Product.NameEn</a></em></td>
                                         <td class="unit-price"><label class="mb-0 td-title">@Localizer["Price"]:</label> <span class="product-unit-price">@orderItem.Product.Price @Localizer["JOD"]</span></td>
                                         <td class="quantity"><label class="mb-0 td-title">@Localizer["Quantity"]:</label> <span class="product-quantity">@orderItem.Quantity</span></td>

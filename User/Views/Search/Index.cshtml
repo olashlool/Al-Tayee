@@ -39,7 +39,6 @@
                                     <div class="d-inline-flex flex-column product-sort-by">
                                         <span class="d-block pb-2 f-s-12 lh-100 text-left">Sort by</span>
                                         <select aria-label="Select product sort order" id="products-orderby" name="products-orderby">
-                                            <option selected="" value="">@Localizer["Position"]</option>
                                             <option value="aToZ">@Localizer["AtoZ"]</option>
                                             <option value="zToA">@Localizer["ZtoA"]</option>
                                             <option value="lowToHigh">@Localizer["LToH"]</option>
@@ -59,41 +58,61 @@
                                     <div class="container">
                                         <div class="product-grid">
                                             <div class="row justify-content-center mt-5 p-grid">
-                                                @foreach (var item in Model)
-                                                {
-                                                    <div class="col-6 col-md-4 col-lg-3 p-item">
-                                                        <div class="position-relative mb-5 et-lazy-img-3--hvr p-card">
-                                                            <div class="position-relative of-h p-card--img">
-                                                                <a class="position-relative d-block w-100 h-100 p-card--link" href="/Products/Detail?=@item.Id" title="Show details for @item.NameEn"> <span class="position-relative d-block p-card--link-img lazyload" id="productPictureContainer_67" data-src="/images/@item.BaseImage"></span> </a>
-                                                                <div class="position-absolute w-100 et-lazy-img-3 p-card--img-hover hoverImage_67">
-                                                                    <div class="position-relative d-block w-100 h-100 p-card--img-hover-inner hoverInnerImage_67" style="background-image:url('')">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="position-absolute w-100 et-lazy-img-3 p-card--img-hover hoverImage_67">
-                                                                    <div class="position-relative d-block w-100 h-100 p-card--img-hover-inner hoverInnerImage_67" style="background-image: url('/images/@item.AltImage')">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="position-absolute p-card--btn-icons p-card--wt"><button type="button" value="@Localizer["AddtoWishlist"]" title="@Localizer["AddtoWishlist"]" rel="nofollow" data-product-Id="@item.Id" class="position-relative d-inline-block m-0 text-center add-list add-wt AddToWishlist"> <i id="wishListIcon_67" class="btn-icon far fa-heart"></i> </button></div>
-                                                                <div class="position-absolute d-flex flex-column text-center p-card--hvr-btn product-item" data-productid="56" data-quick-view="true"><button class="d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id"> <i class="btn-icon lnr lnr-cart"></i> <span class="btn-txt">@Localizer["AddToCart"]</span> </button> <button class="d-inline-block d-lg-none position-relative text-center text-capitalize add-btn add-btn-sm add-atc" rel="nofollow" data_Id="@item.Id" title="" data-original-title="@Localizer["AddToCart"]"> <i class="btn-icon lnr lnr-cart"></i> </button><button data-toggle="modal" data-target="#glassAnimals_@item.Id" data-Id="@item.Id" id="QuickView" type="button" class="button-2 quick-view-btn d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-qv" data-productid="56" title="Quick view"><i class="btn-icon lnr lnr-eye"></i><span class="btn-txt">@Localizer["QuickView"]</span></button></div>
-                                                            </div>
-                                                            <div class="text-center p-card--info">
-                                                                <h3 class="position-relative m-0 clr-dark text-capitalize p-card--title"><a href="/short-sleeve-polo-shirts-for-boys" class="p-card--title-link" title="Show details for Short Sleeve Polo Shirts for Boys">@item.NameEn</a></h3>
-                                                                <div class="position-absolute offer-content"></div>
-                                                                <h4 class="position-relative m-0 clr-dark p-card--title" style="font-size:12px">@Localizer["Size"]:&nbsp; <strong>@item.Size</strong></h4>
-                                                                <div class="p-card--prices"><span class="clr-primary f-s-22 p-card--price font-weight-medium actual-price">@item.Price @Localizer["JOD"]</span></div>
-@*                                                                <div class="d-flex justify-content-center m-0 attributes">
-                                                                    <ul class="option-list attribute-circles color-circle" id="color-circle-82">
-                                                                        @foreach (var color in item.Types)
-                                                                        {
-                                                                            <li><label for="82"> <span class="attribute-circle-container" style="background-color:@color.Value" title="Green click on it"> <span class="attribute-circle" style="background-color:@color.Value">&nbsp;</span> </span> <input id="82" type="radio" name="colorAttribute_82" value="82"> </label></li>
-                                                                        }
-                                                                    </ul>
-                                                                </div>*@
-                                                                <div class="d-none p-card--hvr-btn product-item" data-productid="67" data-quick-view="true"><button class="d-none d-md-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id"> <i class="btn-icon lnr lnr-cart"></i> <span class="btn-txt">@Localizer["AddtoCart"]</span> </button><button type="button" class="d-none d-md-inline-block position-relative text-center text-capitalize add-btn add-qv" data-product-Id="@item.Id" data-productid="67" title="Quick view"><i class="btn-icon lnr lnr-eye"></i><span class="btn-txt">@Localizer["QuickView"]</span></button></div>
-                                                            </div>
+                                    @foreach (var item in Model)
+                                    {
+                                        string culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+                                        var name = culture.StartsWith("en") ? item.NameEn : item.NameAr;
+
+                                        <div class="col-6 col-md-4 col-lg-3 p-item">
+                                            <div class="position-relative mb-5 et-lazy-img-3--hvr p-card">
+                                                <div class="position-relative of-h p-card--img">
+                                                    <a class="position-relative d-block w-100 h-100 p-card--link" href="/Products/Detail?Id=@item.Id" title="@Localizer["ShowDetails"] @name"> 
+                                                        <span class="position-relative d-block p-card--link-img lazyload" data-src="/images/@item.BaseImage"></span> 
+                                                    </a>
+                                                    <div class="position-absolute w-100 et-lazy-img-3 p-card--img-hover">
+                                                        <div class="position-relative d-block w-100 h-100 p-card--img-hover-inner hoverInnerImage_67" style="background-image: url('/images/@item.AltImage')">
                                                         </div>
                                                     </div>
-                                                }
+                                                    <div class="position-absolute p-card--btn-icons p-card--wt">
+                                                        <button type="button" value="@Localizer["AddtoWishlist"]" title="@Localizer["AddtoWishlist"]" data-product-Id="@item.Id" class="position-relative d-inline-block m-0 text-center add-list add-wt AddToWishlistWithOneQty"> 
+                                                            <i class="btn-icon far fa-heart"></i> 
+                                                        </button>
+                                                    </div>
+                                                    <div class="position-absolute d-flex flex-column text-center p-card--hvr-btn product-item" data-quick-view="true">
+                                                        <button class="d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id"> 
+                                                            <i class="btn-icon lnr lnr-cart"></i> 
+                                                            <span class="btn-txt">@Localizer["AddtoCart"]</span> 
+                                                        </button> 
+                                                        <button class="d-inline-block d-lg-none position-relative text-center text-capitalize add-btn add-btn-sm add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id" title="@Localizer["AddtoCart"]" data-original-title="@Localizer["AddtoCart"]"> 
+                                                            <i class="btn-icon lnr lnr-cart"></i> 
+                                                        </button>
+                                                        <button data-toggle="modal" data-target="#glassAnimals_@item.Id" data-Id="@item.Id" id="QuickView" type="button" class="button-2 quick-view-btn d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-qv" title="@Localizer["QuickView"]">
+                                                            <i class="btn-icon lnr lnr-eye"></i>
+                                                            <span class="btn-txt">@Localizer["QuickView"]</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="text-center p-card--info">
+                                                    <h3 class="position-relative m-0 clr-dark text-capitalize p-card--title">
+                                                        <a href="/Products/Detail?Id=@item.Id" class="p-card--title-link" title="@Localizer["ShowDetails"] @name">@name</a>
+                                                    </h3>
+                                                    <div class="position-absolute offer-content"></div>
+                                                    <h4 class="position-relative m-0 clr-dark p-card--title" style="font-size:12px">@Localizer["Size"]: &nbsp;<strong>@item.Size </strong></h4>
+                                                    <div class="p-card--prices"><span class="clr-primary f-s-22 p-card--price font-weight-medium actual-price">@item.Price @Localizer["JOD"]</span></div>
+                                                    <div class="d-none p-card--hvr-btn product-item" data-quick-view="true">
+                                                        <button class="d-none d-md-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart"data-product-Id="@item.Id" rel="nofollow"> 
+                                                            <i class="btn-icon lnr lnr-cart"></i> 
+                                                            <span class="btn-txt">@Localizer["AddtoCart"]</span> 
+                                                        </button>
+                                                        <button data-toggle="modal" data-target="#glassAnimals_@item.Id" data-Id="@item.Id" id="QuickView" type="button" class="button-2 quick-view-btn d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-qv" title="@Localizer["QuickView"]">
+                                                            <i class="btn-icon lnr lnr-eye"></i>
+                                                            <span class="btn-txt">@Localizer["QuickView"]</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
                                             </div>
                                         </div>
                                     </div>
@@ -119,62 +138,45 @@
         </div>
     </div>
 </div>
+<div id="bar-notification" class="bar-notification-container" data-close="Close">
+   <div class="bar-notification success" style="display: none;">
+      <p class="content">The product has been added to your <a href="/cart">shopping cart</a></p>
+      <span class="close" title="Close"></span>
+   </div>
+</div>
     <partial name="_PopupPartial" model="Model" />
 @section Scripts
     {
-        <script>
-        $(".btn-list").click(function () {
-        $("#switchStyle").removeClass("product-grid");
-        $("#switchStyle").addClass("product-list");
-        $(".btn-grid").removeClass("selected");
-        $(".btn-list").addClass("selected");
-
-    });
-    $(".btn-grid").click(function () {
-        $("#switchStyle").removeClass("product-list");
-        $(".btn-list").removeClass("selected");
-        $(".btn-grid").addClass("selected");
-        $("#switchStyle").addClass("product-grid");
-    });
-
-    // Sorted By
-    $(document).ready(function () {
-        // Attach event handler to the select element
-        $('#products-orderby').change(function () {
-            // Get the selected option value
-            var selectedOption = $(this).val();
-
-            var searchTerm =@Html.Raw(Json.Serialize(ViewBag.SearchTerm))
-            // Display an alert message with the selected value
-            window.location.href = '/Search?searchTerm='+ searchTerm +'&&sortOrder=' + selectedOption;
-        });
-    });
-    </script>
     <script>
-        $(".AddToCart").on("click",async function () {
-            debugger
-            var productId = $(this).attr('data-product-Id')
-        @if (User.Identity.IsAuthenticated)
-        {
-            <text>
-                try {
-                    var response = await fetch(`/Cart/AddItem?productId=${productId}`);
-                    if (response.status == 200) {
-                    location.reload();
-                    }
-                }
-                catch (err) {
-                    console.log(err);
-                }
-            </text>
-        }
-        else
-        {
-        <text>
-                window.location.href="/Account/Login"
-                    </text>
-        }});
-
+        $(".AddToCart").on("click", async function() {
+           debugger;
+           var productId = $(this).attr('data-product-Id');
+           
+           @if (User.Identity.IsAuthenticated)
+           {
+               <text>
+                   try {
+                       var response = await fetch(`/Cart/AddItem?productId=${productId}`);
+                       if (response.status == 200) {
+                           // Show the success notification
+                           $('#bar-notification .bar-notification.success').show();
+                           
+                           // Wait for 2 seconds
+                           setTimeout(function() {
+                               // Reload the page after 2 seconds
+                               location.reload();
+                           }, 2000);
+                       }
+                   } catch (err) {
+                   }
+               </text>
+           }
+           else {
+               <text>
+                   window.location.href = "/Account/Login";
+               </text>
+           }
+        });
     </script>
     <script>
         $(".AddToWishlist").on("click",async function () {
@@ -190,7 +192,6 @@
                     }
                 }
                 catch (err) {
-                    console.log(err);
                 }
             </text>
         }
@@ -201,5 +202,44 @@
                     </text>
         }});
 
+    </script>
+    <script>
+        $(".btn-list").click(function () {
+            $("#switchStyle").removeClass("product-grid");
+            $("#switchStyle").addClass("product-list");
+            $(".btn-grid").removeClass("selected");
+            $(".btn-list").addClass("selected");
+        });
+        $(".btn-grid").click(function () {
+            $("#switchStyle").removeClass("product-list");
+            $(".btn-list").removeClass("selected");
+            $(".btn-grid").addClass("selected");
+            $("#switchStyle").addClass("product-grid");
+        });
+        // Sorted By
+        $(document).ready(function () {
+            var searchValue = $('.search-text').val();
+            var productsOrderby = $('#products-orderby');
+            // Load the saved selected option from localStorage
+            var savedValue = localStorage.getItem('selectedOption');
+            if (savedValue) {
+                productsOrderby.val(savedValue);
+            } else {
+                // Set the initial selected option to "A to Z" if no saved value
+                productsOrderby.val('aToZ');
+                // Save the initial selected option to localStorage
+                localStorage.setItem('selectedOption', 'aToZ');
+            }
+
+            // Listen for change event on the select element
+            productsOrderby.change(function () {
+                // Get the selected option value
+                var selectedValue = $(this).val();
+
+                // Save the selected option to localStorage
+                localStorage.setItem('selectedOption', selectedValue);
+                window.location.href = '/Search?searchTerm=' + searchValue + "&&sortOrder=" + selectedValue;
+            });
+        });
     </script>
 }

@@ -1,5 +1,5 @@
-﻿﻿@using Microsoft.AspNetCore.Mvc.Localization
-@using System.Text;
+﻿@using Microsoft.AspNetCore.Mvc.Localization;
+@model List<Admin.Models.Products>
 @inject IViewLocalizer Localizer
 
 <div class="ec-content-wrapper" id="AddProduct">
@@ -16,13 +16,17 @@
                             <div class="col-lg-4">
                                 <div class="ec-vendor-img-upload">
                                     <div class="ec-vendor-main-img">
-                                        <div class="avatar-upload">
+                                        <div class="avatar-upload thumb-upload">
                                             <div class="avatar-edit">
-                                                <input type="file" id="imageUploadAdd" class="imageUpload ec-image-upload rec" accept=".png, .jpg, .jpeg">
-                                                <label for="imageUpload"><img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg newimageUpload" alt="edit"></label>
+                                                <input type="file" class="ec-image-upload rec imageInput" accept=".png, .jpg, .jpeg" id="editIcon">
+                                                <label for="imageUpload"><img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg" alt="edit"></label>
                                             </div>
-                                            <div class="avatar-preview ec-preview">
-                                                <div class="imagePreview ec-div-preview">
+                                            <div class="deleted-image-upload avatar-edit" style="left: 25px; width:40px;">
+                                                <input type="button" class="ec-image-upload">
+                                                <label for="imageUpload"><i class="mdi mdi mdi-delete-outline header_svg newimageUpload" style="font-size:25px;"></i></label>
+                                            </div>
+                                            <div class="avatar-preview ec-preview thumb-preview">
+                                                <div class="imagePreview ec-div-preview imageContainer">
                                                     <img class="ec-image-preview" src="/admin/assets/img/products/vender-upload-preview.png" alt="edit">
                                                 </div>
                                             </div>
@@ -30,15 +34,15 @@
                                         <div class="thumb-upload-set colo-md-12">
                                             <div class="thumb-upload">
                                                 <div class="thumb-edit">
-                                                    <input type="file" id="thumbUpload01" class="ec-image-upload imageUpload rec" accept=".png, .jpg, .jpeg">
+                                                    <input type="file" class="imageUpload ec-image-upload rec imageInput" accept=".png, .jpg, .jpeg">
                                                     <label for="imageUpload"><img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg" alt="edit"></label>
                                                 </div>
                                                 <div class="deleted-image-upload" style="left: 5px;">
                                                     <input type="button" class="ec-image-upload">
-                                                    <label for="imageUpload" style="width: 20px;height: 20px;"><img src="https://flyclipart.com/thumb2/delete-icon-327000.png" class="svg_img header_svg" alt="edit"></label>
+                                                    <label for="imageUpload"><i class="mdi mdi mdi-delete-outline header_svg newimageUpload" style="font-size:20px;"></i></label>
                                                 </div>
                                                 <div class="thumb-preview ec-preview">
-                                                    <div class="image-thumb-preview">
+                                                    <div class="image-thumb-preview imageContainer">
                                                         <img class="image-thumb-preview ec-image-preview" src="/admin/assets/img/products/vender-upload-thumb-preview.png" alt="edit">
                                                     </div>
                                                 </div>
@@ -52,28 +56,44 @@
                                 <div class="ec-vendor-upload-detail">
                                     <form class="row g-3">
                                         <div class="col-md-6">
-                                            <label for="inputEmail4" class="form-label">@Localizer["ProductName"]</label>
+                                            <label for="inputEmail4" class="form-label">@Localizer["ProductNameEn"]</label>
                                             <span class="spnreq" id="productNameEntxtreq" style="color : red ; display:none">@Localizer["NameIsRequired"]</span>
                                             <input type="text" class="form-control slug-title req" id="productNameEntxt">
                                         </div>
                                         <div class="col-md-6">
+                                            <label for="inputEmail4" class="form-label">@Localizer["ProductNameAr"]</label>
+                                            <span class="spnreq" id="productNameEntxtreqAr" style="color : red ; display:none">@Localizer["NameIsRequired"]</span>
+                                            <input type="text" class="form-control slug-title req" id="productNameEntxtAr">
+                                        </div>
+                                        <div class="col-md-6">
                                             <label class="form-label">@Localizer["SelectBrand"]</label>
-                                            <span class="spnreq" id="ddlAllBrandsreq" style="color : red ; display:none">@Localizer["PleaseSelectBrand"]</span>
+                                            <span class="spnreq" id="ddlAllBrandsreq" style="color : red ; display:none">@Localizer["SelectBrand"]</span>
                                             <select name="categories" id="ddlAllBrands" class="form-select">
+                                                <option selected="" value="">@Localizer["SelectBrand"]</option>
+                                                @foreach (var item in ViewBag.Brands)
+                                                {
+                                                    string culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+                                                    var name = culture.StartsWith("en") ? item.NameEn : item.NameAr;
+                                                    <option value="@item.Id">@name</option>
+                                                }
                                             </select>
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
                                             <label class="form-label">@Localizer["ProductFeatured"]</label>
                                             <select class="form-select" id="selecrdFeatured">
                                                 <option value="true">@Localizer["Yes"]</option>
-                                                <option selected value="false">@Localizer["No"]</option>
+                                                <option selected="" value="false">@Localizer["No"]</option>
                                             </select>
                                         </div>
                                         <div class="col-md-12">
-                                            <label class="form-label">@Localizer["Description"]</label>
+                                            <label class="form-label">@Localizer["DescriptionEn"]</label>
                                             <span class="spnreq" id="descEntxtreq" style="color : red ; display:none">@Localizer["DescriptionIsRequired"]</span>
                                             <textarea id="descEntxt" class="form-control req" rows="2"></textarea>
-
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="form-label">@Localizer["DescriptionAr"]</label>
+                                            <span class="spnreq" id="descEntxtreqAr" style="color : red ; display:none">@Localizer["DescriptionIsRequired"]</span>
+                                            <textarea id="descEntxtAr" class="form-control req" rows="2"></textarea>
                                         </div>
                                         <div class="col-md-6">
                                             <label class="form-label">@Localizer["Price"] <span>( @Localizer["InJOD"] )</span></label>
@@ -81,18 +101,10 @@
                                             <input type="number" class="form-control req" id="Pricetxt">
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="form-label ">Size</label>
+                                            <label class="form-label ">@Localizer["Size"]</label>
                                             <span class="spnreq" id="sizetxtreq" style="color : red ; display:none">@Localizer["SizeIsRequired"]</span>
                                             <input type="text" class="form-control req" id="sizetxt">
                                         </div>
-@*                                        <div class="col-md-12 mb-25">
-                                            <label class="form-label">@Localizer["Types"]</label>
-                                            <div class="TypesToAdd">
-                                                <input type="color" class="form-control form-control-color typeValue" id="exampleColorInput1" value="" title="Choose your color">
-                                            </div>
-                                            <button type="button" id="addType"> <i class="mdi mdi mdi-plus-outline"></i> </button>
-                                            <span class="spnreq" id="typeValuereq" style="color : red ; display:none">@Localizer["FillAtLeastOneType"]</span>
-                                        </div>*@
                                         <div class="col-md-12">
                                             <button type="button" id="SaveProductbtn" class="btn btn-primary">@Localizer["Submit"]</button>
                                             <button type="button" id="Cancelbtn" class="btn btn-danger">@Localizer["Cancel"]</button>
@@ -108,6 +120,7 @@
     </div>
     <!-- End Content -->
 </div>
+
 <div class="ec-content-wrapper">
     <div class="content">
         <div class="breadcrumb-wrapper d-flex align-items-center justify-content-between">
@@ -127,20 +140,34 @@
                 <div class="card card-default">
                     <div class="card-header card-header-border-bottom d-flex justify-content-between">
                         <div class="card-bar">
-                            @*                            <div class="col-lg-6 col-md-12">
-                            <input type="text" class="form-control" id="searchProduct" placeholder="@Localizer["Search"]">
-                            </div>
-                            <div class="col-lg-6 col-md-12 sort">
-                            <div class="col-lg-4 col-md-6 p-space">
-                            <select class="form-control" id="dropdownBrands">
-                            <option value="ALL">@Localizer["ALLBrands"]</option>
-                            </select>
-                            </div>
-                            </div>*@
                         </div>
                     </div>
                     <div class="card-body">
                         <div onclick="" class="row" id="ProductCard">
+                            @foreach (var item in Model)
+                            {
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <div class="card-wrapper">
+                                        <div class="card-container">
+                                            <div class="card-top"><img class="card-image" src="/images/@item.BaseImage" alt=""></div>
+                                            <hr>
+                                            <div class="card-bottom">
+                                                @{
+                                                    string culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+                                                    var name = culture.StartsWith("en") ? item.NameEn : item.NameAr;
+                                                }
+                                                <h3>@name</h3>
+                                                <p>@item.Price @Localizer["JOD"]</p>
+                                            </div>
+                                            <div class="card-action">
+                                                <div class="card-edit EditProduct" data_id="@item.Id"><i class="mdi mdi-circle-edit-outline"></i></div>
+                                                <div class="card-preview Details" data_id="@item.Id"><i class="mdi mdi-eye-outline"></i></div>
+                                                <div class="card-remove DeleteProduct" data_id="@item.Id"><i class="mdi mdi mdi-delete-outline"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
                         </div>
                     </div>
                 </div>
@@ -148,379 +175,190 @@
         </div>
     </div>
 </div>
+
 <script src="~/lib/jquery/dist/jquery.min.map"></script>
 <script src="~/lib/jquery/dist/jquery.js"></script>
+
 <script>
-    $(function () {
-        GetAllBrands();
-        GetAllProducts();
-    });
-    var imagesToUpload = []
-    //var oldTypes = [];
-    //var newTypes = [];
-    var oldImages = [];
-    var newImages = [];
-    var IsFeatuer = false;
+    var imagesToUpload = [];
+    var imagesToUploadFiles = {};
     var form = new FormData();
     var Image;
-    //$(".typeValue").on("change", function () {
-    //    // Retrieve the selected color value
-    //    var selectedColor = $(this).val();
 
-    //    // Add the selected color to the colorList array
-    //    newTypes.push(selectedColor);
-    //});
-    $(document).on('change', ".imageUpload", function () {
-        debugger
-        $.each(this.files, function (i, item) {
-            imagesToUpload.push(item)
+    $(document).ready(function () {
+        $(document).on("click", ".AddProduct", function () {
+            $("#AddProduct").slideDown(2000);
         });
-        $('.imageUpload').val(null);
-    });
-    $(document).on('click', ".deleted-image-upload", function () {
-        alert("Ola")
-        var inputValue = $(".imageUpload");
-        alert(inputValue)
-        debugger
-        $.each(this.files, function (i, item) {
-            alert(item)
+        $(document).on("click", "#Cancelbtn", function () {
+            $("#productNameEntxt").val(null);
+            $("#productNameEntxtAr").val(null);
+            $("#descEntxt").val(null);
+            $("#descEntxtAr").val(null);
+            $("#Pricetxt").val(null);
+            $("#sizetxt").val(null);
+            $("#BaseImgFile").val(null);
+            $("#altImgFile").val(null);
+            $("#selecrdFeatured").val("false");
+            $("#ddlAllBrands").val(null);
+            imagesToUpload = [];
+            $("#AddProduct").slideUp(1000);
         });
-        $(this).parent().remove();
-
-    });
-    function GetAllBrands() {
-        $.ajax({
-            url: "/Brands/GetAllBrands",
-            type: "GET",
-            dataType: "json",
-            success: function (data) {
-                var $dropdown = $("#ddlAllBrands");
-                $dropdown.append($("<option selected/>").val("").text("Select Brand"));
-                $.each(data, function (i, item) {
-                    $dropdown.append($("<option />").val(item.id).text(item.nameEn));
-                });
-                var dropdownBrands = $("#dropdownBrands");
-                dropdownBrands.append($("<option selected/>").val("").text("Select Brand"));
-                $.each(data, function (i, item) {
-                    dropdownBrands.append($("<option />").val(item.id).text(item.nameEn));
-                });
-                $dropdown.val(null);
-                dropdownBrands.val(null);
-            },
-            error: function (response) {
-                swal('Oops...', 'Something went wrong!', 'error');;
-            }
+        $(function () {
+            $('#addImage').click(function () {
+                var newDiv = $('<div class="thumb-upload"><div class="thumb-edit"><input type="file" class="imageUpload ec-image-upload rec imageInput" accept = ".png, .jpg, .jpeg"><label for= "imageUpload"><img src= "/admin/assets/img/icons/edit.svg" class= "svg_img header_svg" alt = "edit" > </label></div><div class="deleted-image-upload" style = "left: 5px;" ><input type="button" class="ec-image-upload" ><label for= "imageUpload" > <i class= "mdi mdi mdi-delete-outline header_svg newimageUpload" style = "font-size:20px;" > </i></label ></div><div class="thumb-preview ec-preview"><div class="image-thumb-preview imageContainer"><img class="image-thumb-preview ec-image-preview" src = "/admin/assets/img/products/vender-upload-thumb-preview.png" alt = "edit" ></div></div></div>');
+                $('.thumb-upload-set').append(newDiv);
+            });
         });
-    }
+        $(document).on('change', '.imageInput', function (e) {
+            var file = e.target.files[0];
+            // Create an object URL for the image file
+            var objectURL = URL.createObjectURL(file);
 
-    function GetAllProducts() {
-        $.ajax({
-            url: "/Products/GetAllProducts",
-            type: "GET",
-            dataType: "json",
-            success: function (data) {
-                var innerHtml = "";
-                $("#ProductCard").html('');
-                $.each(data.data, function (i, item) {
-                    debugger
-                    innerHtml += '<div class="col-lg-3 col-md-4 col-sm-6">';
-                    innerHtml += '<div class="card-wrapper">';
-                    innerHtml += '<div class="card-container">';
-                    innerHtml += '<div class="card-top">';
-                    innerHtml += '<img class="card-image" src="' + item.baseImage + '" alt="">';
-                    innerHtml += '</div>';
-                    innerHtml += '<hr />';
-                    innerHtml += '<div class="card-bottom">';
-                    innerHtml += '<h3>' + item.nameEn + '</h3>';
-                    innerHtml += '<p>' + item.price + ' JOD</p>';
-                    innerHtml += '</div>';
-                    innerHtml += '<div class="card-action">';
-                    innerHtml += '<div class="card-edit EditProduct"data_Id ="' + item.id + '"><i class="mdi mdi-circle-edit-outline"></i></div>';
-                    innerHtml += '<div class="card-preview Details"  data_Id ="' + item.id + '">';
-                    innerHtml += '<i class="mdi mdi-eye-outline" data_Id ="' + item.id + '"; ></i>';
-                    innerHtml += '</div>';
-                    innerHtml += '<div class="card-remove DeleteProduct" data_Id ="' + item.id + '"><i class="mdi mdi mdi-delete-outline"></i></div>';
-                    innerHtml += '</div>';
-                    innerHtml += '</div>';
-                    innerHtml += '</div>';
-                    innerHtml += '</div>';
-                });
-                $("#ProductCard").append(innerHtml);
-            },
-            error: function (response) {
-                swal('Oops...', 'Something went wrong!', 'error');;
-            }
+            // Find the closest imageContainer div relative to the current input
+            var imageContainer = $(this).closest('.thumb-upload').find('.imageContainer');
+
+            // Create an <img> element and set its source to the object URL
+            var img = $('<img>').attr('src', objectURL);
+            // Empty the selected imageContainer div and append the image
+            imageContainer.empty().append(img);
+
+            var updatedSrc = img.attr('src');
+            updatedSrc = updatedSrc.substr(updatedSrc.lastIndexOf('/') + 1);
+            //imagesToUpload.push(updatedSrc);
+            imagesToUpload.push(file, updatedSrc);
+            $(this).val(null);
         });
-    }
-    $(document).on("click", ".Details", function () {
-        var Id = $(this).attr('data_Id');
-        window.location.href = "/Products/Details?Id=" + Id
-    });
-    $(document).on("click", ".EditProduct", function () {
-        var Id = $(this).attr('data_Id');
-        window.location.href = "/Products/Edit?id=" + Id
-    });
-    $(document).on("click", ".DeleteProduct", function () {
-        var Id = $(this).attr('data_Id');
-        $.ajax({
-            url: "/Products/DeleteProduct/" + Id,
-            type: "Post",
-            dataType: "json",
-            success: function () {
-                GetAllProducts();
-            },
-            error: function (response) {
-                GetAllProducts();
-            }
-        });
-    });
-    //function GetAllTypesForProduct(ProductId) {
-    //    $.ajax({
-    //        url: "/Types/GetAllTypesByProductId/" + ProductId,
-    //        type: "GET",
-    //        dataType: "json",
-    //        success: function (data) {
-    //            $.each(data.data, function (i, item) {
-    //                var Types = {
-    //                    Id: item.id,
-    //                    Value: item.value
-    //                }
-    //                oldTypes.push(Types);
-    //            });
-    //            $dropdown.val(null);
-    //        },
-    //        error: function (response) {
-    //            swal('Oops...', 'Something went wrong!', 'error');;
-    //        }
-    //    });
-    //}
-    //function UpdateTypes() {
-    //    if ($(".newTypes").val() != "") {
-    //        $(".newTypes").each(function () {
-    //            newTypes.push($(this).val())
-    //        });
-    //    }
-    //    var value = {
-    //        oldType: oldTypes,
-    //        newType: newTypes
-    //    }
-    //    $.ajax({
-    //        url: "/Types/UpdateTypes",
-    //        type: "Post",
-    //        dataType: "json",
-    //        data: JSON.stringify(value),
-    //        success: function (data) {
-    //        },
-    //        error: function (response) {
-    //            swal('Oops...', 'Something went wrong!', 'error');;
-    //        }
-    //    });
-    //}
-
-    //$("#myCheckbox").change(function () {
-    //    if ($(this).prop("checked")) {
-    //        IsFeatuer = true;
-    //    } else {
-    //        IsFeatuer = false;
-    //    }
-    //});
-    function AddProduct() {
-        debugger
-        var ProductEnName = $("#productNameEntxt").val();
-        var ProductdescEntxt = $("#descEntxt").val();
-        var Productsizetxt = $("#sizetxt").val();
-        var ProductPricetxt = $("#Pricetxt").val();
-        var ProductBaseImgFile = $("#BaseImgFile").val();
-        var ProductaltImgFile = $("#altImgFile").val();
-        var IsFeaturedCH = $('#selecrdFeatured').val();
-
-        //var IsFeaturedCH = IsFeatuer;
-        var Brand = $("#ddlAllBrands").val();
-        //$('.typeValue').each(function () {
-        //    // Retrieve the selected color value
-        //    var selectedColor = $(this).val();
-
-        //    // Add the selected color to the colorList array
-        //    newTypes.push(selectedColor);
-        //});
-        let valid = true;
-        $('.spnreq').hide();
-        $('.req').each(function () {
-            if ($(this).val() === "" || $(this).val().trim() === "") {
-                $('#' + $(this).attr('id') + 'req').show();
-                valid = false;
-            }
-        })
-        if (imagesToUpload.length < 2) {
-            valid = false;
-            $('#Imagesreq').show();
-        }
-        //if (newTypes.length < 1) {
-        //    valid = false;
-        //    $('#typeValuereq').show();
-        //}
-        if (Brand == null || Brand == "") {
-            valid = false;
-            $('#ddlAllBrandsreq').show();
-        }
-
-        if (valid == true) {
+        $(document).on('click', '.deleted-image-upload', function () {
+            var imageContainer = $(this).closest('.thumb-upload').find('.imageContainer img').attr('src');
+            imageContainer = imageContainer.substr(imageContainer.lastIndexOf('/') + 1);
             $.each(imagesToUpload, function (i, item) {
-                form.append("Images", item);
+                var index = imagesToUpload.indexOf(imageContainer);
+                if (item == imageContainer) {
+                    imagesToUpload.splice(index, 1);
+                    imagesToUpload.splice(index - 1, 1);
+                }
             });
+            $(this).parent().remove();
+        });
+        $(document).on("click", ".Details", function () {
+            var Id = $(this).attr('data_Id');
+            window.location.href = "/Products/Details?Id=" + Id
+        });
+        $(document).on("click", ".EditProduct", function () {
+            var Id = $(this).attr('data_Id');
+            window.location.href = "/Products/Edit?id=" + Id
+        });
+        $(document).on("click", ".DeleteProduct", function () {
+            var Id = $(this).attr('data_Id');
             $.ajax({
-                url: "/Products/AddImages",
-                type: "POST",
-                data: form,
-                processData: false,
-                contentType: false,
-                success: function (result) {
-                    var productsVM = {
-                        NameEn: ProductEnName,
-                        DescriptionEn: ProductdescEntxt,
-                        Size: Productsizetxt,
-                        Price: ProductPricetxt,
-                        BaseImage: result[0],
-                        AltImage: result[1],
-                        IsFeatured: IsFeaturedCH,
-                        BrandsId: Brand,
-                        Images: result
-                    };
-                    $.ajax({
-                        url: "/Products/AddProduct",
-                        type: "POST",
-                        dataType: "Json",
-                        contentType: "application/json",
-                        data: JSON.stringify(productsVM),
-                        success: function (data) {
-                            //var Types = {
-                            //    ProductId: data.data.id,
-                            //    Types: newTypes
-                            //}
-                            //$.ajax({
-                            //    url: "/Types/AddTypes",
-                            //    type: "POST",
-                            //    dataType: "Json",
-                            //    contentType: "application/json",
-                            //    data: JSON.stringify(Types),
-                            //    success: function (data) {
-
-                            //        //swal("Success", data.Message, "success");
-                            //        $("#AddProduct").slideUp();
-                            //        $("#EditProduct").slideUp();
-                            //        imagesToUpload = [];
-                            //        GetAllProducts();
-                            //    },
-                            //    error: function (err) {
-                            //        swal('Oops...', 'Something went wrong!', 'error');
-                            //    }
-                            //});
-                            $("#productNameEntxt").val(null);
-                            $("#descEntxt").val(null);
-                            $("#Pricetxt").val(null);
-                            $("#sizetxt").val(null);
-                            $("#BaseImgFile").val(null);
-                            $("#altImgFile").val(null);
-                            //$('.typeValue').each(function () {
-                            //    $(this).val(null);
-                            //});
-
-                            imagesToUpload = [];
-                            $("#AddProduct").slideUp();
-                            location.reload()
-                        },
-                        error: function (err) {
-                            swal('Oops...', 'Something went wrong!', 'error');
-                        }
-                    })
+                url: "/Products/DeleteProduct/" + Id,
+                type: "Post",
+                dataType: "json",
+                success: function () {
+                    location.reload();
                 },
-                error: function (xhr, status, error) {
-                    // Handle any errors that occur during the AJAX request
+                error: function (response) {
+                    location.reload();
                 }
             });
-        }
-    }
+        });
 
-    function DeleteProduct(ProductId) {
-        $.ajax({
-            url: "/Product/DeleteProduct/" + ProductId,
-            type: "Post",
-            dataType: "json",
-            success: function (data) {
-                if (data.isSucces == true) {
-                    swal("Success", data.message, "success");
+        function AddProduct() {
+            debugger
+            var ProductEnName = $("#productNameEntxt").val();
+            var ProductEnNameAr = $("#productNameEntxtAr").val();
+            var ProductdescEntxt = $("#descEntxt").val();
+            var ProductdescEntxtAr = $("#descEntxtAr").val();
+            var Productsizetxt = $("#sizetxt").val();
+            var ProductPricetxt = $("#Pricetxt").val();
+            var ProductBaseImgFile = $("#BaseImgFile").val();
+            var ProductaltImgFile = $("#altImgFile").val();
+            var IsFeaturedCH = $('#selecrdFeatured').val();
+            var Brand = $("#ddlAllBrands").val();
+            let valid = true;
+
+            $('.spnreq').hide();
+            $('.req').each(function () {
+                if ($(this).val() === "" || $(this).val().trim() === "") {
+                    $('#' + $(this).attr('id') + 'req').show();
+                    valid = false;
                 }
-                else {
-                    swal('Oops...', data.message, 'error');
-                }
-                $("#AddProduct").slideUp();
-            },
-            error: function (response) {
-                swal('Oops...', 'Something went wrong!', 'error');;
+            })
+            if (ProductdescEntxtAr == "") {
+                $('#descEntxtreqAr').show();
             }
+            if (ProductEnNameAr == "") {
+                $('#productNameEntxtreqAr').show();
+            }
+            if (imagesToUpload.length < 2) {
+                valid = false;
+                $('#Imagesreq').show();
+            }
+            if (Brand == null || Brand == "") {
+                valid = false;
+                $('#ddlAllBrandsreq').show();
+            }
+            if (valid == true) {
+                $.each(imagesToUpload, function (i, item) {
+                    if (typeof item === 'string') {
+                        form.append("NameOfImages", item);
+                    } else if (item instanceof File) {
+                        form.append("Images", item);
+                    }
+                });
+                $.ajax({
+                    url: "/Products/AddImages",
+                    type: "POST",
+                    data: form,
+                    processData: false,
+                    contentType: false,
+                    success: function (result) {
+                        var productsVM = {
+                            NameEn: ProductEnName,
+                            NameAr: ProductEnNameAr,
+                            DescriptionEn: ProductdescEntxt,
+                            DescriptionAr: ProductdescEntxtAr,
+                            Size: Productsizetxt,
+                            Price: ProductPricetxt,
+                            BaseImage: result[0],
+                            AltImage: result[1],
+                            IsFeatured: IsFeaturedCH,
+                            BrandsId: Brand,
+                            Images: result
+                        };
+                        $.ajax({
+                            url: "/Products/AddProduct",
+                            type: "POST",
+                            dataType: "Json",
+                            contentType: "application/json",
+                            data: JSON.stringify(productsVM),
+                            success: function (data) {
+                                $("#productNameEntxt").val(null);
+                                $("#productNameEntxtAr").val(null);
+                                $("#descEntxt").val(null);
+                                $("#descEntxtAr").val(null);
+                                $("#Pricetxt").val(null);
+                                $("#sizetxt").val(null);
+                                $("#BaseImgFile").val(null);
+                                $("#altImgFile").val(null);
+                                imagesToUpload = [];
+                                $("#AddProduct").slideUp();
+                                location.reload()
+                            },
+                            error: function (err) {
+                                swal('Oops...', 'Something went wrong!', 'error');
+                            }
+                        })
+                    },
+                    error: function (xhr, status, error) {
+                        // Handle any errors that occur during the AJAX request
+                    }
+                });
+            }
+        }
+        $(document).on("click", "#SaveProductbtn", function () {
+            AddProduct();
         });
-    }
-    $(document).on("click", ".AddProduct", function () {
-        $("#AddProduct").slideDown(2000);
-        $("#EditProduct").slideUp();
     });
-    $(document).on("click", ".EditProduct", function () {
-        $("#EditProduct").slideDown(2000);
-        $("#AddProduct").slideUp();
-    });
-    $(document).on("click", "#SaveProductbtn", function () {
-        AddProduct();
-    });
-    $(document).on("click", "#Cancelbtn", function () {
-        $("#productNameEntxt").val(null);
-        $("#descEntxt").val(null);
-        $("#Pricetxt").val(null);
-        $("#sizetxt").val(null);
-        $("#BaseImgFile").val(null);
-        $("#altImgFile").val(null);
-        //$('.typeValue').each(function () {
-        //    $(this).val(null);
-        //});
-        imagesToUpload = [];
-        $("#AddProduct").slideUp();
-    });
-    $(document).on("click", "#Deletebtn", function () {
-        $("#productNameEntxt").val(null);
-        $("#descEntxt").val(null);
-        $("#Pricetxt").val(null);
-        $("#sizetxt").val(null);
-        $("#BaseImgFile").val(null);
-        $("#altImgFile").val(null);
-        imagesToUpload = [];
-        //$("#Add_Edit_Brand").slideUp();
-    });
-    $(document).on("click", "#displayNonePro", function () {
-        $("#AddProduct").slideUp(2000);
-    });
-    $(function () {
-        $('#addImage').click(function () {
-            var newDiv = $('<div class="thumb-upload"><div class="thumb-edit"><input id="thumbUpload01" type="file" class="imageUpload ec-image-upload rec" accept=".png, .jpg, .jpeg"><label for="imageUpload"><img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg" alt="edit"></label></div><div class="thumb-preview ec-preview"><div class="image-thumb-preview"><img class="image-thumb-preview ec-image-preview" src="/admin/assets/img/products/vender-upload-thumb-preview.png" alt="edit"></div></div></div>');
-            //var newDiv = $('<div class="thumb-upload"><div class="thumb-edit"><input type="file" class="ec-image-upload imageUpload rec" accept=".png, .jpg, .jpeg"><label for= "imageUpload"<img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg" alt="edit"></label></div><div class="thumb-preview ec-preview"><div class="image-thumb-preview"><img class="image-thumb-preview ec-image-preview" src="/admin/assets/img/products/vender-upload-thumb-preview.jpg" alt="edit"></div></div></div>');
-            //newDiv.style.background = "#000";
-            $('.thumb-upload-set').append(newDiv);
-        });
-        //$('.deleted-image-upload').click(function () {
-        //    var imageDelete = $(".ec-image-preview").attr('src')
 
-        //    //imageDelete = Convert.ToBase64String(Encoding.UTF8.GetBytes());
-        //    $(this).parent().remove();
-        //    debugger
-        //    $.each(imagesToUpload, function (i, item) {
-        //        if (item == imageDelete) {
-        //        imagesToUpload.remove(item);
-        //        }
-        //    });
-        //});
-
-        //$('#addType').click(function () {
-        //    var newDiv = $('<input type="color" class="form-control form-control-color typeValue" id="exampleColorInput1" value="" title="Choose your color">');
-        //    //newDiv.style.background = "#000";
-        //    $('.TypesToAdd').append(newDiv);
-        //});
-    });
 </script>

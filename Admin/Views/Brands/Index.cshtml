@@ -29,7 +29,11 @@
                             <div class="image mb-3">
                                 <img src="@item.ImageUrl" class="img-fluid rounded-circle" alt="Avatar Image">
                             </div>
-                            <h5 class="card-title text-dark">@item.NameEn</h5>
+                            @{
+                                string culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+                                var name = culture.StartsWith("en") ? item.NameEn : item.NameAr;
+                            }
+                            <h5 class="card-title text-dark">@name</h5>
                             <span onclick="location.href='@Url.Action("DeleteConfirmed", "Brands", new { id = item.Id })'" class="brand-delete mdi mdi-delete-outline"></span>
                             <span onclick="location.href='@Url.Action("Edit", "Brands", new { id = item.Id })'" class="brand-edit mdi mdi-circle-edit-outline"></span>
                         </div>

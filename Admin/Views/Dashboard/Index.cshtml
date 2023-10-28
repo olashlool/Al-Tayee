@@ -3,7 +3,9 @@
 @inject IOrder _order
 @inject IViewLocalizer Localizer
 @model Admin.Models.ViewModels.HomeAdminVM
-
+@{
+    string culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+}
 <div class="ec-content-wrapper">
     <div class="content">
         <div class="row">
@@ -37,8 +39,8 @@
             <div class="col-xl-3 col-sm-6 p-b-15 lbl-card">
                 <div class="card card-mini dash-card card-2">
                     <div class="card-body">
-                        <h2 class="mb-1">@ViewBag.CountOfOrdersRejected</h2>
-                        <p>@Localizer["TotalRejectedOrders"]</p>
+                        <h2 class="mb-1">@ViewBag.CountOfOrdersPending</h2>
+                        <p>@Localizer["TotalPendingOrders"]</p>
                         <span class="mdi mdi-package-variant"></span>
                     </div>
                 </div>
@@ -80,10 +82,19 @@
                                                 subtotal += orderItem.Quantity * orderItem.Product.Price;
                                             }
                                         }
-                                        <td class="d-none d-lg-table-cell">$230</td>
-                                        <td>
-                                            <span class="badge badge-success">@item.OrderStatus</span>
-                                        </td>
+                                        <td class="d-none d-lg-table-cell">@subtotal</td>
+                                        @if (@item.OrderStatus == "Completed")
+                                        {
+                                            <td>
+                                                <span class="badge badge-success">@item.OrderStatus</span>
+                                            </td>
+                                        }
+                                        else
+                                        {
+                                            <td>
+                                                <span class="badge badge-warning">@item.OrderStatus</span>
+                                            </td>
+                                        }
                                         <td class="text-right">
                                             <div class="dropdown show d-inline-block widget-dropdown">
                                                 <a class="dropdown-toggle icon-burger-mini" href="" role="button" id="dropdown-recent-order1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static"></a>
@@ -92,7 +103,10 @@
                                                         <a href="Order/Detail/@item.ID">@Localizer["View"]</a>
                                                     </li>
                                                     <li class="dropdown-item">
-                                                        <a onclick="location.href='@Url.Action("DeleteConfirmed", "Home", new { id = item.ID })'">@Localizer["Remove"]</a>
+                                                        <a href="Order/Edit/@item.ID">@Localizer["Edit"]</a>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a onclick="location.href='@Url.Action("DeleteConfirmed", "Dashboard", new { id = item.ID })'">@Localizer["Remove"]</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -152,16 +166,19 @@
                     <div class="card-body mt-10px mb-10px py-0">
                         @foreach (var item in Model.Products.Take(2))
                         {
+                            var name = culture.StartsWith("en") ? item.NameEn : item.NameAr;
+                            var desc = culture.StartsWith("en") ? item.DescriptionEn : item.DescriptionAr;
+
                             <div class="row media d-flex pt-15px pb-15px">
                                 <div class="col-lg-3 col-md-3 col-2 media-image align-self-center rounded">
                                     <a href="/Products/Details?Id=@item.Id"><img src="~/images/@item.BaseImage" alt="customer image"></a>
                                 </div>
                                 <div class="col-lg-9 col-md-9 col-10 media-body align-self-center ec-pos">
-                                    <a href="#">
-                                        <h6 class="mb-10px text-dark font-weight-medium">@item.NameEn</h6>
+                                    <a href="/Products/Details?Id=@item.Id">
+                                        <h6 class="mb-10px text-dark font-weight-medium">@name</h6>
                                     </a>
                                     <p class="d-none d-md-block">
-                                        @item.DescriptionEn
+                                        @desc
                                     </p>
                                     <p class="mb-0 ec-price">
                                         <span class="text-dark">@item.Price</span>

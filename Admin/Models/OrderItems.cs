@@ -6,6 +6,7 @@
         public Guid OrderID { get; set; }
         public Guid ProductID { get; set; }
         public int Quantity { get; set; }
+        public string ImageProduct { get; set; }
 
         public Order Order { get; set; }
         public Products Product { get; set; }

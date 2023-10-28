@@ -147,6 +147,9 @@
   <data name="Submit" xml:space="preserve">
     <value>Submit</value>
   </data>
+  <data name="successfully" xml:space="preserve">
+    <value>Your enquiry has been successfully sent to the store owner.</value>
+  </data>
   <data name="ValidationEmail" xml:space="preserve">
     <value>Wrong email</value>
   </data>

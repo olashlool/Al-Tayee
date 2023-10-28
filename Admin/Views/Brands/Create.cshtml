@@ -17,22 +17,36 @@
                             <div class="ec-cat-form">
                                 <form asp-controller="Brands" asp-action="Create" method="post" enctype="multipart/form-data">
                                     <div class="form-group row">
-                                        <label for="text" class="col-12 col-form-label">@Localizer["Name"]</label>
+                                        <label for="brandEnName" class="col-12 col-form-label">@Localizer["NameEn"]</label>
                                         <div class="col-12">
-                                            <input id="text" class="form-control here slug-title" type="text" asp-for="@Model.Brands.NameEn">
-                                            <span asp-validation-for="Brands.NameEn" class="text-danger"></span>
+                                            <input id="brandEnName" class="form-control here slug-title" type="text" asp-for="@Model.Brands.NameEn">
+                                            <span asp-validation-for="Brands.NameEn" class="text-danger" style="color: #c90505;"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="brandArName" class="col-12 col-form-label">@Localizer["NameAr"]</label>
+                                        <div class="col-12">
+                                            <input id="brandArName" class="form-control here slug-title" type="text" asp-for="@Model.Brands.NameAr">
+                                            <span asp-validation-for="Brands.NameEn" class="text-danger" style="color: #c90505;"></span>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="text" class="col-12 col-form-label">@Localizer["Image"]:</label>
                                         <div class="col-12">
-                                            <input class="form-control here slug-title" name="ImageUpload" type="file" asp-for="@Model.Brands.ImageUrl">
-                                            <span asp-validation-for="ImageUpload" class="text-danger"></span>
+                                            <div style="width: 100%; height: 50px; border: 1px solid #eeeeee ; border-radius: 15px; display: flex; align-items: center; cursor: pointer;" onclick="triggerFileInputClick()">
+                                                <p style="padding-left: 10px; padding-right: 10px;">@Localizer["ChosenImage"]:</p>
+                                                <p id="selectedImageText" style="border-left: 1px solid; padding-left: 10px;"></p>
+                                            </div>
+                                            <input id="fileInput" style="display: none;" onchange="handleFileSelection(event)" name="ImageUpload" type="file" asp-for="@Model.Brands.ImageUrl">
+                                            <div>
+                                                <img name="ImageUrl" id="ImageURL" src="" style="width:150px; height:150px;margin-top:10px;" />
+                                            </div>
+                                            <span asp-validation-for="Brands.ImageUrl" class="text-danger" style="color: #c90505;"></span>
                                         </div>
-                                    </div>                                    
+                                    </div>
                                     <div class="row" style="float: right; margin-top: 10px;">
                                         <div class="col-12">
-                                            <button type="submit" class="btn btn-primary">@Localizer["Save"]</button>
+                                            <button type="submit" class="btn btn-primary submitbtn">@Localizer["Save"]</button>
                                             <button asp-controller="Brands" asp-action="Index" class="btn btn-danger">@Localizer["Cancel"]</button>
                                         </div>
                                     </div>
@@ -45,3 +59,36 @@
         </div> <!-- End Content -->
     </div>
 </div>
+
+@section scripts {
+    <script>
+        function triggerFileInputClick() {
+            document.getElementById('fileInput').click();
+        }
+
+        function handleFileSelection(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function () {
+                const previewImage = document.getElementById('ImageURL');
+                const selectedImageText = document.getElementById('selectedImageText');
+
+                previewImage.src = reader.result;
+                previewImage.style.display = 'block';
+
+                selectedImageText.textContent = file.name;
+            };
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        }
+
+        $(".submitbtn").click(function () {
+            var brandEnName = $("#brandEnName").val();
+            var brandArName = $("#brandArName").val();
+
+        });
+    </script>
+}

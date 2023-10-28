@@ -15,10 +15,17 @@
                 <div class="row justify-content-center item-grid">
                     @foreach (var item in Model)
                     {
+                        string culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+                        var name = culture.StartsWith("en") ? item.NameEn : item.NameAr;
+
                         <div class="col-sm-6 col-md-4 col-lg-3 item-box">
                             <div class="manufacturer-item">
-                                <div class="picture"><a asp-controller="Brands" asp-action="Products" asp-route-brandId="@item.Id" title="Show products manufactured by @item.NameEn"> <img alt="Picture for manufacturer @item.NameEn" src="@item.ImageUrl" title="Show products manufactured by @item.NameEn"> </a></div>
-                                <h2 class="text-uppercase title"><a asp-controller="Brands" asp-action="Products" asp-route-brandId="@item.Id" title="Show products manufactured by @item.NameEn"> @item.NameEn </a></h2>
+                                <div class="picture">
+                                    <a asp-controller="Brands" asp-action="Products" asp-route-brandId="@item.Id" title="@Localizer["ShowProducts"] @name">
+                                        <img alt="@name" src="@item.ImageUrl" title="@Localizer["ShowProducts"] @name">
+                                    </a>
+                                </div>
+                                <h2 class="text-uppercase title"><a asp-controller="Brands" asp-action="Products" asp-route-brandId="@item.Id" title="@Localizer["ShowProducts"] @name"> @name </a></h2>
                             </div>
                         </div>
                     }

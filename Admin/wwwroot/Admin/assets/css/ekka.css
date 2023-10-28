@@ -11631,8 +11631,8 @@ textarea.form-control-lg {
   border-radius: 10px;
 }
 .ec-vendor-uploads .ec-vendor-img-upload .ec-vendor-main-img .thumb-upload-set .thumb-upload .thumb-preview > div {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

@@ -37,6 +37,9 @@ namespace Admin.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Day")
+                        .HasColumnType("int");
+
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -55,6 +58,9 @@ namespace Admin.Migrations
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
+
+                    b.Property<int>("Month")
+                        .HasColumnType("int");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
@@ -86,6 +92,9 @@ namespace Admin.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedEmail")
@@ -104,34 +113,40 @@ namespace Admin.Migrations
                             Id = "a18be9c0",
                             AccessFailedCount = 0,
                             BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "f3ee22d2-82bc-4221-9764-6be546c1df04",
+                            ConcurrencyStamp = "075f6682-6da0-4232-bb69-2e5c8f0fb368",
+                            Day = 0,
                             Email = "info@al-tayee.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
+                            Month = 0,
                             NormalizedEmail = "info@al-tayee.com",
                             NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAEBhg3odl3ouN4cosvGO89wVvlYS8IL8qC6Ddyt/a/XZesyfzLqlV/4Oz3fgBuN6+Kw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAELJgx5YOmq7pDPJOf7OdFp/2KWvi7SA5iW3mFp2qrvUTh/ox80P1aNEZzytcv6KZMg==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
-                            UserName = "admin"
+                            UserName = "admin",
+                            Year = 0
                         },
                         new
                         {
                             Id = "a50ze710",
                             AccessFailedCount = 0,
                             BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "935e23b6-969c-411f-8245-e99422d07011",
+                            ConcurrencyStamp = "cdd05c02-153e-4e48-8382-3751eaf8553e",
+                            Day = 0,
                             Email = "Administrator@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
+                            Month = 0,
                             NormalizedEmail = "Administrator@gmail.com",
                             NormalizedUserName = "Administrator",
-                            PasswordHash = "AQAAAAEAACcQAAAAEFIXv4dtdvHLV4EIECdJx7TAH9c/saFQWPjRzBsixyJWsTacTO92V4q1L2CcYgNXnQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEL21lWbrINmuyc4BvyOjg9VUFuwexfS85xP53a/32yktiqELFTB9d+jkE9MysIiZjQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
-                            UserName = "Administrator"
+                            UserName = "Administrator",
+                            Year = 0
                         });
                 });
 
@@ -148,7 +163,6 @@ namespace Admin.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Address2")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("City")
@@ -164,7 +178,6 @@ namespace Admin.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FaxNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
@@ -195,6 +208,10 @@ namespace Admin.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameAr")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -293,7 +310,6 @@ namespace Admin.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Address2")
@@ -304,7 +320,6 @@ namespace Admin.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Country")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -316,6 +331,9 @@ namespace Admin.Migrations
 
                     b.Property<string>("FirstName")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullLocation")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
@@ -339,7 +357,6 @@ namespace Admin.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("State")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Timestamp")
@@ -363,6 +380,10 @@ namespace Admin.Migrations
                     b.Property<Guid>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ImageProduct")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("OrderID")
                         .HasColumnType("uniqueidentifier");
@@ -420,12 +441,20 @@ namespace Admin.Migrations
                     b.Property<Guid>("BrandsId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("DescriptionAr")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("DescriptionEn")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsFeatured")
                         .HasColumnType("bit");
+
+                    b.Property<string>("NameAr")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NameEn")
                         .IsRequired()
@@ -565,21 +594,21 @@ namespace Admin.Migrations
                         new
                         {
                             Id = "ad376a8f",
-                            ConcurrencyStamp = "6672b653-348d-4b05-bf54-7a27a109a3d7",
+                            ConcurrencyStamp = "f20b3020-956a-4c74-9858-4beb699e9df9",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
                             Id = "bd586a8f",
-                            ConcurrencyStamp = "e3cae04c-1c20-4031-9e1d-862b045406c9",
+                            ConcurrencyStamp = "67ff1379-1568-4fde-9e80-9872f625fde6",
                             Name = "Editor",
                             NormalizedName = "Editor"
                         },
                         new
                         {
-                            Id = "19782f3a-0806-4b9e-8fa6-9ff6eecd3d95",
-                            ConcurrencyStamp = "30faaf1f-3389-4ae9-a1a7-83c90e3944a3",
+                            Id = "425b065b-34fe-4d3a-ab4c-e7efc9f54089",
+                            ConcurrencyStamp = "ea3371d7-f8c7-46df-b26b-9740bd20d0c6",
                             Name = "User",
                             NormalizedName = "User"
                         });

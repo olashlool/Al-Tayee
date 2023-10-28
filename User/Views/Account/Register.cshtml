@@ -19,7 +19,7 @@
                                 <div class="alert alert-danger" role="alert" asp-validation-summary="ModelOnly" class="text-danger" style="margin: 0;padding: 5px; margin-top: 20px; margin-bottom: 20px;"></div>
                                 <div class="form-fields">
                                     <div class="form-group row align-items-center inputs">
-                                        <div class="col-md-4 col-lg-5 text-left text-md-right"><label asp-for="Gender" class="col-form-label">@Localizer["Gender"]:</label><span class="required">*</span></div>
+                                        <div class="col-md-4 col-lg-5 text-left text-md-right"><label asp-for="Gender" class="col-form-label">@Localizer["Gender"]:</label></div>
                                         <div class="col-md-8 col-lg-7 text-left">
                                             <div class="gender">
                                                 <span class="ctm-radio male"> <input data-val-required="@Localizer["ValidationGender"]" asp-for="Gender" type="radio" value="Male" id="gender-male" name="Gender"> <label class="forcheckbox" for="gender-male">@Localizer["Male"]</label> </span>
@@ -47,7 +47,7 @@
                                         <div class="col-md-4 col-lg-5 text-left text-md-right"><label class="col-form-label">@Localizer["DateOfBirth"]:</label></div>
                                         <div class="col-md-8 col-lg-7 text-left">
                                             <div class="date-picker-wrapper">
-                                                <select asp-selected-day="" asp-selected-month="" asp-selected-year="" asp-for="Day">
+                                                <select asp-for="Day">
                                                     <option value="0">@Localizer["Day"]</option>
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
@@ -81,7 +81,7 @@
                                                     <option value="30">30</option>
                                                     <option value="31">31</option>
                                                 </select>
-                                                <select asp-selected-day="" asp-selected-month="" asp-selected-year="" asp-for="Month">
+                                                <select asp-for="Month">
                                                     <option value="0">@Localizer["Month"]</option>
                                                     <option value="1">January</option>
                                                     <option value="2">February</option>
@@ -96,7 +96,7 @@
                                                     <option value="11">November</option>
                                                     <option value="12">December</option>
                                                 </select>
-                                                <select asp-selected-day="" asp-selected-month="" asp-selected-year="" id="year" asp-for="Year">
+                                                <select id="year" asp-for="Year">
                                                     <option value="0">@Localizer["Year"]</option>
                                                 </select>
                                             </div>
@@ -151,13 +151,12 @@
 @section Scripts {
     <script>
         /*Date years */
-        var currentYears = new Date().getFullYear();
-        var selectorYear = document.getElementById("year");
-        for (var i = currentYears; i >= currentYears - 70; i--) {
-            var option = document.createElement("option");
-            option.value = i;
-            option.textContent = i;
-            selectorYear.appendChild(option);
+        var currentYear = new Date().getFullYear();
+        var $selectorYear = $("#year");
+
+        for (var i = currentYear; i >= currentYear - 70; i--) {
+            var $option = $("<option>", { value: i, text: i });
+            $selectorYear.append($option);
         }
     </script>
 }

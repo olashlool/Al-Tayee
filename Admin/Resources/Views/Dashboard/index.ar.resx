@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Edit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
   <data name="FeaturedProducts" xml:space="preserve">
     <value>المنتجات المميزة</value>
   </data>
@@ -156,11 +159,11 @@
   <data name="TotalOrders" xml:space="preserve">
     <value>مجموع الطلبات</value>
   </data>
+  <data name="TotalPendingOrders" xml:space="preserve">
+    <value>إجمالي الطلبات قيد الإنتظار</value>
+  </data>
   <data name="TotalProducts" xml:space="preserve">
     <value>مجموع المنتجات</value>
-  </data>
-  <data name="TotalRejectedOrders" xml:space="preserve">
-    <value>إجمالي الطلبات المرفوضة</value>
   </data>
   <data name="TotalUser" xml:space="preserve">
     <value>مجموع المستخدمون</value>

@@ -165,6 +165,9 @@
   <data name="FeaturedProducts" xml:space="preserve">
     <value>المنتجات المميزة</value>
   </data>
+  <data name="Hello" xml:space="preserve">
+    <value>مرحبا</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>الصفحة الرئسية</value>
   </data>
@@ -210,6 +213,9 @@
   </data>
   <data name="PrivacyPolicy" xml:space="preserve">
     <value>سياسة الخصوصية</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>المنتجات</value>
   </data>
   <data name="QuickLinks" xml:space="preserve">
     <value>روابط سريعة</value>

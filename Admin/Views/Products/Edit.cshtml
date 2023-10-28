@@ -18,47 +18,38 @@
                             <div class="col-lg-4">
                                 <div class="ec-vendor-img-upload">
                                     <div class="ec-vendor-main-img">
-                                        <div class="avatar-upload">
-                                            <div class="avatar-edit deleted-image-upload">
+                                        <div class="avatar-upload thumb-upload">
+                                            <div class="deleted-image-upload avatar-edit" style="left: 25px; width:40px;">
                                                 <input type="button" class="ec-image-upload">
-                                                <label for="imageUpload"><img src="https://flyclipart.com/thumb2/delete-icon-327000.png" class="svg_img header_svg newimageUpload" alt="delete"></label>
+                                                <label for="imageUpload"><i class="mdi mdi mdi-delete-outline header_svg newimageUpload" style="font-size:25px;"></i></label>
                                             </div>
-                                            <div class="avatar-preview ec-preview">
-                                                <div class="imagePreview ec-div-preview">
-                                                    <img class="ec-image-preview" src="/images/@Model.BaseImage" alt="edit">
+                                            <div class="avatar-preview ec-preview thumb-preview">
+                                                <div class="imagePreview ec-div-preview imageContainer">
+                                                    <img class="ec-image-preview" src="/images/@Model.Images[0].ImageName" alt="edit">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="thumb-upload-set colo-md-12">
                                             <div class="thumb-upload">
-                                                <div class="thumb-edit deleted-image-upload">
+                                                <div class="deleted-image-upload avatar-edit" style="left: 5px; width:40px;">
                                                     <input type="button" class="ec-image-upload">
-                                                    <label for="imageUpload"><img src="https://flyclipart.com/thumb2/delete-icon-327000.png" class="svg_img header_svg" alt="delete"></label>
+                                                    <label for="imageUpload"><i class="mdi mdi mdi-delete-outline header_svg newimageUpload" style="font-size:20px;"></i></label>
                                                 </div>
-                                                @*                                                <div class="deleted-image-upload" style="left: 5px;">
-                                                <input type="button" class="ec-image-upload">
-                                                <label for="imageUpload" style="width: 20px;height: 20px;"><img src="https://flyclipart.com/thumb2/delete-icon-327000.png" class="svg_img header_svg" alt="edit"></label>
-                                                </div>
-                                                *@
                                                 <div class="thumb-preview ec-preview">
-                                                    <div class="image-thumb-preview">
-                                                        <img class="image-thumb-preview ec-image-preview" src="/images/@Model.AltImage" alt="delete">
+                                                    <div class="image-thumb-preview imageContainer">
+                                                        <img class="image-thumb-preview ec-image-preview" src="/images/@Model.Images[1].ImageName" alt="edit">
                                                     </div>
                                                 </div>
                                             </div>
-                                            @foreach (var item in Model.Images)
+                                            @foreach (var item in Model.Images.Skip(2))
                                             {
                                                 <div class="thumb-upload">
-                                                    <div class="thumb-edit deleted-image-upload">
+                                                    <div class="deleted-image-upload avatar-edit" style="left: 5px; width:40px;">
                                                         <input type="button" class="ec-image-upload">
-                                                        <label for="imageUpload"><img src="https://flyclipart.com/thumb2/delete-icon-327000.png" class="svg_img header_svg" alt="delete"></label>
+                                                        <label for="imageUpload"><i class="mdi mdi mdi-delete-outline header_svg newimageUpload" style="font-size:20px;"></i></label>
                                                     </div>
-                                                    @*                                                    <div class="deleted-image-upload" style="left: 5px;">
-                                                <input type="button" class="ec-image-upload">
-                                                <label for="imageUpload" style="width: 20px;height: 20px;"><img src="https://flyclipart.com/thumb2/delete-icon-327000.png" class="svg_img header_svg" alt="edit"></label>
-                                                </div>*@
                                                     <div class="thumb-preview ec-preview">
-                                                        <div class="image-thumb-preview">
+                                                        <div class="image-thumb-preview imageContainer">
                                                             <img class="image-thumb-preview ec-image-preview" src="/images/@item.ImageName" alt="edit">
                                                         </div>
                                                     </div>
@@ -73,46 +64,57 @@
                                 <div class="ec-vendor-upload-detail">
                                     <form class="row g-3">
                                         <div class="col-md-6">
-                                            <label for="inputEmail4" class="form-label">@Localizer["ProductName"]</label>
+                                            <label for="inputEmail4" class="form-label">@Localizer["ProductNameEn"]</label>
                                             <span class="spnreq" id="productNameEntxtreq" style="color : red ; display:none">@Localizer["NameIsRequired"]</span>
                                             <input type="text" class="form-control slug-title req" id="productNameEntxt" asp-for="@Model.NameEn">
                                         </div>
                                         <div class="col-md-6">
+                                            <label for="inputEmail4" class="form-label">@Localizer["ProductNameAr"]</label>
+                                            <span class="spnreq" id="productNameEntxtreqAr" style="color : red ; display:none">@Localizer["NameIsRequired"]</span>
+                                            <input type="text" class="form-control slug-title req" id="productNameEntxtAr" asp-for="@Model.NameAr">
+                                        </div>
+                                        <div class="col-md-6">
                                             <label class="form-label">@Localizer["SelectBrand"]</label>
                                             <span class="spnreq" id="ddlAllBrandsreq" style="color : red ; display:none">@Localizer["PleaseSelectBrand"]</span>
-                                            <select name="categories" id="ddlAllBrands" class="form-select"></select>
+
+                                            <select name="categories" id="ddlAllBrands" class="form-select" asp-for="@Model.BrandsId">
+                                            @foreach (var item in ViewBag.Brands)
+                                                {
+                                                    string culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+                                                    var name = culture.StartsWith("en") ? item.NameEn : item.NameAr;
+                                                    <option value="@item.Id" asp-selected="@(name == Model.Brands.NameEn)">@name</option>
+                                                }
+                                            </select>
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
                                             <label class="form-label">@Localizer["ProductFeatured"]</label>
                                             <select class="form-select" id="selecrdFeatured" asp-for="@Model.IsFeatured">
-                                                <option value="true">@Localizer["Yes"]</option>
-                                                <option selected value="false">@Localizer["No"]</option>
+                                                <option value="true" asp-selected="@(Model.IsFeatured ? "true" : "false")">@Localizer["Yes"]</option>
+                                                <option value="false" asp-selected="@(Model.IsFeatured ? "false" : "true")">@Localizer["No"]</option>
                                             </select>
                                         </div>
                                         <div class="col-md-12">
-                                            <label class="form-label">@Localizer["Description"]</label>
+                                            <label class="form-label">@Localizer["DescriptionEn"]</label>
                                             <span class="spnreq" id="descEntxtreq" style="color : red ; display:none">@Localizer["DescriptionIsRequired"]</span>
                                             <textarea id="descEntxt" class="form-control req" rows="2" asp-for="@Model.DescriptionEn"></textarea>
-
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="form-label">@Localizer["DescriptionAr"]</label>
+                                            <span class="spnreq" id="descEntxtreq" style="color : red ; display:none">@Localizer["DescriptionIsRequired"]</span>
+                                            <textarea id="descEntxtAr" class="form-control req" rows="2" asp-for="@Model.DescriptionAr"></textarea>
                                         </div>
                                         <div class="col-md-6">
                                             <label class="form-label">@Localizer["Price"] <span>( @Localizer["InJOD"] )</span></label>
                                             <span class="spnreq" id="Pricetxtreq" style="color : red ; display:none">@Localizer["PriceIsRequired"]</span>
-                                            <input type="number" class="form-control req" id="Pricetxt" asp-for="@Model.Price">
-                                        </div>
+@*                                              <input type="number" class="form-control req" id="Pricetxt" asp-for="@Model.Price">*@
+                                                <input type="text" class="form-control req" id="Pricetxt" asp-for="@Model.Price">
+    
+                                            </div>
                                         <div class="col-md-6">
                                             <label class="form-label ">Size</label>
                                             <span class="spnreq" id="sizetxtreq" style="color : red ; display:none">@Localizer["SizeIsRequired"]</span>
                                             <input type="text" class="form-control req" id="sizetxt" asp-for="@Model.Size">
                                         </div>
-                                        @*                                        <div class="col-md-12 mb-25">
-                                        <label class="form-label">@Localizer["Types"]</label>
-                                        <div class="TypesToAdd">
-                                        <input type="color" class="form-control form-control-color typeValue" id="exampleColorInput1" value="" title="Choose your color">
-                                        </div>
-                                        <button type="button" id="addType"> <i class="mdi mdi mdi-plus-outline"></i> </button>
-                                        <span class="spnreq" id="typeValuereq" style="color : red ; display:none">@Localizer["FillAtLeastOneType"]</span>
-                                        </div>*@
                                         <div class="col-md-12">
                                             <button type="button" id="SaveProductbtn" class="btn btn-primary">@Localizer["Submit"]</button>
                                             <button type="button" id="Cancelbtn" class="btn btn-danger">@Localizer["Cancel"]</button>
@@ -131,244 +133,184 @@
 <script src="~/lib/jquery/dist/jquery.min.map"></script>
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <script>
-    var imagesToUpload = []
-    imagesToUpload.push("@Model.BaseImage")
-    imagesToUpload.push("@Model.AltImage")
-    @{
-        foreach (var productImage in Model.Images)
-        {
-            <text>
-               imagesToUpload.push("@productImage.ImageName")
-            </text>
-        }
-    }
-    $(document).on('change', ".imageUpload", function () {
-        debugger
-        $.each(this.files, function (i, item) {
-            imagesToUpload.push(item.name)
-        });
-        $('.imageUpload').val(null);
-    });
-
-    $('.deleted-image-upload').click(function () {
-        debugger
-        var src = $(this).siblings('.thumb-preview').find('.ec-image-preview').attr('src');
-        var result = src.replace(/\/images\//, "");
-        $(this).parent().remove();
-        debugger
-        $.each(imagesToUpload, function (i, item) {
-            var index = imagesToUpload.indexOf(result);
-            if (item == result) {
-            imagesToUpload.splice(index, 1);
-            //imagesToUpload.remove(item);
+    $(document).ready(function () {
+        var imagesToUpload = [];
+        var oldNameOfImages = [];
+        var newImagesToUpload = [];
+        var imagesToUploadFiles = {};
+        var form = new FormData();
+        var Image;
+        @{
+            foreach (var productImage in Model.Images)
+            {
+                <text>
+                    oldNameOfImages.push("@productImage.ImageName")
+                </text>
             }
-        });
-        alert(imagesToUpload);
-    });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    GetAllBrands();
-
-    function GetAllBrands() {
-        $.ajax({
-            url: "/Brands/GetAllBrands",
-            type: "GET",
-            dataType: "json",
-            success: function (data) {
-                var $dropdown = $("#ddlAllBrands");
-                $dropdown.append($("<option selected/>").val("").text("Select Brand"));
-                $.each(data, function (i, item) {
-                    $dropdown.append($("<option />").val(item.id).text(item.nameEn));
-                });
-                var dropdownBrands = $("#dropdownBrands");
-                dropdownBrands.append($("<option selected/>").val("").text("Select Brand"));
-                $.each(data, function (i, item) {
-                    dropdownBrands.append($("<option />").val(item.id).text(item.nameEn));
-                });
-                $dropdown.val(null);
-                dropdownBrands.val(null);
-            },
-            error: function (response) {
-                swal('Oops...', 'Something went wrong!', 'error');;
-            }
-        });
-    }
-    function EditProduct() {
-        debugger
-        var ProductEnName = $("#productNameEntxt").val();
-        var ProductdescEntxt = $("#descEntxt").val();
-        var Productsizetxt = $("#sizetxt").val();
-        var ProductPricetxt = $("#Pricetxt").val();
-        var ProductBaseImgFile = $("#BaseImgFile").val();
-        var ProductaltImgFile = $("#altImgFile").val();
-        var IsFeaturedCH = $('#selecrdFeatured').val();
-
-        //var IsFeaturedCH = IsFeatuer;
-        var Brand = $("#ddlAllBrands").val();
-        //$('.typeValue').each(function () {
-        //    // Retrieve the selected color value
-        //    var selectedColor = $(this).val();
-
-        //    // Add the selected color to the colorList array
-        //    newTypes.push(selectedColor);
-        //});
-        let valid = true;
-        $('.spnreq').hide();
-        $('.req').each(function () {
-            if ($(this).val() === "" || $(this).val().trim() === "") {
-                $('#' + $(this).attr('id') + 'req').show();
-                valid = false;
-            }
-        })
-        if (imagesToUpload.length < 2) {
-            valid = false;
-            $('#Imagesreq').show();
         }
-        //if (newTypes.length < 1) {
-        //    valid = false;
-        //    $('#typeValuereq').show();
-        //}
-        if (Brand == null || Brand == "") {
-            valid = false;
-            $('#ddlAllBrandsreq').show();
-        }
-
-        if (valid == true) {
-            $.each(imagesToUpload, function (i, item) {
-                form.append("Images", item);
+        $(function () {
+            $('#addImage').click(function () {
+                var newDiv = $('<div class="thumb-upload"><div class="thumb-edit"><input type="file" class="imageUpload ec-image-upload rec imageInput" accept = ".png, .jpg, .jpeg"><label for= "imageUpload"><img src= "/admin/assets/img/icons/edit.svg" class= "svg_img header_svg" alt = "edit" > </label></div><div class="deleted-image-upload" style = "left: 5px;" ><input type="button" class="ec-image-upload" ><label for= "imageUpload" > <i class= "mdi mdi mdi-delete-outline header_svg newimageUpload" style = "font-size:20px;" > </i></label ></div><div class="thumb-preview ec-preview"><div class="image-thumb-preview imageContainer"><img class="image-thumb-preview ec-image-preview" src = "/admin/assets/img/products/vender-upload-thumb-preview.png" alt = "edit" ></div></div></div>');
+                $('.thumb-upload-set').append(newDiv);
             });
-            $.ajax({
-                url: "/Products/AddImages",
-                type: "POST",
-                data: form,
-                processData: false,
-                contentType: false,
-                success: function (result) {
-                    var productsVM = {
-                        NameEn: ProductEnName,
-                        DescriptionEn: ProductdescEntxt,
-                        Size: Productsizetxt,
-                        Price: ProductPricetxt,
-                        BaseImage: result[0],
-                        AltImage: result[1],
-                        IsFeatured: IsFeaturedCH,
-                        BrandsId: Brand,
-                        Images: result
-                    };
-                    $.ajax({
-                        url: "/Products/Edit",
-                        type: "POST",
-                        dataType: "Json",
-                        contentType: "application/json",
-                        data: JSON.stringify(productsVM),
-                        success: function (data) {
-                            //var Types = {
-                            //    ProductId: data.data.id,
-                            //    Types: newTypes
-                            //}
-                            //$.ajax({
-                            //    url: "/Types/AddTypes",
-                            //    type: "POST",
-                            //    dataType: "Json",
-                            //    contentType: "application/json",
-                            //    data: JSON.stringify(Types),
-                            //    success: function (data) {
+        });
+        $(document).on("click", "#Cancelbtn", function () {
+            window.location.href = "/Products/"
+        });
+        $(document).on('change', '.imageInput', function (e) {
+            var file = e.target.files[0];
+            // Create an object URL for the image file
+            var objectURL = URL.createObjectURL(file);
 
-                            //        //swal("Success", data.Message, "success");
-                            //        $("#AddProduct").slideUp();
-                            //        $("#EditProduct").slideUp();
-                            //        imagesToUpload = [];
-                            //        GetAllProducts();
-                            //    },
-                            //    error: function (err) {
-                            //        swal('Oops...', 'Something went wrong!', 'error');
-                            //    }
-                            //});
-                            $("#productNameEntxt").val(null);
-                            $("#descEntxt").val(null);
-                            $("#Pricetxt").val(null);
-                            $("#sizetxt").val(null);
-                            $("#BaseImgFile").val(null);
-                            $("#altImgFile").val(null);
-                            //$('.typeValue').each(function () {
-                            //    $(this).val(null);
-                            //});
 
-                            imagesToUpload = [];
-                            $("#AddProduct").slideUp();
-                            location.reload()
-                        },
-                        error: function (err) {
-                            swal('Oops...', 'Something went wrong!', 'error');
-                        }
-                    })
-                },
-                error: function (xhr, status, error) {
-                    // Handle any errors that occur during the AJAX request
+            // Find the closest imageContainer div relative to the current input
+            var imageContainer = $(this).closest('.thumb-upload').find('.imageContainer');
+
+            // Create an <img> element and set its source to the object URL
+            var img = $('<img>').attr('src', objectURL);
+            // Empty the selected imageContainer div and append the image
+            imageContainer.empty().append(img);
+
+            debugger;
+            var updatedSrc = img.attr('src');
+            updatedSrc = updatedSrc.substr(updatedSrc.lastIndexOf('/') + 1);
+            newImagesToUpload.push(file, updatedSrc);
+
+            $(this).val(null);
+        });
+        $(document).on('click', '.deleted-image-upload', function () {
+            debugger
+            var imageContainer = $(this).closest('.thumb-upload').find('.imageContainer img').attr('src');
+            imageContainer = imageContainer.substr(imageContainer.lastIndexOf('/') + 1);
+            $.each(imagesToUpload, function (i, item) {
+                var index = imagesToUpload.indexOf(imageContainer);
+                if (item == imageContainer) {
+                imagesToUpload.splice(index, 1);
                 }
             });
-        }
-    }
-    $(document).on("click", "#SaveProductbtn", function () {
-        EditProduct();
-    });
-    $('#image-input').change(function () {
-        debugger
-        var input = this;
-
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                // Update the source of the image element
-                $('#preview-image').attr('src', e.target.result);
-            };
-            $('#preview-image').attr('src', input.files[0].name);
-            //reader.readAsDataURL(input.files[0]);
-        }
-    });
-    $(function () {
-        $('#addImage').click(function () {
-            var newDiv = $('<div class="thumb-upload"><div class="thumb-edit"><input id="thumbUpload01" type="file" class="imageUpload ec-image-upload rec" accept=".png, .jpg, .jpeg"><label for="imageUpload"><img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg" alt="edit"></label></div><div class="thumb-preview ec-preview"><div class="image-thumb-preview"><img class="image-thumb-preview ec-image-preview" src="/admin/assets/img/products/vender-upload-thumb-preview.png" alt="edit"></div></div></div>');
-            $('.thumb-upload-set').append(newDiv);
+            $.each(newImagesToUpload, function (i, item) {
+                var index = newImagesToUpload.indexOf(imageContainer);
+                if (item == imageContainer) {
+                newImagesToUpload.splice(index, 1);
+                }
+            });
+            $.each(oldNameOfImages, function (i, item) {
+                var index = oldNameOfImages.indexOf(imageContainer);
+                if (item == imageContainer) {
+                oldNameOfImages.splice(index, 1);
+                }
+            });
+            $(this).parent().remove();
         });
 
-        //$('.deleted-image-upload').click(function () {
-        //    var imageDelete = $(".ec-image-preview").attr('src')
+        function EditProduct() {
+            debugger
+            var ProductEnName = $("#productNameEntxt").val();
+            var ProductEnNameAr = $("#productNameEntxtAr").val();
+            var ProductdescEntxt = $("#descEntxt").val();
+            var ProductdescEntxtAr = $("#descEntxtAr").val();
+            var Productsizetxt = $("#sizetxt").val();
+            var ProductPricetxt = $("#Pricetxt").val();
+            var ProductBaseImgFile = $("#BaseImgFile").val();
+            var ProductaltImgFile = $("#altImgFile").val();
+            var IsFeaturedCH = $('#selecrdFeatured').val();
+            var Brand = $("#ddlAllBrands").val();
+            let valid = true;
 
-        //    //imageDelete = Convert.ToBase64String(Encoding.UTF8.GetBytes());
-        //    $(this).parent().remove();
-        //    debugger
-        //    $.each(imagesToUpload, function (i, item) {
-        //        if (item == imageDelete) {
-        //        imagesToUpload.remove(item);
-        //        }
-        //    });
-        //});
-
-        //$('#addType').click(function () {
-        //    var newDiv = $('<input type="color" class="form-control form-control-color typeValue" id="exampleColorInput1" value="" title="Choose your color">');
-        //    //newDiv.style.background = "#000";
-        //    $('.TypesToAdd').append(newDiv);
-        //});
+            $('.spnreq').hide();
+            $('.req').each(function () {
+                if ($(this).val() === "" || $(this).val().trim() === "") {
+                    $('#' + $(this).attr('id') + 'req').show();
+                    valid = false;
+                }
+            })
+            if (ProductdescEntxtAr == "") {
+                $('#descEntxtreqAr').show();
+            }
+            if (ProductEnNameAr == "") {
+                $('#productNameEntxtreqAr').show();
+            }
+            if (newImagesToUpload.length < 2 && oldNameOfImages.length < 2) {
+                valid = false;
+                $('#Imagesreq').show();
+            }
+            if (Brand == null || Brand == "") {
+                valid = false;
+                $('#ddlAllBrandsreq').show();
+            }
+            if (valid == true) {
+                $.each(newImagesToUpload, function (i, item) {
+                    if (typeof item === 'string') {
+                        form.append("newNameOfImages", item);
+                    } else if (item instanceof File) {
+                        form.append("Images", item);
+                    }
+                });
+                $.each(oldNameOfImages, function (i, item) {
+                    form.append("oldNameOfImages", item);
+                });
+                form.append("id", "@Model.Id");
+                $.ajax({
+                    url: "/Products/EditImages",
+                    type: "POST",
+                    data: form,
+                    processData: false,
+                    contentType: false,
+                    success: function (result) {
+                        debugger
+                        var productsVM = {
+                            Id: "@Model.Id",
+                            NameEn: ProductEnName,
+                            NameAr: ProductEnNameAr,
+                            DescriptionEn: ProductdescEntxt,
+                            DescriptionAr: ProductdescEntxtAr,
+                            Size: Productsizetxt,
+                            Price: ProductPricetxt,
+                            BaseImage: result[0],
+                            AltImage: result[1],
+                            IsFeatured: IsFeaturedCH,
+                            BrandsId: Brand,
+                            Images: result
+                        };
+                        $.ajax({
+                            url: "/Products/EditProduct",
+                            type: "POST",
+                            dataType: "Json",
+                            contentType: "application/json",
+                            data: JSON.stringify(productsVM),
+                            success: function (data) {
+                                location.href = "/Products"
+                            },
+                            error: function (err) {
+                                alert('Oops...' + err);
+                            }
+                        })
+                    },
+                    error: function (xhr, status, error) {
+                        // Handle any errors that occur during the AJAX request
+                    }
+                });
+            }
+        }
+        $(document).on("click", "#SaveProductbtn", function () {
+            EditProduct();
+        });
     });
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#Pricetxt').on('input', function () {
+      // Remove any non-numeric characters except for the decimal point
+      $(this).val($(this).val().replace(/[^0-9.]/g, ''));
+
+      // Ensure that there is at most one decimal point
+      var value = $(this).val();
+      var decimalCount = (value.match(/\./g) || []).length;
+      if (decimalCount > 1) {
+        value = value.slice(0, -1); // Remove the last character if there are multiple decimal points
+        $(this).val(value);
+      }
+    });
+  });
 </script>

@@ -14,7 +14,7 @@
                                     <div class="owl-item active" style="width: 1349px;">
                                         <div class="slider-item">
                                             <div class="slider-picture">
-                                                <a href="/iphone-12/" title="New Season">
+                                                <a href="/" title="New Season">
                                                     <img id="Slider1" alt="Slider-1" src="/images/Slider-1.png" title="">
                                                 </a>
                                             </div>
@@ -30,7 +30,7 @@
                                     <div class="owl-item" style="width: 1349px;">
                                         <div class="slider-item">
                                             <div class="slider-picture">
-                                                <a href="/test" title="Stylish Bag">
+                                                <a href="/" title="Stylish Bag">
                                                     <img id="Slider2" alt="Slider-2" src="/images/Slider-2.png" title="">
                                                 </a>
                                             </div>
@@ -48,7 +48,7 @@
                                     <div class="owl-item" style="width: 1349px;">
                                         <div class="slider-item">
                                             <div class="slider-picture">
-                                                <a href="/test" title="Stylish Bag">
+                                                <a href="/" title="Stylish Bag">
                                                     <img id="Slider3" alt="Slider-3" src="/images/Slider-3.png" title="">
                                                 </a>
                                             </div>
@@ -102,19 +102,19 @@
                         <div class="row item-grid mb-5 cat-grid cat-grid-4">
                             <div class="col-12 col-md-6">
                                 <div class="cat-grid--item cat-grid--item-0">
-                                    <a href="/" class="cat-grid--item-link"> <span class="cat-grid--item-inner lazyload" data-src="/images/Grid/des-img-2.png"></span> </a>
+                                    <p class="cat-grid--item-link"> <span class="cat-grid--item-inner lazyload" data-src="/images/Grid/des-img-2.png"></span> </p>
                                 </div>
                             </div>
                             <div class="col-6 col-md-3 col-lg-3">
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="cat-grid--item cat-grid--item-1">
-                                            <a href="/" class="cat-grid--item-link"> <span class="cat-grid--item-inner lazyload" data-src="/images/Grid/des-img-3.png"></span> </a>
+                                            <p class="cat-grid--item-link"> <span class="cat-grid--item-inner lazyload" data-src="/images/Grid/des-img-3.png"></span> </p>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="cat-grid--item cat-grid--item-2">
-                                            <a href="/" class="h-100 cat-grid--item-link"> <span class="cat-grid--item-inner lazyload" data-src="/images/Grid/des-img-1.png"></span> </a>
+                                            <p class="h-100 cat-grid--item-link"> <span class="cat-grid--item-inner lazyload" data-src="/images/Grid/des-img-1.png"></span> </p>
                                         </div>
                                     </div>
                                 </div>
@@ -123,21 +123,16 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="cat-grid--item cat-grid--item-1">
-                                            <a href="/" class="cat-grid--item-link"> <span class="cat-grid--item-inner lazyload" data-src="/images/Grid/des-img-4.png"></span> </a>
+                                            <p class="cat-grid--item-link"> <span class="cat-grid--item-inner lazyload" data-src="/images/Grid/des-img-4.png"></span> </p>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="cat-grid--item cat-grid--item-2">
-                                            <a href="/" class="h-100 cat-grid--item-link"> <span class="cat-grid--item-inner lazyload" data-src="/images/Grid/des-img-5.png"></span> </a>
+                                            <p class="h-100 cat-grid--item-link"> <span class="cat-grid--item-inner lazyload" data-src="/images/Grid/des-img-5.png"></span> </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-@*                            <div class="col-6 col-md-3">
-                                <div class="h-100 cat-grid--item cat-grid--item-3">
-                                    <a href="/" class="h-100 cat-grid--item-link"> <span class="cat-grid--item-inner lazyload" data-src="/images/Grid/Des-IMG_9539.png"></span> </a>
-                                </div>
-                            </div>*@
                         </div>
                     </div>
                 </div>
@@ -156,13 +151,15 @@
                                     <div class="owl-stage" style="transform: translate3d(-2065px, 0px, 0px); transition: all 0.25s ease 0s; width: 3540px;">
                                         @foreach (var item in Model.Brands)
                                         {
+                                            string culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+                                            var name = culture.StartsWith("en") ? item.NameEn : item.NameAr;
                                             <div class="owl-item" style="width: 285px; margin-right: 10px;">
                                                 <div class="ocarousel-item">
-                                                    <a href="/Brands/Products?brandId=@item.Id" title="Show details for Jewelry">
-                                                        <img alt="Picture of cliven" src="@item.ImageUrl" title="Show details for @item.NameEn">
+                                                    <a href="/Brands/Products?brandId=@item.Id" title="@Localizer["ShowDetails"] @name">
+                                                        <img alt="@name" src="@item.ImageUrl" title="@Localizer["ShowDetails"] @name">
                                                     </a>
                                                     <div class="category-name">
-                                                        <a href="#">@item.NameEn</a>
+                                                        <a href="/Brands/Products?brandId=@item.Id">@name</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -221,40 +218,73 @@
                 <div class="col-12">
                     <div class="product-grid home-page-product-grid">
                         <div class="position-relative text-center clr-dark section-header">
-                            <h3 class="d-flex justify-content-center align-items-center text-uppercase section-title"><span>@Localizer["FeaturedProducts"]</span></h3>
+                            <h3 class="d-flex justify-content-center align-items-center text-uppercase section-title">
+                                <span>@Localizer["FeaturedProducts"]</span>
+                            </h3>
                             <span class="d-block text-center clr-gray font-italic section-subtitle">@Localizer["TopFeaturedItems"]</span>
                         </div>
                         <div class="row p-cards of-x-h">
-                            @foreach (var item in Model.Products)
+                            @if(Model.Products != null)
                             {
-                                <div class="col-6 col-lg-3 p-card--inner">
-                                    <div class="position-relative mb-5 et-lazy-img-3--hvr p-card">
-                                        <div class="position-relative of-h p-card--img">
-                                            <a class="position-relative d-block w-100 h-100 p-card--link" href="/Products/Detail?Id=@item.Id" title="Show details for @item.NameEn"> <span class="position-relative d-block p-card--link-img lazyload" id="productPictureContainer_56" data-src="/images/@item.BaseImage"></span></a>
-                                            <div class="position-absolute w-100 et-lazy-img-3 p-card--img-hover hoverImage_56">
-                                                <div class="position-relative d-block w-100 h-100 p-card--img-hover-inner hoverInnerImage_56" style="background-image:url('/images/@item.AltImage')">
+                                foreach (var item in Model.Products)
+                                {
+                                    string culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+                                    var name = culture.StartsWith("en") ? item.NameEn : item.NameAr;
+
+                                    <div class="col-6 col-lg-3 p-card--inner">
+                                        <div class="position-relative mb-5 et-lazy-img-3--hvr p-card">
+                                            <div class="position-relative of-h p-card--img">
+                                                <a class="position-relative d-block w-100 h-100 p-card--link" href="/Products/Detail?Id=@item.Id" title="@Localizer["ShowDetails"] @name">
+                                                    <span class="position-relative d-block p-card--link-img lazyload" id="productPictureContainer_56" data-src="/images/@item.BaseImage"></span>
+                                                </a>
+                                                <div class="position-absolute w-100 et-lazy-img-3 p-card--img-hover hoverImage_56">
+                                                    <div class="position-relative d-block w-100 h-100 p-card--img-hover-inner hoverInnerImage_56" style="background-image:url('/images/@item.AltImage')">
+                                                    </div>
+                                                </div>
+                                                <div class="position-absolute p-card--btn-icons p-card--wt">
+                                                    <button type="button" value="Add to wishlist" rel="nofollow" class="position-relative d-inline-block m-0 text-center add-list add-wt AddToWishlistWithOneQty" data-product-Id="@item.Id" data_Id="@item.Id" data-original-title="@Localizer["AddtoWishlist"]">
+                                                        <i id="wishListIcon_56" class="btn-icon far fa-heart"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="position-absolute d-flex flex-column text-center p-card--hvr-btn product-item" data-productid="56" data-quick-view="true">
+                                                    <button class="d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id">
+                                                        <i class="btn-icon lnr lnr-cart"></i>
+                                                        <span class="btn-txt">@Localizer["AddToCart"]</span>
+                                                    </button>
+                                                    <button class="d-inline-block d-lg-none position-relative text-center text-capitalize add-btn add-btn-sm add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id" title="@Localizer["AddToCart"]" data-original-title="@Localizer["AddToCart"]">
+                                                        <i class="btn-icon lnr lnr-cart"></i>
+                                                    </button>
+                                                    <button data-toggle="modal" data-target="#glassAnimals_@item.Id" data-Id="@item.Id" id="QuickView" type="button" class="button-2 quick-view-btn d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-qv" data-productid="56" title="@Localizer["QuickView"]">
+                                                        <i class="btn-icon lnr lnr-eye"></i>
+                                                        <span class="btn-txt">@Localizer["QuickView"]</span>
+                                                    </button>
                                                 </div>
                                             </div>
-                                            <div class="position-absolute p-card--btn-icons p-card--wt"><button type="button" value="Add to wishlist" title="" rel="nofollow" class="position-relative d-inline-block m-0 text-center add-list add-wt AddToWishlistWithOneQty" data-product-Id="@item.Id" data_Id="@item.Id" data-original-title="@Localizer["AddtoWishlist"]"> <i id="wishListIcon_56" class="btn-icon far fa-heart"></i> </button></div>
-                                            <div class="position-absolute d-flex flex-column text-center p-card--hvr-btn product-item" data-productid="56" data-quick-view="true"><button class="d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id"> <i class="btn-icon lnr lnr-cart"></i> <span class="btn-txt">@Localizer["AddToCart"]</span> </button> <button class="d-inline-block d-lg-none position-relative text-center text-capitalize add-btn add-btn-sm add-atc" rel="nofollow" data_Id="@item.Id" title="" data-original-title="@Localizer["AddToCart"]"> <i class="btn-icon lnr lnr-cart"></i> </button><button data-toggle="modal" data-target="#glassAnimals_@item.Id" data-Id="@item.Id" id="QuickView" type="button" class="button-2 quick-view-btn d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-qv" data-productid="56" title="Quick view"><i class="btn-icon lnr lnr-eye"></i><span class="btn-txt">@Localizer["QuickView"]</span></button></div>
-                                        </div>
-                                        <div class="text-center p-card--info">
-                                            <h3 class="position-relative m-0 clr-dark text-capitalize p-card--title"><a href="/Home/Detail" class="p-card--title-link" title="Show details for @item.NameEn">@item.NameEn </a></h3>
-                                            <h4 class="position-relative m-0 clr-dark p-card--title" style="font-size:12px">@Localizer["Size"]: &nbsp; <strong>@item.Size</strong></h4>
-                                            <div class="p-card--prices"><span class="clr-primary f-s-22 p-card--price font-weight-medium actual-price">@item.Price  @Localizer["JOD"]</span></div>
-                                            <div class="d-flex justify-content-center m-0 attributes">
-                                                @*<ul class="option-list attribute-circles color-circle" id="color-circle-59">
-                                            @foreach (var types in Model.Products.Types)
-                                            {
-                                            <li><label for="59"> <span class="attribute-circle-container" style="background-color:#04122c" title="Blue click on it"> <span class="attribute-circle" style="background-color:@types.Value">&nbsp;</span> </span> <input id="59" type="radio"> </label></li>
-                                            }
-
-                                            </ul>*@
+                                            <div class="text-center p-card--info">
+                                                <h3 class="position-relative m-0 clr-dark text-capitalize p-card--title">
+                                                    <a href="/Products/Detail?Id=@item.Id" class="p-card--title-link" title="@Localizer["ShowDetails"]@name">@name </a>
+                                                </h3>
+                                                <h4 class="position-relative m-0 clr-dark p-card--title" style="font-size:12px">@Localizer["Size"]: &nbsp; <strong>@item.Size</strong></h4>
+                                                <div class="p-card--prices">
+                                                    <span class="clr-primary f-s-22 p-card--price font-weight-medium actual-price">@item.Price  @Localizer["JOD"]</span>
+                                                </div>
+                                                <div class="d-flex justify-content-center m-0 attributes">
+                                                </div>
+                                                <div class="d-none p-card--hvr-btn product-item" data-productid="56" data-quick-view="true">
+                                                    <button class="d-none d-md-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id">
+                                                        <i class="btn-icon lnr lnr-cart"></i>
+                                                        <span class="btn-txt">@Localizer["AddToCart"]</span>
+                                                    </button>
+                                                    <button type="button" class="button-2 quick-view-btn d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-qv" data-productid="56" title="@Localizer["QuickView"]">
+                                                        <i class="btn-icon lnr lnr-eye"></i>
+                                                        <span class="btn-txt">@Localizer["QuickView"]</span>
+                                                    </button>
+                                                </div>
                                             </div>
-                                            <div class="d-none p-card--hvr-btn product-item" data-productid="56" data-quick-view="true"><button class="d-none d-md-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id"> <i class="btn-icon lnr lnr-cart"></i> <span class="btn-txt">@Localizer["AddToCart"]</span> </button><button type="button" class="button-2 quick-view-btn d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-qv" data-productid="56" title="Quick view"><i class="btn-icon lnr lnr-eye"></i><span class="btn-txt">@Localizer["QuickView"]</span></button></div>
                                         </div>
                                     </div>
-                                </div>
+                                }
+
                             }
                         </div>
                     </div>
@@ -264,63 +294,86 @@
         </div>
     </div>
 </div>
-    <partial name="_PopupPartial" model="Model.Products" />
+<partial name="_PopupPartial" model="Model.Products" />
 <div style=" background: url(../../images/Slider-4.png); width: 100%; height: 300px; background-size: 100% 100%; text-align: center; text-transform: uppercase; vertical-align: middle; display: table-cell; width: 100vw;">
     <h1 style="color:white">@Localizer["NATURALBEAUTY"]</h1>
     <h3 style="color:white">@Localizer["NATURALLYWE"]</h3>
-
 </div>
+<div id="bar-notification" class="bar-notification-container" data-close="Close">
+    <div class="bar-notification success" style="display: none;">
+        <p class="content">@Localizer["AlertAdded"] <a href="/cart">@Localizer["shoppingCart"]</a></p>
+        <span class="close" title="@Localizer["Close"]"></span>
+    </div>
+</div>
+<div id="bar-notification-wishlist" class="bar-notification-container" data-close="Close">
+    <div class="bar-notification success" style="display: none;">
+        <p class="content">@Localizer["AlertAdded"] <a href="/Wishlist">@Localizer["wishlist"]</a></p>
+        <span class="close" title="@Localizer["Close"]"></span>
+    </div>
+</div>
+
 @section Scripts
     {
     <script>
-        $(".AddToCart").on("click",async function () {
-            debugger
-            var productId = $(this).attr('data-product-Id')
+        $(".AddToCart").on("click", async function () {
+            debugger;
+            var productId = $(this).attr('data-product-Id');
+
         @if (User.Identity.IsAuthenticated)
         {
             <text>
                 try {
                     var response = await fetch(`/Cart/AddItem?productId=${productId}`);
                     if (response.status == 200) {
-                    location.reload();
+                        // Show the success notification
+                        $('#bar-notification .bar-notification.success').show();
+
+                        // Wait for 2 seconds
+                        setTimeout(function () {
+                            // Reload the page after 2 seconds
+                            location.reload();
+                        }, 2000);
                     }
-                }
+                } 
                 catch (err) {
-                    console.log(err);
                 }
             </text>
         }
         else
         {
-        <text>
-                window.location.href="/Account/Login"
-                    </text>
+            <text>
+                    window.location.href = "/Account/Login";
+            </text>
         }});
-
     </script>
-        <script>
-        $(".AddToWishlistWithOneQty").on("click",async function () {
-            debugger
+    <script>
+        $(".AddToWishlistWithOneQty").on("click", async function () {
             var productId = $(this).attr('data-product-Id')
         @if (User.Identity.IsAuthenticated)
         {
             <text>
-                try {
+                                            try {
                     var response = await fetch(`/WishList/AddItem?productId=${productId}`);
                     if (response.status == 200) {
-                    location.reload();
+                        // Show the success notification
+                        $('#bar-notification-wishlist .bar-notification.success').show();
+
+                        // Wait for 2 seconds
+                        setTimeout(function () {
+                            // Reload the page after 2 seconds
+                            location.reload();
+                        }, 2000);
                     }
                 }
                 catch (err) {
-                    console.log(err);
                 }
             </text>
         }
         else
         {
-        <text>
-                window.location.href="/Account/Login"
-                    </text>
+            <text>
+                    window.open("/Account/Login", "_self");
+            </text>
         }});
 
     </script>

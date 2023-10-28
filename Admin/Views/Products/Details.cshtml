@@ -34,47 +34,41 @@
                         <div class="row">
                             <div class="col-xl-4 col-lg-6">
                                 <div class="row">
-                                    <img src="@Model.BaseImage">
+                                    <img src="/images/@Model.Images[0]">
                                 </div>
                             </div>
                             <div class="col-xl-8 col-lg-6">
                                 <div class="row product-overview">
                                     <div class="col-12">
                                         <h5 class="product-title" style="padding-bottom: 15px;">@Model.NameEn</h5>
+                                        <h5 class="product-title" style="padding-bottom: 15px;">@Model.NameAr</h5>
                                         <p class="brand" style="padding-bottom: 15px;"><strong>@Localizer["Brand"]:</strong> @Model.Brand</p>
                                         <p class="product-desc">
                                             @Model.DescriptionEn
                                         </p>
+                                        <p class="product-desc">
+                                            @Model.DescriptionAr
+                                        </p>
                                         <p class="product-price">@Localizer["Price"]: @Model.Price @Localizer["JOD"]</p>
                                         <p class="product-size">@Localizer["Size"]: @Model.Size</p>
-
- @*                                       @if (@Model.Types != null && @Model.Types.Count > 0)
-                                        {
-                                            <ul class="product-color">
-                                                @foreach (var item in @Model.Types)
-                                                {
-                                                    <li class="color"><span style="background-color: @item ;"></span></li>
-                                                }
-                                            </ul>
-                                        }*@
                                         <div class="single-nav-thumb slick-initialized slick-slider">
                                             <div class="slick-list draggable">
                                                 <div class="slick-track" style="opacity: 1; width: 100%;">
                                                     <div class="slick-slide">
                                                         <div>
                                                             <div class="single-slide" style="width: 100%; display: inline-block;">
-                                                                <img class="img-responsive" src="@Model.AltImage" alt="">
+                                                                <img class="img-responsive" src="/images/@Model.Images[1]" alt="">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     @if (Model.Images != null && Model.Images.Count > 0)
                                                     {
-                                                        foreach (var item in Model.Images)
+                                                        foreach (var item in Model.Images.Skip(2))
                                                         {
                                                             <div class="slick-slide">
                                                                 <div>
                                                                     <div class="single-slide" style="width: 100%; display: inline-block;">
-                                                                        <img class="img-responsive" src="@item" alt="">
+                                                                        <img class="img-responsive" src="/images/@item" alt="">
                                                                     </div>
                                                                 </div>
                                                             </div>

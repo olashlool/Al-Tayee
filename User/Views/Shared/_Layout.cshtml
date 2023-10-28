@@ -11,10 +11,6 @@
     <meta name=description content="@Localizer["Description"]">
     <meta name=keywords content="@Localizer["Keywords"]">
     <meta name=viewport content="width=device-width, initial-scale=1">
-    <meta name=msapplication-TileColor content=#2d89ef>
-    <meta name=msapplication-TileImage content=/icons/icons_0/mstile-144x144.png>
-    <meta name=msapplication-config content=/icons/icons_0/browserconfig.xml>
-    <meta name=theme-color content=#ffffff>
     <link rel="shortcut icon" href="~/images/Al-Tayee-fdn.-Icone.png" type="image/x-icon" />
     <script src="/User/Scripts/js/Homepage.Head.scriptsd79c.js" type="text/javascript"></script>
     @{
@@ -71,8 +67,6 @@
     <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel=stylesheet href="/User/Themes/NopKalles/Content/css/linearicons88b3.css">
-    <link href="../lib_npm/jquery-ui-dist/jquery-ui.min.css" rel="stylesheet" />
-    <link href="~/lib_npm/jquery-ui-dist/jquery-ui.min.css" rel="stylesheet" />
     <link rel=stylesheet href="/User/Themes/NopKalles/Content/css/fontawesome-all.minfebf.css">
     <link rel=stylesheet href="/User/Plugins/NopStation.Plugin.Widgets.ProductRibbon/Themes/NopKalles/Contents/css/styles9870.css">
     <link rel=stylesheet href="/User/Themes/NopKalles/Content/css/owl.carousel.min6b33.css">
@@ -99,30 +93,32 @@
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class="d-flex justify-content-center justify-content-md-end align-items-center h-100 header-top--right">
-                                    <div class="dropdown show border-right pr-2 mr-3 rtl">
-                                        <a class="dropdown-toggle language-selector" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            @Thread.CurrentThread.CurrentUICulture.Name
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                            <a class="dropdown-item" href="/Home/Change?culture=en">@Localizer["English"]</a>
-                                            <a class="dropdown-item" href="/Home/Change?culture=ar">@Localizer["Arabic"]</a>
+                                    <div class="border-right pr-2 mr-3 rtl">
+                                        <div class=currency-selector>
+                                            <select id=changeLanguage>
+                                                <option selected disabled>@Thread.CurrentThread.CurrentUICulture.Name</option>
+                                                <option value="En">@Localizer["English"]</option>
+                                                <option value="Ar">@Localizer["Arabic"]</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="border-right pr-2 mr-3 rtl">
                                         <div class=currency-selector>
-                                            <select id=customerCurrency name=customerCurrency onchange="if (!window.__cfRLUnblockHandlers) return false; setLocation(this.value)" aria-label="Currency selector" data-cf-modified-90d46f657ad5f90280106dba-="">
+                                            <select id=customerCurrency>
                                                 <option selected value="USD">@Localizer["JOD"]</option>
                                             </select>
                                         </div>
                                     </div>
-
                                     @if (User.Identity.IsAuthenticated)
                                     {
-                                        <ul class="mb-0 list-inline header-top-links">
-                                            <li class="list-inline-item">
-                                                <a asp-controller="Account" asp-action="Logout"> <i class="fas fa-sign-out-alt"></i> <span>@Localizer["Logout"]</span> </a>
-                                            </li>
-                                        </ul>
+                                        <div class="border-right pr-2 mr-3 rtl">
+                                            <div class=currency-selector>
+                                                <select id="accountInfo">
+                                                    <option selected>@Localizer["Hello"], @User.Identity.Name!</option>
+                                                    <option value="logout"><i class="fas fa-sign-out-alt"></i> <span>@Localizer["Logout"]</span></option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     }
                                     else
                                     {
@@ -182,13 +178,13 @@
                                                                                         <ul id=@item.NameEn aria-labelledby=heading-men class="collapse position-relative sublist first-level">
                                                                                             @foreach (var product in await Products.GetProductByBrand(item.Id))
                                                                                             {
-                                                                                            <li class="col-3 nav-item dropdown accordion">
-                                                                                                <a id=heading-jeans-2 class="position-relative nav-link text-ellipsis" href="/Products/Detail?id=@product.Id">
-                                                                                                    <span class="position-relative d-block py-10 pl-0 pr-1 nav-link--label">
+                                                                                                <li class="col-3 nav-item dropdown accordion">
+                                                                                                    <a id=heading-jeans-2 class="position-relative nav-link text-ellipsis" href="/Products/Detail?id=@product.Id">
+                                                                                                        <span class="position-relative d-block py-10 pl-0 pr-1 nav-link--label">
                                                                                                             <span>@product.NameEn</span>
-                                                                                                    </span>
-                                                                                                </a>
-                                                                                            </li>
+                                                                                                        </span>
+                                                                                                    </a>
+                                                                                                </li>
                                                                                             }
                                                                                         </ul>
                                                                                     </li>
@@ -199,7 +195,7 @@
                                                                     <div class="tab-pane fade" id=quick-links role=tabpanel aria-labelledby=quick-links-tab>
                                                                         <nav class=mob-nav role=navigation>
                                                                             <ul class="top-menu mobile">
-                                                                                <li class=nav-item><a class=nav-link href="/Products/FeaturedProduct">@Localizer["FeaturedProducts"]</a>
+                                                                                <li class=nav-item><a class="nav-link FeaturedProduct">@Localizer["FeaturedProducts"]</a>
                                                                                 <li class=nav-item><a class=nav-link href="/Home/AboutUs">@Localizer["AboutUs"]</a>
                                                                                 <li class=nav-item><a class=nav-link href="/Contactus">@Localizer["ContactUs"]</a>
                                                                             </ul>
@@ -247,10 +243,13 @@
                                                                     <div class="second-dropdown d-block container">
                                                                         <ul class="row px-3 text-center" id="ddlLayoutBrands">
 
-                                                                                    @foreach (var item in await Brands.GetBrands())
-                                                                                    {
-                                                                                <li class="d-block col-4 mb-2 nav-item dropdown"><a class="d-block px-0 nav-link" asp-controller="Brands" asp-action="Products" asp-route-brandId="@item.Id"> <span class="position-relative d-block w-100 py-10 pl-0 pr-1 text-center text-uppercase nav-link--label"> <span>@item.NameEn</span> </span> </a> </li>
-                                                                                    }
+                                                                        @foreach (var item in await Brands.GetBrands())
+                                                                        {
+                                                                            string cultureBrand = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+                                                                            var name = cultureBrand.StartsWith("en") ? item.NameEn : item.NameAr;
+
+                                                                            <li class="d-block col-4 mb-2 nav-item dropdown"><a class="d-block px-0 nav-link" asp-controller="Brands" asp-action="Products" asp-route-brandId="@item.Id"> <span class="position-relative d-block w-100 py-10 pl-0 pr-1 text-center text-uppercase nav-link--label"> <span>@name</span> </span> </a> </li>
+                                                                        }
                                                                         </ul>
                                                                         <div class="row px-3">
                                                                             <div class=col-12>
@@ -262,8 +261,23 @@
                                                             </li>
                                                         </ul>
                                                     </li>
-                                                    <li class="nav-item first-lebel-nav"><a class="position-relative d-flex justify-content-center align-items-center px-3 f-s-14 nav-link" href=/Products/FeaturedProduct>@Localizer["FeaturedProducts"]</a>
-                                                    <li class="nav-item first-lebel-nav"><a class="position-relative d-flex justify-content-center align-items-center px-3 f-s-14 nav-link" href=/Contactus>@Localizer["ContactUs"]</a>
+                                                    <li class="position-static nav-item nav-products dropdown">
+                                                        <ul class="navbar-nav align-items-center">
+                                                            <li class="dropdown nav-item dropdown-menu-list">
+                                                                <a class="position-relative d-flex justify-content-center align-items-center px-3 f-s-14 nav-link dropdown-toggle" href=# role=button id="dropdownMenuLink manufacture-dropdown" data-toggle=dropdown aria-haspopup=true aria-expanded=false>@Localizer["Products"] </a>
+                                                                <div class="d-block dropdown-menu dropdown-menu-md dropdown-menu-right" aria-labelledby=dropdownMenuButton>
+                                                                    <div class="second-dropdown d-block container">
+                                                                        <ul class="row px-3 text-center" id="ddlLayoutBrands">
+                                                                            <li class="d-block col-6 mb-2 nav-item dropdown"><a class="d-block px-0 nav-link AllProduct"> <span class="position-relative d-block w-100 py-10 pl-0 pr-1 text-center text-uppercase nav-link--label"> <span>@Localizer["Products"]</span> </span> </a> </li>
+                                                                            <li class="d-block col-6 mb-2 nav-item dropdown"><a class="d-block px-0 nav-link FeaturedProduct"> <span class="position-relative d-block w-100 py-10 pl-0 pr-1 text-center text-uppercase nav-link--label"> <span>@Localizer["FeaturedProducts"]</span> </span> </a> </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+@*                                                    <li class="nav-item first-lebel-nav"><a class="position-relative d-flex justify-content-center align-items-center px-3 f-s-14 nav-link FeaturedProduct">@Localizer["FeaturedProducts"]</a>
+*@                                                    <li class="nav-item first-lebel-nav"><a class="position-relative d-flex justify-content-center align-items-center px-3 f-s-14 nav-link" href=/Contactus>@Localizer["ContactUs"]</a>
                                                 </ul>
                                             </div>
                                             <div class="position-fixed t-0 l-0 w-100 h-100 sb--overlay sb--overlay-menu"></div>
@@ -284,10 +298,10 @@
                                                             <button class=tb--btn-close> <i class="fas fa-times"></i> </button>
                                                         </div>
                                                         <div class=tb--content>
-                                                            <form method=get class=search-form id=small-search-box-form asp-controller="Search" asp-action="index">
-                                                                <div class="position-relative search-input"><input type=text class=search-box-text id=small-searchterms autocomplete=off name="searchTerm" placeholder="@Localizer["SearchStor"]" aria-label="@Localizer["SearchStor"]"> <button type=submit value=Search class="text-right search-box-button"> <span class=d-none>button</span> </button></div>
-                                                            </form>
-                                                        </div>
+@*                                                            <form method=get class=search-form id=small-search-box-form asp-controller="Search" asp-action="index">
+*@                                                                <div class="position-relative search-input"><input type=text class=search-box-text id=small-searchterms autocomplete=off name="searchTerm" placeholder="@Localizer["SearchStor"]" aria-label="@Localizer["SearchStor"]"> <button type=submit value=Search class="text-right search-box-button"> <span class=d-none>button</span> </button></div>
+@*                                                            </form>
+*@                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="position-fixed t-0 l-0 w-100 h-100 tb--overlay tb--overlay-search"></div>
@@ -330,7 +344,7 @@
                         <div class="col-12 col-md-6 col-lg-3 mb-4 mb-md-4 mb-lg-0 shipping-type">
                             <a href=page-not-found.html class=information-box></a>
                             <div class="row no-gutters align-items-center">
-                                <div class="col-auto mr-4 text-center clr-gray shipping-type--icon"><img src=https://nop-kalles.nop-station.com/images/thumbs/0001413_7days.png alt=""></div>
+                                <div class="col-auto mr-4 text-center clr-gray shipping-type--icon"><img src="~/images/Footer_Icons/SUPPORT.png" alt=""></div>
                                 <div class="col of-h clr-gray text-left shipping-type--info">
                                     <h3 class="mt-0 mb-1 clr-dark shipping-type--title">@Localizer["Support"]</h3>
                                     <p class="m-0 text-left shipping-type--desc">@Localizer["SupportDec"]
@@ -339,7 +353,7 @@
                         </div>
                         <div class="col-12 col-md-6 col-lg-3 mb-4 mb-md-4 mb-lg-0 shipping-type">
                             <div class="row no-gutters align-items-center">
-                                <div class="col-auto mr-4 text-center clr-gray shipping-type--icon"><img src=https://nop-kalles.nop-station.com/images/thumbs/0001414_30-days-return.png alt=""></div>
+                                <div class="col-auto mr-4 text-center clr-gray shipping-type--icon"><img src="~/images/Footer_Icons/RETURNPOLICY.png" alt=""></div>
                                 <div class="col of-h clr-gray text-left shipping-type--info">
                                     <h3 class="mt-0 mb-1 clr-dark shipping-type--title">@Localizer["ReturnPolicy"]</h3>
                                     <p class="m-0 text-left shipping-type--desc">@Localizer["ReturnPolicyDec"]
@@ -348,7 +362,7 @@
                         </div>
                         <div class="col-12 col-md-6 col-lg-3 mb-4 mb-md-4 mb-lg-0 shipping-type">
                             <div class="row no-gutters align-items-center">
-                                <div class="col-auto mr-4 text-center clr-gray shipping-type--icon"><img src=https://nop-kalles.nop-station.com/images/thumbs/0001416_free-delivery.png alt=""></div>
+                                <div class="col-auto mr-4 text-center clr-gray shipping-type--icon"><img src="~/images/Footer_Icons/FASTDELIVERY.png" alt=""></div>
                                 <div class="col of-h clr-gray text-left shipping-type--info">
                                     <h3 class="mt-0 mb-1 clr-dark shipping-type--title">@Localizer["FastDelivery"]</h3>
                                     <p class="m-0 text-left shipping-type--desc">@Localizer["FastDeliveryDec"]
@@ -357,7 +371,7 @@
                         </div>
                         <div class="col-12 col-md-6 col-lg-3 mb-4 mb-md-4 mb-lg-0 shipping-type">
                             <div class="row no-gutters align-items-center">
-                                <div class="col-auto mr-4 text-center clr-gray shipping-type--icon"><img src=https://nop-kalles.nop-station.com/images/thumbs/0001415_worldWide--shpping.png alt=""></div>
+                                <div class="col-auto mr-4 text-center clr-gray shipping-type--icon"><img src="~/images/Footer_Icons/DOMESTICSHIPPING.png" alt=""></div>
                                 <div class="col of-h clr-gray text-left shipping-type--info">
                                     <h3 class="mt-0 mb-1 clr-dark shipping-type--title">@Localizer["DomesticShipping"]</h3>
                                     <p class="m-0 text-left shipping-type--desc">@Localizer["DomesticShippingDec"]
@@ -512,7 +526,6 @@
         async function loadCartCount() {
             try {
                 var response = await fetch(`/Cart/GetTotalItemInCart`);
-                console.log(response)
                 if (response.status == 200) {
                     var result = await response.json();
                     var cartCountEl = document.getElementById("cartCount");
@@ -520,7 +533,6 @@
                 }
             }
             catch (err) {
-                console.log(err);
             }
         }
     </script>
@@ -529,7 +541,6 @@
         async function loadwishlistCount() {
             try {
                 var response = await fetch(`/WishList/GetTotalItemInCart`);
-                console.log(response)
                 if (response.status == 200) {
                     var result = await response.json();
                     var wishlistCountEl = document.getElementById("wishlistCount");
@@ -537,10 +548,38 @@
                 }
             }
             catch (err) {
-                console.log(err);
             }
         }
 
+    </script>
+    <script>
+        $("#accountInfo").change(function () {
+            if ($(this).val() === "logout") {
+                window.location.href = "/Account/Logout";
+            }
+        });
+        $("#changeLanguage").change(function () {
+            if ($(this).val() === "En") {
+                window.open("/Home/Change?culture=en", "_self");
+            }
+            if ($(this).val() === "Ar") {
+                window.open("/Home/Change?culture=ar", "_self");
+            }
+        });
+        //$("#").click
+    </script>
+    <script>
+        var savedValue = localStorage.getItem('selectedOption');
+        $(".FeaturedProduct").click(function () {
+            window.location.href = '/Products/FeaturedProduct?sortOrder=' + savedValue;
+        });
+        $(".AllProduct").click(function () {
+            window.location.href = '/Products?sortOrder=' + savedValue;
+        });
+        $(".search-box-button").click(function () {
+            var searchValue = $('#small-searchterms').val();
+            window.location.href = '/Search?searchTerm=' + searchValue + "&&sortOrder=" + savedValue;
+        });
     </script>
     <script src="/User/Scripts/js/Homepage.Footer.scripts3365.js" type="text/javascript"></script>
     <script type="text/javascript">var localized_data = { AjaxCartFailure: "Failed to add the product. Please refresh the page and try one more time." }; AjaxCart.init(!1, ".header-links .cart-qty", ".header-links .wishlist-qty", "#flyout-cart", localized_data)</script>
@@ -556,7 +595,7 @@
     <script type="text/javascript">$(document).ready(function () { $(".footer-block .title").on("click", function () { var n = window, t = "inner", i; "innerWidth" in window || (t = "client", n = document.documentElement || document.body); i = { width: n[t + "Width"], height: n[t + "Height"] }; i.width < 769 && ($(this).siblings(".list").slideToggle("slow"), $(this).toggleClass("opened")) }) })</script>
     <script type="text/javascript">$(document).ready(function () { $(".block .title").on("click", function () { var n = window, t = "inner", i; "innerWidth" in window || (t = "client", n = document.documentElement || document.body); i = { width: n[t + "Width"], height: n[t + "Height"] }; i.width < 1001 && $(this).siblings(".listbox").slideToggle("slow") }) })</script>
     <script type="text/javascript">new LazyLoad; $(document).ajaxStop(function () { new LazyLoad })</script>
-    <script src="~/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"></script>
+    @*<script src="~/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"></script>*@
 
     @RenderSection("scripts", required: false)
 </body>

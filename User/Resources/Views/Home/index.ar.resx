@@ -123,6 +123,9 @@
   <data name="AddtoWishlist" xml:space="preserve">
     <value>أضف للمفضلة</value>
   </data>
+  <data name="AlertAdded" xml:space="preserve">
+    <value>تم إضافة المنتج إلى</value>
+  </data>
   <data name="BeautyCare" xml:space="preserve">
     <value>العناية بالجمال</value>
   </data>
@@ -137,6 +140,9 @@
   </data>
   <data name="ButYourHairCanBe" xml:space="preserve">
     <value>ولكن شعرك يمكن أن يكون</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>إغلاق</value>
   </data>
   <data name="FeaturedProducts" xml:space="preserve">
     <value>منتجات مميزة</value>
@@ -159,6 +165,9 @@
   <data name="NATURALLYWE" xml:space="preserve">
     <value>بالطبع نحن</value>
   </data>
+  <data name="Prdducts" xml:space="preserve">
+    <value>المنتجات</value>
+  </data>
   <data name="QuickView" xml:space="preserve">
     <value>نظرة سريعة</value>
   </data>
@@ -168,6 +177,12 @@
   <data name="ShoppingCart" xml:space="preserve">
     <value>سلة التسوق</value>
   </data>
+  <data name="shoppingCart1" xml:space="preserve">
+    <value>لسلة التسوق</value>
+  </data>
+  <data name="ShowDetails" xml:space="preserve">
+    <value>إظهار تفاصيل عن</value>
+  </data>
   <data name="Size" xml:space="preserve">
     <value>الحجم</value>
   </data>
@@ -176,5 +191,8 @@
   </data>
   <data name="Type" xml:space="preserve">
     <value>النوع</value>
+  </data>
+  <data name="wishlist" xml:space="preserve">
+    <value>للمفضلة</value>
   </data>
 </root>

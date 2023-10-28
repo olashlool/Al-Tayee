@@ -2,6 +2,9 @@
 using Admin.Models.ViewModels;
 using Admin.Models;
 using Microsoft.AspNetCore.Mvc;
+using static System.Net.Mime.MediaTypeNames;
+using Microsoft.VisualBasic;
+using System.Linq;
 
 namespace Admin.Controllers
 {
@@ -12,6 +15,8 @@ namespace Admin.Controllers
         private ITypes _Types;
         private IImages _Images;
         private IBrands _Brands;
+        string culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+
         public ProductsController(IWebHostEnvironment webHostEnvironment, IProducts products, ITypes types, IImages images, IBrands brands)
         {
             _environment = webHostEnvironment;
@@ -20,9 +25,11 @@ namespace Admin.Controllers
             _Images = images;
             _Brands = brands;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var products = await _Products.GetProducts();
+            ViewBag.Brands = await _Brands.GetBrands();
+            return View(products);
         }
         public async Task<IActionResult> Details(Guid Id)
         {
@@ -30,84 +37,47 @@ namespace Admin.Controllers
             Products products = await _Products.GetProductById(Id);
             ProductsVM productsVM = new ProductsVM();
             productsVM.NameEn = products.NameEn;
+            productsVM.NameAr = products.NameAr;
             productsVM.DescriptionEn = products.DescriptionEn;
+            productsVM.DescriptionAr = products.DescriptionAr;
             productsVM.IsFeatured = products.IsFeatured;
             productsVM.Price = products.Price;
             productsVM.Size = products.Size;
 
             var imageData = string.Empty;
-            var BaseimagePath = Path.Combine(_environment.WebRootPath, "images", products.BaseImage);
-            if (System.IO.File.Exists(BaseimagePath))
-            {
-                string imageFormat = Path.GetExtension(BaseimagePath).TrimStart('.');
-                imageData = Convert.ToBase64String(System.IO.File.ReadAllBytes(BaseimagePath));
-                productsVM.BaseImage = $"data:image/{imageFormat};base64,{imageData}";
-            }
-            var altimagePath = Path.Combine(_environment.WebRootPath, "images", products.AltImage);
-            if (System.IO.File.Exists(altimagePath))
-            {
-                string imageFormat = Path.GetExtension(altimagePath).TrimStart('.');
-                imageData = Convert.ToBase64String(System.IO.File.ReadAllBytes(altimagePath));
-                productsVM.AltImage = $"data:image/{imageFormat};base64,{imageData}";
-            }
-
             Brands brands = await _Brands.GetBrandById(products.BrandsId);
-            productsVM.Brand = brands.NameEn;
+            var nameBrand = culture.StartsWith("en") ? brands.NameEn : brands.NameAr;
+            productsVM.Brand = nameBrand;
             List<Images> Images = await _Images.GetImageByProductId(Id);
             foreach (var item in Images)
             {
-                var img = string.Empty;
-                var fileName = Path.Combine(_environment.WebRootPath, "images", item.ImageName);
-                if (System.IO.File.Exists(fileName))
-                {
-                    string imageFormat = Path.GetExtension(fileName).TrimStart('.');
-                    imageData = Convert.ToBase64String(System.IO.File.ReadAllBytes(fileName));
-                    img = $"data:image/{imageFormat};base64,{imageData}";
-                }
-                productsVM.Images.Add(img);
+                productsVM.Images.Add(item.ImageName);
             }
-            //List<Types> types = await _Types.GetTypeByProductId(Id);
-            //foreach (var type in types)
-            //{
-            //    productsVM.Types.Add(type.Value);
-            //}
             return View(productsVM);
         }
         public async Task<IActionResult> Edit(Guid id)
         {
             var product = await _Products.GetProductById(id);
             product.Images = await _Images.GetImageByProductId(id);
+            product.Brands = await _Brands.GetBrandById(product.BrandsId);
             ViewBag.Brands = await _Brands.GetBrands();
             return View(product);
         }
-
         [HttpPost]
-        public async Task<List<string>> AddImages(List<IFormFile> Images)
+        public async Task<List<string>> AddImages(List<IFormFile> Images, List<string> NameOfImages)
         {
-            var count = 0;
-            //var fileName = string.Empty;
             List<string> FilesName = new List<string>();
-            foreach (var image in Images)
-            { // Generate a unique file name
-                var fileName = Path.GetFileNameWithoutExtension(image.FileName);
-                var fileExtension = Path.GetExtension(image.FileName);
-                fileName = $"{fileName}_{DateTime.UtcNow.Ticks}{fileExtension}";
-
-                var filePath = Path.Combine(_environment.WebRootPath, "images", fileName);
+            var nameOfImage = "";
+            for (int i = 0; i < NameOfImages.Count; i++)
+            {
+                var fileExtension = Path.GetExtension(Images[i].FileName);
+                nameOfImage = $"{NameOfImages[i]}{fileExtension}";
+                var filePath = Path.Combine(_environment.WebRootPath, "images", nameOfImage);
                 using (var stream = new FileStream(filePath, FileMode.Create))
                 {
-                    await image.CopyToAsync(stream);
+                    await Images[i].CopyToAsync(stream);
                 }
-
-
-                //fileName = Path.GetFileName("Img_" + Guid.NewGuid() + image.FileName );
-                //var filePath = Path.Combine(_environment.WebRootPath, "images", fileName);
-                //using (var fileStream = new FileStream(filePath, FileMode.Create))
-                //{
-                //    var f = image.CopyToAsync(fileStream);
-                //}
-                count++;
-                FilesName.Add(fileName);
+                FilesName.Add(nameOfImage);
             }
             return FilesName;
         }
@@ -120,7 +90,9 @@ namespace Admin.Controllers
             {
                 Id = Guid.NewGuid(),
                 NameEn = productVM.NameEn,
+                NameAr = productVM.NameAr,
                 DescriptionEn = productVM.DescriptionEn,
+                DescriptionAr = productVM.DescriptionAr,    
                 Price = productVM.Price,
                 Size = productVM.Size,
                 IsFeatured = productVM.IsFeatured,
@@ -140,7 +112,7 @@ namespace Admin.Controllers
                         ProductsId = products.Id,
                         ImageName = item
                     };
-                    if (count > 2)
+                    //if (count > 0)
                         await _Images.CreateImages(Image);
                 }
 
@@ -159,136 +131,82 @@ namespace Admin.Controllers
             return response;
         }
 
-        //[HttpPost]
-        //public async Task<ReturnResponse> EditProduct([FromBody] ProductsVM productVM)
-        //{
-        //    ReturnResponse response = new ReturnResponse();
-        //    Products products = new Products
-        //    {
-        //        Id = productVM.Id,
-        //        NameAr = productVM.NameAr,
-        //        NameEn = productVM.NameEn,
-        //        DescriptionEn = productVM.DescriptionEn,
-        //        DescriptionAr = productVM.DescriptionAr,
-        //        Price = productVM.Price,
-        //        Size = productVM.Size,
-        //        IsFeatured = productVM.IsFeatured,
-        //        BaseImage = productVM.BaseImage,
-        //        AltImage = productVM.AltImage,
-        //        //BrandId = productVM.BrandId,
-        //    };
-        //    foreach (var item in productVM.UpdateTypes)
-        //    {
-        //        var Type = new Types
-        //        {
-        //            ProductsId = item.Id,
-        //            Value = item.Value
-        //        };
-        //        await _Types.UpdateType(item.Id, Type);
-        //    }
-
-        //    var fileName = string.Empty;
-        //    foreach (var item in productVM.Images)
-        //    {
-        //        foreach (var ImageItem in item.Images)
-        //        {
-        //            fileName = Path.GetFileName("Img_" + ImageItem.FileName + Guid.NewGuid());
-        //            var filePath = Path.Combine(_environment.WebRootPath, "images", fileName);
-        //            using (var fileStream = new FileStream(filePath, FileMode.Create))
-        //            {
-        //                await ImageItem.CopyToAsync(fileStream);
-        //            }
-
-        //            var newImage = new Images
-        //            {
-        //                Id = item.Id,
-        //                ImageName = fileName,
-        //                ProductId = productVM.Id
-        //            };
-        //            await _Images.UpdateImages(item.Id, newImage);
-        //        }
-        //    }
-        //    if (await _Products.UpdateProduct(productVM.Id, products) > 0)
-        //    {
-        //        response.IsSuccess = true;
-        //        response.Status = Status.Success;
-        //        response.Message = "Done";
-        //    }
-        //    else
-        //    {
-        //        response.IsSuccess = false;
-        //        response.Status = Status.Error;
-        //        response.Message = "Oops... Somthing went wrong \nplease check your data and try again";
-        //    }
-
-        //    return response;
-        //}
-
-        [HttpGet]
-        public async Task<ReturnResponse> GetAllProducts()
+        [HttpPost]
+        public async Task<ReturnResponse> EditProduct([FromBody] ProductsVM productVM)
         {
-            var response = new ReturnResponse();
-            List<Products> products = new List<Products>();
-            List<Products> Allproducts = new List<Products>();
+            ReturnResponse response = new ReturnResponse();
+            List<Images> listOfImages = new List<Images>();
 
-            products = await _Products.GetProducts();
-            //List<Types> types = await _Types.GetTypes();
-
-            if (products != null)
+            foreach (var item in productVM.Images)
             {
-                foreach (var product in products)
+                var images = new Images
                 {
-                    var BaseimagePath = Path.Combine(_environment.WebRootPath, "images", product.BaseImage);
-                    if (System.IO.File.Exists(BaseimagePath))
-                    {
-                        var imageData = Convert.ToBase64String(System.IO.File.ReadAllBytes(BaseimagePath));
-                        product.BaseImage = $"data:image/jpeg;base64,{imageData}";
-                    }
-                    var altimagePath = Path.Combine(_environment.WebRootPath, "images", product.AltImage);
-                    if (System.IO.File.Exists(altimagePath))
-                    {
-                        var imageData = Convert.ToBase64String(System.IO.File.ReadAllBytes(altimagePath));
-                        product.AltImage = $"data:image/jpeg;base64,{imageData}";
-                    }
-                    //product.Types = await _Types.GetTypeByProductId(product.Id);
-                    //product.Types = (List<Types>)types.ToList().Where(x => x.ProductsId == product.Id);
-                }
+                    ImageName = item,
+                    ProductsId = productVM.Id,
+                };
+                await _Images.CreateImages(images);
+                listOfImages.Add(images);
             }
-            response.Data = products;
+            Products products = new Products
+            {
+                Id = productVM.Id,
+                NameEn = productVM.NameEn,
+                NameAr = productVM.NameAr,
+                DescriptionEn = productVM.DescriptionEn,
+                DescriptionAr = productVM.DescriptionAr,
+                Price = productVM.Price,
+                Size = productVM.Size,
+                IsFeatured = productVM.IsFeatured,
+                BaseImage = productVM.BaseImage,
+                AltImage = productVM.AltImage,
+                BrandsId = productVM.BrandsId,
+                Images= listOfImages
+            };
+            if (await _Products.UpdateProduct(productVM.Id, products) > 0)
+            {
+                response.IsSuccess = true;
+                response.Status = Status.Success;
+                response.Message = "Done";
+            }
+            else
+            {
+                response.IsSuccess = false;
+                response.Status = Status.Error;
+                response.Message = "Oops... Somthing went wrong \nplease check your data and try again";
+            }
+
             return response;
         }
-
-        [HttpGet]
-        public async Task<ReturnResponse> GetProductById(Guid Id)
+        [HttpPost]
+        public async Task<List<string>> EditImages(List<IFormFile> Images, List<string> newNameOfImages, List<string> oldNameOfImages, string id)
         {
-            var response = new ReturnResponse();
-            Products products = await _Products.GetProductById(Id);
-            List<Types> types = await _Types.GetTypes();
-            List<Images> Images = await _Images.GetImages();
+            Guid guid = Guid.Parse(id);
+            var ImagesByProductId = await _Images.GetImageByProductId(guid);
 
-            if (products != null)
+            foreach (var item in ImagesByProductId)
             {
-                var BaseimagePath = Path.Combine(_environment.WebRootPath, "images", products.BaseImage);
-                if (System.IO.File.Exists(BaseimagePath))
-                {
-                    var imageData = Convert.ToBase64String(System.IO.File.ReadAllBytes(BaseimagePath));
-                    products.BaseImage = $"data:image/jpeg;base64,{imageData}";
-                }
-                var altimagePath = Path.Combine(_environment.WebRootPath, "images", products.AltImage);
-                if (System.IO.File.Exists(altimagePath))
-                {
-                    var imageData = Convert.ToBase64String(System.IO.File.ReadAllBytes(altimagePath));
-                    products.AltImage = $"data:image/jpeg;base64,{imageData}";
-                }
-                //products.Types = (List<Types>)types.ToList().Where(x => x.ProductsId == products.Id);
-                products.Images = (List<Images>)Images.ToList().Where(x => x.ProductsId == products.Id && x.ImageName != products.BaseImage && x.ImageName != products.AltImage);
+                await _Images.DeleteImages(item.Id);
             }
-            return response;
-        }
 
-        public string EncodeBase(string imgPath)
-        {
-            return imgPath;
+            List<string> FilesName = new List<string>();
+            var nameOfImage = "";
+            for (int i = 0; i < newNameOfImages.Count; i++)
+            {
+                var fileExtension = Path.GetExtension(Images[i].FileName);
+                nameOfImage = $"{newNameOfImages[i]}{fileExtension}";
+                var filePath = Path.Combine(_environment.WebRootPath, "images", nameOfImage);
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await Images[i].CopyToAsync(stream);
+                }
+                FilesName.Add(nameOfImage);
+            }
+
+            foreach (var item in oldNameOfImages)
+            {
+                FilesName.Add(item);
+            }
+            return FilesName;
         }
         [HttpPost]
         public async Task<IActionResult> DeleteProduct(Guid Id)

@@ -6,9 +6,16 @@
             <div class="text-left title"><span class="d-flex justify-content-between align-items-center ajaxfilter-title collapsed" data-toggle="collapse" data-target="#ajaxFilterManufacturers" aria-expanded="false" aria-controls="collapseManufacturers"> @Localizer["Brands"] <i class="fa fa-angle-down rotate-icon float-right"></i> </span></div>
             <div class="listbox ajaxfilter-section collapse" id="ajaxFilterManufacturers" aria-labelledby="headingManufacturers" data-parent="#accordionManufacturers">
                 <ul class="text-left list list-manufacturer">
-                    @foreach (var item in await Brands.GetBrands())
+                    @{
+                        var brands = await Brands.GetBrands();
+                        var firstBrands = brands.Take(9);
+                    }
+                    @foreach (var item in firstBrands)
                     {
-                        <li class="inactive"><a asp-controller="Brands" asp-action="Products" asp-route-brandId="@item.Id">@item.NameEn</a></li>
+                        string culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+                        var name = culture.StartsWith("en") ? item.NameEn : item.NameAr;
+
+                        <li class="inactive"><a asp-controller="Brands" asp-action="Products" asp-route-brandId="@item.Id">@name</a></li>
                     }
                 </ul>
                 <div class="view-all text-right"><a class="p-0" href="/Brands"> @Localizer["ViewAll"] <span class="lnr lnr-arrow-right ml-2"></span> </a></div>

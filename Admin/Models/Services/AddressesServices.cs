@@ -1,60 +1,79 @@
 ﻿using Admin.Data;
+using Admin.Models.Exceptions;
 using Admin.Models.Interface;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace Admin.Models.Services
 {
     public class AddressesServices : IAddresses
     {
         //Establishes a private connection to a database via dependency injection
-        private readonly AltayeeDBContext _context;
-        public AddressesServices(AltayeeDBContext context)
-        {
-            _context = context;
-        }
-        public async Task<List<Addresses>> GetAddresses() // Gets all of the Addresses data from the connencted database
-        {
-            return await _context.Addresses.ToListAsync();
-        }
+        private readonly AltayeeDBContext _dbContext;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
+        public AddressesServices(AltayeeDBContext context, IHttpContextAccessor httpContextAccessor)
+        {
+            _dbContext = context;
+            _httpContextAccessor = httpContextAccessor;
+        }
         public async Task<Addresses> CreateAddress(Addresses addresses) // Creates a Addresses data by saving a Addresses object into the connected database
         {
-            _context.Entry(addresses).State = EntityState.Added;
-            await _context.SaveChangesAsync();
+            _dbContext.Entry(addresses).State = EntityState.Added;
+            await _dbContext.SaveChangesAsync();
 
             return addresses;
         }
-
+        public async Task<List<Addresses>> GetAddresses() // Gets all of the Addresses data from the connencted database
+        {
+            return await _dbContext.Addresses.ToListAsync();
+        }
         public async Task<Addresses> GetAddressById(int id)
         {
-            return await _context.Addresses.FirstOrDefaultAsync(x => x.Id == id);
+            return await _dbContext.Addresses.SingleOrDefaultAsync(x => x.Id == id);
         }
-
+        public async Task<List<Addresses>> GetAddressesByUserId()
+        {
+            var userId = GetUserId();
+            return await _dbContext.Addresses.Where(a => a.UserId == userId).ToListAsync();
+        }
         public async Task<Addresses> UpdateAddress(int id, Addresses addresses)
         {
-            var updateAddresses = new Addresses
+            var existingAddress = await GetAddressById(id);
+            if (existingAddress == null)
             {
-                Id = addresses.Id,
-                FirstName = addresses.FirstName,
-                LastName = addresses.LastName,
-                Email = addresses.Email,
-                PhoneNumber = addresses.PhoneNumber,
-                FaxNumber = addresses.FaxNumber,
-                Address1 = addresses.Address1,
-                Address2 = addresses.Address2,
-                City = addresses.City,
-                Country = addresses.Country,
-            };
-            _context.Entry(addresses).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-            return updateAddresses;
-        }
+                throw new NotFoundException("Address not found.");
+            }
 
+            existingAddress.FirstName = addresses.FirstName;
+            existingAddress.LastName = addresses.LastName;
+            existingAddress.Email = addresses.Email;
+            existingAddress.PhoneNumber = addresses.PhoneNumber;
+            existingAddress.FaxNumber = addresses.FaxNumber;
+            existingAddress.Address1 = addresses.Address1;
+            existingAddress.Address2 = addresses.Address2;
+            existingAddress.City = addresses.City;
+            existingAddress.Country = addresses.Country;
+
+            await _dbContext.SaveChangesAsync();
+            return existingAddress;
+        }
         public async Task DeleteAddress(int id) // Deletes a Addresses data based on the id from the connected database
         {
             Addresses addresses = await GetAddressById(id);
-            _context.Entry(addresses).State = EntityState.Deleted;
-            await _context.SaveChangesAsync();
+            if (addresses == null)
+            {
+                throw new NotFoundException("Address not found.");
+            }
+            _dbContext.Entry(addresses).State = EntityState.Deleted;
+            await _dbContext.SaveChangesAsync();
+        }
+        private string GetUserId()
+        {
+            var httpContext = _httpContextAccessor.HttpContext;
+            var user = httpContext?.User;
+
+            return user?.FindFirstValue(ClaimTypes.NameIdentifier);
         }
     }
 }

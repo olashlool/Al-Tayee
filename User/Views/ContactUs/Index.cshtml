@@ -1,4 +1,13 @@
 ﻿@model Admin.Models.ContactUs
+<style>
+    .result.visible {
+        display: block;
+    }
+
+    .result{
+        display: none;
+    }
+</style>
 
 <div class="column-two-wrapper">
     <div class="container">
@@ -56,11 +65,49 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="text-center buttons"><input type="submit" name="send-email" class="btn btn-primary btn-lg text-uppercase contact-us-button" value="@Localizer["Submit"]"></div>
+                            <div class="text-center buttons">
+                                <input type="submit" name="send-email" class="btn btn-primary btn-lg text-uppercase contact-us-button" value="@Localizer["Submit"]">
+                            </div>
                         </form>
+                        <div class="text-center result" >
+                            @Localizer["successfully"]
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    // Assuming you have a reference to the form element
+    const form = document.querySelector('.inline-form');
+    const resultDiv = document.querySelector('.result');
+
+    form.addEventListener('submit', function (event) {
+        debugger
+        event.preventDefault();
+
+        // Perform form validation if needed
+
+        // Submit the form data using AJAX or fetch
+        // Example using fetch API
+        fetch(form.action, {
+            method: form.method,
+            body: new FormData(form)
+        })
+            .then(response => {
+                if (response.ok) {
+                    resultDiv.classList.add('visible');
+                    $('.inline-form').css({
+                        'display': 'none',
+                    });
+                } else {
+                    // Handle error response if needed
+                }
+            })
+            .catch(error => {
+                // Handle network or other errors
+            });
+    });
+</script>

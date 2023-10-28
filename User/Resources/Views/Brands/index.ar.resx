@@ -120,4 +120,7 @@
   <data name="Brands" xml:space="preserve">
     <value>العلامات التجارية</value>
   </data>
+  <data name="ShowProducts" xml:space="preserve">
+    <value>عرض المنتجات المصنعة بواسطة</value>
+  </data>
 </root>

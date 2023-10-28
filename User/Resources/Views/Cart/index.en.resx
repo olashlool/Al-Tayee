@@ -156,6 +156,12 @@
   <data name="TaxInfo" xml:space="preserve">
     <value>*Prices include sales tax</value>
   </data>
+  <data name="TermsOfService" xml:space="preserve">
+    <value>Terms of service</value>
+  </data>
+  <data name="TermsOfServiceBody" xml:space="preserve">
+    <value>Please accept the terms of service before the next step.</value>
+  </data>
   <data name="Total" xml:space="preserve">
     <value>Total</value>
   </data>

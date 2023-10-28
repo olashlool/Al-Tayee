@@ -6,55 +6,95 @@ namespace Admin.Models.Services
 {
     public class OrderServices : IOrder
     {
-        // Establishes a private connection to a database via dependency injection
         private readonly AltayeeDBContext _context;
 
         public OrderServices(AltayeeDBContext context)
         {
             _context = context;
         }
-        public async Task<Order> CreateOrder(Order order) // Create an order data by saving an Order object into the connected database
+
+        public async Task<Order> CreateOrder(Order order)
         {
             _context.Entry(order).State = EntityState.Added;
             await _context.SaveChangesAsync();
 
             return order;
         }
-        public async Task<OrderItems> CreateOrderItem(OrderItems orderItem) // Create an orderItems data by saving an orderItems object into the connected database
+        public async Task<Order> EditOrder(Guid id , Order order)
+        {
+            // Retrieve the existing order from the database based on the ID
+            var existingOrder = await _context.Orders.FindAsync(id);
+            if (existingOrder == null)
+            {
+                // Handle the case where the order with the specified ID is not found.
+                throw new Exception("Order not found.");
+            }
+
+            // Update the PaymentStatus property of the existing order with the new value
+            existingOrder.PaymentStstus = order.PaymentStstus;
+            existingOrder.OrderStatus = existingOrder.PaymentStstus == "PAID" ? "Completed" : "Pending";
+
+            // Save the changes to the database
+            await _context.SaveChangesAsync();
+
+            // Return the updated order
+            return existingOrder;
+
+        }
+        public async Task CreateOrderItems(IEnumerable<OrderItems> orderItems)
+        {
+            _context.OrderItems.AddRange(orderItems);
+            await _context.SaveChangesAsync();
+        }
+        public async Task<OrderItems> CreateOrderItem(OrderItems orderItem)
         {
             _context.Entry(orderItem).State = EntityState.Added;
             await _context.SaveChangesAsync();
 
             return orderItem;
         }
-        public async Task<Order> GetLatestOrderForUser(string userId) // Gets the latest order data from the connencted database
+        public async Task<Order> GetLatestOrderForUser(string userId)
         {
-            var orders = await GetOrdersByUserId(userId);
-            return orders.OrderByDescending(order => order.ID).FirstOrDefault();
-        }
-        public async Task<Order> GetOrderByOrderId(Guid Id) // Gets the latest order data from the connencted database
-        {
-            return _context.Orders.FirstOrDefault(x => x.ID == Id);
-        }
-        public async Task<IEnumerable<Order>> GetOrdersByUserId(string userId) // Gets all of the oder data for a user from the connencted database
-        {
-            return await _context.Orders.Where(order => order.UserID == userId).ToListAsync();
+            return await _context.Orders.AsNoTracking()
+                .Where(order => order.UserID == userId)
+                .OrderByDescending(order => order.ID)
+                .FirstOrDefaultAsync();
         }
 
-        public async Task<IEnumerable<Order>> GetOrders() // Gets all of the oder from the connencted database
+        public async Task<Order> GetOrderByOrderId(Guid Id)
+        {
+            return await _context.Orders.AsNoTracking()
+                .FirstOrDefaultAsync(x => x.ID == Id);
+        }
+
+        public async Task<IEnumerable<Order>> GetOrdersByUserId(string userId)
+        {
+            return await _context.Orders.AsNoTracking()
+                .Where(order => order.UserID == userId)
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<Order>> GetOrders()
         {
             return await _context.Orders.ToListAsync();
         }
-        public async Task<IList<OrderItems>> GetOrderItemsByOrderId(Guid orderId) // Gets all of the oderItems data for an orderId from the connencted database
+
+        public async Task<IList<OrderItems>> GetOrderItemsByOrderId(Guid orderId)
         {
-            return await _context.OrderItems.Where(orderItems => orderItems.OrderID == orderId).Include(x => x.Product).ToListAsync();
+            return await _context.OrderItems.AsNoTracking()
+                .Where(orderItems => orderItems.OrderID == orderId)
+                .Include(x => x.Product)
+                .ToListAsync();
         }
 
-        public async Task<IEnumerable<OrderItems>> GetOrderItems() // Gets all of the oderItems from the connencted database
+        public async Task<List<OrderItems>> GetOrderItems()
         {
-            return await _context.OrderItems.Include(x => x.Product).ToListAsync();
+            return await _context.OrderItems.AsNoTracking()
+                .Include(x => x.Product)
+                .ToListAsync();
         }
-        public async Task<OrderItems> UpdateOrderItems(OrderItems orderItem) // Update an orderItem data from the connected database
+
+        public async Task<OrderItems> UpdateOrderItems(OrderItems orderItem)
         {
             var updateOrderItem = new OrderItems
             {
@@ -65,11 +105,14 @@ namespace Admin.Models.Services
             await _context.SaveChangesAsync();
             return updateOrderItem;
         }
-        public async Task DeleteOrder(Guid id) // Deletes a Brands data based on the id from the connected database
+
+        public async Task DeleteOrder(Guid id)
         {
-            Order brands = await GetOrderByOrderId(id);
-            _context.Entry(brands).State = EntityState.Deleted;
+            Order order = await GetOrderByOrderId(id);
+            _context.Entry(order).State = EntityState.Deleted;
             await _context.SaveChangesAsync();
         }
+
+
     }
 }

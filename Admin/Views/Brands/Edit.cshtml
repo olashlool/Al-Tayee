@@ -14,35 +14,48 @@
                         </div>
                         <div class="card-body">
                             <div class="ec-cat-form">
-                                <form asp-controller="Brands" asp-action="Edit" method="post" enctype="multipart/form-data">
+                                <form>
                                     <input id="text" class="form-control here slug-title" type="text" asp-for="@Model.Brands.Id" hidden>
                                     <div class="form-group row">
-                                        <label for="text" class="col-12 col-form-label">@Localizer["Name"]</label>
+                                        <label for="BrandNameEntxt" class="col-12 col-form-label">@Localizer["NameEn"]</label>
                                         <div class="col-12">
-                                            <input id="text" class="form-control here slug-title" type="text" asp-for="@Model.Brands.NameEn">
-                                            <span asp-validation-for="Brands.NameEn" class="text-danger"></span>
+                                            <input id="BrandNameEntxt" class="form-control here slug-title" type="text" asp-for="@Model.Brands.NameEn">
+                                            <span class="spnreq" id="brabdNameEntxtreq" style="color : red ; display:none">@Localizer["NameIsRequired"]</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="BrandNameEntxtAr" class="col-12 col-form-label">@Localizer["NameAr"]</label>
+                                        <div class="col-12">
+                                            <input id="BrandNameEntxtAr" class="form-control here slug-title" type="text" asp-for="@Model.Brands.NameAr">
+                                            <span class="spnreq" id="brabdNameArtxtreq" style="color : red ; display:none">@Localizer["NameIsRequired"]</span>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="text" class="col-12 col-form-label">@Localizer["Image"]:</label>
                                         <div class="col-12">
-                                            <input id="UploadImage" class="form-control here slug-title" name="ImageUpload" type="file" asp-for="@Model.Brands.ImageUrl">
-                                            @if (Model.Brands.ImageUrl != null)
-                                            {
-                                                <div>
-                                                    <img id="ImageURL" src="@Model.Brands.ImageUrl" style="width:150px; height:150px;margin-top:10px" />
-                                                </div>
-                                            }
-                                            <span asp-validation-for="Brands.ImageUrl" class="text-danger"></span>
+                                            <div style="width: 100%; height: 50px; border: 1px solid #eeeeee ; border-radius: 15px; display: flex; align-items: center; cursor: pointer;" onclick="triggerFileInputClick()">
+                                                @{
+                                                    string originalPath = Model.Brands.ImageUrl;
+                                                    string newPath = originalPath.Replace("/images/", "");
+                                                }
+                                                <p style="padding-left: 10px; padding-right: 10px;">@Localizer["ChosenImage"]:</p>
+                                                <p id="selectedImageText" style="border-left: 1px solid; padding-left: 10px;">@newPath</p>
+                                            </div>
+                                            <input id="fileInput" style="display: none;" onchange="handleFileSelection(event)" name="ImageUpload" type="file" asp-for="@Model.Brands.ImageUrl">
+                                            <div>
+                                                <img name="ImageUrl" id="ImageURL" src="@Model.Brands.ImageUrl" style="width:150px; height:150px;margin-top:10px;" />
+                                            </div>
+                                            <span asp-validation-for="Brands.ImageUrl" class="text-danger" style="color: #c90505;"></span>
                                         </div>
                                     </div>
                                     <div class="row" style="float: right; margin-top: 10px;">
                                         <div class="col-12">
-                                            <button type="submit" class="btn btn-primary">@Localizer["Save"]</button>
+                                            <button type="button" id="SaveBrandbtn" class="btn btn-primary">@Localizer["Save"]</button>
                                             <button asp-controller="Brands" asp-action="Index" class="btn btn-danger">@Localizer["Cancel"]</button>
                                         </div>
                                     </div>
                                 </form>
+
                             </div>
                         </div>
                     </div>
@@ -51,3 +64,82 @@
         </div> <!-- End Content -->
     </div>
 </div>
+
+
+@section scripts {
+    <script>
+        var imageBrand = [];
+        var form = new FormData();  // Create a new FormData object
+        function triggerFileInputClick() {
+            document.getElementById('fileInput').click();
+        }
+        function handleFileSelection(event) {
+            const fileInput = event.target;
+            const file = fileInput.files[0];
+            const previewImage = document.getElementById('ImageURL');
+            const selectedImageText = document.getElementById('selectedImageText');
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function () {
+                    previewImage.src = reader.result;
+                    previewImage.style.display = 'block';
+
+                    selectedImageText.textContent = file.name;
+                };
+
+                reader.readAsDataURL(file);
+                imageBrand.push(file);
+            }
+        }
+        function EditBrand() {
+            var BrandReq = {};
+            var BrandEnName = $("#BrandNameEntxt").val();
+            var BrandNameAr = $("#BrandNameEntxtAr").val();
+            var BrandImage = imageBrand;
+
+            let valid = true;
+
+            $('.spnreq').hide();
+            $('.req').each(function () {
+                if ($(this).val() === "" || $(this).val().trim() === "") {
+                    $('#' + $(this).attr('id') + 'req').show();
+                    valid = false;
+                }
+            });
+
+            if (BrandEnName == "") {
+                $('#brabdNameEntxtreq').show();
+                valid = false;
+            }
+            if (BrandNameAr == "") {
+                $('#brabdNameArtxtreq').show();
+                valid = false;
+            }
+            debugger
+            if (valid) {
+                form.append("images", imageBrand[0]);
+                form.append("nameEn", BrandEnName);
+                form.append("nameAr", BrandNameAr);
+                form.append("id", "@Model.Brands.Id");
+                $.ajax({
+                    url: "/Brands/Edit",
+                    type: "POST",
+                    data: form,
+                    processData: false,
+                    contentType: false,
+                    success: function (data) {
+                        location.href = "/Brands"
+                    },
+                    error: function (err) {
+                        alert('Oops...' + err);
+                    }
+                })
+            }
+        }
+        $(document).on("click", "#SaveBrandbtn", function () {
+            EditBrand();
+        });
+    </script>
+}

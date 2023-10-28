@@ -53,13 +53,14 @@
                                                 <td>@item.Timestamp</td>
                                                 <td>
                                                     <div class="btn-group mb-1">
-                                                        <button type="button" class="btn btn-outline-success">Info</button>
+                                                        <button type="button" class="btn btn-outline-success">@Localizer["Info"]</button>
                                                         <button type="button" class="btn btn-outline-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                                                             <span class="sr-only">@Localizer["Info"]</span>
                                                         </button>
                                                         <div class="dropdown-menu">
                                                             <a class="dropdown-item" asp-controller="Order" asp-action="Detail" asp-route-id="@item.ID">@Localizer["Detail"] </a>
-                                                            <a class="dropdown-item" href="#">@Localizer["Delete"] </a>
+                                                            <a class="dropdown-item" asp-controller="Order" asp-action="Edit" asp-route-id="@item.ID">@Localizer["Edit"] </a>
+                                                            <a class="dropdown-item" asp-controller="Order" asp-action="Delete" asp-route-id="@item.ID">@Localizer["Delete"] </a>
                                                         </div>
                                                     </div>
                                                 </td>

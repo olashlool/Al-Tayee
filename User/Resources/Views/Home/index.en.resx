@@ -123,6 +123,9 @@
   <data name="AddtoWishlist" xml:space="preserve">
     <value>Add to wishlist</value>
   </data>
+  <data name="AlertAdded" xml:space="preserve">
+    <value>The product has been added to your</value>
+  </data>
   <data name="BeautyCare" xml:space="preserve">
     <value>beauty care</value>
   </data>
@@ -137,6 +140,9 @@
   </data>
   <data name="ButYourHairCanBe" xml:space="preserve">
     <value>but your hair can be</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
   </data>
   <data name="FeaturedProducts" xml:space="preserve">
     <value>Featured Products</value>
@@ -159,6 +165,9 @@
   <data name="NATURALLYWE" xml:space="preserve">
     <value>NATURALLY WE</value>
   </data>
+  <data name="Prdducts" xml:space="preserve">
+    <value>Prdducts</value>
+  </data>
   <data name="QuickView" xml:space="preserve">
     <value>Quick View</value>
   </data>
@@ -168,6 +177,12 @@
   <data name="ShoppingCart" xml:space="preserve">
     <value>Shopping cart</value>
   </data>
+  <data name="shoppingCart1" xml:space="preserve">
+    <value>shopping cart</value>
+  </data>
+  <data name="ShowDetails" xml:space="preserve">
+    <value>Show details for</value>
+  </data>
   <data name="Size" xml:space="preserve">
     <value>Size</value>
   </data>
@@ -176,5 +191,8 @@
   </data>
   <data name="Type" xml:space="preserve">
     <value>Type</value>
+  </data>
+  <data name="wishlist" xml:space="preserve">
+    <value>wishlist</value>
   </data>
 </root>

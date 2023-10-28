@@ -1,6 +1,7 @@
 ﻿using Admin.Data;
 using Admin.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
+using System.Reflection;
 
 namespace Admin.Models.Identity
 {
@@ -70,7 +71,7 @@ namespace Admin.Models.Identity
                 }
             }
 
-            var user = new ApplicationUser { UserName = model.UserName, Email = model.Email, PhoneNumber = model.PhoneNumber, FirstName = model.FirstName, SecondName = model.LastName, Gender = model.Gender };
+            var user = new ApplicationUser { UserName = model.UserName, Email = model.Email, PhoneNumber = model.PhoneNumber, FirstName = model.FirstName, SecondName = model.LastName, Gender = model.Gender != null ? model.Gender : "", Day = model.Day, Month= model.Month, Year = model.Year};
             var result = await _userManager.CreateAsync(user, model.Password);
 
             if (!result.Succeeded)
@@ -104,8 +105,12 @@ namespace Admin.Models.Identity
             user.PhoneNumber = updateUser.PhoneNumber;
             user.Email = updateUser.Email;
             user.BirthDate = updateUser.BirthDate;
+            user.Day= updateUser.Day;
+            user.Month = updateUser.Month;
+            user.Year = updateUser.Year;
 
-            var x = await _userManager.UpdateAsync(user);
+            var result = await _userManager.UpdateAsync(user);
+
         }
     }
 }

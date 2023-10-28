@@ -14,7 +14,7 @@ namespace User.Controllers
             _products = products;
             _Types = types;
         }
-        public async Task<IActionResult> Index(string searchTerm, string sortOrder = "")
+        public async Task<IActionResult> Index(string searchTerm = "", string sortOrder = "")
         {
             var listOfProduct = await _products.GetProducts();
 

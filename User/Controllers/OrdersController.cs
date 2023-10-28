@@ -10,12 +10,14 @@ namespace User.Controllers
     public class OrdersController : Controller
     {
         private readonly IOrder _order;
+        private readonly ICartRepository _cartRepo;
 
         private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public OrdersController(IOrder order, IHttpContextAccessor httpContextAccessor) // The constructor to bring in IOrder interface that enables getting information from the order data table
+        public OrdersController(IOrder order, ICartRepository cart, IHttpContextAccessor httpContextAccessor) // The constructor to bring in IOrder interface that enables getting information from the order data table
         {
             _order = order;
+            _cartRepo = cart;
             _httpContextAccessor = httpContextAccessor;
         }
         public async Task<IActionResult> Index()
@@ -32,6 +34,8 @@ namespace User.Controllers
             orderDetailVM.OrderItems = await _order.GetOrderItemsByOrderId(id);
 
             orderDetailVM.OrderItems.First().Order = await _order.GetOrderByOrderId(orderDetailVM.OrderItems.First().OrderID);
+            //orderDetailVM.CartDetail = await _cartRepo.GetCartProductByUserId(orderDetailVM.OrderItems.First().Order.UserID);
+
             return View(orderDetailVM);
         }
     }

@@ -6,13 +6,44 @@
         <div class="title">@Localizer["Myaccount"]</div>
         <div class="p-0 listbox">
             <ul class="list list-account">
-                <li class="customer-info"><a href="/Account/ProfileAccount" class="active">@Localizer["CustomerInfo"]</a></li>
-                <li class="customer-addresses"><a href="/Addresses" class="inactive">@Localizer["Addresses"]</a></li>
-                <li class="customer-orders"><a href="/Orders" class="inactive">@Localizer["Orders"]</a></li>
-                <li class="change-password"><a href="/Account/ChangePassword" class="inactive">@Localizer["ChangePassword"]</a></li>
+                <li class="customer-info"><a href="/Account/ProfileAccount">@Localizer["CustomerInfo"]</a></li>
+                <li class="customer-addresses"><a href="/Addresses">@Localizer["Addresses"]</a></li>
+                <li class="customer-orders"><a href="/Orders">@Localizer["Orders"]</a></li>
+                <li class="change-password"><a href="/Account/ChangePassword">@Localizer["ChangePassword"]</a></li>
             </ul>
         </div>
     </div>
 </div>
 
+<script>
+    // Get the current page URL
+    var currentPageUrl = window.location.pathname;
 
+    // Get all the <a> tags inside the list
+    var anchorTags = document.querySelectorAll('.list-account li a');
+
+    // Function to handle setting the active state based on the current page URL
+    function setActiveState() {
+        // Remove the active class from all <a> tags
+        anchorTags.forEach(function (anchor) {
+            anchor.classList.remove('active');
+        });
+
+        // Add the active class to the corresponding <a> tag based on the current page URL
+        anchorTags.forEach(function (anchor) {
+            if (anchor.getAttribute('href') === currentPageUrl) {
+                anchor.classList.add('active');
+            }
+        });
+    }
+    // Add the active state on page load
+    document.addEventListener('DOMContentLoaded', setActiveState);
+
+    // Update the active state on navigation
+    document.addEventListener('click', function (event) {
+        if (event.target.tagName === 'A') {
+            currentPageUrl = event.target.getAttribute('href');
+            setActiveState();
+        }
+    });
+</script>

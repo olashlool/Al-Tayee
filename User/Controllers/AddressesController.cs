@@ -4,72 +4,99 @@ using Admin.Models.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace User.Controllers
 {
+    [Authorize] // Apply authorization at the controller level
     public class AddressesController : Controller
     {
-        private IWebHostEnvironment _environment;
-        private readonly IAddresses _Addresses;
-        private readonly IConfiguration _configuration;
+        private readonly IAddresses _addressesService;
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly IHttpContextAccessor _httpContextAccessor;
 
-
-        public AddressesController(IWebHostEnvironment environment, IAddresses addresses, IConfiguration configuration, UserManager<ApplicationUser> userManager, IHttpContextAccessor httpContextAccessor)
+        public AddressesController(IAddresses addressesService, UserManager<ApplicationUser> userManager)
         {
-            _environment = environment;
-            _configuration = configuration;
-            _Addresses = addresses;
+            _addressesService = addressesService;
             _userManager = userManager;
-            _httpContextAccessor = httpContextAccessor;
         }
-        [Authorize]
+
         public async Task<IActionResult> Index()
         {
-            var userId = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
-            IEnumerable<Addresses> listOfAddresses = await _Addresses.GetAddresses();
-            listOfAddresses = listOfAddresses.Where(x => x.UserId == userId);
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            IEnumerable<Addresses> listOfAddresses = await _addressesService.GetAddressesByUserId();
             return View(listOfAddresses);
         }
-        [Authorize]
+
         [HttpGet]
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> Create(Addresses addresses)
         {
-            if (ModelState.IsValid)
+            var propertiesToCheck = new List<string> { nameof(Addresses.FaxNumber), nameof(Addresses.Address2) };
+
+            foreach (var propertyName in propertiesToCheck)
             {
-                await _Addresses.CreateAddress(addresses);
+                var propertyValue = (string)addresses.GetType().GetProperty(propertyName)?.GetValue(addresses);
+
+                if (string.IsNullOrEmpty(propertyValue))
+                {
+                    ModelState.Remove(propertyName);
+                }
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View(addresses);
+            }
+            try
+            {
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                addresses.UserId = userId;
+                await _addressesService.CreateAddress(addresses);
                 return RedirectToAction("Index");
             }
+            catch (Exception)
+            {
+                ModelState.AddModelError(string.Empty, "An error occurred while creating the address.");
+            }
+
             return View();
         }
-        [Authorize]
-        [HttpGet]
-        public async Task<IActionResult> Edit(Int32 id)
-        {
 
-            Addresses addresses = await _Addresses.GetAddressById(id);
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            Addresses addresses = await _addressesService.GetAddressById(id);
+            if (addresses == null)
+            {
+                return NotFound();
+            }
             return View(addresses);
         }
+
         [HttpPost]
-        public async Task<IActionResult> Edit(Int32 id , Addresses addresses)
+        public async Task<IActionResult> Edit(int id, Addresses addresses)
         {
             if (ModelState.IsValid)
             {
-                await _Addresses.UpdateAddress(addresses.Id, addresses);
+                await _addressesService.UpdateAddress(id , addresses);
                 return RedirectToAction("Index");
             }
             return View(addresses);
         }
+
+        [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
-            await _Addresses.DeleteAddress(id);
+            await _addressesService.DeleteAddress(id);
             return RedirectToAction("Index");
         }
     }

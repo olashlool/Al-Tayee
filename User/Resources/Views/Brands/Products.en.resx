@@ -123,6 +123,9 @@
   <data name="AddtoWishlist" xml:space="preserve">
     <value>Add to wishlist</value>
   </data>
+  <data name="AlertAdded" xml:space="preserve">
+    <value>The product has been added to your</value>
+  </data>
   <data name="AtoZ" xml:space="preserve">
     <value>Name: A to Z</value>
   </data>
@@ -150,11 +153,20 @@
   <data name="QuickView" xml:space="preserve">
     <value>Quick view</value>
   </data>
+  <data name="shoppingCart" xml:space="preserve">
+    <value>shopping cart</value>
+  </data>
+  <data name="ShowDetails" xml:space="preserve">
+    <value>Show details for</value>
+  </data>
   <data name="Size" xml:space="preserve">
     <value>Size</value>
   </data>
   <data name="Sortby" xml:space="preserve">
     <value>Sort by</value>
+  </data>
+  <data name="wishlist" xml:space="preserve">
+    <value>wishlist</value>
   </data>
   <data name="ZtoA" xml:space="preserve">
     <value>Name: Z to A</value>

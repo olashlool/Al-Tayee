@@ -147,6 +147,9 @@
   <data name="Submit" xml:space="preserve">
     <value>ارسال</value>
   </data>
+  <data name="successfully" xml:space="preserve">
+    <value>تم إرسال استفسارك بنجاح إلى صاحب المتجر.</value>
+  </data>
   <data name="ValidationEmail" xml:space="preserve">
     <value>ايميل خاظئ</value>
   </data>

@@ -2,6 +2,7 @@
 using Admin.Models.Interface;
 using Admin.Models.ViewModels;
 using Admin.Models;
+using Microsoft.Data.SqlClient;
 
 namespace User.Controllers
 {
@@ -25,39 +26,32 @@ namespace User.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder)
         {
             var listProducts = await _products.GetProducts();
-
-            foreach (var product in listProducts)
+            switch (sortOrder)
             {
-                //var BaseimagePath = Path.Combine(_environment.WebRootPath, "images", product.BaseImage);
-                //if (System.IO.File.Exists(BaseimagePath))
-                //{
-                //    var imageData = Convert.ToBase64String(System.IO.File.ReadAllBytes(BaseimagePath));
-                //    product.BaseImage = $"data:image/jpeg;base64,{imageData}";
-                //}
-                //var altimagePath = Path.Combine(_environment.WebRootPath, "images", product.AltImage);
-                //if (System.IO.File.Exists(altimagePath))
-                //{
-                //    var imageData = Convert.ToBase64String(System.IO.File.ReadAllBytes(altimagePath));
-                //    product.AltImage = $"data:image/jpeg;base64,{imageData}";
-                //}
-
-                //product.Types = await _Types.GetTypeByProductId(product.Id);
+                case "lowToHigh":
+                    listProducts = listProducts.OrderBy(p => p.Price).ToList();
+                    break;
+                case "highToLow":
+                    listProducts = listProducts.OrderByDescending(p => p.Price).ToList();
+                    break;
+                case "aToZ":
+                    listProducts = listProducts.OrderBy(p => p.NameEn).ToList();
+                    break;
+                case "zToA":
+                    listProducts = listProducts.OrderByDescending(p => p.NameEn).ToList();
+                    break;
+                default:
+                    // Handle default case or no sorting
+                    break;
             }
-
             return View(listProducts);
         }
-        public async Task<IActionResult> FeaturedProduct(string sortOrder = "")
+        public async Task<IActionResult> FeaturedProduct(string sortOrder)
         {
             var listOfFeaturedProduct = await _products.GetFeaturedProduct();
-            //foreach (var item in listOfFeaturedProduct)
-            //{
-            //    List<Types> types = await _Types.GetTypeByProductId(item.Id);
-            //    item.Types = types;
-            //}
-            // Apply the sorting based on the sortOrder parameter
             switch (sortOrder)
             {
                 case "lowToHigh":

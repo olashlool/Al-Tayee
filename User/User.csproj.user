@@ -14,6 +14,9 @@
     <NameOfLastUsedPublishProfile>C:\Users\LP-OlaAlshloul\Desktop\Al_Tayee_fdn\User\Properties\PublishProfiles\FolderProfile3.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Update="Resources\Views\Checkout\index.ar.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\Views\Home\PrivacyPolicy.ar.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>

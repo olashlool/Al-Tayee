@@ -52,19 +52,22 @@ namespace Admin.Models.Services
         public async Task<int> UpdateProduct(Guid id, Products products)
         {
             int result;
-            var product = new Products
+            var updateProduct = new Products
             {
                 Id = products.Id,
                 NameEn = products.NameEn,
+                NameAr = products.NameAr,
                 DescriptionEn = products.DescriptionEn,
+                DescriptionAr = products.DescriptionAr,
                 BaseImage = products.BaseImage,
                 AltImage = products.AltImage,
-                BrandsId = products.BrandsId,
                 IsFeatured = products.IsFeatured,
                 Size = products.Size,
                 Price = products.Price,
+                BrandsId= products.BrandsId,
+                Images = products.Images,
             };
-            _context.Entry(product).State = EntityState.Modified;
+            _context.Entry(updateProduct).State = EntityState.Modified;
             result = await _context.SaveChangesAsync();
             return result;
         }

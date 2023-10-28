@@ -9,6 +9,8 @@ namespace Admin.Models
 
         [Required(ErrorMessage = "This field is rquried")]
         public string NameEn { get; set; }
+        [Required(ErrorMessage = "This field is rquried")]
+        public string NameAr { get; set; }
 
         public string ImageUrl { get; set; }
     }

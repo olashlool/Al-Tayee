@@ -6,48 +6,57 @@ namespace Admin.Models.Services
 {
     public class BrandsServices : IBrands
     {
-        // Establishes a private connection to a database via dependency injection
         private readonly AltayeeDBContext _context;
+
         public BrandsServices(AltayeeDBContext context)
         {
             _context = context;
         }
-        public async Task<List<Brands>> GetBrands() // Gets all of the Brands data from the connencted database
+
+        public async Task<List<Brands>> GetBrands()
         {
-            return await _context.Brands.ToListAsync();
+            return await _context.Brands.AsNoTracking().ToListAsync();
         }
 
-        public async Task<Brands> CreateBrand(Brands brands) // Creates a Brands data by saving a Brands object into the connected database
+        public async Task<Brands> CreateBrand(Brands brand)
         {
-            _context.Entry(brands).State = EntityState.Added;
+            _context.Entry(brand).State = EntityState.Added;
             await _context.SaveChangesAsync();
 
-            return brands;
+            return brand;
         }
 
         public async Task<Brands> GetBrandById(Guid id)
         {
-            return await _context.Brands.FirstOrDefaultAsync(x => x.Id == id);
+            return await _context.Brands.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<Brands> UpdateBrand(Guid id, Brands brand)
+        public async Task<Brands> UpdateBrand(Guid id, Brands updatedBrand)
         {
-            var updateBrands = new Brands
+            var existingBrand = await _context.Brands.FindAsync(id);
+            if (existingBrand == null)
             {
-                Id = brand.Id,
-                NameEn = brand.NameEn,
-                ImageUrl = brand.ImageUrl
-            };
-            _context.Entry(updateBrands).State = EntityState.Modified;
+                // Handle the case when the brand with the given id is not found
+                return null;
+            }
+            if (updatedBrand.ImageUrl == null)
+            {
+                updatedBrand.ImageUrl = existingBrand.ImageUrl;
+            }
+            _context.Entry(existingBrand).CurrentValues.SetValues(updatedBrand);
             await _context.SaveChangesAsync();
-            return updateBrands;
+
+            return existingBrand;
         }
 
-        public async Task DeleteBrand(Guid id) // Deletes a Brands data based on the id from the connected database
+        public async Task DeleteBrand(Guid id)
         {
-            Brands brands = await GetBrandById(id);
-            _context.Entry(brands).State = EntityState.Deleted;
-            await _context.SaveChangesAsync();
+            var brand = await _context.Brands.FindAsync(id);
+            if (brand != null)
+            {
+                _context.Entry(brand).State = EntityState.Deleted;
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

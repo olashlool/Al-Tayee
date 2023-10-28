@@ -123,11 +123,17 @@
   <data name="Cancel" xml:space="preserve">
     <value>إلغاء</value>
   </data>
+  <data name="ChosenImage" xml:space="preserve">
+    <value>اختر صورة للعلامة التجارية</value>
+  </data>
   <data name="Image" xml:space="preserve">
     <value>الصورة</value>
   </data>
-  <data name="Name" xml:space="preserve">
-    <value>اسم العلامة التجارية</value>
+  <data name="NameAr" xml:space="preserve">
+    <value>اسم العلامة التجارية بالعربي</value>
+  </data>
+  <data name="NameEn" xml:space="preserve">
+    <value>اسم العلامة التجارية بالإنجليزية</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>حفظ</value>

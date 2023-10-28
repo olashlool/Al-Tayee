@@ -120,14 +120,26 @@
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
+  <data name="ChosenImage" xml:space="preserve">
+    <value>Chosen Image For Brand</value>
+  </data>
   <data name="EditBrand" xml:space="preserve">
     <value>Edit Brand</value>
   </data>
   <data name="Image" xml:space="preserve">
     <value>Image</value>
   </data>
-  <data name="Name" xml:space="preserve">
-    <value>Name</value>
+  <data name="ImageIsRequired" xml:space="preserve">
+    <value>Image Is Required</value>
+  </data>
+  <data name="NameAr" xml:space="preserve">
+    <value>Name in Arabic</value>
+  </data>
+  <data name="NameEn" xml:space="preserve">
+    <value>Name in English</value>
+  </data>
+  <data name="NameIsRequired" xml:space="preserve">
+    <value>Name Is Required</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Save</value>

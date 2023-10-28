@@ -3,6 +3,6 @@
     public class BrandsVM
     {
         public Brands Brands { get; set; }
-        public IFormFile ImageUpload { get; set; }
+        public List<IFormFile> ImageUpload { get; set; }
     }
 }

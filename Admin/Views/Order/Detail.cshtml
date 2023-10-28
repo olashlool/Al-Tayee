@@ -5,10 +5,10 @@
 <div class="ec-content-wrapper">
     <div class="content">
         <div class="breadcrumb-wrapper breadcrumb-wrapper-2">
-            <h1>Order Detail</h1>
+            <h1> @Localizer["OrderDetail"]</h1>
             <p class="breadcrumbs">
-                <span><a href="/">Home</a></span>
-                <span><i class="mdi mdi-chevron-right"></i></span>Orders
+                <span><a href="/"> @Localizer["Home"]</a></span>
+                <span><i class="mdi mdi-chevron-right"></i></span> @Localizer["Orders"]
             </p>
         </div>
         <div class="row">
@@ -16,37 +16,36 @@
                 <div class="ec-odr-dtl card card-default">
                     <div class="card-header card-header-border-bottom d-flex justify-content-between">
                         <h2 class="ec-odr">
-                            Order Detail<br>
-                            <span class="small">Order ID: #@Model.OrderItems.First().Order.ID</span>
+                            @Localizer["OrderDetail"]<br>
+                            <span class="small">@Localizer["OrderID"]: #@Model.OrderItems.First().Order.ID</span>
                         </h2>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-xl-6 col-lg-6">
                                 <address class="info-grid">
-                                    <div class="info-title"><strong>Customer:</strong></div>
+                                    <div class="info-title"><strong>@Localizer["Customer"]:</strong></div>
                                     <br>
                                     <div class="info-content">
                                         @Model.OrderItems.First().Order.FirstName, @Model.OrderItems.First().Order.LastName<br>
-                                        @Model.OrderItems.First().Order.Country, @Model.OrderItems.First().Order.City<br>
                                         @Model.OrderItems.First().Order.Address<br>
-                                        <abbr title="Phone">P:</abbr> @Model.OrderItems.First().Order.Phone
+                                        <abbr title="Phone">@Localizer["P"]:</abbr> @Model.OrderItems.First().Order.Phone
                                     </div>
                                 </address>
                             </div>
                             <div class="col-xl-3 col-lg-6">
                                 <address class="info-grid">
-                                    <div class="info-title"><strong>Payment Method:</strong></div>
+                                    <div class="info-title"><strong>@Localizer["PaymentMethod"]:</strong></div>
                                     <br>
                                     <div class="info-content">
-                                        Cash on delivary<br>
+                                        @Model.OrderItems.First().Order.PaymentMethod<br>
                                         @Model.OrderItems.First().Order.Email<br>
                                     </div>
                                 </address>
                             </div>
                             <div class="col-xl-3 col-lg-6">
                                 <address class="info-grid">
-                                    <div class="info-title"><strong>Order Date:</strong></div>
+                                    <div class="info-title"><strong>@Localizer["OrderDate"]:</strong></div>
                                     <br>
                                     <div class="info-content">
                                         @Model.OrderItems.First().Order.Timestamp
@@ -56,17 +55,17 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <h3 class="tbl-title">PRODUCT SUMMARY</h3>
+                                <h3 class="tbl-title">@Localizer["PRODUCTSUMMARY"]</h3>
                                 <div class="table-responsive">
                                     <table class="table table-striped o-tbl">
                                         <thead>
                                             <tr class="line">
                                                 <td><strong>#</strong></td>
-                                                <td class="text-center"><strong>IMAGE</strong></td>
-                                                <td class="text-center"><strong>PRODUCT</strong></td>
-                                                <td class="text-center"><strong>PRICE/UNIT</strong></td>
-                                                <td class="text-right"><strong>QUANTITY</strong></td>
-                                                <td class="text-right"><strong>SUBTOTAL</strong></td>
+                                                <td class="text-left"><strong>@Localizer["IMAGE"] </strong></td>
+                                                <td class="text-center"><strong>@Localizer["PRODUCT"] </strong></td>
+                                                <td class="text-center"><strong>@Localizer["PRICE_UNIT"] </strong></td>
+                                                <td class="text-center"><strong>@Localizer["QUANTITY"] </strong></td>
+                                                <td class="text-right"><strong> @Localizer["SUBTOTAL"] </strong></td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -85,8 +84,8 @@
                                                 }
                                                 <tr>
                                                     <td>@count</td>
-                                                    <td><img class="product-img" src="/images/@item.Product.BaseImage" alt=""></td>
-                                                    <td>
+                                                    <td class="text-left"><img class="product-img" src="/images/@item.ImageProduct" style="width:100px" alt=""></td>
+                                                    <td class="text-center">
                                                         <strong>@item.Product.NameEn</strong>
                                                     </td>
                                                     <td class="text-center">@item.Product.Price</td>
@@ -97,20 +96,20 @@
                                             }
                                             <tr>
                                                 <td colspan="4"></td>
-                                                <td class="text-right"><strong>Taxes</strong></td>
+                                                <td class="text-right"><strong>@Localizer["Taxes"]</strong></td>
                                                 <td class="text-right"><strong>N/A</strong></td>
                                             </tr>
                                             <tr>
                                                 <td colspan="4">
                                                 </td>
-                                                <td class="text-right"><strong>Total</strong></td>
-                                                <td class="text-right"><strong>@OrderTotal.ToString("F") JOD</strong></td>
+                                                <td class="text-right"><strong>@Localizer["Total"]</strong></td>
+                                                <td class="text-right"><strong>@OrderTotal.ToString("F") @Localizer["JOD"]</strong></td>
                                             </tr>
                                             <tr>
                                                 <td colspan="4">
                                                 </td>
-                                                <td class="text-right"><strong>Payment Status</strong></td>
-                                                <td class="text-right"><strong>PAID</strong></td>
+                                                <td class="text-right"><strong>@Localizer["PaymentStatus"]</strong></td>
+                                                <td class="text-right"><strong>@Model.OrderItems.FirstOrDefault().Order.PaymentStstus</strong></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -122,6 +121,18 @@
             </div>
         </div>
     </div>
+    <div style="padding: 0px 30px;display: flex;justify-content: flex-end;gap: 5px;">
+        <button type="button" id="Cancelbtn" style="border: 1px solid #333;padding: 5px 10px;float: right;">@Localizer["Cancel"]</button>
+    </div>
     <!-- End Content -->
 </div>
 
+<script src="~/lib/jquery/dist/jquery.min.map"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<script>
+    $(document).on("click", "#Cancelbtn", function () {
+        debugger
+        window.location.href = "/Order"
+    });
+</script>

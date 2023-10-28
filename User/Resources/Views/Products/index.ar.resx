@@ -123,6 +123,9 @@
   <data name="AddtoWishlist" xml:space="preserve">
     <value>أضف للمفضلة</value>
   </data>
+  <data name="AlertAdded" xml:space="preserve">
+    <value>تم إضافة المنتج إلى</value>
+  </data>
   <data name="AtoZ" xml:space="preserve">
     <value>الاسم: من الألف إلى الياء</value>
   </data>
@@ -150,11 +153,17 @@
   <data name="QuickView" xml:space="preserve">
     <value>نظرة سريعة</value>
   </data>
+  <data name="shoppingCart" xml:space="preserve">
+    <value>لسلة التسوق</value>
+  </data>
   <data name="Size" xml:space="preserve">
     <value>الحجم</value>
   </data>
   <data name="Sortby" xml:space="preserve">
     <value>رتب بـ</value>
+  </data>
+  <data name="wishlist" xml:space="preserve">
+    <value>للمفضلة</value>
   </data>
   <data name="ZtoA" xml:space="preserve">
     <value>الاسم: من الياء إلى الألف</value>

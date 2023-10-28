@@ -120,4 +120,7 @@
   <data name="Brands" xml:space="preserve">
     <value>Brands</value>
   </data>
+  <data name="ShowProducts" xml:space="preserve">
+    <value>Show products manufactured by</value>
+  </data>
 </root>

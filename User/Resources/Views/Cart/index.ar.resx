@@ -156,6 +156,12 @@
   <data name="TaxInfo" xml:space="preserve">
     <value>*الأسعار تشمل ضريبة المبيعات</value>
   </data>
+  <data name="TermsOfService" xml:space="preserve">
+    <value>الشروط والأحكام</value>
+  </data>
+  <data name="TermsOfServiceBody" xml:space="preserve">
+    <value>يرجى قبول بنود الشروط والأحكام قبل الخطوة التالية.</value>
+  </data>
   <data name="Total" xml:space="preserve">
     <value>المجموع</value>
   </data>

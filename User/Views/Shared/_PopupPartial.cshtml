@@ -4,20 +4,27 @@
 
 @if(Model != null)
 {
-foreach (var item in Model)
+    foreach (var item in Model)
 {
-        var brand = await Brands.GetBrandById(item.BrandsId);
+    var brand = await Brands.GetBrandById(item.BrandsId);
+
+    string culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+    var name = culture.StartsWith("en") ? item.NameEn : item.NameAr;
+    var desc = culture.StartsWith("en") ? item.DescriptionEn : item.DescriptionAr;
+    var brandName = culture.StartsWith("en") ? brand.NameEn : brand.NameAr;
+
         <div class="modal fade" id="glassAnimals_@item.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body" style="padding: 30px">
                     <div class="product-details-pictures">
                         <!--product pictures-->
+
                         <div class="gallery" data-popup="#dialogForImgPopUp">
                             <link rel="image_src" href="~/images/@item.BaseImage">
                             <div id="wrap" style="top:0px;z-index:9999;position:relative;">
                                 <a href="~/images/@item.BaseImage" class="cloud-zoom" style="position: relative; display: block;" id="dbrandImage">
-                                    <img alt="Picture of @item.NameEn" src="~/images/@item.BaseImage" title="Picture of @item.NameEn" style="height: auto; width: 100%; border-width: 0px; display: block;" class="cloud-zoom-image cloud-zoom-image-size" width="400" id="main-product-img-lightbox-anchor-56">
+                                    <img alt="Picture of @name" src="~/images/@item.BaseImage" title="Picture of @name" style="height: auto; width: 100%; border-width: 0px; display: block;" class="cloud-zoom-image cloud-zoom-image-size" width="400" id="main-product-img-lightbox-anchor-56">
                                 </a>
                                 <div class="mousetrap" style="background-image: url(&quot;.&quot;); z-index: 999; position: absolute; width: 200px; height: 200px; left: 0px; top: 0px; cursor: move;"></div>
                                 <div class="mousetrap" style="background-image: url(&quot;.&quot;); z-index: 999; position: absolute; width: 200px; height: 200px; left: 0px; top: 0px; cursor: move;"></div>
@@ -37,19 +44,22 @@ foreach (var item in Model)
                             <div class="cloud-zoom-thumb-container">
                                 <div class="cloud-zoom-thumb">
                                     <a href="~/images/@item.BaseImage" rel="lightbox-p" class="src-zoom-anchor" onclick="return false;" data-halfimgurl="/images/@item.BaseImage">
-                                        <img src="~/images/@item.BaseImage" alt="Picture of @item.NameEn" title="Picture of @item.NameEn" class="src-zoom-image" style="height:100px; width:100px">
+                                        <img src="~/images/@item.BaseImage" alt="Picture of @name" title="Picture of @name" class="src-zoom-image" style="height:100px; width:100px">
                                     </a>
                                 </div>
                                 <div class="cloud-zoom-thumb">
                                     <a href="~/images/@item.AltImage" rel="lightbox-p" class="src-zoom-anchor" onclick="return false;" data-halfimgurl="/images/@item.AltImage">
-                                        <img src="/images/@item.AltImage" alt="Picture of @item.NameEn" title="Picture of @item.NameEn" class="src-zoom-image" style="height:100px; width:100px">
+                                        <img src="/images/@item.AltImage" alt="Picture of @name" title="Picture of @name" class="src-zoom-image" style="height:100px; width:100px">
                                     </a>
                                 </div>
-                                @foreach (var img in await Images.GetImageByProductId(item.Id))
+                                    @{
+                                        var ImgesProduct = await Images.GetImageByProductId(item.Id);
+                                    }
+                                @foreach (var img in ImgesProduct.Skip(2))
                                 {
                                     <div class="cloud-zoom-thumb">
                                         <a href="~/images/@img.ImageName" rel="lightbox-p" class="src-zoom-anchor" onclick="return false;" data-halfimgurl="/images/@img.ImageName">
-                                            <img src="/images/@img.ImageName" alt="Picture of @item.NameEn" title="Picture of @item.NameEn" class="src-zoom-image" style="height:100px; width:100px">
+                                            <img src="/images/@img.ImageName" alt="Picture of @name" title="Picture of @name" class="src-zoom-image" style="height:100px; width:100px">
                                         </a>
                                     </div>
                                 }
@@ -79,32 +89,17 @@ foreach (var item in Model)
                         </script>
                         <div class="float-none w-100 text-left overview">
                             <div class="mb-2 product-name">
-                                <h1 itemprop="name">@item.NameEn</h1>
+                                <h1 itemprop="name">@name</h1>
                             </div>
                             <div class="my-3 bg-gray-2 divider-h">divider</div>
                             <div class="prices">
-                                <div class="product-price"><span id="price-value-56" class="price-value-56">@item.Price @Localizer["JOD"]</span></div>
+                                <div class="product-price"><span id="price-value-56" class="price-value-56">@item.Price @Localizer["JOD"]</span></div>                            
+                                <div class="clr-gray short-description">@Localizer["Size"]: &nbsp;<strong>@item.Size</strong></div>
                             </div>
                             <div class="my-3 bg-gray-2 divider-h">divider</div>
-                            <div class="mb-3 manufacturers"><span class="clr-gray-3 font-weight-bold label">@Localizer["Brands"]:</span> <span class="value"> <a href="#">@brand.NameEn</a> </span></div>
-                            <div class="mb-3 clr-gray short-description">@item.DescriptionEn</div>
-                            <div class="mb-3 clr-gray short-description">@Localizer["Size"]: &nbsp;<strong>@item.Size</strong></div>
+                            <div class="mb-3 manufacturers"><span class="clr-gray-3 font-weight-bold label">@Localizer["Brands"]:</span> <span class="value"> <a href="/Brands/Products?brandId=@item.BrandsId">@brandName</a> </span></div>
+                            <div class="mb-3 clr-gray short-description">@desc</div>
                             <div class="m-0 additional-details"></div>
-@*                            <div class="attributes">
-                                <dl>
-                                    <dt id="product_attribute_label_24"><label class="text-prompt"> @Localizer["Type"] </label></dt>
-                                    <dd id="product_attribute_input_24">
-                                        <ul data-attr="24" class="option-list attribute-squares color-squares" id="color-squares-24">
-                                            @foreach (var color in item.Types)
-                                            {
-                                                <li data-attr-value="59">
-                                                    <label for="product_attribute_24_59"> <span class="attribute-square-container"> <span class="attribute-square" style="background-color:@color.Value">&nbsp;</span> </span> <input id="product_attribute_24_59" type="radio" name="product_attribute_24" value="59"> </label>
-                                                </li>
-                                            }
-                                        </ul>
-                                    </dd>
-                                </dl>
-                            </div>*@
                             <div class="my-3 bg-gray-2 divider-h">divider</div>
                             <div class="d-flex flex-column p-qty">
                                 <div class="add-to-cart">
@@ -126,9 +121,21 @@ foreach (var item in Model)
     </div>
 
 }
-    
+<div id="bar-notification" class="bar-notification-container" data-close="Close">
+    <div class="bar-notification success" style="display: none;">
+        <p class="content">@Localizer["AlertAdded"] <a href="/cart">@Localizer["shoppingCart"]</a></p>
+        <span class="close" title="@Localizer["Close"]"></span>
+    </div>
+</div>
+<div id="bar-notification-wishlist" class="bar-notification-container" data-close="Close">
+    <div class="bar-notification success" style="display: none;">
+        <p class="content">@Localizer["AlertAdded"] <a href="/Wishlist">@Localizer["wishlist"]</a></p>
+        <span class="close" title="@Localizer["Close"]"></span>
+    </div>
+</div>
+
 }
-    <script>
+<script>
         var hrefValue ="";
             $(".cloud-zoom-thumb").on("click", function () {
                 hrefValue = $('#dbrandImage').attr('href');
@@ -145,13 +152,20 @@ foreach (var item in Model)
         {
             <text>
                 try {
+                    debugger
                     var response = await fetch(`/Cart/AddItemWithQtyAndImage?productId=${productId}&&qty=${inputValue}&&image=${modifiedPath}`);
                     if (response.status == 200) {
-                    location.reload();
+                        // Show the success notification
+                        $('#bar-notification .bar-notification.success').show();
+
+                        // Wait for 2 seconds
+                        setTimeout(function () {
+                            // Reload the page after 2 seconds
+                            location.reload();
+                        }, 2000);
                     }
-                }
+                } 
                 catch (err) {
-                    console.log(err);
                 }
             </text>
         }
@@ -161,7 +175,7 @@ foreach (var item in Model)
                 window.location.href="/Account/Login"
                     </text>
         }});
-        $(".AddToWishlistWithOneQtyPopup").on("click",async function () {
+@*        $(".AddToWishlistWithOneQtyPopup").on("click",async function () {
             debugger
             var productId = $(this).attr('data-product-Id')
         @if (User.Identity.IsAuthenticated)
@@ -170,11 +184,17 @@ foreach (var item in Model)
                 try {
                     var response = await fetch(`/WishList/AddItem?productId=${productId}`);
                     if (response.status == 200) {
-                    location.reload();
+                        // Show the success notification
+                        $('#bar-notification-wishlist .bar-notification.success').show();
+
+                        // Wait for 2 seconds
+                        setTimeout(function () {
+                            // Reload the page after 2 seconds
+                            location.reload();
+                        }, 2000);
                     }
                 }
                 catch (err) {
-                    console.log(err);
                 }
             </text>
         }
@@ -183,6 +203,42 @@ foreach (var item in Model)
         <text>
                 window.location.href="/Account/Login"
                     </text>
-        }});
+        }});*@
 
+    </script>
+
+                        <script>
+        $(".AddToWishlistWithOneQtyPopup").on("click",async function () {
+            debugger
+            if(hrefValue== ""){
+                hrefValue = @Html.Raw(Json.Serialize(Model.FirstOrDefault().BaseImage))
+            }
+            var modifiedPath = hrefValue.replace("/images/", "");
+            var inputValue = $('#EnteredQuantityPopup').val();
+            var productId = $(this).attr('data-product-Id')
+        @if (User.Identity.IsAuthenticated)
+        {
+            <text>
+                try {
+                    var response = await fetch(`/WishList/AddItemWithQtyAndImage?productId=${productId}&&qty=${inputValue}&&image=${modifiedPath}`);
+                    if (response.status == 200) {
+                        // Show the success notification
+                        $('#bar-notification-wishlist .bar-notification.success').show();
+
+                        // Wait for 2 seconds
+                        setTimeout(function () {
+                            // Reload the page after 2 seconds
+                            location.reload();
+                        }, 2000);                    }
+                }
+                catch (err) {
+                }
+            </text>
+        }
+        else
+        {
+        <text>
+                window.location.href="/Account/Login"
+        </text>
+        }});
     </script>

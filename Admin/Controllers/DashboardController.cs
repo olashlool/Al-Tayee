@@ -13,6 +13,7 @@ namespace Admin.Controllers
         private IOrder _order;
         private IBrands _brand;
         private IContactUs _contactUs;
+
         public DashboardController(IProducts products, IOrder order, IBrands brands, IContactUs contactUs)
         {
             _products = products;
@@ -31,11 +32,11 @@ namespace Admin.Controllers
             var brands = await _brand.GetBrands();
             var products = await _products.GetProducts();
             var ordersCompleted = _order.GetOrders().Result.Where(x => x.OrderStatus == "Completed").ToList();
-            var ordersRejected = _order.GetOrders().Result.Where(x => x.OrderStatus == "Rejected").ToList();
+            var ordersPending = _order.GetOrders().Result.Where(x => x.OrderStatus == "Pending").ToList();
 
             ViewBag.CountOfBrands = brands.Count();
             ViewBag.CountOfOrdersCompleted = ordersCompleted.Count();
-            ViewBag.CountOfOrdersRejected = ordersRejected.Count();
+            ViewBag.CountOfOrdersPending = ordersPending.Count();
             ViewBag.CountOfProduct = products.Count();
 
             return View(homeAdminVM);

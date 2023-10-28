@@ -1,4 +1,5 @@
 ﻿﻿@using Microsoft.AspNetCore.Mvc.Localization
+﻿@using Microsoft.AspNetCore.Mvc.Localization
 @using System.Text;
 @inject IViewLocalizer Localizer
 
@@ -16,29 +17,31 @@
                             <div class="col-lg-4">
                                 <div class="ec-vendor-img-upload">
                                     <div class="ec-vendor-main-img">
-                                        <div class="avatar-upload">
+@*                                        <div class="avatar-upload">
                                             <div class="avatar-edit">
-                                                <input type="file" id="imageUploadAdd" class="ec-image-upload" accept=".png, .jpg, .jpeg">
+                                                @*                                                <input type="file" id="imageUploadAdd" class="ec-image-upload" accept=".png, .jpg, .jpeg">
+                                                
+                                                <input type="file" class="imageUpload imageInput" @*class="ec-image-upload" accept=".png, .jpg, .jpeg">
                                                 <label for="imageUpload"><img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg newimageUpload" alt="edit"></label>
                                             </div>
                                             <div class="avatar-preview ec-preview">
-                                                <div class="imagePreview ec-div-preview">
+                                                <div class="imagePreview ec-div-preview imageContainer">
                                                     <img class="ec-image-preview" src="/admin/assets/img/products/vender-upload-preview.png" alt="edit">
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>*@
                                         <div class="thumb-upload-set colo-md-12">
                                             <div class="thumb-upload">
                                                 <div class="thumb-edit">
-                                                    <input type="file" id="thumbUpload01" class="ec-image-upload" accept=".png, .jpg, .jpeg">
+                                                    <input type="file" id="thumbUpload01" class="ec-image-upload imageInput" accept=".png, .jpg, .jpeg">
                                                     <label for="imageUpload"><img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg" alt="edit"></label>
                                                 </div>
                                                 <div class="deleted-image-upload" style="left: 5px;">
-                                                <input type="button" class="ec-image-upload">
-                                                <label for="imageUpload" style="width: 20px;height: 20px;"><img src="https://flyclipart.com/thumb2/delete-icon-327000.png" class="svg_img header_svg" alt="edit"></label>
+                                                    <input type="button" class="ec-image-upload">
+                                                    <label for="imageUpload" style="width: 20px;height: 20px;"><img src="https://flyclipart.com/thumb2/delete-icon-327000.png" class="svg_img header_svg" alt="edit"></label>
                                                 </div>
                                                 <div class="thumb-preview ec-preview">
-                                                    <div class="image-thumb-preview">
+                                                    <div class="image-thumb-preview imageContainer">
                                                         <img class="image-thumb-preview ec-image-preview" src="/admin/assets/img/products/vender-upload-thumb-preview.png" alt="edit">
                                                     </div>
                                                 </div>
@@ -59,8 +62,7 @@
                                         <div class="col-md-6">
                                             <label class="form-label">@Localizer["SelectBrand"]</label>
                                             <span class="spnreq" id="ddlAllBrandsreq" style="color : red ; display:none">@Localizer["PleaseSelectBrand"]</span>
-                                            <select name="categories" id="ddlAllBrands" class="form-select">
-                                            </select>
+                                            <select name="categories" id="ddlAllBrands" class="form-select"></select>
                                         </div>
                                         <div class="col-md-12">
                                             <label class="form-label">@Localizer["ProductFeatured"]</label>
@@ -107,29 +109,200 @@
         </div>
     </div>
     <!-- End Content -->
-
-    <input type="file" id="image-input">
-<img id="preview-image" src="#" alt="Preview">
-
+    @*    <input type="file" id="imageInput">
+    <div id="imageContainer"></div>
+    *@
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="~/lib/jquery/dist/jquery.min.map"></script>
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <script>
-    $('#image-input').change(function () {
+    var imagesToUpload = []
+
+    function AddProduct() {
         debugger
-        var input = this;
+        var ProductEnName = $("#productNameEntxt").val();
+        var ProductdescEntxt = $("#descEntxt").val();
+        var Productsizetxt = $("#sizetxt").val();
+        var ProductPricetxt = $("#Pricetxt").val();
+        var ProductBaseImgFile = $("#BaseImgFile").val();
+        var ProductaltImgFile = $("#altImgFile").val();
+        var IsFeaturedCH = $('#selecrdFeatured').val();
 
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
+        //var IsFeaturedCH = IsFeatuer;
+        var Brand = $("#ddlAllBrands").val();
+        //$('.typeValue').each(function () {
+        //    // Retrieve the selected color value
+        //    var selectedColor = $(this).val();
 
-            reader.onload = function (e) {
-                // Update the source of the image element
-                $('#preview-image').attr('src', e.target.result);
-            };
-            $('#preview-image').attr('src', input.files[0].name);
-            //reader.readAsDataURL(input.files[0]);
+        //    // Add the selected color to the colorList array
+        //    newTypes.push(selectedColor);
+        //});
+        let valid = true;
+        $('.spnreq').hide();
+        $('.req').each(function () {
+            if ($(this).val() === "" || $(this).val().trim() === "") {
+                $('#' + $(this).attr('id') + 'req').show();
+                valid = false;
+            }
+        })
+        if (imagesToUpload.length < 2) {
+            valid = false;
+            $('#Imagesreq').show();
         }
+        //if (newTypes.length < 1) {
+        //    valid = false;
+        //    $('#typeValuereq').show();
+        //}
+        if (Brand == null || Brand == "") {
+            valid = false;
+            $('#ddlAllBrandsreq').show();
+        }
+
+        if (valid == true) {
+            $.each(imagesToUpload, function (i, item) {
+                form.append("Images", item);
+            });
+            $.ajax({
+                url: "/Products/AddImages",
+                type: "POST",
+                data: form,
+                processData: false,
+                contentType: false,
+                success: function (result) {
+                    var productsVM = {
+                        NameEn: ProductEnName,
+                        DescriptionEn: ProductdescEntxt,
+                        Size: Productsizetxt,
+                        Price: ProductPricetxt,
+                        BaseImage: result[0],
+                        AltImage: result[1],
+                        IsFeatured: IsFeaturedCH,
+                        BrandsId: Brand,
+                        Images: result
+                    };
+                    $.ajax({
+                        url: "/Products/AddProduct",
+                        type: "POST",
+                        dataType: "Json",
+                        contentType: "application/json",
+                        data: JSON.stringify(productsVM),
+                        success: function (data) {
+                            //var Types = {
+                            //    ProductId: data.data.id,
+                            //    Types: newTypes
+                            //}
+                            //$.ajax({
+                            //    url: "/Types/AddTypes",
+                            //    type: "POST",
+                            //    dataType: "Json",
+                            //    contentType: "application/json",
+                            //    data: JSON.stringify(Types),
+                            //    success: function (data) {
+
+                            //        //swal("Success", data.Message, "success");
+                            //        $("#AddProduct").slideUp();
+                            //        $("#EditProduct").slideUp();
+                            //        imagesToUpload = [];
+                            //        GetAllProducts();
+                            //    },
+                            //    error: function (err) {
+                            //        swal('Oops...', 'Something went wrong!', 'error');
+                            //    }
+                            //});
+                            $("#productNameEntxt").val(null);
+                            $("#descEntxt").val(null);
+                            $("#Pricetxt").val(null);
+                            $("#sizetxt").val(null);
+                            $("#BaseImgFile").val(null);
+                            $("#altImgFile").val(null);
+                            //$('.typeValue').each(function () {
+                            //    $(this).val(null);
+                            //});
+
+                            imagesToUpload = [];
+                            $("#AddProduct").slideUp();
+                            location.reload()
+                        },
+                        error: function (err) {
+                            swal('Oops...', 'Something went wrong!', 'error');
+                        }
+                    })
+                },
+                error: function (xhr, status, error) {
+                    // Handle any errors that occur during the AJAX request
+                }
+            });
+        }
+    }
+    function GetAllBrands() {
+        $.ajax({
+            url: "/Brands/GetAllBrands",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                debugger
+                var $dropdown = $("#ddlAllBrands");
+                $dropdown.append($("<option selected/>").val("").text("Select Brand"));
+                $.each(data, function (i, item) {
+                    $dropdown.append($("<option />").val(item.id).text(item.nameEn));
+                });
+                var dropdownBrands = $("#dropdownBrands");
+                dropdownBrands.append($("<option selected/>").val("").text("Select Brand"));
+                $.each(data, function (i, item) {
+                    dropdownBrands.append($("<option />").val(item.id).text(item.nameEn));
+                });
+                $dropdown.val(null);
+                dropdownBrands.val(null);
+            },
+            error: function (response) {
+                swal('Oops...', 'Something went wrong!', 'error');;
+            }
+        });
+    }
+
+
+
+
+
+
+
+
+    $(document).ready(function () {
+        // Listen for changes in the file input
+        $('#imageInput').on('change', function (e) {
+            var file = e.target.files[0];
+            // Create an object URL for the image file
+            var objectURL = URL.createObjectURL(file);
+            // Create an <img> element and set its source to the object URL
+            var img = $('<img>').attr('src', objectURL);
+            // Append the image to the imageContainer div
+            $('#imageContainer').empty().append(img);
+            var updatedSrc = $('#imageContainer img').attr('src');
+            updatedSrc = updatedSrc.substr(updatedSrc.lastIndexOf('/') + 1);
+            imagesToUpload.push(updatedSrc);
+            $('#imageInput').val(null);
+
+        });
     });
+    //$(document).on('change', ".imageUpload", function () {
+        
+    //});
+    //$('#image-input').change(function () {
+    //    debugger
+    //    var input = this;
+
+    //    if (input.files && input.files[0]) {
+    //        var reader = new FileReader();
+
+    //        reader.onload = function (e) {
+    //            // Update the source of the image element
+    //            $('#preview-image').attr('src', e.target.result);
+    //        };
+    //        $('#preview-image').attr('src', input.files[0].name);
+    //        //reader.readAsDataURL(input.files[0]);
+    //    }
+    //});
     $(function () {
         $('#addImage').click(function () {
             var newDiv = $('<div class="thumb-upload"><div class="thumb-edit"><input id="thumbUpload01" type="file" class="imageUpload ec-image-upload rec" accept=".png, .jpg, .jpeg"><label for="imageUpload"><img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg" alt="edit"></label></div><div class="thumb-preview ec-preview"><div class="image-thumb-preview"><img class="image-thumb-preview ec-image-preview" src="/admin/assets/img/products/vender-upload-thumb-preview.png" alt="edit"></div></div></div>');

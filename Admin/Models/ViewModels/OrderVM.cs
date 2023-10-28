@@ -3,6 +3,6 @@
     public class OrderVM
     {
         public IEnumerable<Order> Orders { get; set; }
-        public IEnumerable<OrderItems> OrderItems { get; set; }
+        public List<OrderItems> OrderItems { get; set; } = new List<OrderItems>(); // Initialize as an empty list
     }
 }

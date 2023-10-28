@@ -5,7 +5,10 @@
         <ul class="row px-3 text-center">
             @foreach (var item in Model)
             {
-                <li class="d-block col-4 mb-2 nav-item dropdown"><a class="d-block px-0 nav-link" href=#> <span class="position-relative d-block w-100 py-10 pl-0 pr-1 text-center text-uppercase nav-link--label"> <span>@item.NameEn</span> </span> </a></li> 
+                string culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+                var name = culture.StartsWith("en") ? item.NameEn : item.NameAr;
+
+                <li class="d-block col-4 mb-2 nav-item dropdown"><a class="d-block px-0 nav-link" href=#> <span class="position-relative d-block w-100 py-10 pl-0 pr-1 text-center text-uppercase nav-link--label"> <span>@name</span> </span> </a></li> 
             }
         </ul>
         <div class="row px-3">

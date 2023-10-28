@@ -23,14 +23,12 @@ namespace Admin.Models
         public string Address2 { get; set; }
 
         [Required]
-        public string City { get; set; }
-
-        [Required]
         public string State { get; set; }
 
         [Required]
         [DataType(DataType.PostalCode)]
         [Compare("Zip", ErrorMessage = "The is an invalid zip code")]
         public string Zip { get; set; }
+        public string PaymentStstus { get; set; }
     }
 }
