@@ -3608,9 +3608,9 @@ body.sb-opened,html.sb-opened{
     position:relative;
     overflow:hidden
 }
-.cat-grid--item-1{
+/*.cat-grid--item-1{
     margin-bottom:30px
-}
+}*/
 .cat-grid--item-link{
     display:block;
     position:relative;

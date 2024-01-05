@@ -2338,19 +2338,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LP-OlaAlshloul\\.nuget\\packages\\": {}
+    "C:\\Users\\PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\Admin.csproj",
+      "projectUniqueName": "C:\\Users\\PC\\Desktop\\Al-Tayee\\Admin\\Admin.csproj",
       "projectName": "Admin",
-      "projectPath": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\Admin.csproj",
-      "packagesPath": "C:\\Users\\LP-OlaAlshloul\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LP-OlaAlshloul\\Desktop\\Al_Tayee_fdn\\Admin\\obj\\",
+      "projectPath": "C:\\Users\\PC\\Desktop\\Al-Tayee\\Admin\\Admin.csproj",
+      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\PC\\Desktop\\Al-Tayee\\Admin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LP-OlaAlshloul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2428,7 +2428,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

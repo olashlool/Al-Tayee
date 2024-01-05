@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 using System;
+using Admin.Models.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -64,8 +65,12 @@ builder.Services.AddTransient<IAddresses, AddressesServices>();
 builder.Services.AddTransient<ICartRepository, CartRepository>();
 builder.Services.AddTransient<IWishlistRepository, WishlistRepository>();
 builder.Services.AddTransient<IContactUs, ContactUsServices>();
+builder.Services.AddTransient<IGridImage, GridImageServices>();
+builder.Services.AddTransient<IBackgroundSection, BackgroundSectionServices>();
 builder.Services.AddTransient<IOrder, OrderServices>();
 builder.Services.AddScoped<ShoppingCart>();
+builder.Services.AddTransient<SmallCartViewComponent>();
+
 
 
 var app = builder.Build();

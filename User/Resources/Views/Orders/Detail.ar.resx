@@ -135,6 +135,9 @@
   <data name="FaxNumber" xml:space="preserve">
     <value>الفاكس</value>
   </data>
+  <data name="Image" xml:space="preserve">
+    <value>الصورة</value>
+  </data>
   <data name="JOD" xml:space="preserve">
     <value>د.أ</value>
   </data>
@@ -193,7 +196,10 @@
     <value>الضريبة</value>
   </data>
   <data name="TaxInfo" xml:space="preserve">
-    <value>*الأسعار تشمل ضريبة المبيعات</value>
+    <value>&lt;ol&gt;
+&lt;li&gt;*الأسعار تشمل ضريبة المبيعات&lt;/li&gt;
+&lt;li&gt;*غير شامل التوصيل&lt;/li&gt;
+ &lt;/ol&gt;</value>
   </data>
   <data name="Total" xml:space="preserve">
     <value>الإجمالي</value>

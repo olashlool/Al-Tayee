@@ -154,7 +154,10 @@
     <value>Tax</value>
   </data>
   <data name="TaxInfo" xml:space="preserve">
-    <value>*Prices include sales tax</value>
+    <value>&lt;ol&gt;
+&lt;li&gt;*Prices include sales tax&lt;/li&gt;
+&lt;li&gt;*Delivery Not Included&lt;/li&gt;
+ &lt;/ol&gt;</value>
   </data>
   <data name="TermsOfService" xml:space="preserve">
     <value>Terms of service</value>

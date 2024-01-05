@@ -1,0 +1,312 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization;
+@model List<Admin.Models.GridImage>
+@inject IViewLocalizer Localizer
+
+<div class="ec-content-wrapper" id="AddProduct">
+    <div class="content">
+        <div class="row">
+            <div class="col-12">
+                <div class="card card-default">
+                    <div class="card-header card-header-border-bottom">
+                        <h2>@Localizer["EditGridImages"]</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row ec-vendor-uploads" style="row-gap: 25px;">
+                            @foreach (var item in Model)
+                            {
+                                <div class="col-md-4 col-lg-3">
+                                    <div class="ec-vendor-img-upload">
+                                        <div class="ec-vendor-main-img">
+                                            <div class="avatar-upload thumb-upload">
+                                                <div class="avatar-edit">
+                                                    <input type="file" class="ec-image-upload rec imageInput" accept=".png, .jpg, .jpeg" id="editIcon">
+                                                    <label for="imageUpload"><img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg" alt="edit"></label>
+                                                </div>
+                                                <div class="avatar-preview ec-preview thumb-preview">
+                                                    <div class="imagePreview ec-div-preview imageContainer">
+@*                                                         <img class="ec-image-preview" src="/admin/assets/img/products/vender-upload-preview.png" alt="edit">*@
+                                                        <img class="ec-image-preview" src="@item.ImageUrl" alt="edit">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+@*                             <div class="col-md-4 col-lg-3">
+                                <div class="ec-vendor-img-upload">
+                                    <div class="ec-vendor-main-img">
+                                        <div class="avatar-upload thumb-upload">
+                                            <div class="avatar-edit">
+                                                <input type="file" class="ec-image-upload rec imageInput" accept=".png, .jpg, .jpeg" id="editIcon">
+                                                <label for="imageUpload"><img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg" alt="edit"></label>
+                                            </div>
+                                            <div class="avatar-preview ec-preview thumb-preview">
+                                                <div class="imagePreview ec-div-preview imageContainer">
+                                                    <img class="ec-image-preview" src="/admin/assets/img/products/vender-upload-preview.png" alt="edit">
+                                                </div>
+                                            </div>
+                                        </div>
+@*                                         <div class="thumb-upload-set colo-md-12">
+                                            <div class="thumb-upload">
+                                                <div class="thumb-edit">
+                                                    <input type="file" class="imageUpload ec-image-upload rec imageInput" accept=".png, .jpg, .jpeg">
+                                                    <label for="imageUpload"><img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg" alt="edit"></label>
+                                                </div>
+                                                <div class="deleted-image-upload" style="left: 5px;">
+                                                    <input type="button" class="ec-image-upload">
+                                                    <label for="imageUpload"><i class="mdi mdi mdi-delete-outline header_svg newimageUpload" style="font-size:20px;"></i></label>
+                                                </div>
+                                                <div class="thumb-preview ec-preview">
+                                                    <div class="image-thumb-preview imageContainer">
+                                                        <img class="image-thumb-preview ec-image-preview" src="/admin/assets/img/products/vender-upload-thumb-preview.png" alt="edit">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" id="addImage"> <i class="mdi mdi-image-plus"></i> </button>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-3">
+                                <div class="ec-vendor-img-upload">
+                                    <div class="ec-vendor-main-img">
+                                        <div class="avatar-upload thumb-upload">
+                                            <div class="avatar-edit">
+                                                <input type="file" class="ec-image-upload rec imageInput" accept=".png, .jpg, .jpeg" id="editIcon">
+                                                <label for="imageUpload"><img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg" alt="edit"></label>
+                                            </div>
+                                            <div class="avatar-preview ec-preview thumb-preview">
+                                                <div class="imagePreview ec-div-preview imageContainer">
+                                                    <img class="ec-image-preview" src="/admin/assets/img/products/vender-upload-preview.png" alt="edit">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-3">
+                                <div class="ec-vendor-img-upload">
+                                    <div class="ec-vendor-main-img">
+                                        <div class="avatar-upload thumb-upload">
+                                            <div class="avatar-edit">
+                                                <input type="file" class="ec-image-upload rec imageInput" accept=".png, .jpg, .jpeg" id="editIcon">
+                                                <label for="imageUpload"><img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg" alt="edit"></label>
+                                            </div>
+                                            <div class="avatar-preview ec-preview thumb-preview">
+                                                <div class="imagePreview ec-div-preview imageContainer">
+                                                    <img class="ec-image-preview" src="/admin/assets/img/products/vender-upload-preview.png" alt="edit">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-3">
+                                <div class="ec-vendor-img-upload">
+                                    <div class="ec-vendor-main-img">
+                                        <div class="avatar-upload thumb-upload">
+                                            <div class="avatar-edit">
+                                                <input type="file" class="ec-image-upload rec imageInput" accept=".png, .jpg, .jpeg" id="editIcon">
+                                                <label for="imageUpload"><img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg" alt="edit"></label>
+                                            </div>
+                                            <div class="avatar-preview ec-preview thumb-preview">
+                                                <div class="imagePreview ec-div-preview imageContainer">
+                                                    <img class="ec-image-preview" src="/admin/assets/img/products/vender-upload-preview.png" alt="edit">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-3">
+                                <div class="ec-vendor-img-upload">
+                                    <div class="ec-vendor-main-img">
+                                        <div class="avatar-upload thumb-upload">
+                                            <div class="avatar-edit">
+                                                <input type="file" class="ec-image-upload rec imageInput" accept=".png, .jpg, .jpeg" id="editIcon">
+                                                <label for="imageUpload"><img src="/admin/assets/img/icons/edit.svg" class="svg_img header_svg" alt="edit"></label>
+                                            </div>
+                                            <div class="avatar-preview ec-preview thumb-preview">
+                                                <div class="imagePreview ec-div-preview imageContainer">
+                                                    <img class="ec-image-preview" src="/admin/assets/img/products/vender-upload-preview.png" alt="edit">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> *@
+                            <div class="d-flex justify-content-end">
+                                <div class="ec-vendor-upload-detail">
+                                    <form class="row g-3">
+                                        <div class="col-md-12">
+                                            <button type="button" id="SaveProductbtn" class="btn btn-primary">@Localizer["Submit"]</button>
+                                            <button type="button" id="Cancelbtn" class="btn btn-danger">@Localizer["Cancel"]</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Content -->
+</div>
+
+<div class="ec-content-wrapper">
+    <div class="content">
+        <div class="breadcrumb-wrapper d-flex align-items-center justify-content-between">
+            <div>
+                <h1>@Localizer["GridImages"]</h1>
+                <p class="breadcrumbs">
+                    <span><a href="/">@Localizer["Home"]</a></span>
+                    <span><i class="mdi mdi-chevron-right"></i></span>@Localizer["GridImages"]
+                </p>
+            </div>
+            <div>
+                <a class="btn btn-primary AddProduct"> @Localizer["EditGridImages"]</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card card-default">
+                    <div class="card-header card-header-border-bottom d-flex justify-content-between">
+                        <div class="card-bar">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div onclick="" class="row" id="ProductCard">
+                            @foreach (var item in Model)
+                            {
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <div class="card-wrapper">
+                                        <div class="card-container">
+                                            <div class="card-top"><img class="card-image" src="@item.ImageUrl" alt=""></div>
+@*                                             <hr>
+                                            <div class="card-action">
+                                                <div class="card-edit EditProduct" data_id="@item.Id"><i class="mdi mdi-circle-edit-outline"></i></div>
+                                                <div class="card-preview Details" data_id="@item.Id"><i class="mdi mdi-eye-outline"></i></div>
+                                                <div class="card-remove DeleteProduct" data_id="@item.Id"><i class="mdi mdi mdi-delete-outline"></i></div>
+                                            </div> *@
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.map"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<script>
+    var imagesToUpload = [];
+    var imagesToUploadFiles = {};
+    var form = new FormData();
+    var Image;
+    var oldImage = @Html.Raw(Json.Serialize(Model));
+    $(document).ready(function () {
+        $(document).on("click", ".AddProduct", function () {
+            $("#AddProduct").slideDown(2000);
+        });
+        $(document).on("click", "#Cancelbtn", function () {
+            // imagesToUpload = [];
+            $("#AddProduct").slideUp(1000);
+        });
+        $(document).on('change', '.imageInput', function (e) {
+            debugger
+            var file = e.target.files[0];
+
+            // Find the closest imageContainer div relative to the current input
+            var imageContainer = $(this).closest('.thumb-upload').find('.imageContainer');
+
+            // Get the current source (src) of the ec-image-preview element
+            var currentSrc = imageContainer.find('.ec-image-preview').attr('src');
+
+            // Create an object URL for the image file
+            var objectURL = URL.createObjectURL(file);
+
+            // Create an <img> element and set its source to the object URL
+            var img = $('<img>').attr('src', objectURL);
+
+            // Empty the selected imageContainer div and append the image
+            imageContainer.empty().append(img);
+
+            var updatedSrc = img.attr('src');
+            updatedSrc = updatedSrc.substr(updatedSrc.lastIndexOf('/') + 1);
+
+            // Now you have both the current source and the updated source
+            for (var i = 0; i < oldImage.length; i++) {
+                if (oldImage[i].imageUrl.includes(currentSrc)) {
+                    // Remove the element at index i from the array
+                    oldImage.splice(i, 1);
+                    // Adjust the index after removal
+                    i--;
+                }
+            }
+            //imagesToUpload.push(updatedSrc);
+            imagesToUpload.push(file, updatedSrc);
+            $(this).val(null);
+        });
+
+        // $(document).on('change', '.imageInput', function (e) {
+        //     debugger
+        //     var file = e.target.files[0];
+        //     // Create an object URL for the image file
+        //     var objectURL = URL.createObjectURL(file);
+
+        //     // Find the closest imageContainer div relative to the current input
+        //     var imageContainer = $(this).closest('.thumb-upload').find('.imageContainer');
+
+        //     // Create an <img> element and set its source to the object URL
+        //     var img = $('<img>').attr('src', objectURL);
+        //     // Empty the selected imageContainer div and append the image
+        //     imageContainer.empty().append(img);
+
+        //     var updatedSrc = img.attr('src');
+        //     updatedSrc = updatedSrc.substr(updatedSrc.lastIndexOf('/') + 1);
+        //     //imagesToUpload.push(updatedSrc);
+        //     imagesToUpload.push(file, updatedSrc);
+        //     $(this).val(null);
+        // });
+        function AddProduct() {
+            debugger
+            let valid = true;
+
+            if (valid == true) {
+                $.each(imagesToUpload, function (i, item) {
+                    if (typeof item === 'string') {
+                        form.append("NameOfImages", item);
+                    } else if (item instanceof File) {
+                        form.append("Images", item);
+                    }
+                });
+                form.append("OldImages", JSON.stringify(oldImage));
+
+                $.ajax({
+                    url: "/GridImage/AddGridImage",
+                    type: "POST",
+                    data: form,
+                    processData: false,
+                    contentType: false,
+                    success: function (result) {
+                        location.reload();
+                    },
+                    error: function (xhr, status, error) {
+                        // Handle any errors that occur during the AJAX request
+                    }
+                });
+            }
+        }
+        $(document).on("click", "#SaveProductbtn", function () {
+            AddProduct();
+        });
+    });
+
+</script>

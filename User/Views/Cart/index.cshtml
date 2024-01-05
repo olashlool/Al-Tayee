@@ -29,15 +29,18 @@
                                 <div class="sp-cart--list">
                                     @foreach (var item in Model.CartDetails)
                                     {
+                                    string culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+                                    var name = culture.StartsWith("en") ? item.Products.NameEn : item.Products.NameAr;
+
                                         <div class="mb-4 mb-lg-0 sp-cart--list-item">
                                             <div class="row align-items-center">
                                                 <div class="col-12 col-md-12 col-lg-5 order-2 order-md-2 mb-3 mb-lg-0 border-bottom border-lg-0">
                                                     <div class="d-inline-flex align-items-center w-100 text-left">
                                                         <a class="pr-3" href="/Products/Detail?Id=@item.Products.Id"> 
-                                                            <img class="sp-cart--img" alt="Picture of @item.Products.NameEn" src="/images/@item.Image" style="max-width:100px" title="Show details for @item.Products.NameEn"> 
+                                                            <img class="sp-cart--img" alt="Picture of @name" src="/images/@item.Image" style="max-width:100px" title="Show details for @name"> 
                                                         </a>
                                                         <div class="d-inline-flex flex-column justify-content-center py-2 py-lg-0 sp-cart--product-info">
-                                                            <h5 class="m-0 mb-2 f-s-14"><a href="/Products/Detail?Id=@item.ProductId" class="product-name clr-dark">@item.Products.NameEn</a></h5>
+                                                            <h5 class="m-0 mb-2 f-s-14"><a href="/Products/Detail?Id=@item.ProductId" class="product-name clr-dark">@name</a></h5>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -48,14 +51,14 @@
                                                 <div class="col-12 col-md-4 col-lg-2 order-3 order-md-4 mb-3 mb-md-0 pb-3 pb-md-0 border-bottom border-md-0">
                                                     <div class="input-group mx-auto mx-lg-0 justify-content-center justify-content-lg-between align-items-center p-qty--counter">
                                                         <span class="input-group-btn"> 
-                                                            <button class="btn btn-minus btn-disabled" type="button" onclick="location.href='@Url.Action("RemoveItem", "Cart", new { productId = item.ProductId })'"> 
+                                                            <button class="btn btn-minus btn-disabled" type="button" onclick="location.href='@Url.Action("RemoveItem", "Cart", new { productId = item.ProductId, img = item.Image })'"> 
                                                                 <i class="fas fa-minus"></i> 
                                                             </button>
                                                         </span> 
                                                         <input type="text" value="@item.Quantity" class="qty-input"> 
-                                                        <span class="input-group-btn"> 
-                                                            <button class="btn btn-plus" type="button" onclick="location.href='@Url.Action("AddItem", "Cart", new { productId = item.ProductId })'"> 
-                                                                <i class="fas fa-plus"></i> 
+                                                        <span class="input-group-btn">
+                                                        <button class="btn btn-plus" type="button" onclick="location.href='@Url.Action("AddItem", "Cart", new { productId = item.ProductId , img = item.Image})'">
+                                                            <i class="fas fa-plus"></i> 
                                                             </button> 
                                                         </span>
                                                     </div>

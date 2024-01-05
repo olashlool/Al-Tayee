@@ -154,7 +154,10 @@
     <value>الضريبة</value>
   </data>
   <data name="TaxInfo" xml:space="preserve">
-    <value>*الأسعار تشمل ضريبة المبيعات</value>
+    <value>&lt;ol&gt;
+&lt;li&gt;*الأسعار تشمل ضريبة المبيعات&lt;/li&gt;
+&lt;li&gt;*غير شامل التوصيل&lt;/li&gt;
+ &lt;/ol&gt;</value>
   </data>
   <data name="TermsOfService" xml:space="preserve">
     <value>الشروط والأحكام</value>

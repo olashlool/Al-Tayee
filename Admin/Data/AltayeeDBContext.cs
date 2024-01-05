@@ -24,11 +24,24 @@ namespace Admin.Data
         public DbSet<OrderItems> OrderItems { get; set; }
         public DbSet<OrderStatus> orderStatuses { get; set; }
         public DbSet<ContactUs> ContactUs { get; set; }
+        public DbSet<GridImage> GridImage { get; set; }
+        public DbSet<BackgroundSection> BackgroundSection { get; set; }
+
         //public DbSet<Relateds> Relateds { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<GridImage>().HasData(
+              new GridImage { Id = 1, ImageUrl = "/images/grid/des-img-1.png" },
+              new GridImage { Id = 2, ImageUrl = "/images/grid/des-img-2.png" },
+              new GridImage { Id = 3, ImageUrl = "/images/grid/des-img-3.png" },
+              new GridImage { Id = 4, ImageUrl = "/images/grid/des-img-4.png" },
+              new GridImage { Id = 5, ImageUrl = "/images/grid/des-img-5.png" }
+            );
+            modelBuilder.Entity<BackgroundSection>().HasData(
+             new BackgroundSection { Id = 1, ImageUrl = "/images/Slider-4.png", TitleEn= "NATURAL BEAUTY", TitleAr = "جمال طبيعي", DescriptionEn = "NATURALLY WE", DescriptionAr = "بالطبع نحن" }
+            );
             base.OnModelCreating(modelBuilder);
             // any unique string id
             const string ADMIN_ID = "a18be9c0";

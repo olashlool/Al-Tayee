@@ -135,6 +135,9 @@
   <data name="FaxNumber" xml:space="preserve">
     <value>Fax number</value>
   </data>
+  <data name="Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
   <data name="JOD" xml:space="preserve">
     <value>JOD</value>
   </data>
@@ -193,7 +196,10 @@
     <value>Tax</value>
   </data>
   <data name="TaxInfo" xml:space="preserve">
-    <value>*Prices include sales tax</value>
+    <value>&lt;ol&gt;
+&lt;li&gt;*Prices include sales tax&lt;/li&gt;
+&lt;li&gt;*Delivery Not Included&lt;/li&gt;
+ &lt;/ol&gt;</value>
   </data>
   <data name="Total" xml:space="preserve">
     <value>Total</value>

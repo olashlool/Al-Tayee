@@ -102,33 +102,33 @@
                         <div class="row item-grid mb-5 cat-grid cat-grid-4">
                             <div class="col-12 col-md-6">
                                 <div class="cat-grid--item cat-grid--item-0">
-                                    <p class="cat-grid--item-link"> <span class="cat-grid--item-inner lazyload" data-src="/images/Grid/des-img-2.png"></span> </p>
+                                    <p class="cat-grid--item-link"> <span class="cat-grid--item-inner lazyload" data-src="@Model.GridImages[0].ImageUrl"></span> </p>
                                 </div>
                             </div>
                             <div class="col-6 col-md-3 col-lg-3">
-                                <div class="row">
+                                <div class="row h-100">
                                     <div class="col-12">
                                         <div class="cat-grid--item cat-grid--item-1">
-                                            <p class="cat-grid--item-link"> <span class="cat-grid--item-inner lazyload" data-src="/images/Grid/des-img-3.png"></span> </p>
+                                            <p class="cat-grid--item-link"> <span class="cat-grid--item-inner lazyload" data-src="@Model.GridImages[1].ImageUrl"></span> </p>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="cat-grid--item cat-grid--item-2">
-                                            <p class="h-100 cat-grid--item-link"> <span class="cat-grid--item-inner lazyload" data-src="/images/Grid/des-img-1.png"></span> </p>
+                                            <p class="h-100 cat-grid--item-link m-0"> <span class="cat-grid--item-inner lazyload" data-src="@Model.GridImages[2].ImageUrl"></span> </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6 col-md-3 col-lg-3">
-                                <div class="row">
+                                <div class="row h-100">
                                     <div class="col-12">
                                         <div class="cat-grid--item cat-grid--item-1">
-                                            <p class="cat-grid--item-link"> <span class="cat-grid--item-inner lazyload" data-src="/images/Grid/des-img-4.png"></span> </p>
+                                            <p class="cat-grid--item-link"> <span class="cat-grid--item-inner lazyload" data-src="@Model.GridImages[3].ImageUrl"></span> </p>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="cat-grid--item cat-grid--item-2">
-                                            <p class="h-100 cat-grid--item-link"> <span class="cat-grid--item-inner lazyload" data-src="/images/Grid/des-img-5.png"></span> </p>
+                                            <p class="h-100 cat-grid--item-link m-0"> <span class="cat-grid--item-inner lazyload" data-src="@Model.GridImages[4].ImageUrl"></span> </p>
                                         </div>
                                     </div>
                                 </div>
@@ -247,10 +247,14 @@
                                                     </button>
                                                 </div>
                                                 <div class="position-absolute d-flex flex-column text-center p-card--hvr-btn product-item" data-productid="56" data-quick-view="true">
-                                                    <button class="d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id">
+                                                    @* <button class="d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id">
                                                         <i class="btn-icon lnr lnr-cart"></i>
                                                         <span class="btn-txt">@Localizer["AddToCart"]</span>
-                                                    </button>
+                                                    </button> *@
+                                                    <a class="d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-atc" href="/Products/Detail?Id=@item.Id">
+                                                        <i class="btn-icon lnr lnr-cart"></i>
+                                                        <span class="btn-txt">@Localizer["AddToCart"]</span>
+                                                    </a>
                                                     <button class="d-inline-block d-lg-none position-relative text-center text-capitalize add-btn add-btn-sm add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id" title="@Localizer["AddToCart"]" data-original-title="@Localizer["AddToCart"]">
                                                         <i class="btn-icon lnr lnr-cart"></i>
                                                     </button>
@@ -271,10 +275,14 @@
                                                 <div class="d-flex justify-content-center m-0 attributes">
                                                 </div>
                                                 <div class="d-none p-card--hvr-btn product-item" data-productid="56" data-quick-view="true">
-                                                    <button class="d-none d-md-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id">
+                                                    @* <button class="d-none d-md-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id">
                                                         <i class="btn-icon lnr lnr-cart"></i>
                                                         <span class="btn-txt">@Localizer["AddToCart"]</span>
-                                                    </button>
+                                                    </button> *@
+                                                    <a class="d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-atc" href="/Products/Detail?Id=@item.Id">
+                                                        <i class="btn-icon lnr lnr-cart"></i>
+                                                        <span class="btn-txt">@Localizer["AddToCart"]</span>
+                                                    </a>
                                                     <button type="button" class="button-2 quick-view-btn d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-qv" data-productid="56" title="@Localizer["QuickView"]">
                                                         <i class="btn-icon lnr lnr-eye"></i>
                                                         <span class="btn-txt">@Localizer["QuickView"]</span>
@@ -284,7 +292,6 @@
                                         </div>
                                     </div>
                                 }
-
                             }
                         </div>
                     </div>

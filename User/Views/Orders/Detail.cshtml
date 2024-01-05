@@ -74,8 +74,8 @@
                                 @foreach (var orderItem in Model.OrderItems)
                                 {
                                     <tr>
-                                        <td class="product"><em><a href="/Products/Detail?=@orderItem.Product.Id"><img src="/images/@orderItem.ImageProduct" style="width:100%"/></a></em></td>
-                                        <td class="product"><em><a href="/Products/Detail?=@orderItem.Product.Id">@orderItem.Product.NameEn</a></em></td>
+                                        <td class="product"><em><a href="/Products/Detail?Id=@orderItem.Product.Id"><img src="/images/@orderItem.ImageProduct" style="width:100%"/></a></em></td>
+                                        <td class="product"><em><a href="/Products/Detail?Id=@orderItem.Product.Id">@orderItem.Product.NameEn</a></em></td>
                                         <td class="unit-price"><label class="mb-0 td-title">@Localizer["Price"]:</label> <span class="product-unit-price">@orderItem.Product.Price @Localizer["JOD"]</span></td>
                                         <td class="quantity"><label class="mb-0 td-title">@Localizer["Quantity"]:</label> <span class="product-quantity">@orderItem.Quantity</span></td>
                                         @{

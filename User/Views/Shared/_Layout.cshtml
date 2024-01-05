@@ -111,7 +111,7 @@
                                     </div>
                                     @if (User.Identity.IsAuthenticated)
                                     {
-                                        <div class="border-right pr-2 mr-3 rtl">
+                                        <div class="border-right pr-2 rtl">
                                             <div class=currency-selector>
                                                 <select id="accountInfo">
                                                     <option selected>@Localizer["Hello"], @User.Identity.Name!</option>
@@ -540,7 +540,7 @@
         loadwishlistCount();
         async function loadwishlistCount() {
             try {
-                var response = await fetch(`/WishList/GetTotalItemInCart`);
+                var response = await fetch(`/WishList/GetTotalItemInWishlist`);
                 if (response.status == 200) {
                     var result = await response.json();
                     var wishlistCountEl = document.getElementById("wishlistCount");

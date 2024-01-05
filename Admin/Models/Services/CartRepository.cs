@@ -21,7 +21,7 @@ namespace Admin.Models.Services
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public async Task<int> AddItem(Guid productId)
+        public async Task<int> AddItem(Guid productId, string img)
         {
             string userId = GetUserId();
 
@@ -33,7 +33,7 @@ namespace Admin.Models.Services
 
                 var cart = await GetOrCreateCart(userId);
 
-                var cartItem = cart.CartDetails.FirstOrDefault(a => a.ProductId == productId);
+                var cartItem = cart.CartDetails.FirstOrDefault(a => a.ProductId == productId && a.Image == img);
                 if (cartItem != null)
                 {
                     cartItem.Quantity += 1;
@@ -77,7 +77,9 @@ namespace Admin.Models.Services
 
                 var cart = await GetOrCreateCart(userId);
 
-                var cartItem = cart.CartDetails.FirstOrDefault(a => a.ProductId == productId);
+               // var cartItem = cart.CartDetails.FirstOrDefault(a => a.ProductId == productId);
+                var cartItem = cart.CartDetails.Where(x => x.Image == img).FirstOrDefault();
+
                 if (cartItem != null)
                 {
                     if (cartItem.Image != img)
@@ -127,7 +129,7 @@ namespace Admin.Models.Services
             var cartItemCount = await GetCartItemCount();
             return cartItemCount;
         }
-        public async Task<int> RemoveItem(Guid bookId)
+        public async Task<int> RemoveItem(Guid bookId, string img)
         {
             string userId = GetUserId();
             try
@@ -139,7 +141,9 @@ namespace Admin.Models.Services
                 if (cart == null)
                     throw new Exception("Cart not found");
 
-                var cartItem = cart.CartDetails.FirstOrDefault(a => a.ProductId == bookId);
+                //var cartItem = cart.CartDetails.FirstOrDefault(a => a.ProductId == bookId);
+                var cartItem = cart.CartDetails.Where(a => a.ProductId == bookId && a.Image == img).FirstOrDefault();
+
                 if (cartItem != null)
                 {
                     if (cartItem.Quantity > 1)

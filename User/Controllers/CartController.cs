@@ -14,9 +14,9 @@ namespace User.Controllers
             _cartRepo = cartRepo;
         }
         [Authorize]
-        public async Task<IActionResult> AddItem(Guid productId, int qty = 1, int redirect = 1)
+        public async Task<IActionResult> AddItem(Guid productId, string img, int qty = 1, int redirect = 1)
         {
-            var cartCount = await _cartRepo.AddItem(productId);
+            var cartCount = await _cartRepo.AddItem(productId, img);
             if (redirect == 0)
                 return Ok(cartCount);
             string returnUrl = Request.Headers["Referer"].ToString() ?? "/";
@@ -32,9 +32,9 @@ namespace User.Controllers
             string returnUrl = Request.Headers["Referer"].ToString() ?? "/";
             return Redirect(returnUrl);
         }
-        public async Task<IActionResult> RemoveItem(Guid productId)
+        public async Task<IActionResult> RemoveItem(Guid productId, string img)
         {
-            var cartCount = await _cartRepo.RemoveItem(productId);
+            var cartCount = await _cartRepo.RemoveItem(productId, img);
             string returnUrl = Request.Headers["Referer"].ToString() ?? "/";
             return Redirect(returnUrl);
         }

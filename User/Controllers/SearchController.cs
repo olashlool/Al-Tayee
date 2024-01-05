@@ -21,7 +21,7 @@ namespace User.Controllers
             // Apply the search based on the searchTerm parameter
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                listOfProduct = listOfProduct.Where(p => p.NameEn.Contains(searchTerm)).ToList();
+                listOfProduct = listOfProduct.Where(p => p.NameEn.Contains(searchTerm) || p.NameAr.Contains(searchTerm)).ToList();
             }
             //foreach (var item in listOfProduct)
             //{

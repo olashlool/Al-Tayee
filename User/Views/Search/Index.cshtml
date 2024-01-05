@@ -79,10 +79,14 @@
                                                         </button>
                                                     </div>
                                                     <div class="position-absolute d-flex flex-column text-center p-card--hvr-btn product-item" data-quick-view="true">
-                                                        <button class="d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id"> 
+                                                        @* <button class="d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id"> 
                                                             <i class="btn-icon lnr lnr-cart"></i> 
                                                             <span class="btn-txt">@Localizer["AddtoCart"]</span> 
-                                                        </button> 
+                                                        </button>  *@
+                                                        <a class="d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-atc" href="/Products/Detail?Id=@item.Id">
+                                                            <i class="btn-icon lnr lnr-cart"></i>
+                                                            <span class="btn-txt">@Localizer["AddtoCart"]</span>
+                                                        </a>
                                                         <button class="d-inline-block d-lg-none position-relative text-center text-capitalize add-btn add-btn-sm add-atc AddToCart" rel="nofollow" data-product-Id="@item.Id" title="@Localizer["AddtoCart"]" data-original-title="@Localizer["AddtoCart"]"> 
                                                             <i class="btn-icon lnr lnr-cart"></i> 
                                                         </button>
@@ -100,10 +104,14 @@
                                                     <h4 class="position-relative m-0 clr-dark p-card--title" style="font-size:12px">@Localizer["Size"]: &nbsp;<strong>@item.Size </strong></h4>
                                                     <div class="p-card--prices"><span class="clr-primary f-s-22 p-card--price font-weight-medium actual-price">@item.Price @Localizer["JOD"]</span></div>
                                                     <div class="d-none p-card--hvr-btn product-item" data-quick-view="true">
-                                                        <button class="d-none d-md-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart"data-product-Id="@item.Id" rel="nofollow"> 
+                                                        @* <button class="d-none d-md-inline-block position-relative text-center text-capitalize add-btn add-atc AddToCart"data-product-Id="@item.Id" rel="nofollow"> 
                                                             <i class="btn-icon lnr lnr-cart"></i> 
                                                             <span class="btn-txt">@Localizer["AddtoCart"]</span> 
-                                                        </button>
+                                                        </button> *@
+                                                        <a class="d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-atc" href="/Products/Detail?Id=@item.Id">
+                                                            <i class="btn-icon lnr lnr-cart"></i>
+                                                            <span class="btn-txt">@Localizer["AddtoCart"]</span>
+                                                        </a>
                                                         <button data-toggle="modal" data-target="#glassAnimals_@item.Id" data-Id="@item.Id" id="QuickView" type="button" class="button-2 quick-view-btn d-none d-lg-inline-block position-relative text-center text-capitalize add-btn add-qv" title="@Localizer["QuickView"]">
                                                             <i class="btn-icon lnr lnr-eye"></i>
                                                             <span class="btn-txt">@Localizer["QuickView"]</span>
@@ -144,7 +152,10 @@
       <span class="close" title="Close"></span>
    </div>
 </div>
+@if (Model.Count > 0)
+{
     <partial name="_PopupPartial" model="Model" />
+}
 @section Scripts
     {
     <script>

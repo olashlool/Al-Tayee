@@ -25,13 +25,13 @@
                                 </div>
                                 <div class="my-2 input-group p-qty--counter qty--counter-sm mini-cart--p-qty">
                                     <span class="input-group-btn">
-                                        <button class="btn btn-minus btn-disabled" type="button" onclick="location.href='@Url.Action("RemoveItem", "Cart", new { productId = item.ProductId })'">
+                                        <button class="btn btn-minus btn-disabled" type="button" onclick="location.href='@Url.Action("RemoveItem", "Cart", new { productId = item.ProductId, img = item.Image })'">
                                             <i class="fas fa-minus"></i>
                                         </button>
                                     </span>
                                     <input name="itemquantity1702" id="itemquantity1702" type="text" value="@item.Quantity" class="qty-input">
                                     <span class="input-group-btn">
-                                        <button class="btn btn-plus" type="button" onclick="location.href='@Url.Action("AddItem", "Cart", new { productId = item.ProductId })'">
+                                        <button class="btn btn-plus" type="button" onclick="location.href='@Url.Action("AddItem", "Cart", new { productId = item.ProductId, img = item.Image })'">
                                             <i class="fas fa-plus"></i>
                                         </button>
                                     </span>

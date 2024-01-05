@@ -9,173 +9,181 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = User
 build_property.RootNamespace = User
-build_property.ProjectDir = C:\Users\LP-OlaAlshloul\Desktop\Al_Tayee_fdn\User\
+build_property.ProjectDir = C:\Users\PC\Desktop\Al-Tayee\User\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\LP-OlaAlshloul\Desktop\Al_Tayee_fdn\User
+build_property.MSBuildProjectDirectory = C:\Users\PC\Desktop\Al-Tayee\User
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Pages/Error.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Pages/Language.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/Al-Tayee/User/Pages/Language.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGFuZ3VhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Pages/Privacy.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Pages/_ViewImports.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Pages/_ViewStart.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Account/ChangePassword.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Account/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Account/Login.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Account/ProfileAccount.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Account/ProfileAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlQWNjb3VudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Account/Register.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Addresses/Create.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Addresses/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkcmVzc2VzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Addresses/Edit.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Addresses/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkcmVzc2VzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Addresses/Index.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Addresses/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkcmVzc2VzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Brands/Index.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Brands/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Brands/Products.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Brands/Products.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRzXFByb2R1Y3RzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Cart/index.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Brands/_PartialLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRzXF9QYXJ0aWFsTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Cart/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxpbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Checkout/Completed.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Checkout/Completed.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tvdXRcQ29tcGxldGVkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Checkout/Index.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Checkout/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/ContactUs/Index.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/ContactUs/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Home/AboutUs.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Home/AboutUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Home/ConditionsofUse.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Home/ConditionsofUse.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb25kaXRpb25zb2ZVc2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Home/Contact.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Home/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Home/DeliveryAndReturns.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Home/DeliveryAndReturns.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZWxpdmVyeUFuZFJldHVybnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Home/Index.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Home/PrivacyPolicy.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Home/PrivacyPolicy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5UG9saWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Orders/Detail.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Orders/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Orders/Index.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Orders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Products/Detail.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Products/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Products/FeaturedProduct.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Products/FeaturedProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRmVhdHVyZWRQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Products/Index.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Search/Index.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Search/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Shared/Components/SmallCart/Default.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Shared/Components/SmallCart/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU21hbGxDYXJ0XERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Shared/_Brands.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Shared/_Brands.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9CcmFuZHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Shared/_Layout.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Shared/_LeftSide.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Shared/_LeftSide.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MZWZ0U2lkZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Shared/_LeftSideAccount.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Shared/_LeftSideAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MZWZ0U2lkZUFjY291bnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/Shared/_PopupPartial.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/Shared/_PopupPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qb3B1cFBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/WishList/Index.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/WishList/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2lzaExpc3RcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/_ViewImports.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Views/_ViewStart.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LP-OlaAlshloul/Desktop/Al_Tayee_fdn/User/Pages/Shared/_Layout.cshtml]
+[C:/Users/PC/Desktop/Al-Tayee/User/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-yk241co3f1

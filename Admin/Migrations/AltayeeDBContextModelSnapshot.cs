@@ -113,7 +113,7 @@ namespace Admin.Migrations
                             Id = "a18be9c0",
                             AccessFailedCount = 0,
                             BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "075f6682-6da0-4232-bb69-2e5c8f0fb368",
+                            ConcurrencyStamp = "55a5911b-c0ad-4746-86d3-adb5b9682617",
                             Day = 0,
                             Email = "info@al-tayee.com",
                             EmailConfirmed = false,
@@ -121,7 +121,7 @@ namespace Admin.Migrations
                             Month = 0,
                             NormalizedEmail = "info@al-tayee.com",
                             NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAELJgx5YOmq7pDPJOf7OdFp/2KWvi7SA5iW3mFp2qrvUTh/ox80P1aNEZzytcv6KZMg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEDxJyyqz7Mi3Od9DykY60KgzWldzPpekoW8qQFabqD2pWIR51Ex+0qCqq2z0ijk2+A==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -133,7 +133,7 @@ namespace Admin.Migrations
                             Id = "a50ze710",
                             AccessFailedCount = 0,
                             BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "cdd05c02-153e-4e48-8382-3751eaf8553e",
+                            ConcurrencyStamp = "ec6c13f7-aa37-42e1-a5b3-fb0e32f19ee5",
                             Day = 0,
                             Email = "Administrator@gmail.com",
                             EmailConfirmed = false,
@@ -141,7 +141,7 @@ namespace Admin.Migrations
                             Month = 0,
                             NormalizedEmail = "Administrator@gmail.com",
                             NormalizedUserName = "Administrator",
-                            PasswordHash = "AQAAAAEAACcQAAAAEL21lWbrINmuyc4BvyOjg9VUFuwexfS85xP53a/32yktiqELFTB9d+jkE9MysIiZjQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAELHjogjJ05qLr4ppIH8CHLiQ8JqdsxA/safKqbDtWkWUisBdIjnAsZyGVtch7hezZQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -199,6 +199,50 @@ namespace Admin.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Addresses");
+                });
+
+            modelBuilder.Entity("Admin.Models.BackgroundSection", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("DescriptionAr")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DescriptionEn")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TitleAr")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TitleEn")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BackgroundSection");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DescriptionAr = "بالطبع نحن",
+                            DescriptionEn = "NATURALLY WE",
+                            ImageUrl = "/images/Slider-4.png",
+                            TitleAr = "جمال طبيعي",
+                            TitleEn = "NATURAL BEAUTY"
+                        });
                 });
 
             modelBuilder.Entity("Admin.Models.Brands", b =>
@@ -281,6 +325,50 @@ namespace Admin.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ContactUs");
+                });
+
+            modelBuilder.Entity("Admin.Models.GridImage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("GridImage");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ImageUrl = "/images/grid/des-img-1.png"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ImageUrl = "/images/grid/des-img-2.png"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ImageUrl = "/images/grid/des-img-3.png"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            ImageUrl = "/images/grid/des-img-4.png"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            ImageUrl = "/images/grid/des-img-5.png"
+                        });
                 });
 
             modelBuilder.Entity("Admin.Models.Images", b =>
@@ -594,21 +682,21 @@ namespace Admin.Migrations
                         new
                         {
                             Id = "ad376a8f",
-                            ConcurrencyStamp = "f20b3020-956a-4c74-9858-4beb699e9df9",
+                            ConcurrencyStamp = "f6827384-fc89-4c49-804a-0ec61775fd10",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
                             Id = "bd586a8f",
-                            ConcurrencyStamp = "67ff1379-1568-4fde-9e80-9872f625fde6",
+                            ConcurrencyStamp = "afb41841-ee11-417e-a039-c556c1c6ca12",
                             Name = "Editor",
                             NormalizedName = "Editor"
                         },
                         new
                         {
-                            Id = "425b065b-34fe-4d3a-ab4c-e7efc9f54089",
-                            ConcurrencyStamp = "ea3371d7-f8c7-46df-b26b-9740bd20d0c6",
+                            Id = "cbb8d6fd-bf24-4594-a6f5-36744ceb050c",
+                            ConcurrencyStamp = "ed5293f8-bd89-462d-b446-7bbeab6af42f",
                             Name = "User",
                             NormalizedName = "User"
                         });

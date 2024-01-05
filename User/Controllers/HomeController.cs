@@ -12,10 +12,11 @@ namespace User.Controllers
         private IWebHostEnvironment _environment;
         private readonly IBrands _brands;
         private readonly IProducts _products;
+        private readonly IGridImage _gridImage;
         private ITypes _Types;
         private IImages _Images;
         private readonly IConfiguration _configuration;
-        public HomeController(IWebHostEnvironment environment,IBrands brands, IConfiguration configuration , ITypes types, IProducts products , IImages images)
+        public HomeController(IWebHostEnvironment environment,IBrands brands, IConfiguration configuration , ITypes types, IProducts products , IImages images, IGridImage gridImage)
         {
             _environment = environment;
             _brands = brands;
@@ -23,6 +24,7 @@ namespace User.Controllers
             _products = products;
             _Types = types;
             _Images = images;
+            _gridImage = gridImage;
         }
         [HttpGet]
         public async Task<IActionResult> Index()
@@ -30,6 +32,7 @@ namespace User.Controllers
             HomeVM homeVM = new HomeVM();
             homeVM.Brands = await _brands.GetBrands();
             homeVM.Products = await _products.GetFeaturedProduct();
+            homeVM.GridImages = await _gridImage.GetGridImages();
             return View(homeVM);
         }
         public IActionResult AboutUs()

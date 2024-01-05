@@ -129,6 +129,9 @@
   <data name="English" xml:space="preserve">
     <value>انجليزي</value>
   </data>
+  <data name="GridImages" xml:space="preserve">
+    <value>Grid Images</value>
+  </data>
   <data name="LogOut" xml:space="preserve">
     <value>تسجيل الخروج</value>
   </data>

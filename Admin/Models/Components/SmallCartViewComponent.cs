@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Admin.Models.Components
 {
+    [ViewComponent(Name = "SmallCart")]
     public class SmallCartViewComponent : ViewComponent
     {
         private readonly ICartRepository _cartRepo;
