@@ -32,17 +32,71 @@ namespace Admin.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<GridImage>().HasData(
+            var brandId = Guid.NewGuid();
+            var productsId = Guid.NewGuid();
+
+			modelBuilder.Entity<Brands>().HasData(
+                new Brands { 
+                    Id = brandId, 
+                    ImageUrl = "/images/Initial_DB/AGRADO.png", 
+                    NameEn = "AGRADO",
+                    NameAr = "أغرادو"
+				}
+            );
+
+			modelBuilder.Entity<Products>().HasData(
+	            new Products
+	            {
+	            	Id = productsId,
+					NameEn = "Hair Shampoo",
+					NameAr = "شامبو للشعر",
+                    DescriptionEn = "Hair shampoo with extra keratin is a refreshing cleanser that stimulates the scalp and leaves hair feeling clean, fresh and healthy.",
+                    DescriptionAr = "شامبو شعر مع كيراتين اضافية منظف منعش الذي يحفز فروة الرأس ويترك شعور الشعر نظيفة وجديدة وصحية.",
+					BaseImage = "Initial_DB/AGRADO_Product.png",
+                    AltImage = "Initial_DB/AGRADO_Product02.png",
+                    BrandsId = brandId,
+                    IsFeatured = false,
+                    Price = 1,
+                    Size = "120"
+	            }
+            );
+
+			modelBuilder.Entity<Images>().HasData(
+	            new Images
+				{
+	            	Id = Guid.NewGuid(),
+                    ImageName = "Initial_DB/AGRADO_Product.png",
+                    ProductsId = productsId
+				}
+            );
+
+			modelBuilder.Entity<Images>().HasData(
+	            new Images
+	            {
+	            	Id = Guid.NewGuid(),
+	            	ImageName = "Initial_DB/AGRADO_Product02.png",
+	            	ProductsId = productsId
+	            }
+            );
+
+			modelBuilder.Entity<GridImage>().HasData(
               new GridImage { Id = 1, ImageUrl = "/images/grid/des-img-1.png" },
               new GridImage { Id = 2, ImageUrl = "/images/grid/des-img-2.png" },
               new GridImage { Id = 3, ImageUrl = "/images/grid/des-img-3.png" },
               new GridImage { Id = 4, ImageUrl = "/images/grid/des-img-4.png" },
               new GridImage { Id = 5, ImageUrl = "/images/grid/des-img-5.png" }
             );
+
             modelBuilder.Entity<BackgroundSection>().HasData(
-             new BackgroundSection { Id = 1, ImageUrl = "/images/Slider-4.png", TitleEn= "NATURAL BEAUTY", TitleAr = "جمال طبيعي", DescriptionEn = "NATURALLY WE", DescriptionAr = "بالطبع نحن" }
+                new BackgroundSection { 
+                    Id = 1, ImageUrl = "/images/Slider-4.png", 
+                    TitleEn= "NATURAL BEAUTY", 
+                    TitleAr = "جمال طبيعي", 
+                    DescriptionEn = "NATURALLY WE", 
+                    DescriptionAr = "بالطبع نحن" 
+                }
             );
-            base.OnModelCreating(modelBuilder);
+
             // any unique string id
             const string ADMIN_ID = "a18be9c0";
             const string ADMIN_ROLE_ID = "ad376a8f";
@@ -106,6 +160,10 @@ namespace Admin.Data
                 RoleId = EDITOR_ROLE_ID,
                 UserId = EDITOR_ID
             });
-        }
-    }
+
+
+			base.OnModelCreating(modelBuilder);
+
+		}
+	}
 }

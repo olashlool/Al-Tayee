@@ -1,5 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization
 @using Admin.Models.Interface;
+@using System.Globalization
 @inject IOrder _order
 @inject IViewLocalizer Localizer
 @model Admin.Models.ViewModels.HomeAdminVM
@@ -74,7 +75,20 @@
                                         <td>
                                             <a class="text-dark" href=""> @item.FirstName @item.LastName</a>
                                         </td>
-                                        <td class="d-none d-lg-table-cell">@item.Timestamp</td>
+                                        @{
+                                            string timestampString = item.Timestamp;
+                                            string formattedDate = "";
+                                            string formattedTime = "";
+
+                                            DateTime timestamp;
+                                            if (DateTime.TryParseExact(timestampString, "M/d/yyyy h:mm:ss tt;", CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out timestamp))
+                                            {
+                                                DateTime dateOnly = timestamp.Date;
+                                                formattedDate = dateOnly.ToString("yyyy-MM-dd", CultureInfo.GetCultureInfo(culture));
+                                                formattedTime = timestamp.ToString("h:mm:ss tt", CultureInfo.GetCultureInfo(culture));
+                                            }
+                                        }
+                                        <td class="d-none d-lg-table-cell"><span>@formattedTime</span> <br /> @formattedDate</td>
                                         @{
                                             double subtotal = 0;
                                             foreach (var orderItem in orderItems)

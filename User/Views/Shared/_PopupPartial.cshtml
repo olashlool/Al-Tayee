@@ -2,7 +2,7 @@
 @inject Admin.Models.Interface.IBrands Brands
 @inject Admin.Models.Interface.IImages Images
 
-@if(Model != null)
+@if(Model != null &&  Model.Count() > 0)
 {
     foreach (var item in Model)
 {
@@ -134,7 +134,7 @@
     </div>
 </div>
 
-}
+
 <script>
         var hrefValue ="";
             $(".cloud-zoom-thumb").on("click", function () {
@@ -242,3 +242,4 @@
         </text>
         }});
     </script>
+}

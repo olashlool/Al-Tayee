@@ -113,7 +113,7 @@ namespace Admin.Migrations
                             Id = "a18be9c0",
                             AccessFailedCount = 0,
                             BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "55a5911b-c0ad-4746-86d3-adb5b9682617",
+                            ConcurrencyStamp = "99498cd1-4998-418c-af0e-f65d9a997a20",
                             Day = 0,
                             Email = "info@al-tayee.com",
                             EmailConfirmed = false,
@@ -121,7 +121,7 @@ namespace Admin.Migrations
                             Month = 0,
                             NormalizedEmail = "info@al-tayee.com",
                             NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAEDxJyyqz7Mi3Od9DykY60KgzWldzPpekoW8qQFabqD2pWIR51Ex+0qCqq2z0ijk2+A==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBQCHJGd0p2Os6jD8nZPUSVAOBLqc9S5rtsieXqgf5hEsCFhzsfYmO6VzZBXZU6g9g==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -133,7 +133,7 @@ namespace Admin.Migrations
                             Id = "a50ze710",
                             AccessFailedCount = 0,
                             BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "ec6c13f7-aa37-42e1-a5b3-fb0e32f19ee5",
+                            ConcurrencyStamp = "02a4cb66-c01f-4795-b7f4-325ae2c72c12",
                             Day = 0,
                             Email = "Administrator@gmail.com",
                             EmailConfirmed = false,
@@ -141,7 +141,7 @@ namespace Admin.Migrations
                             Month = 0,
                             NormalizedEmail = "Administrator@gmail.com",
                             NormalizedUserName = "Administrator",
-                            PasswordHash = "AQAAAAEAACcQAAAAELHjogjJ05qLr4ppIH8CHLiQ8JqdsxA/safKqbDtWkWUisBdIjnAsZyGVtch7hezZQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEAOTDsyLptHfsDcnYBDT23cJZJGL6Fuu7gCTrzeCB3lp3SKLLHlcdRtBAEAZwADf4Q==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -266,6 +266,15 @@ namespace Admin.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Brands");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("e6701eaf-0346-4be9-a779-dc2ac17ef5ac"),
+                            ImageUrl = "/images/Initial_DB/AGRADO.png",
+                            NameAr = "أغرادو",
+                            NameEn = "AGRADO"
+                        });
                 });
 
             modelBuilder.Entity("Admin.Models.CartDetail", b =>
@@ -389,6 +398,20 @@ namespace Admin.Migrations
                     b.HasIndex("ProductsId");
 
                     b.ToTable("Images");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("2ea67f82-0f38-43dd-86a9-e87c300e61a4"),
+                            ImageName = "Initial_DB/AGRADO_Product.png",
+                            ProductsId = new Guid("fb9a69a2-9803-494f-96d7-bea456865bae")
+                        },
+                        new
+                        {
+                            Id = new Guid("05279137-8113-4703-bc5e-75d2245415be"),
+                            ImageName = "Initial_DB/AGRADO_Product02.png",
+                            ProductsId = new Guid("fb9a69a2-9803-494f-96d7-bea456865bae")
+                        });
                 });
 
             modelBuilder.Entity("Admin.Models.Order", b =>
@@ -560,6 +583,22 @@ namespace Admin.Migrations
                     b.HasIndex("BrandsId");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("fb9a69a2-9803-494f-96d7-bea456865bae"),
+                            AltImage = "Initial_DB/AGRADO_Product02.png",
+                            BaseImage = "Initial_DB/AGRADO_Product.png",
+                            BrandsId = new Guid("e6701eaf-0346-4be9-a779-dc2ac17ef5ac"),
+                            DescriptionAr = "شامبو شعر مع كيراتين اضافية منظف منعش الذي يحفز فروة الرأس ويترك شعور الشعر نظيفة وجديدة وصحية.",
+                            DescriptionEn = "Hair shampoo with extra keratin is a refreshing cleanser that stimulates the scalp and leaves hair feeling clean, fresh and healthy.",
+                            IsFeatured = false,
+                            NameAr = "شامبو للشعر",
+                            NameEn = "Hair Shampoo",
+                            Price = 1.0,
+                            Size = "120"
+                        });
                 });
 
             modelBuilder.Entity("Admin.Models.ShoppingCart", b =>
@@ -682,21 +721,21 @@ namespace Admin.Migrations
                         new
                         {
                             Id = "ad376a8f",
-                            ConcurrencyStamp = "f6827384-fc89-4c49-804a-0ec61775fd10",
+                            ConcurrencyStamp = "c9b06c14-070d-467c-b1e2-28dfb7bd006a",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
                             Id = "bd586a8f",
-                            ConcurrencyStamp = "afb41841-ee11-417e-a039-c556c1c6ca12",
+                            ConcurrencyStamp = "a6ad464e-8b87-4e79-9d8e-aba5db86098b",
                             Name = "Editor",
                             NormalizedName = "Editor"
                         },
                         new
                         {
-                            Id = "cbb8d6fd-bf24-4594-a6f5-36744ceb050c",
-                            ConcurrencyStamp = "ed5293f8-bd89-462d-b446-7bbeab6af42f",
+                            Id = "39871f99-a24b-498d-84c8-4065ef4448c5",
+                            ConcurrencyStamp = "3c6410e7-9724-4f67-9077-6fab7a63a2d3",
                             Name = "User",
                             NormalizedName = "User"
                         });

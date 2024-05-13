@@ -1,8 +1,12 @@
 ﻿@model Admin.Models.ViewModels.OrderVM
 @using Microsoft.AspNetCore.Mvc.Localization
+@using System.Globalization
 @inject IViewLocalizer Localizer
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
+@{
+    string culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+}
 <div class="ec-content-wrapper">
     <div class="content">
         <div class="breadcrumb-wrapper breadcrumb-wrapper-2">
@@ -24,6 +28,7 @@
                                             <th class="sorting" tabindex="0" aria-controls="responsive-data-table" rowspan="1" colspan="1" aria-label="Customer: activate to sort column ascending" style="width: 159px;">@Localizer["Customer"] </th>
                                             <th class="sorting" tabindex="0" aria-controls="responsive-data-table" rowspan="1" colspan="1" aria-label="Items: activate to sort column ascending" style="width: 37px;">@Localizer["Items"] </th>
                                             <th class="sorting" tabindex="0" aria-controls="responsive-data-table" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending" style="width: 34px;">@Localizer["Price"] </th>
+                                            <th class="sorting" tabindex="0" aria-controls="responsive-data-table" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 34px;">@Localizer["Status"] </th>
                                             <th class="sorting" tabindex="0" aria-controls="responsive-data-table" rowspan="1" colspan="1" aria-label="Date: activate to sort column ascending" style="width: 51px;">@Localizer["Date"] </th>
                                             <th class="sorting" tabindex="0" aria-controls="responsive-data-table" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 58px;">@Localizer["Action"] </th>
                                         </tr>
@@ -50,7 +55,33 @@
                                                 }
                                                 <td>@Qty</td>
                                                 <td>@finalTotal.ToString("F") @Localizer["JOD"]</td>
-                                                <td>@item.Timestamp</td>
+                                                @if (@item.OrderStatus == "Completed")
+                                                {
+                                                    <td>
+                                                        <span class="badge badge-success">@item.OrderStatus</span>
+                                                    </td>
+                                                }
+                                                else
+                                                {
+                                                    <td>
+                                                        <span class="badge badge-warning">@item.OrderStatus</span>
+                                                    </td>
+                                                }
+
+                                                @{
+                                                    string timestampString = item.Timestamp;
+                                                    string formattedDate = "";
+                                                    string formattedTime = "";
+
+                                                    DateTime timestamp;
+                                                    if (DateTime.TryParseExact(timestampString, "M/d/yyyy h:mm:ss tt;", CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out timestamp))
+                                                    {
+                                                        DateTime dateOnly = timestamp.Date;
+                                                        formattedDate = dateOnly.ToString("yyyy-MM-dd", CultureInfo.GetCultureInfo(culture));
+                                                        formattedTime = timestamp.ToString("h:mm:ss tt", CultureInfo.GetCultureInfo(culture));
+                                                    }
+                                                }
+                                                <td>@formattedTime <br /> @formattedDate</td>
                                                 <td>
                                                     <div class="btn-group mb-1">
                                                         <button type="button" class="btn btn-outline-success">@Localizer["Info"]</button>

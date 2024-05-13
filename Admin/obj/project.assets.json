@@ -2338,19 +2338,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PC\\.nuget\\packages\\": {}
+    "C:\\Users\\OlaAlshloul\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\Desktop\\Al-Tayee\\Admin\\Admin.csproj",
+      "projectUniqueName": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Admin.csproj",
       "projectName": "Admin",
-      "projectPath": "C:\\Users\\PC\\Desktop\\Al-Tayee\\Admin\\Admin.csproj",
-      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\Desktop\\Al-Tayee\\Admin\\obj\\",
+      "projectPath": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Admin.csproj",
+      "packagesPath": "C:\\Users\\OlaAlshloul\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\OlaAlshloul\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2370,6 +2370,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2428,7 +2433,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }

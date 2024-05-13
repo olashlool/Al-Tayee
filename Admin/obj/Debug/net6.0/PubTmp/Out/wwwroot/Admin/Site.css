@@ -1,0 +1,55 @@
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c6922c;
+}
+
+#AddProduct, #EditProduct, #AddBrands, #EditBrands {
+    display: none;
+}
+.slick-slide {
+    width: 100px;
+}
+.product-brand .rounded-circle{
+    width:150px;
+}
+.brand-edit {
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    color: #bbb;
+}
+    .brand-edit:hover {
+        color: #f7b7b7;
+    }
+.brand-delete {
+    top: 35px !important;
+}
+.ec-brand a img {
+    max-width: 100% !important;
+}
+
+/*Layout*/
+.dash-card .card-body span {
+    right: 20px;
+}
+#majesticAgency:hover {
+    color: #e1251b !important;
+}
+#majesticAgency {
+    color: #8a909d !important;
+}
+/* Admin "Product" */
+
+.deleted-image-upload {
+/*    left: 5px;
+*/    position: absolute;
+    top: 5px;
+    z-index: 1;
+    cursor: pointer;
+}

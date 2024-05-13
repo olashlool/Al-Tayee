@@ -124,8 +124,9 @@ namespace User.Controllers
                     {
                         OrderID = latestOrder.ID,
                         ProductID = cartItem.ProductId,
-                        Quantity = cartItem.Quantity
-                    };
+                        Quantity = cartItem.Quantity,
+						ImageProduct = cartItem.Image
+					};
                     orderItems.Add(orderItem);
                     var product = await _product.GetProductById(cartItem.ProductId);
                     total += product.Price * cartItem.Quantity;

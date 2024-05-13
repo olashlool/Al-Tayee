@@ -302,10 +302,18 @@
     </div>
 </div>
 <partial name="_PopupPartial" model="Model.Products" />
-<div style=" background: url(../../images/Slider-4.png); width: 100%; height: 300px; background-size: 100% 100%; text-align: center; text-transform: uppercase; vertical-align: middle; display: table-cell; width: 100vw;">
-    <h1 style="color:white">@Localizer["NATURALBEAUTY"]</h1>
-    <h3 style="color:white">@Localizer["NATURALLYWE"]</h3>
-</div>
+@foreach (var item in Model.BackgroundSection)
+{
+    string culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+    var title = culture.StartsWith("en") ? item.TitleEn : item.TitleAr;
+    var desc = culture.StartsWith("en") ? item.DescriptionEn : item.DescriptionAr;
+
+    <div style=" background: url(../..@item.ImageUrl); width: 100%; height: 300px; background-size: 100% 100%; text-align: center; text-transform: uppercase; vertical-align: middle; display: table-cell; width: 100vw;">
+        <h1 style="color:white">@title</h1>
+        <h3 style="color:white">@desc</h3>
+    </div>
+}
+
 <div id="bar-notification" class="bar-notification-container" data-close="Close">
     <div class="bar-notification success" style="display: none;">
         <p class="content">@Localizer["AlertAdded"] <a href="/cart">@Localizer["shoppingCart"]</a></p>
