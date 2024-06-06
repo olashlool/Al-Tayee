@@ -14,10 +14,12 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    overflow: hidden !important;
 }
 .cloud-zoom-thumb-container {
     display: flex !important;
     gap: 16px !important;
     margin-top: 16px !important;
+    flex-wrap: wrap;
 }

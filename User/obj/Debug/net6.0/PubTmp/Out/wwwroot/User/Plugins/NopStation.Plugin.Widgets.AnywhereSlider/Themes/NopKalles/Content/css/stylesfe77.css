@@ -1,7 +1,6 @@
 .slider-container {
     margin-bottom: 40px;
     position: relative;
-    min-height: 300px
 }
 .slider-container .owl-carousel .owl-nav {
     visibility: visible;
@@ -101,7 +100,7 @@
 .slider-subtitle {
     margin: 0;
     color: #242423;
-    font-family: Poppins;
+    font-family: Poppins,Helvetica,sans-serif;
     line-height: 1
 }
 

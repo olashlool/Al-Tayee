@@ -7,55 +7,24 @@
       "RelativeMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|c:\\users\\olaalshloul\\desktop\\al-tayee\\admin\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|c:\\users\\olaalshloul\\desktop\\al-tayee\\admin\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|c:\\users\\olaalshloul\\desktop\\al-tayee\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|solutionrelative:views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|c:\\users\\olaalshloul\\desktop\\al-tayee\\admin\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|solutionrelative:views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|c:\\users\\olaalshloul\\desktop\\al-tayee\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|solutionrelative:controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|c:\\users\\olaalshloul\\desktop\\al-tayee\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|solutionrelative:controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|c:\\users\\olaalshloul\\desktop\\al-tayee\\admin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|c:\\users\\olaalshloul\\desktop\\al-tayee\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|solutionrelative:controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|c:\\users\\olaalshloul\\desktop\\al-tayee\\admin\\data\\altayeedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|solutionrelative:data\\altayeedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|c:\\users\\olaalshloul\\desktop\\al-tayee\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|solutionrelative:views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\OlaAlshloul\\AppData\\Local\\Temp\\fygyw5wm..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|c:\\users\\olaalshloul\\desktop\\al-tayee\\admin\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|c:\\users\\olaalshloul\\desktop\\al-tayee\\admin\\views\\products\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|solutionrelative:views\\products\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|c:\\users\\olaalshloul\\desktop\\al-tayee\\admin\\migrations\\20240511101517_initial_db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|solutionrelative:migrations\\20240511101517_initial_db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|c:\\users\\olaalshloul\\desktop\\al-tayee\\admin\\migrations\\20240511102120_updatedataseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|solutionrelative:migrations\\20240511102120_updatedataseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|c:\\users\\olaalshloul\\desktop\\al-tayee\\admin\\models\\services\\orderservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{515D1AAF-74F9-40E4-90CC-3E43A24BB915}|Admin.csproj|solutionrelative:models\\services\\orderservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -65,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 52,
+          "SelectedChildIndex": 44,
           "Children": [
             {
               "$type": "Bookmark",
@@ -245,102 +214,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Views\\Account\\Login.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-13T17:35:23.412Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-13T16:10:21.483Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Views\\Order\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Order\\Index.cshtml",
-              "ToolTip": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Views\\Order\\Index.cshtml",
-              "RelativeToolTip": "Views\\Order\\Index.cshtml",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAFIAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-13T15:48:55.504Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "Controllers\\OrderController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBQAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T15:48:52.405Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Views\\Dashboard\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Dashboard\\Index.cshtml",
-              "ToolTip": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Views\\Dashboard\\Index.cshtml",
-              "RelativeToolTip": "Views\\Dashboard\\Index.cshtml",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAAAGQAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-13T14:53:58.649Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
-              "ToolTip": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "Controllers\\DashboardController.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAcwBgAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T18:44:01.562Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBkAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T18:12:43.345Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SQLQuery1.sql ",
-              "DocumentMoniker": "C:\\Users\\OlaAlshloul\\AppData\\Local\\Temp\\fygyw5wm..sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\fygyw5wm..sql",
-              "ToolTip": "SQLQuery1.sql ",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-05-12T17:52:52.616Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\appsettings.json",
@@ -349,69 +222,69 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAACKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-12T16:52:52.667Z",
+              "WhenOpened": "2024-06-06T16:44:40.221Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "20240511102120_updateDataSeed.cs",
-              "DocumentMoniker": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Migrations\\20240511102120_updateDataSeed.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240511102120_updateDataSeed.cs",
-              "ToolTip": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Migrations\\20240511102120_updateDataSeed.cs",
-              "RelativeToolTip": "Migrations\\20240511102120_updateDataSeed.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T10:21:20.764Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AltayeeDBContext.cs",
-              "DocumentMoniker": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Data\\AltayeeDBContext.cs",
-              "RelativeDocumentMoniker": "Data\\AltayeeDBContext.cs",
-              "ToolTip": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Data\\AltayeeDBContext.cs",
-              "RelativeToolTip": "Data\\AltayeeDBContext.cs",
-              "ViewState": "AQIAAHYAAAAAAAAAAAAQwIYAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T10:20:19.323Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Views\\Products\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\Products\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Views\\Products\\Edit.cshtml",
-              "RelativeToolTip": "Views\\Products\\Edit.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Views\\Order\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Order\\Index.cshtml",
+              "ToolTip": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Views\\Order\\Index.cshtml",
+              "RelativeToolTip": "Views\\Order\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-11T10:19:39.646Z",
+              "WhenOpened": "2024-06-06T12:22:21.402Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "Controllers\\ProductsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADkAAAA2AAAA",
+              "DocumentIndex": 3,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "Controllers\\OrderController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAQwB0AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T10:18:41.674Z"
+              "WhenOpened": "2024-06-06T12:00:19.392Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "20240511101517_Initial_DB.cs",
-              "DocumentMoniker": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Migrations\\20240511101517_Initial_DB.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240511101517_Initial_DB.cs",
-              "ToolTip": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Migrations\\20240511101517_Initial_DB.cs",
-              "RelativeToolTip": "Migrations\\20240511101517_Initial_DB.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "OrderServices.cs",
+              "DocumentMoniker": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Models\\Services\\OrderServices.cs",
+              "RelativeDocumentMoniker": "Models\\Services\\OrderServices.cs",
+              "ToolTip": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Models\\Services\\OrderServices.cs",
+              "RelativeToolTip": "Models\\Services\\OrderServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T10:15:17.578Z"
+              "WhenOpened": "2024-06-06T11:56:19.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-06T11:55:29.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\OlaAlshloul\\Desktop\\Al-Tayee\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Controllers\\DashboardController.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAmwD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T11:54:19.28Z"
             }
           ]
         }

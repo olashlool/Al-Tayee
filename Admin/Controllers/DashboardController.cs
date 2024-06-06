@@ -25,14 +25,33 @@ namespace Admin.Controllers
         {
             var homeAdminVM = new HomeAdminVM();
 
-            homeAdminVM.Orders = await _order.GetOrders();
+            var orders = await _order.GetOrders();
+            var products = await _products.GetProducts();
+
+            // Define the expected date format
+            string[] formats = { "M/d/yyyy h:mm:ss tt", "MM/dd/yyyy hh:mm:ss tt" }; // Add more formats if needed
+            var cultureInfo = System.Globalization.CultureInfo.InvariantCulture;
+
+            // Sort orders by timestamp
+            orders = orders
+                .OrderByDescending(o =>
+                {
+                    DateTime parsedDate;
+                    if (DateTime.TryParseExact(o.Timestamp.Trim(';'), formats, cultureInfo, System.Globalization.DateTimeStyles.None, out parsedDate))
+                    {
+                        return parsedDate;
+                    }
+                    return DateTime.MinValue; // Default value for invalid date strings
+                })
+                .ToList();
+
+            homeAdminVM.Orders = orders;
             homeAdminVM.Products = await _products.GetFeaturedProduct();
             homeAdminVM.ContactUs = await _contactUs.GetFeedback();
 
             var brands = await _brand.GetBrands();
-            var products = await _products.GetProducts();
-            var ordersCompleted = _order.GetOrders().Result.Where(x => x.OrderStatus == "Completed").ToList();
-            var ordersPending = _order.GetOrders().Result.Where(x => x.OrderStatus == "Pending").ToList();
+            var ordersCompleted = orders.Where(x => x.OrderStatus == "Completed").ToList();
+            var ordersPending = orders.Where(x => x.OrderStatus == "Pending").ToList();
 
             ViewBag.CountOfBrands = brands.Count();
             ViewBag.CountOfOrdersCompleted = ordersCompleted.Count();
@@ -41,6 +60,7 @@ namespace Admin.Controllers
 
             return View(homeAdminVM);
         }
+
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
             await _order.DeleteOrder(id);

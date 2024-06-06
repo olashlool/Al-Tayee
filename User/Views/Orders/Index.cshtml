@@ -1,7 +1,10 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using System.Globalization
 @inject IViewLocalizer Localizer
 @model Admin.Models.ViewModels.OrderVM
-
+@{
+    string culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+}
 <div class="column-two-wrapper">
     <div class="container">
         @Html.Partial("_LeftSideAccount")
@@ -18,7 +21,28 @@
                                 <div class="title"><strong>@Localizer["OrderNumber"]: @order.ID</strong></div>
                                 <ul class="info">
                                     <li>@Localizer["OrderStatus"]: <span class="order-status pending">@order.OrderStatus</span></li>
-                                    <li>@Localizer["OrderDate"]: <span class="order-date">@order.Timestamp</span></li>
+                                    <li class="d-flex" style="gap:4px">@Localizer["OrderDate"]:
+                                        
+                                        @{
+                                            string timestampString = order.Timestamp;
+                                            string formattedDate = "";
+                                            string formattedTime = "";
+
+                                            DateTime timestamp;
+                                            if (DateTime.TryParseExact(timestampString, "M/d/yyyy h:mm:ss tt;", CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out timestamp))
+                                            {
+                                                DateTime dateOnly = timestamp.Date;
+                                                formattedDate = dateOnly.ToString("yyyy-MM-dd", CultureInfo.GetCultureInfo(culture));
+                                                formattedTime = timestamp.ToString("h:mm:ss tt", CultureInfo.GetCultureInfo(culture));
+                                            }
+                                            
+                                        }
+
+                                        <div style="display:grid">
+                                            <span class="order-date">@formattedTime </span>
+                                            <span class="order-date">@formattedDate </span>
+                                        </div>
+                                    </li>
                                     @{
                                         double subtotal = 0;
                                         foreach (var orderItem in Model.OrderItems.Where(orderItem => orderItem.OrderID == order.ID))

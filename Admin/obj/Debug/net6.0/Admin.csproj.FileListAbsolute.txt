@@ -446,3 +446,5 @@ C:\Users\OlaAlshloul\Desktop\Al-Tayee\Admin\obj\Debug\net6.0\refint\Admin.dll
 C:\Users\OlaAlshloul\Desktop\Al-Tayee\Admin\obj\Debug\net6.0\Admin.pdb
 C:\Users\OlaAlshloul\Desktop\Al-Tayee\Admin\obj\Debug\net6.0\Admin.genruntimeconfig.cache
 C:\Users\OlaAlshloul\Desktop\Al-Tayee\Admin\obj\Debug\net6.0\ref\Admin.dll
+C:\Users\OlaAlshloul\Desktop\Al-Tayee\Admin\obj\Debug\net6.0\ar\Admin.resources.cs
+C:\Users\OlaAlshloul\Desktop\Al-Tayee\Admin\obj\Debug\net6.0\en\Admin.resources.cs

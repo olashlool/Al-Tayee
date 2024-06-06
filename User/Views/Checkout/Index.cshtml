@@ -1,4 +1,5 @@
-﻿@model Admin.Models.ViewModels.CheckoutVM
+﻿@using System.Globalization
+@model Admin.Models.ViewModels.CheckoutVM
 
 <div class="center-1">
     <div class="page checkout-page text-left">
@@ -16,7 +17,7 @@
                     <div class="col-12">
                         <ol id="checkout-steps" class="py-4 list-unstyled stepper">
                             <form asp-controller="Checkout" asp-action="index" method="post">
-                                <input type="hidden" data-val="true" asp-for="Order.Timestamp" value="@DateTime.Now.ToString();">
+                                <input type="hidden" data-val="true" asp-for="Order.Timestamp" value="@DateTime.Now.ToString(new CultureInfo("en-US")).ToString()">
                                 <input type="hidden" data-val="true" asp-for="Order.UserID" value="@_httpContextAccessor.HttpContext.User.Claims.FirstOrDefault().Value">
                                 <input type="hidden" data-val="true" asp-for="Order.OrderStatus" value="Pending">
                                 <input type="hidden" data-val="true" asp-for="Order.PaymentStstus" value="UnPaid">

@@ -58,7 +58,7 @@ namespace User.Controllers
                     Fax = getFullAddress.Result.FaxNumber,
                     Phone = getFullAddress.Result.PhoneNumber,
                     Zip = checkoutInput.Order.Zip,
-                    Timestamp = checkoutInput.Order.Timestamp,
+                    Timestamp = checkoutInput.Order.Timestamp+ ";",
                     OrderStatus = checkoutInput.Order.OrderStatus,
                     PaymentMethod = checkoutInput.Order.PaymentMethod,
                     PaymentStstus = checkoutInput.Order.PaymentStstus

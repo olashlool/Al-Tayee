@@ -560,5 +560,3 @@ C:\Users\OlaAlshloul\Desktop\Al-Tayee\User\obj\Debug\net6.0\refint\User.dll
 C:\Users\OlaAlshloul\Desktop\Al-Tayee\User\obj\Debug\net6.0\User.pdb
 C:\Users\OlaAlshloul\Desktop\Al-Tayee\User\obj\Debug\net6.0\User.genruntimeconfig.cache
 C:\Users\OlaAlshloul\Desktop\Al-Tayee\User\obj\Debug\net6.0\ref\User.dll
-C:\Users\OlaAlshloul\Desktop\Al-Tayee\User\obj\Debug\net6.0\ar\User.resources.cs
-C:\Users\OlaAlshloul\Desktop\Al-Tayee\User\obj\Debug\net6.0\en\User.resources.cs

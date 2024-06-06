@@ -139,7 +139,7 @@
     <value>Orders</value>
   </data>
   <data name="OrderStatus" xml:space="preserve">
-    <value>Order status</value>
+    <value>Order Status</value>
   </data>
   <data name="OrderTotal" xml:space="preserve">
     <value>Order Total</value>

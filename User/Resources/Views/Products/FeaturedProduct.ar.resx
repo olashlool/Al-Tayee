@@ -124,7 +124,7 @@
     <value>أضف للمفضلة</value>
   </data>
   <data name="AlertAdded" xml:space="preserve">
-    <value>تم إضافة المنتج إلى</value>
+    <value>تم إضافة المنتج </value>
   </data>
   <data name="AtoZ" xml:space="preserve">
     <value>الاسم: من الألف إلى الياء</value>

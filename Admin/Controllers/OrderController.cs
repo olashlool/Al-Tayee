@@ -2,6 +2,7 @@
 using Admin.Models.Interface;
 using Admin.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Admin.Controllers
 {
@@ -21,6 +22,22 @@ namespace Admin.Controllers
             var orders = new OrderVM();
             orders.Orders = await _order.GetOrders();
 
+            // Define the expected date format
+            string[] formats = { "M/d/yyyy h:mm:ss tt", "MM/dd/yyyy hh:mm:ss tt" }; // Add more formats if needed
+            var cultureInfo = System.Globalization.CultureInfo.InvariantCulture;
+
+            orders.Orders = orders.Orders
+                .OrderByDescending(o =>
+                {
+                    DateTime parsedDate;
+                    if (DateTime.TryParseExact(o.Timestamp.Trim(';'), formats, cultureInfo, System.Globalization.DateTimeStyles.None, out parsedDate))
+                    {
+                        return parsedDate;
+                    }
+                    return DateTime.MinValue; // Default value for invalid date strings
+                })
+                .ToList();
+
             foreach (var item in orders.Orders)
             {
                 var orderItems = await _order.GetOrderItemsByOrderId(item.ID);
@@ -29,6 +46,7 @@ namespace Admin.Controllers
 
             return View(orders);
         }
+
         [HttpGet]
         public async Task<IActionResult> Edit(Guid id)
         {
