@@ -3,7 +3,6 @@ html {
     overflow-x: clip;
 }
 body {
-    direction: rtl;
     font-family: Cairo !important;
 }
     *:not(i):not(span) {
